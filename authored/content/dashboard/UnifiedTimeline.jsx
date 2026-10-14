@@ -2,6 +2,7 @@ import React,{useMemo,useState,useRef} from 'react';
 import {DataComponent,Dropdown,SegmentedControl,Button} from '../../data-app-public.jsx';
 import {DateLabel} from './HistoryViews.jsx';
 import {ModelReports} from './ModelReports.jsx';
+import {TimelineMilestones} from './TimelineMilestones.jsx';
 import {ModelTechnology} from './ModelTechnology.jsx';
 import {timelineEvents,monthKey,orderedMonths} from './timeline-model.js';
 import './unified-timeline.css';
@@ -48,6 +49,7 @@ export function UnifiedTimeline({papers,models,history,cats,focus,setFocus,onOpe
   <div className="paper-scope"><span>收录 <b>{papers.length}</b> 篇论文 <i/><b>{models.length}</b> 个模型版本</span><span>1948 起 · NLP 基础到大模型</span><span className="paper-progress">近期研究截至 2026-10-13</span></div>
   <div className="unified-heading"><h2>NLP 与大模型时间线</h2><SegmentedControl ariaLabel="时间线查看方式" value={specView?'models':'events'} options={[{value:'events',label:'时间线'},{value:'models',label:'模型规格与对比'}]} onChange={timelineView=>setFocus({timelineView,...(timelineView==='models'?{layout:'table'}:{})})}/></div>
   {specView?<ModelReports models={models} papers={papers} onOpenPaper={onOpenPaper} focus={focus} setFocus={setFocus} mode="embedded"/>:<>
+   <TimelineMilestones history={history} papers={papers} models={models} onOpen={onOpen} onModel={model=>setFocus({model,paper:''})}/>
    <div className="unified-controls">
     <SegmentedControl ariaLabel="时间线内容" value={type} options={Object.entries(labels).map(([value,label])=>({value,label}))} onChange={entryType=>selectFilter({entryType,...(entryType==='model'?{corpus:'all',dateMode:'all'}:entryType==='paper'?{vendor:'all',openness:'all',modality:'all'}:{})})}/>
     <Dropdown label="重点范围" allLabel="全部动态" value={highlights} choices={['all','milestones']} choiceLabels={{all:'全部动态',milestones:'只看里程碑'}} onChange={highlights=>selectFilter({highlights})}/>

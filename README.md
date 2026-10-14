@@ -8,6 +8,8 @@
 
 2026-10-14 增加 12 篇 NLP 基础文献，目前共 135 篇重点论文。发展脉络已合并进[时间线](https://me4ldr.github.io/nlp-llm-research-dashboard/?view=1&tab=timeline)：左侧按年份浏览，箭头展开／折叠月份；论文与模型在同一时间线上展示，支持从近到远或从早到晚排序。27 篇精选里程碑论文及 2 个重要模型发布单独突出，也可只看里程碑。研究分支图已移除，通过方向标签多选取交集寻找跨方向论文和模型。旧 evolution、connections、models 地址仍可打开时间线。
 
+时间线上方保留独立的横向发展脉络：N-gram、统计 NLP、神经语言模型、word2vec、Attention、Transformer、ELMo/GPT/BERT、规模化、ChatGPT、推理／多模态／Agent，直到标明“开放目标”的 AGI。点击阶段展开关键变化和代表论文，不影响下方年份与方向筛选。
+
 ## 更新与部署
 
 - 内容更新：当前 Codex 对话每天北京时间 09:30 检查官方来源、核实并整理新增内容。需要运行 Codex 的电脑和应用在线。
