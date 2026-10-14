@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-10-14T05:39:48.312368+00:00",
+  "generatedAt": "2026-10-14T07:24:01.622961+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -5054,11 +5054,177 @@
           "conference": "OpenAI 技术报告 2018 · 历史基础",
           "titleZh": "早期 GPT：先生成式预训练，再做任务微调",
           "recommendation": "S"
+        },
+        {
+          "id": "worldmodels2018",
+          "short": "World Models",
+          "title": "World Models",
+          "zh": "World Models：先学环境，再在想象中训练策略",
+          "date": "2018-03-27",
+          "url": "https://arxiv.org/abs/1803.10122",
+          "tags": [
+            "world",
+            "agents"
+          ],
+          "tier": "S",
+          "summary": "学习环境的压缩空间与时间表征，再把这些表征输入简洁的控制策略。论文展示在模型生成的模拟环境中训练 Agent，并将策略迁回原任务环境。",
+          "why": "世界模型路线的入门代表作：把环境预测模型与采取行动的策略区分开，理解“在想象中学习”。",
+          "limit": "证据来自指定的强化学习环境；向原任务迁回不等于获得真实物理世界中的通用能力。2018 年是此论文首发，并非世界模型思想的起点。",
+          "extra": [
+            {
+              "label": "作者交互论文",
+              "url": "https://worldmodels.github.io/"
+            }
+          ],
+          "venue": "arXiv",
+          "year": 2018,
+          "rank": 136,
+          "track": "历史背景",
+          "cohort": "历史背景",
+          "role": "世界模型代表文献",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "depth": "原始摘要与首发日期核读",
+          "verification": "2026-10-14 核读 arXiv 原始摘要与提交历史；未核验最终会议归属，按预印本文献记录。",
+          "datePrecision": "日",
+          "firstPublicDate": "2018-03-27",
+          "dateBasis": "arXiv v1 首次公开",
+          "dateSource": "https://arxiv.org/abs/1803.10122",
+          "categories": "世界模型与规划 · Agent 与工具",
+          "conference": "arXiv 2018 · 历史背景",
+          "titleZh": "World Models：先学环境，再在想象中训练策略",
+          "recommendation": "S"
+        },
+        {
+          "id": "dreamerv3",
+          "short": "DreamerV3",
+          "title": "Mastering Diverse Domains through World Models",
+          "zh": "DreamerV3：用统一配置在想象中学习多种控制任务",
+          "date": "2023-01-10",
+          "url": "https://arxiv.org/abs/2301.04104",
+          "tags": [
+            "world",
+            "agents"
+          ],
+          "tier": "S",
+          "summary": "先学习环境模型，再通过想象未来轨迹改进策略。使用归一化、损失平衡和变换等稳健化方法，在超过 150 个任务上使用同一套配置，减少逐任务调参。",
+          "why": "从“模型能预测”推进到“预测能稳定帮助决策”，适合学习世界模型与强化学习如何组成闭环。",
+          "limit": "统一配置的多任务实验不等于无条件泛化到任意新环境；需区分模型学习、策略训练与测试预算。时间线按 2023 年 arXiv 首发排列。",
+          "extra": [
+            {
+              "label": "作者项目（含后续期刊版本）",
+              "url": "https://danijar.com/project/dreamerv3/"
+            }
+          ],
+          "venue": "arXiv",
+          "year": 2023,
+          "rank": 137,
+          "track": "历史背景",
+          "cohort": "历史背景",
+          "role": "世界模型代表文献",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "depth": "原始摘要与首发日期核读",
+          "verification": "2026-10-14 核读 arXiv 原始摘要与提交历史；未核验最终会议归属，按预印本文献记录。",
+          "datePrecision": "日",
+          "firstPublicDate": "2023-01-10",
+          "dateBasis": "arXiv v1 首次公开",
+          "dateSource": "https://arxiv.org/abs/2301.04104",
+          "categories": "世界模型与规划 · Agent 与工具",
+          "conference": "arXiv 2023 · 历史背景",
+          "titleZh": "DreamerV3：用统一配置在想象中学习多种控制任务",
+          "recommendation": "S"
+        },
+        {
+          "id": "vjepa2",
+          "short": "V-JEPA 2",
+          "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+          "zh": "V-JEPA 2：从视频表征预测到动作条件下的机器人规划",
+          "date": "2025-06-11",
+          "url": "https://arxiv.org/abs/2506.09985",
+          "tags": [
+            "world",
+            "multi",
+            "agents"
+          ],
+          "tier": "A+",
+          "summary": "先在视频和图像上预训练无动作条件的联合嵌入预测模型，再用少量机器人交互数据训练动作条件版本 V-JEPA 2-AC。通过潜在表征预测与图像目标规划，在两个实验室的机械臂上展示抓取和放置。",
+          "why": "代表抽象表征预测路线：决策所需的未来可以在特征空间预测，不必先生成每一个像素。",
+          "limit": "需区分 V-JEPA 2 的视频理解与 2-AC 的机器人规划；后者使用交互数据，有限实验室的迁移结果不能外推为任意机器人和任务的通用控制。",
+          "extra": [
+            {
+              "label": "Meta 原始研究说明",
+              "url": "https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/"
+            }
+          ],
+          "venue": "arXiv",
+          "year": 2025,
+          "rank": 138,
+          "track": "历史背景",
+          "cohort": "历史背景",
+          "role": "世界模型代表文献",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "depth": "原始摘要与首发日期核读",
+          "verification": "2026-10-14 核读 arXiv 原始摘要与提交历史；未核验最终会议归属，按预印本文献记录。",
+          "datePrecision": "日",
+          "firstPublicDate": "2025-06-11",
+          "dateBasis": "arXiv v1 首次公开",
+          "dateSource": "https://arxiv.org/abs/2506.09985",
+          "categories": "世界模型与规划 · 多模态与语音 · Agent 与工具",
+          "conference": "arXiv 2025 · 历史背景",
+          "titleZh": "V-JEPA 2：从视频表征预测到动作条件下的机器人规划",
+          "recommendation": "A+"
+        },
+        {
+          "id": "dreamer4",
+          "short": "Dreamer 4",
+          "title": "Training Agents Inside of Scalable World Models",
+          "zh": "Dreamer 4：从离线视频构建可扩展世界模型并训练 Agent",
+          "date": "2025-09-29",
+          "url": "https://arxiv.org/abs/2509.24527",
+          "tags": [
+            "world",
+            "agents",
+            "multi"
+          ],
+          "tier": "A+",
+          "summary": "采用 shortcut forcing 目标和高效 Transformer 架构，学习支持动作条件与实时交互的世界模型，再在模型内部用强化学习训练策略。论文在 Minecraft 中展示仅使用离线数据训练后完成长程任务。",
+          "why": "连接大规模视频学习、动作条件模拟与 Agent 训练，展示世界模型如何从演示生成走向可用于学习行为的环境。",
+          "limit": "Minecraft 的成功不代表真实机器人通用能力；需分别检查长程预测误差、策略是否利用模拟漏洞，以及模拟到真实任务的迁移。",
+          "extra": [
+            {
+              "label": "作者项目与演示",
+              "url": "https://danijar.com/project/dreamer4/"
+            }
+          ],
+          "venue": "arXiv",
+          "year": 2025,
+          "rank": 139,
+          "track": "历史背景",
+          "cohort": "历史背景",
+          "role": "世界模型代表文献",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "depth": "原始摘要与首发日期核读",
+          "verification": "2026-10-14 核读 arXiv 原始摘要与提交历史；未核验最终会议归属，按预印本文献记录。",
+          "datePrecision": "日",
+          "firstPublicDate": "2025-09-29",
+          "dateBasis": "arXiv v1 首次公开",
+          "dateSource": "https://arxiv.org/abs/2509.24527",
+          "categories": "世界模型与规划 · Agent 与工具 · 多模态与语音",
+          "conference": "arXiv 2025 · 历史背景",
+          "titleZh": "Dreamer 4：从离线视频构建可扩展世界模型并训练 Agent",
+          "recommendation": "A+"
         }
       ],
       "source": {
-        "label": "135 篇精选论文及基础文献（73 篇 2026 会议 + 62 篇历史背景）",
-        "period": "研究进展截至 2026-10-13；新增 12 篇 NLP 基础文献核验于 2026-10-14",
+        "label": "139 篇精选论文及基础文献（73 篇 2026 会议 + 66 篇历史背景）",
+        "period": "研究进展截至 2026-10-13；新增 12 篇 NLP 基础与 4 篇世界模型文献核验于 2026-10-14",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -5600,6 +5766,22 @@
           {
             "label": "GPT（2018）",
             "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+          },
+          {
+            "label": "World Models",
+            "url": "https://arxiv.org/abs/1803.10122"
+          },
+          {
+            "label": "Mastering Diverse Domains through World Models",
+            "url": "https://arxiv.org/abs/2301.04104"
+          },
+          {
+            "label": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+            "url": "https://arxiv.org/abs/2506.09985"
+          },
+          {
+            "label": "Training Agents Inside of Scalable World Models",
+            "url": "https://arxiv.org/abs/2509.24527"
           }
         ],
         "filters": [
@@ -5644,6 +5826,10 @@
           {
             "title": "NLP 基础脉络补充（2026-10-14）",
             "detail": "补入 12 篇历史代表作，阅读深度与日期依据逐条记录；保持原有 123 篇 ID、推荐顺序与核验说明。新增项追加在原推荐顺序之后，历史学习顺序由发展脉络组织。"
+          },
+          {
+            "title": "世界模型补充（2026-10-14）",
+            "detail": "补充 World Models、DreamerV3、V-JEPA 2、Dreamer 4；核读原始摘要和 arXiv v1 日期。按历史背景记录，未推断会议录用。保留原有 135 篇顺序，新增项追加。"
           }
         ]
       },
@@ -275720,12 +275906,103 @@
               "url": "https://arxiv.org/abs/2205.14135"
             }
           ]
+        },
+        {
+          "id": "world-models",
+          "period": "2018–至今",
+          "title": "世界模型：预测行动的后果",
+          "tagline": "与推理、多模态、Agent 并行交叉",
+          "kind": "parallel",
+          "question": "如果采取这个行动，接下来会发生什么？",
+          "advance": "世界模型学习环境随时间和行动变化的规律，用来预测未来状态、观察或回报，再支持规划、评估行动或训练策略。预测可以发生在像素、抽象表征或符号状态中；不一定需要生成可观看的视频。",
+          "limit": "逼真的生成不等于可靠的物理与因果预测；长期误差、未见场景、模拟与真实环境的差距，以及 Agent 能否有效利用预测，仍需分别验证。它可以作为独立的能力演进节点，但不是 Agent 之后才开始、通往 AGI 必经且已完成的下一阶段。",
+          "next": "先读 World Models 与 Dreamer，再比较表征预测和交互生成，最后联系当前文本／符号世界模型研究。",
+          "paperIds": [
+            "worldmodels2018",
+            "dreamerv3",
+            "vjepa2",
+            "dreamer4"
+          ],
+          "relatedPaperIds": [
+            "agentworld",
+            "wordworld",
+            "worldfail"
+          ],
+          "modelIds": [],
+          "branchIds": [
+            "world-path"
+          ],
+          "example": "以推杯子为例：多模态感知识别杯子和桌边；世界模型预测不同推法可能让杯子移动或掉落；Agent 根据目标选择动作，执行后再观察。这个例子用于解释分工，不是某篇论文的实验结果。",
+          "order": 11,
+          "reviewedAt": "2026-10-14",
+          "sources": [
+            {
+              "label": "World Models",
+              "url": "https://arxiv.org/abs/1803.10122"
+            },
+            {
+              "label": "DreamerV3",
+              "url": "https://arxiv.org/abs/2301.04104"
+            },
+            {
+              "label": "V-JEPA 2",
+              "url": "https://arxiv.org/abs/2506.09985"
+            },
+            {
+              "label": "Dreamer 4",
+              "url": "https://arxiv.org/abs/2509.24527"
+            },
+            {
+              "label": "Genie 3 官方发布 · 2025-08-05",
+              "url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/"
+            }
+          ],
+          "routes": [
+            {
+              "title": "在想象中学习策略",
+              "description": "World Models → DreamerV3 / Dreamer 4：模型模拟未来轨迹，策略在模拟中学习行动。",
+              "links": [
+                {
+                  "label": "World Models · 2018",
+                  "url": "https://arxiv.org/abs/1803.10122"
+                },
+                {
+                  "label": "DreamerV3 · 2023",
+                  "url": "https://arxiv.org/abs/2301.04104"
+                },
+                {
+                  "label": "Dreamer 4 · 2025",
+                  "url": "https://arxiv.org/abs/2509.24527"
+                }
+              ]
+            },
+            {
+              "title": "预测抽象表征",
+              "description": "V-JEPA 2：从视频学习表征；动作条件版本 2-AC 用预测支持机器人规划。",
+              "links": [
+                {
+                  "label": "V-JEPA 2 · 2025",
+                  "url": "https://arxiv.org/abs/2506.09985"
+                }
+              ]
+            },
+            {
+              "title": "生成可交互环境",
+              "description": "Genie 3：根据提示生成可实时操控的动态环境，用于模拟与 Agent 研究。可交互不等于物理规律完全准确。",
+              "links": [
+                {
+                  "label": "Genie 3 官方发布 · 2025-08-05",
+                  "url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/"
+                }
+              ]
+            }
+          ]
         }
       ],
       "source": {
         "label": "从 NLP 基础到大模型的技术问题主线",
         "period": "1948–2026；基础脉络核验 2026-10-14，当前研究沿用 2026-10-13 快照",
-        "grain": "每行一个编辑性概念阶段",
+        "grain": "每行一个编辑性概念阶段或并行前沿节点",
         "links": [
           {
             "label": "Shannon / N-gram",
@@ -275774,12 +276051,33 @@
           {
             "label": "GPT（2018）",
             "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+          },
+          {
+            "label": "World Models",
+            "url": "https://arxiv.org/abs/1803.10122"
+          },
+          {
+            "label": "DreamerV3",
+            "url": "https://arxiv.org/abs/2301.04104"
+          },
+          {
+            "label": "V-JEPA 2",
+            "url": "https://arxiv.org/abs/2506.09985"
+          },
+          {
+            "label": "Dreamer 4",
+            "url": "https://arxiv.org/abs/2509.24527"
+          },
+          {
+            "label": "Genie 3 官方发布 · 2025-08-05",
+            "url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/"
           }
         ],
         "caveats": [
           "沿语言建模及其相关任务选取代表节点，不是完整 NLP 学科史。",
           "阶段可以重叠，箭头表示问题与方法的概念联系，不声称直接引用、唯一因果或完全替代。",
-          "基础论文的阅读深度和日期精度逐条保留；原有近期论文未在本次重新核验。"
+          "基础论文的阅读深度和日期精度逐条保留；原有近期论文未在本次重新核验。",
+          "世界模型节点按阅读关系置于当前前沿之后；2018 是选取代表作的首发年，不是该方向起点，也不表示它晚于 Agent 才出现。"
         ],
         "evidenceFlow": [
           {
@@ -275788,14 +276086,14 @@
           },
           {
             "title": "编辑性组织",
-            "detail": "依局部概率、结构预测、表示学习、序列生成、预训练、规模与对齐等问题组织十个阶段；模型发布引用现有 modelReports。"
+            "detail": "按代表问题组织十个 NLP / 大模型阶段，另列世界模型并行前沿；世界模型与 Agent、多模态交叉，不编排为必然通往 AGI 的阶段链。模型发布引用现有 modelReports。"
           }
         ]
       },
       "methods": [
         {
           "language": "text",
-          "code": "阶段按代表问题出现的大致时间由远到近展示；参考作品按 paperIds 保留原 ID、日期依据与阅读深度；不推断引文关系。"
+          "code": "NLP 历史阶段按代表问题出现的大致时间由远到近展示；并行前沿通过 kind=parallel 单列，不参与阶段编号。paperIds 为编辑性代表作；relatedPaperIds 为相关进展，不自动计为里程碑。参考作品保留原 ID、日期依据与阅读深度；不推断引文或必然继承关系。"
         }
       ]
     }

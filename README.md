@@ -6,9 +6,9 @@
 
 首次发布包含 123 篇带摘要论文、73 个模型版本、224 个模型技术要点。15,056 条会议题目索引属于检索候选集，不代表全部已读；S / A+ / A 是编辑性阅读优先级，不是会议官方排名。
 
-2026-10-14 增加 12 篇 NLP 基础文献，目前共 135 篇重点论文。发展脉络已合并进[时间线](https://me4ldr.github.io/nlp-llm-research-dashboard/?view=1&tab=timeline)：左侧按年份浏览，箭头展开／折叠月份；论文与模型在同一时间线上展示，支持从近到远或从早到晚排序。27 篇精选里程碑论文及 2 个重要模型发布单独突出，也可只看里程碑。研究分支图已移除，通过方向标签多选取交集寻找跨方向论文和模型。旧 evolution、connections、models 地址仍可打开时间线。
+2026-10-14 增加 12 篇 NLP 基础及 4 篇世界模型文献，目前共 139 篇重点论文。发展脉络已合并进[时间线](https://me4ldr.github.io/nlp-llm-research-dashboard/?view=1&tab=timeline)：左侧按年份浏览，箭头展开／折叠月份；论文与模型在同一时间线上展示，支持从近到远或从早到晚排序。31 篇精选里程碑论文及 2 个重要模型发布单独突出，也可只看里程碑。研究分支图已移除，通过方向标签多选取交集寻找跨方向论文和模型。旧 evolution、connections、models 地址仍可打开时间线。
 
-时间线上方保留独立的横向发展脉络：N-gram、统计 NLP、神经语言模型、word2vec、Attention、Transformer、ELMo/GPT/BERT、规模化、ChatGPT、推理／多模态／Agent，直到标明“开放目标”的 AGI。点击阶段展开关键变化和代表论文，不影响下方年份与方向筛选。
+时间线上方保留独立的横向发展脉络：N-gram、统计 NLP、神经语言模型、word2vec、Attention、Transformer、ELMo/GPT/BERT、规模化、ChatGPT、推理／多模态／Agent，并列出世界模型这一“并行前沿”，最后是标明“开放目标”的 AGI。点击节点展开关键变化和代表论文，不影响下方年份与方向筛选。世界模型节点含 World Models、DreamerV3、V-JEPA 2、Dreamer 4，以及 Genie 3 官方说明；用预测行动后果的例子区分三条研究路线，并关联现有文本／符号世界模型进展。位置不表示世界模型始于 Agent 之后，也不把它视为必然通往 AGI 的第 11 阶段。
 
 ## 更新与部署
 
