@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-10-13T09:19:39.584606+00:00",
+  "generatedAt": "2026-10-14T05:39:48.312368+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -4586,11 +4586,479 @@
           "firstPublicDate": null,
           "dateSource": "https://neurips.cc/virtual/2026/poster/150721",
           "rank": 123
+        },
+        {
+          "id": "shannon1948",
+          "short": "Shannon / N-gram",
+          "title": "A Mathematical Theory of Communication",
+          "zh": "统计语言建模的早期基础：词序列与马尔可夫近似",
+          "venue": "Bell System Technical Journal",
+          "year": 1948,
+          "date": "1948",
+          "tags": [
+            "language",
+            "mechanism",
+            "data"
+          ],
+          "tier": "S",
+          "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+          "summary": "把通信中的消息看作随机过程，并用不同阶的字母、词转移统计近似英语。它为理解局部上下文、概率预测和信息量提供早期基础，并不是现代 N-gram 平滑方法的完整方案。",
+          "why": "从“统计前面出现了什么，预测后面是什么”理解语言建模，也能分清文本统计规律与语义理解。",
+          "limit": "1948 是这篇代表作的年份，不是 N-gram 的唯一发明年份；原文通信理论的目标不等于完整自然语言理解。",
+          "depth": "正文重点核查",
+          "verification": "已核读原文 §3–4 的英语逐阶近似与马尔可夫源；未阅读全文或复现实验。",
+          "rank": 124,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "extra": [],
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "年",
+          "dateBasis": "出版年份",
+          "firstPublicDate": "",
+          "dateSource": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+          "categories": "语言学与多语言 · 能力机理与理论 · 预训练与数据",
+          "conference": "Bell System Technical Journal 1948 · 历史基础",
+          "titleZh": "统计语言建模的早期基础：词序列与马尔可夫近似",
+          "recommendation": "S"
+        },
+        {
+          "id": "eliza1966",
+          "short": "ELIZA",
+          "title": "ELIZA—A Computer Program for the Study of Natural Language Communication Between Man and Machine",
+          "zh": "ELIZA：用规则和脚本组织对话",
+          "venue": "Communications of the ACM",
+          "year": 1966,
+          "date": "1966-01",
+          "tags": [
+            "language",
+            "agents",
+            "eval"
+          ],
+          "tier": "A+",
+          "url": "https://doi.org/10.1145/365153.365168",
+          "summary": "通过输入模式匹配、分解与重组规则生成对话，脚本与程序分离。它展示了规则式对话怎样产生交互效果，也提醒读者区分对话形式与语言理解。",
+          "why": "补上与统计建模并行的符号 NLP 路线，理解“看起来会聊天”为什么不足以证明理解能力。",
+          "limit": "这是规则式系统；不能按现代大模型的训练规模、参数知识或推理能力评价。",
+          "depth": "出版社原文片段核读",
+          "verification": "出版信息与机制依据 ACM 原文检索片段；扫描重印版未全文阅读。",
+          "extra": [
+            {
+              "label": "原文重印版",
+              "url": "https://cse.buffalo.edu/~rapaport/572/S02/weizenbaum.eliza.1966reprint.pdf"
+            }
+          ],
+          "rank": 125,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "月",
+          "dateBasis": "出版月份",
+          "firstPublicDate": "",
+          "dateSource": "https://doi.org/10.1145/365153.365168",
+          "categories": "语言学与多语言 · Agent 与工具 · 评测与可靠性",
+          "conference": "Communications of the ACM 1966 · 历史基础",
+          "titleZh": "ELIZA：用规则和脚本组织对话",
+          "recommendation": "A+"
+        },
+        {
+          "id": "smt1990",
+          "short": "统计机器翻译",
+          "title": "A Statistical Approach to Machine Translation",
+          "zh": "统计机器翻译：用概率模型和搜索替代手写翻译规则",
+          "venue": "Computational Linguistics",
+          "year": 1990,
+          "date": "1990-06",
+          "tags": [
+            "language",
+            "data",
+            "arch"
+          ],
+          "tier": "S",
+          "url": "https://aclanthology.org/J90-2002/",
+          "summary": "将翻译建模为概率推断，结合语言模型、翻译模型与解码搜索，从双语数据估计参数。文中讨论 N-gram 语言模型如何给词序评分，并报告受限词汇条件下的翻译实验。",
+          "why": "理解后来神经机器翻译究竟统一了哪些原先分开的组件。",
+          "limit": "原文系统规模和实验条件受限；不能把后来的 IBM 模型系列或短语翻译成果全部归到这篇论文。",
+          "depth": "正文重点核查",
+          "verification": "已核读原文系统分解、N-gram 说明与实验范围；期刊年月来自 ACL Anthology。",
+          "rank": 126,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "extra": [],
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "月",
+          "dateBasis": "出版月份",
+          "firstPublicDate": "",
+          "dateSource": "https://aclanthology.org/J90-2002/",
+          "categories": "语言学与多语言 · 预训练与数据 · 架构与生成范式",
+          "conference": "Computational Linguistics 1990 · 历史基础",
+          "titleZh": "统计机器翻译：用概率模型和搜索替代手写翻译规则",
+          "recommendation": "S"
+        },
+        {
+          "id": "crf2001",
+          "short": "CRF",
+          "title": "Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data",
+          "zh": "CRF：把分词和标注作为结构化预测",
+          "venue": "ICML",
+          "year": 2001,
+          "date": "2001",
+          "tags": [
+            "language",
+            "arch"
+          ],
+          "tier": "A+",
+          "url": "https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps",
+          "summary": "对给定输入的结构化输出进行条件建模，并采用全局归一化。它代表了统计 NLP 中“设计特征，再联合预测标签序列”的一条重要路线。",
+          "why": "说明传统 NLP 不只有语言模型，还包括序列标注与结构化预测；能帮助理解后来的神经编码器与 CRF 解码组合。",
+          "limit": "此处依据作者对原始论文的说明，未重新核读原文实验；不要把它等同于生成式语言模型。",
+          "depth": "作者说明核读",
+          "verification": "作者公开论文目录核实 ICML 2001、条件训练与全局归一化；原始 PostScript 未解析。",
+          "extra": [
+            {
+              "label": "作者的论文说明",
+              "url": "https://people.cs.umass.edu/~mccallum/publications-by-topic.html"
+            }
+          ],
+          "rank": 127,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "年",
+          "dateBasis": "出版年份",
+          "firstPublicDate": "",
+          "dateSource": "https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps",
+          "categories": "语言学与多语言 · 架构与生成范式",
+          "conference": "ICML 2001 · 历史基础",
+          "titleZh": "CRF：把分词和标注作为结构化预测",
+          "recommendation": "A+"
+        },
+        {
+          "id": "lstm1997",
+          "short": "LSTM",
+          "title": "Long Short-Term Memory",
+          "zh": "LSTM：用门控和记忆单元缓解长程梯度问题",
+          "venue": "Neural Computation",
+          "year": 1997,
+          "date": "1997",
+          "tags": [
+            "arch",
+            "context",
+            "mechanism"
+          ],
+          "tier": "S",
+          "url": "https://www.bioinf.jku.at/publications/older/2604.pdf",
+          "summary": "针对循环网络长时间跨度上误差信号衰减的问题，引入记忆单元与乘性门控，维持误差流并学习信息的写入和读取。原文重点检验人工长时延任务。",
+          "why": "理解循环序列模型怎样保持状态，以及长程依赖为何一直是语言建模中的难点。",
+          "limit": "1997 原始结构与今天常用的 LSTM 变体不完全相同；原始实验也不是现代大规模语言模型评测。",
+          "depth": "原文摘要与引言核读",
+          "verification": "作者机构保存的原文核实机制、实验边界及期刊年份；不推断未核验的月日。",
+          "rank": 128,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "extra": [],
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "年",
+          "dateBasis": "出版年份",
+          "firstPublicDate": "",
+          "dateSource": "https://www.bioinf.jku.at/publications/older/2604.pdf",
+          "categories": "架构与生成范式 · 长上下文 · 能力机理与理论",
+          "conference": "Neural Computation 1997 · 历史基础",
+          "titleZh": "LSTM：用门控和记忆单元缓解长程梯度问题",
+          "recommendation": "S"
+        },
+        {
+          "id": "nnlm2003",
+          "short": "神经概率语言模型",
+          "title": "A Neural Probabilistic Language Model",
+          "zh": "神经语言模型：让相似词共享统计强度",
+          "venue": "JMLR",
+          "year": 2003,
+          "date": "2003-02",
+          "tags": [
+            "data",
+            "language",
+            "arch"
+          ],
+          "tier": "S",
+          "url": "https://jmlr.org/papers/v3/bengio03a.html",
+          "summary": "联合学习词的分布式向量表示和词序列概率，使相似词组成的未见序列也能获得合理概率。通过参数共享缓解 N-gram 数据稀疏，并在两个文本语料上比较语言建模效果。",
+          "why": "把离散计数与后来的词向量、神经语言模型连接起来，是理解表示学习的关键一站。",
+          "limit": "使用有限上下文，训练成本和词表规模仍受限制；并没有消除全部长上下文问题。",
+          "depth": "原始摘要与正文重点核查",
+          "verification": "JMLR 摘要及原文表示学习、有限上下文说明已核读；出版月为 2003-02。",
+          "rank": 129,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "extra": [],
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "月",
+          "dateBasis": "出版月份",
+          "firstPublicDate": "",
+          "dateSource": "https://jmlr.org/papers/v3/bengio03a.html",
+          "categories": "预训练与数据 · 语言学与多语言 · 架构与生成范式",
+          "conference": "JMLR 2003 · 历史基础",
+          "titleZh": "神经语言模型：让相似词共享统计强度",
+          "recommendation": "S"
+        },
+        {
+          "id": "rnnlm2010",
+          "short": "RNN 语言模型",
+          "title": "Recurrent Neural Network Based Language Model",
+          "zh": "RNN 语言模型：用循环状态表示历史",
+          "venue": "Interspeech",
+          "year": 2010,
+          "date": "2010",
+          "tags": [
+            "arch",
+            "context",
+            "language"
+          ],
+          "tier": "A+",
+          "url": "https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html",
+          "summary": "将循环神经网络用于语言建模和语音识别，让循环状态承载历史信息。原文比较 RNN 模型组合与回退式语言模型的困惑度及语音识别效果。",
+          "why": "补上从固定词窗口到可递归状态的过渡，连接 LSTM、Seq2Seq 和后来的状态空间模型讨论。",
+          "limit": "循环状态不等于无限可靠记忆；原文语音识别任务中的结果不能直接推广到开放式生成。",
+          "depth": "原始摘要初读",
+          "verification": "ISCA 原始摘要与会议记录已读取；未核验首发日。",
+          "rank": 130,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "extra": [],
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "年",
+          "dateBasis": "出版年份",
+          "firstPublicDate": "",
+          "dateSource": "https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html",
+          "categories": "架构与生成范式 · 长上下文 · 语言学与多语言",
+          "conference": "Interspeech 2010 · 历史基础",
+          "titleZh": "RNN 语言模型：用循环状态表示历史",
+          "recommendation": "A+"
+        },
+        {
+          "id": "word2vec2013",
+          "short": "word2vec",
+          "title": "Efficient Estimation of Word Representations in Vector Space",
+          "zh": "word2vec：高效学习可复用的词向量",
+          "venue": "arXiv",
+          "year": 2013,
+          "date": "2013-01-16",
+          "tags": [
+            "data",
+            "language",
+            "eff"
+          ],
+          "tier": "S",
+          "url": "https://arxiv.org/abs/1301.3781",
+          "summary": "研究高效学习词向量的两种架构，在大规模语料上降低表示学习成本，并以词相似性和语法、语义关系任务评价向量质量。",
+          "why": "理解静态词向量作为通用特征的价值，以及 ELMo、BERT 为什么进一步强调上下文相关表示。",
+          "limit": "一个词通常对应固定向量，不能充分区分不同语境的词义；这篇工作不等同于完整的生成式语言模型。",
+          "depth": "原始摘要初读",
+          "verification": "arXiv 原始摘要与 v1 日期已核实；此记录按预印本保存，不推断主会录用。",
+          "rank": 131,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "extra": [],
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本",
+          "firstPublicDate": "2013-01-16",
+          "dateSource": "https://arxiv.org/abs/1301.3781",
+          "categories": "预训练与数据 · 语言学与多语言 · 效率与优化",
+          "conference": "arXiv 2013 · 历史基础",
+          "titleZh": "word2vec：高效学习可复用的词向量",
+          "recommendation": "S"
+        },
+        {
+          "id": "seq2seq2014",
+          "short": "Seq2Seq",
+          "title": "Sequence to Sequence Learning with Neural Networks",
+          "zh": "Seq2Seq：用编码器—解码器端到端学习序列转换",
+          "venue": "NeurIPS",
+          "year": 2014,
+          "date": "2014-09-10",
+          "tags": [
+            "arch",
+            "language",
+            "data"
+          ],
+          "tier": "S",
+          "url": "https://arxiv.org/abs/1409.3215",
+          "summary": "用一个多层 LSTM 将输入序列编码为固定长度向量，再用另一个 LSTM 解码输出序列，在英法翻译上验证端到端序列学习。",
+          "why": "理解统一输入输出接口如何取代复杂任务管线，以及 Attention 所处理的信息压缩瓶颈。",
+          "limit": "不能把固定向量瓶颈理解为原文所有长句都失败；原文也报告了长句结果与逆序输入的训练技巧。",
+          "depth": "原始摘要初读",
+          "verification": "arXiv 摘要与首版日期、NeurIPS 2014 论文集记录已核实。",
+          "extra": [
+            {
+              "label": "NeurIPS 2014 官方论文集",
+              "url": "https://papers.nips.cc/paper_files/paper/2014/hash/5a18e133cbf9f257297f410bb7eca942-Abstract.html"
+            }
+          ],
+          "rank": 132,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本",
+          "firstPublicDate": "2014-09-10",
+          "dateSource": "https://arxiv.org/abs/1409.3215",
+          "categories": "架构与生成范式 · 语言学与多语言 · 预训练与数据",
+          "conference": "NeurIPS 2014 · 历史基础",
+          "titleZh": "Seq2Seq：用编码器—解码器端到端学习序列转换",
+          "recommendation": "S"
+        },
+        {
+          "id": "attention2014",
+          "short": "Bahdanau Attention",
+          "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+          "zh": "Attention：生成每个词时重新选择输入证据",
+          "venue": "ICLR",
+          "year": 2015,
+          "date": "2014-09-01",
+          "tags": [
+            "arch",
+            "context",
+            "language"
+          ],
+          "tier": "S",
+          "url": "https://arxiv.org/abs/1409.0473",
+          "summary": "针对编码器—解码器固定长度表示的瓶颈，让模型生成目标词时对源句相关部分进行软对齐和加权访问，联合学习对齐与翻译。",
+          "why": "从“把全部输入压进一个向量”转向“按当前需要读取输入”，为理解注意力机制提供直接的问题背景。",
+          "limit": "这是循环编码器—解码器中的注意力，不是 2017 Transformer 的完整自注意力架构；两类机制要分清。",
+          "depth": "原始摘要初读",
+          "verification": "arXiv 首发 2014-09-01、摘要及 ICLR 2015 oral 说明已核实。",
+          "rank": 133,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "extra": [],
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本",
+          "firstPublicDate": "2014-09-01",
+          "dateSource": "https://arxiv.org/abs/1409.0473",
+          "categories": "架构与生成范式 · 长上下文 · 语言学与多语言",
+          "conference": "ICLR 2015 · 历史基础",
+          "titleZh": "Attention：生成每个词时重新选择输入证据",
+          "recommendation": "S"
+        },
+        {
+          "id": "elmo2018",
+          "short": "ELMo",
+          "title": "Deep Contextualized Word Representations",
+          "zh": "ELMo：让词表示随上下文变化",
+          "venue": "NAACL",
+          "year": 2018,
+          "date": "2017-10-27",
+          "tags": [
+            "data",
+            "language",
+            "arch"
+          ],
+          "tier": "S",
+          "url": "https://arxiv.org/abs/1802.05365",
+          "summary": "从预训练双向语言模型的内部状态提取上下文相关词表示，组合不同层的信息，再接入下游任务模型，改进多个 NLP 任务。",
+          "why": "连接静态 word2vec 和预训练迁移：同一个词可以因句子不同而拥有不同表示。",
+          "limit": "ELMo 使用双向语言模型作为特征来源，与 BERT 的双向 Transformer 及端到端微调并非同一种方案。",
+          "depth": "原始摘要初读",
+          "verification": "作者在 arXiv comments 明确记载 2017-10-27 首次发于 OpenReview；arXiv v1 为 2018-02-15，NAACL 论文集为 2018。",
+          "dateBasis": "作者注明的 OpenReview 首发",
+          "extra": [
+            {
+              "label": "NAACL 2018 官方论文集",
+              "url": "https://aclanthology.org/N18-1202/"
+            }
+          ],
+          "rank": 134,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "日",
+          "firstPublicDate": "2017-10-27",
+          "dateSource": "https://arxiv.org/abs/1802.05365",
+          "categories": "预训练与数据 · 语言学与多语言 · 架构与生成范式",
+          "conference": "NAACL 2018 · 历史基础",
+          "titleZh": "ELMo：让词表示随上下文变化",
+          "recommendation": "S"
+        },
+        {
+          "id": "gpt2018",
+          "short": "GPT（2018）",
+          "title": "Improving Language Understanding by Generative Pre-Training",
+          "zh": "早期 GPT：先生成式预训练，再做任务微调",
+          "venue": "OpenAI 技术报告",
+          "year": 2018,
+          "date": "2018-06-11",
+          "tags": [
+            "data",
+            "language",
+            "arch"
+          ],
+          "tier": "S",
+          "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+          "summary": "先在未标注文本上做生成式语言模型预训练，再以少量结构调整适配有监督任务。使用 Transformer 迁移学习，减少各任务对专门架构的依赖。",
+          "why": "理解 GPT 路线的起点，并与 ELMo 的特征提取和 BERT 的掩码预训练对照。",
+          "limit": "这里是 2018 年的预训练加微调范式，不能套用 GPT-3 的上下文学习或 ChatGPT 的对齐与对话能力。",
+          "depth": "原文摘要与官方发布核读",
+          "verification": "技术报告摘要和 OpenAI 2018-06-11 发布页已核读。",
+          "dateBasis": "官方技术报告发布",
+          "dateSource": "https://openai.com/index/language-unsupervised/",
+          "extra": [
+            {
+              "label": "官方发布说明",
+              "url": "https://openai.com/index/language-unsupervised/"
+            }
+          ],
+          "rank": 135,
+          "track": "历史基础",
+          "cohort": "历史背景",
+          "role": "NLP 基础脉络",
+          "curated": true,
+          "award": "",
+          "verifiedAt": "2026-10-14",
+          "datePrecision": "日",
+          "firstPublicDate": "2018-06-11",
+          "categories": "预训练与数据 · 语言学与多语言 · 架构与生成范式",
+          "conference": "OpenAI 技术报告 2018 · 历史基础",
+          "titleZh": "早期 GPT：先生成式预训练，再做任务微调",
+          "recommendation": "S"
         }
       ],
       "source": {
-        "label": "123 篇重点论文：73 篇 2026 会议论文＋50 篇历史代表作",
-        "period": "首版日期覆盖 2017–2026；2026 会议资料截至 2026-10-13",
+        "label": "135 篇精选论文及基础文献（73 篇 2026 会议 + 62 篇历史背景）",
+        "period": "研究进展截至 2026-10-13；新增 12 篇 NLP 基础文献核验于 2026-10-14",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -5084,6 +5552,54 @@
           {
             "label": "Training Quality Determines Efficiency Boundaries in Test-Time Reasoning",
             "url": "https://neurips.cc/virtual/2026/poster/150721"
+          },
+          {
+            "label": "Shannon / N-gram",
+            "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+          },
+          {
+            "label": "ELIZA",
+            "url": "https://doi.org/10.1145/365153.365168"
+          },
+          {
+            "label": "统计机器翻译",
+            "url": "https://aclanthology.org/J90-2002/"
+          },
+          {
+            "label": "CRF",
+            "url": "https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps"
+          },
+          {
+            "label": "LSTM",
+            "url": "https://www.bioinf.jku.at/publications/older/2604.pdf"
+          },
+          {
+            "label": "神经概率语言模型",
+            "url": "https://jmlr.org/papers/v3/bengio03a.html"
+          },
+          {
+            "label": "RNN 语言模型",
+            "url": "https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html"
+          },
+          {
+            "label": "word2vec",
+            "url": "https://arxiv.org/abs/1301.3781"
+          },
+          {
+            "label": "Seq2Seq",
+            "url": "https://arxiv.org/abs/1409.3215"
+          },
+          {
+            "label": "Bahdanau Attention",
+            "url": "https://arxiv.org/abs/1409.0473"
+          },
+          {
+            "label": "ELMo",
+            "url": "https://arxiv.org/abs/1802.05365"
+          },
+          {
+            "label": "GPT（2018）",
+            "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
           }
         ],
         "filters": [
@@ -5124,6 +5640,10 @@
           {
             "title": "整理方法",
             "detail": "新增 46 篇历史背景与 16 篇年度拓展，读取原始摘要和时间记录；整理中文概括、边界和发展路径。目录中的其余记录仅做题目规则初筛。"
+          },
+          {
+            "title": "NLP 基础脉络补充（2026-10-14）",
+            "detail": "补入 12 篇历史代表作，阅读深度与日期依据逐条记录；保持原有 123 篇 ID、推荐顺序与核验说明。新增项追加在原推荐顺序之后，历史学习顺序由发展脉络组织。"
           }
         ]
       },
@@ -267869,6 +268389,17 @@
                 "bert"
               ]
             ]
+          ],
+          "originStageIds": [
+            "neural",
+            "embeddings",
+            "transfer",
+            "scale"
+          ],
+          "origin": "表示学习 → 通用预训练 → 数据与算力配置",
+          "caption": "数据决定学到什么",
+          "coreTags": [
+            "data"
           ]
         },
         {
@@ -267928,6 +268459,16 @@
                 "star"
               ]
             ]
+          ],
+          "originStageIds": [
+            "scale",
+            "alignment"
+          ],
+          "origin": "基础语言能力 → 指令与偏好 → 推理过程和验证奖励",
+          "caption": "怎样思考、怎样验证",
+          "coreTags": [
+            "post",
+            "reason"
           ]
         },
         {
@@ -267987,6 +268528,16 @@
                 "react"
               ]
             ]
+          ],
+          "originStageIds": [
+            "alignment",
+            "branches"
+          ],
+          "origin": "对话与指令接口 → 工具循环 → 真实环境与经验复用",
+          "caption": "从回答走向行动",
+          "coreTags": [
+            "agents",
+            "domain"
           ]
         },
         {
@@ -268042,6 +268593,18 @@
                 "rag2020"
               ]
             ]
+          ],
+          "originStageIds": [
+            "ngram",
+            "seq2seq",
+            "scale"
+          ],
+          "origin": "上下文表示与信息访问 → 外部检索 → 记忆管理",
+          "caption": "怎样访问和更新知识",
+          "coreTags": [
+            "rag",
+            "memory",
+            "context"
           ]
         },
         {
@@ -268102,6 +268665,17 @@
                 "transformer"
               ]
             ]
+          ],
+          "originStageIds": [
+            "neural",
+            "seq2seq",
+            "transformer-era"
+          ],
+          "origin": "循环状态 → 注意力 → 稀疏、缓存与替代架构",
+          "caption": "能力与计算成本",
+          "coreTags": [
+            "arch",
+            "eff"
           ]
         },
         {
@@ -268144,6 +268718,17 @@
                 "blip2"
               ]
             ]
+          ],
+          "originStageIds": [
+            "seq2seq",
+            "transfer",
+            "branches"
+          ],
+          "origin": "共享序列表示 → 跨模态对齐 → 交互与动态预测",
+          "caption": "从理解内容到预测结果",
+          "coreTags": [
+            "multi",
+            "world"
           ]
         },
         {
@@ -268203,6 +268788,17 @@
                 "truthful"
               ]
             ]
+          ],
+          "originStageIds": [
+            "statistical",
+            "alignment",
+            "branches"
+          ],
+          "origin": "任务评价 → 真实性与偏好 → 行为和风险压力测试",
+          "caption": "如何知道模型可信",
+          "coreTags": [
+            "eval",
+            "safety"
           ]
         },
         {
@@ -268249,11 +268845,23 @@
                 "bert"
               ]
             ]
+          ],
+          "originStageIds": [
+            "ngram",
+            "statistical",
+            "embeddings",
+            "transfer"
+          ],
+          "origin": "语言统计与结构 → 分布式表征 → 多语言与能力机理",
+          "caption": "模型究竟学到了什么",
+          "coreTags": [
+            "language",
+            "mechanism"
           ]
         }
       ],
       "source": {
-        "label": "8 条研究发展脉络",
+        "label": "8 条大模型研究分支及其 NLP 概念来源",
         "period": "截至 2026-10-13",
         "grain": "每行一条编辑性研究路线",
         "links": [
@@ -268291,13 +268899,14 @@
           "多数为原始摘要初读；少数正文重点核查，均未复现实验。",
           "优先使用 arXiv v1 日期；缺失时显示论文集日期并明确标注首发待核，月份不补造具体日。",
           "发展脉络为编辑性概念梳理，不声称论文之间存在引用或直接继承关系。",
-          "EMNLP 2026 完整目录未读取；AAAI、IJCAI、CVPR 等未系统纳入，2026 全年尚未结束。"
+          "EMNLP 2026 完整目录未读取；AAAI、IJCAI、CVPR 等未系统纳入，2026 全年尚未结束。",
+          "originStageIds 是编辑性概念回溯；跨方向计数来自已整理论文的共同标签，不代表真实引文、热度或方向的直接继承。"
         ]
       },
       "methods": [
         {
           "language": "text",
-          "code": "由论文的问题、方法和已知边界构成概念性发展路径；阶段从近到远，非引用图。"
+          "code": "既有 stages 仍按近到远保存；页面默认反转为从早到晚，可切换最新在前。分支 cards 展示阶段引用的唯一论文数。交叉探索以全库 papers.tags 为依据，筛选同时具有两个标签的论文。"
         }
       ]
     },
@@ -274737,6 +275346,456 @@
         {
           "language": "text",
           "code": "人工核对原始技术报告、官方模型卡、发布公告及 API 定价。中文技术要点为简要归纳，不依据厂商自报单项基准给出跨厂商性能排名。"
+        }
+      ]
+    },
+    "nlpHistory": {
+      "rows": [
+        {
+          "id": "ngram",
+          "period": "1948–1960s",
+          "title": "N-gram 与早期 NLP",
+          "tagline": "统计局部规律，也用规则组织语言",
+          "question": "只看相邻的字或词，能预测多少语言结构？",
+          "advance": "N-gram 用前 n−1 个词近似预测下一个词；Shannon 的逐阶英语近似提供早期背景。规则式 NLP 是并行路线，ELIZA 用模式匹配和脚本组织对话。",
+          "limit": "局部计数面临稀疏和长程依赖；规则需要人工维护。流畅的词序或对话形式，也不等于理解。",
+          "next": "从概率与规则的想法出发，进一步让数据估计翻译、标注等具体任务中的参数。",
+          "paperIds": [
+            "shannon1948",
+            "eliza1966"
+          ],
+          "branchIds": [
+            "language-path",
+            "data-path"
+          ],
+          "example": "Bigram：P(下一个词 | 当前词)；Trigram：P(下一个词 | 前两个词)。1948 是代表作年份，并非 N-gram 的唯一诞生点。",
+          "order": 1,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "Shannon / N-gram",
+              "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+            },
+            {
+              "label": "ELIZA",
+              "url": "https://doi.org/10.1145/365153.365168"
+            }
+          ]
+        },
+        {
+          "id": "statistical",
+          "period": "1990–2001",
+          "title": "统计 NLP 与特征工程",
+          "tagline": "从数据学习，再做结构化预测",
+          "question": "如何把翻译、分词、词性等任务写成可学习的模型？",
+          "advance": "统计机器翻译把语言模型、翻译模型与解码分开；HMM / CRF 等序列方法对标签结构建模。以 CRF 为例，给定输入后联合建模整个标签序列。",
+          "limit": "任务管线与特征往往需要人工设计；稀疏特征难以自然共享语义。",
+          "next": "学习连续表示，让相似词和相似上下文共享信息，而不只依赖见过的离散组合。",
+          "paperIds": [
+            "smt1990",
+            "crf2001"
+          ],
+          "branchIds": [
+            "language-path",
+            "architecture-path"
+          ],
+          "example": "两条并行任务：翻译生成一段文本；序列标注给每个位置分配标签。NLP 的历史比语言模型本身更宽。",
+          "order": 2,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "统计机器翻译",
+              "url": "https://aclanthology.org/J90-2002/"
+            },
+            {
+              "label": "CRF",
+              "url": "https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps"
+            }
+          ]
+        },
+        {
+          "id": "neural",
+          "period": "1997–2010",
+          "title": "神经语言模型与 RNN",
+          "tagline": "从计数表转向向量和可学习状态",
+          "question": "未见过的词组合，能否借助相似表示得到合理预测？",
+          "advance": "Bengio 等联合学习词向量与概率函数；RNN 用循环状态编码历史。更早的 LSTM 为长时延学习提供门控记忆机制。",
+          "limit": "固定词窗口或有限状态仍会丢失信息；循环依赖使序列训练难以充分并行。",
+          "next": "进一步降低表示学习成本，并让词向量成为多个 NLP 任务可以复用的输入。",
+          "paperIds": [
+            "lstm1997",
+            "nnlm2003",
+            "rnnlm2010"
+          ],
+          "branchIds": [
+            "architecture-path",
+            "knowledge-path",
+            "language-path"
+          ],
+          "example": "词向量解决“哪些词相近”；循环状态处理“前面发生过什么”。两者回答不同问题。",
+          "order": 3,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "LSTM",
+              "url": "https://www.bioinf.jku.at/publications/older/2604.pdf"
+            },
+            {
+              "label": "神经概率语言模型",
+              "url": "https://jmlr.org/papers/v3/bengio03a.html"
+            },
+            {
+              "label": "RNN 语言模型",
+              "url": "https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html"
+            }
+          ]
+        },
+        {
+          "id": "embeddings",
+          "period": "2013",
+          "title": "word2vec 与词表示",
+          "tagline": "大语料中的语义关系变成通用特征",
+          "question": "如何便宜地训练和复用高质量词向量？",
+          "advance": "word2vec 研究高效词表示架构，用词相似性及语法、语义关系检验表示质量。训练好的向量可以作为下游模型的特征。",
+          "limit": "静态词向量不能充分区分同一个词在不同上下文中的含义；单个词的向量也不是整句的理解。",
+          "next": "从词特征走向整段输入到整段输出的端到端学习，同时研究上下文相关表示。",
+          "paperIds": [
+            "word2vec2013"
+          ],
+          "branchIds": [
+            "data-path",
+            "language-path"
+          ],
+          "example": "“苹果”在水果和公司语境中可能需要不同表示；这正是后来上下文化表示要处理的问题之一。",
+          "order": 4,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "word2vec",
+              "url": "https://arxiv.org/abs/1301.3781"
+            }
+          ]
+        },
+        {
+          "id": "seq2seq",
+          "period": "2014–2015",
+          "title": "Seq2Seq 与 Attention",
+          "tagline": "端到端生成，并按需读取输入",
+          "question": "怎样把不定长输入变成不定长输出？",
+          "advance": "Seq2Seq 以编码器—解码器学习序列转换；Bahdanau Attention 让解码每个词时软选择输入证据，减轻固定向量压缩的负担。两项工作在 2014 年前后并行发展。",
+          "limit": "注意力缓解了访问输入的问题，循环计算本身的串行性仍在。",
+          "next": "把注意力进一步用作主要的序列建模机制，减少对循环结构的依赖。",
+          "paperIds": [
+            "seq2seq2014",
+            "attention2014"
+          ],
+          "branchIds": [
+            "architecture-path",
+            "knowledge-path"
+          ],
+          "example": "这里的软对齐注意力先于 Transformer；不能把两者当作同一篇论文或同一套架构。",
+          "order": 5,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "Seq2Seq",
+              "url": "https://arxiv.org/abs/1409.3215"
+            },
+            {
+              "label": "Bahdanau Attention",
+              "url": "https://arxiv.org/abs/1409.0473"
+            }
+          ]
+        },
+        {
+          "id": "transformer-era",
+          "period": "2017",
+          "title": "Transformer",
+          "tagline": "以自注意力构建可并行序列模型",
+          "question": "能否主要用注意力处理序列间的依赖？",
+          "advance": "Transformer 以自注意力、前馈层和位置编码构成编码器—解码器，原文主要验证机器翻译。它成为多种后续预训练模型的架构基础。",
+          "limit": "标准注意力随序列长度增长带来计算和内存压力；架构本身也不自动提供指令遵循或事实可靠性。",
+          "next": "先在大量文本上学习通用能力，再迁移到多个任务，而不是为每个任务从头训练。",
+          "paperIds": [
+            "transformer"
+          ],
+          "branchIds": [
+            "architecture-path",
+            "data-path",
+            "language-path"
+          ],
+          "example": "Encoder、Decoder 和 Encoder–Decoder 后来对应不同预训练目标与使用方式。",
+          "order": 6,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "Transformer",
+              "url": "https://arxiv.org/abs/1706.03762"
+            }
+          ]
+        },
+        {
+          "id": "transfer",
+          "period": "2017–2019",
+          "title": "ELMo、GPT 与 BERT",
+          "tagline": "预训练成为跨任务的基础",
+          "question": "同一套语言表征怎样帮助多个下游任务？",
+          "advance": "ELMo 提供上下文相关特征；早期 GPT 采用生成式预训练再微调；BERT 用双向 Transformer 与掩码目标学习表示。它们是不同的迁移学习路线。",
+          "limit": "特征提取、全参数微调、生成式和掩码目标各有适配方式；预训练成功不等于所有任务都无需监督。",
+          "next": "研究参数、数据与算力怎样共同影响性能，并探索在提示中给出任务与示例。",
+          "paperIds": [
+            "elmo2018",
+            "gpt2018",
+            "bert"
+          ],
+          "branchIds": [
+            "data-path",
+            "language-path",
+            "architecture-path"
+          ],
+          "example": "ELMo 作者注明首次公开于 2017 年，arXiv 与 NAACL 版本在 2018 年；阶段标签保留这个跨度。",
+          "order": 7,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "ELMo",
+              "url": "https://arxiv.org/abs/1802.05365"
+            },
+            {
+              "label": "GPT（2018）",
+              "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+            },
+            {
+              "label": "BERT",
+              "url": "https://arxiv.org/abs/1810.04805"
+            }
+          ]
+        },
+        {
+          "id": "scale",
+          "period": "2020–2022",
+          "title": "规模化语言模型",
+          "tagline": "任务示例进入上下文，训练预算成为变量",
+          "question": "更大模型之外，数据量和计算预算该怎样分配？",
+          "advance": "GPT-3 展示提示中的少样本学习；Scaling Laws 与 Chinchilla 研究模型规模、数据和算力配置。RAG 同期引入可检索的外部知识。",
+          "limit": "扩大规模不等于自动可靠、听从指令或知识可更新；具体结论依赖训练条件和评测任务。",
+          "next": "用指令示范和偏好反馈塑造行为，并把检索、工具等能力接入系统。",
+          "paperIds": [
+            "gpt3",
+            "scaling",
+            "chinchilla",
+            "rag2020"
+          ],
+          "branchIds": [
+            "data-path",
+            "knowledge-path",
+            "architecture-path"
+          ],
+          "example": "参数知识与外部索引可以共存；检索路线并不是在 ChatGPT 出现以后才开始。",
+          "order": 8,
+          "reviewedAt": "2026-10-14",
+          "modelIds": [],
+          "sources": [
+            {
+              "label": "GPT-3",
+              "url": "https://arxiv.org/abs/2005.14165"
+            },
+            {
+              "label": "Scaling Laws",
+              "url": "https://arxiv.org/abs/2001.08361"
+            },
+            {
+              "label": "Chinchilla",
+              "url": "https://arxiv.org/abs/2203.15556"
+            },
+            {
+              "label": "RAG",
+              "url": "https://arxiv.org/abs/2005.11401"
+            }
+          ]
+        },
+        {
+          "id": "alignment",
+          "period": "2022",
+          "title": "指令对齐与 ChatGPT",
+          "tagline": "从续写文本走向遵循人类意图",
+          "question": "怎样把基础语言模型变成更有用的交互助手？",
+          "advance": "InstructGPT 使用示范和偏好反馈塑造输出；ChatGPT 以对话形式面向用户。CoT 等研究同时探索通过中间步骤提高部分推理任务的表现。",
+          "limit": "对话体验、偏好对齐与正确推理不是同一指标；ChatGPT 的出现也不是大模型各分支的统一起点。",
+          "next": "研究重点分化到推理、Agent、记忆、效率、多模态和可靠性，并不断相互组合。",
+          "paperIds": [
+            "instruct",
+            "cot",
+            "constitutional"
+          ],
+          "modelIds": [
+            "chatgpt"
+          ],
+          "branchIds": [
+            "reason-path",
+            "agent-path",
+            "trust-path"
+          ],
+          "example": "模型发布是产品事件，论文是在特定条件下的研究证据；两类日期与结论分别保留。",
+          "order": 9,
+          "reviewedAt": "2026-10-14",
+          "sources": [
+            {
+              "label": "InstructGPT",
+              "url": "https://arxiv.org/abs/2203.02155"
+            },
+            {
+              "label": "CoT",
+              "url": "https://arxiv.org/abs/2201.11903"
+            },
+            {
+              "label": "Constitutional AI",
+              "url": "https://arxiv.org/abs/2212.08073"
+            }
+          ]
+        },
+        {
+          "id": "branches",
+          "period": "2023–2026",
+          "title": "大模型分支与交叉",
+          "tagline": "围绕不同瓶颈，组合多种方法",
+          "question": "当前研究分别在解决哪些能力、成本与可靠性问题？",
+          "advance": "偏好优化与 RLVR、Agent 工具循环、检索与记忆、效率架构、多模态、语言机理和安全评测形成相互交叉的研究路线。",
+          "limit": "分支边界用于帮助阅读；它们并非互斥学科，也不是所有方法都始于 2023 年。",
+          "next": "选下方一条分支，看它的早期代表、阶段变化、当前瓶颈，再查看连接其他方向的论文。",
+          "paperIds": [
+            "dpo",
+            "react",
+            "selfrag",
+            "r1",
+            "llava",
+            "flash"
+          ],
+          "modelIds": [
+            "dsr1"
+          ],
+          "branchIds": [
+            "data-path",
+            "reason-path",
+            "agent-path",
+            "knowledge-path",
+            "architecture-path",
+            "world-path",
+            "trust-path",
+            "language-path"
+          ],
+          "example": "例如 ReAct 连接推理与工具；Self-RAG 连接检索与自评估；DeepSeekMath 连接领域数据、后训练与推理。",
+          "order": 10,
+          "reviewedAt": "2026-10-14",
+          "sources": [
+            {
+              "label": "DPO",
+              "url": "https://arxiv.org/abs/2305.18290"
+            },
+            {
+              "label": "ReAct",
+              "url": "https://arxiv.org/abs/2210.03629"
+            },
+            {
+              "label": "Self-RAG",
+              "url": "https://arxiv.org/abs/2310.11511"
+            },
+            {
+              "label": "DeepSeek-R1",
+              "url": "https://arxiv.org/abs/2501.12948"
+            },
+            {
+              "label": "LLaVA",
+              "url": "https://arxiv.org/abs/2304.08485"
+            },
+            {
+              "label": "FlashAttention",
+              "url": "https://arxiv.org/abs/2205.14135"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "label": "从 NLP 基础到大模型的技术问题主线",
+        "period": "1948–2026；基础脉络核验 2026-10-14，当前研究沿用 2026-10-13 快照",
+        "grain": "每行一个编辑性概念阶段",
+        "links": [
+          {
+            "label": "Shannon / N-gram",
+            "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+          },
+          {
+            "label": "ELIZA",
+            "url": "https://doi.org/10.1145/365153.365168"
+          },
+          {
+            "label": "统计机器翻译",
+            "url": "https://aclanthology.org/J90-2002/"
+          },
+          {
+            "label": "CRF",
+            "url": "https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps"
+          },
+          {
+            "label": "LSTM",
+            "url": "https://www.bioinf.jku.at/publications/older/2604.pdf"
+          },
+          {
+            "label": "神经概率语言模型",
+            "url": "https://jmlr.org/papers/v3/bengio03a.html"
+          },
+          {
+            "label": "RNN 语言模型",
+            "url": "https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html"
+          },
+          {
+            "label": "word2vec",
+            "url": "https://arxiv.org/abs/1301.3781"
+          },
+          {
+            "label": "Seq2Seq",
+            "url": "https://arxiv.org/abs/1409.3215"
+          },
+          {
+            "label": "Bahdanau Attention",
+            "url": "https://arxiv.org/abs/1409.0473"
+          },
+          {
+            "label": "ELMo",
+            "url": "https://arxiv.org/abs/1802.05365"
+          },
+          {
+            "label": "GPT（2018）",
+            "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+          }
+        ],
+        "caveats": [
+          "沿语言建模及其相关任务选取代表节点，不是完整 NLP 学科史。",
+          "阶段可以重叠，箭头表示问题与方法的概念联系，不声称直接引用、唯一因果或完全替代。",
+          "基础论文的阅读深度和日期精度逐条保留；原有近期论文未在本次重新核验。"
+        ],
+        "evidenceFlow": [
+          {
+            "title": "核验基础来源",
+            "detail": "通过原始论文、JMLR / ACL Anthology / ISCA / 作者论文目录及官方技术报告核实。精确网址保留于各行 sources 和 papers.dateSource。"
+          },
+          {
+            "title": "编辑性组织",
+            "detail": "依局部概率、结构预测、表示学习、序列生成、预训练、规模与对齐等问题组织十个阶段；模型发布引用现有 modelReports。"
+          }
+        ]
+      },
+      "methods": [
+        {
+          "language": "text",
+          "code": "阶段按代表问题出现的大致时间由远到近展示；参考作品按 paperIds 保留原 ID、日期依据与阅读深度；不推断引文关系。"
         }
       ]
     }

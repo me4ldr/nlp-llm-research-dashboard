@@ -1,15 +1,15 @@
 import React,{useState,useEffect,useMemo} from 'react';
 import {useDataApp,useDashboardTabs,DataComponent,Section,SectionHeader,Filters,Dropdown,SegmentedControl,Dialog,DataTable,Button} from '../../data-app-public.jsx';
-import {tierLabels,filterPapers,overlaps,intersection,shortCategory,readingRoutes} from './model.js';
+import {tierLabels,filterPapers,overlaps,shortCategory,readingRoutes} from './model.js';
 import './dashboard.css';
-import {Evolution,Coverage,DateLabel} from './HistoryViews.jsx';
+import {Coverage,DateLabel} from './HistoryViews.jsx';
+import {Evolution} from './EvolutionPage.jsx';
 import {UnifiedTimeline} from './UnifiedTimeline.jsx';
 const tabs=[
  {id:'timeline',label:'时间线',aliases:['models'],filterIds:[],focusFields:['corpus','topic','dateMode','query','paper','entryType','year','month','vendor','openness','modality','timelineView','layout','model','compare']},
- {id:'evolution',label:'发展脉络',filterIds:[],focusFields:['branch','paper']},
+ {id:'evolution',label:'发展脉络',aliases:['connections'],filterIds:[],focusFields:['stage','branch','category','peer','order','paper','nodeType','panel','peerBranch']},
  {id:'library',label:'论文库',filterIds:['venue','tier'],focusFields:['topics','query','status','sort','paper','layout','corpus']},
  {id:'directions',label:'方向全景',filterIds:[],focusFields:['paper']},
- {id:'connections',label:'交叉关系',filterIds:[],focusFields:['category','paper']},
  {id:'routes',label:'阅读路线',filterIds:[],focusFields:['paper']},
  {id:'coverage',label:'会议覆盖',filterIds:[],focusFields:['catalogVenue','catalogTopic','query','paper']}
 ];
@@ -26,27 +26,11 @@ function PaperCard({p,catMap,onOpen,onTag,marks,onMark}){return <article classNa
  <div className="paper-card-footer"><span className="paper-award">{p.award||(p.track.includes('待核')?'官网目录 · 分轨待核对':p.cohort+' · '+p.role)}</span><button className="paper-mark" aria-label={`${p.zh}：${statusLabels[marks[p.id]||'unread']}，点击切换`} onClick={()=>onMark(p.id)}>{marks[p.id]==='done'?'✓ 已读':marks[p.id]==='saved'?'◉ 待读':'+ 待读'}</button></div>
  <button className="paper-detail-button" onClick={()=>onOpen(p.id)}>摘要、评价与关联 <span aria-hidden="true">↗</span></button>
  </article>}
-function TopicGraph({rows,cats,selected,onSelect,onPair}){
- const scope=rows.filter(p=>p.tags.includes(selected));
- const nodes=cats.map((c,i)=>{const angle=-Math.PI/2+i*2*Math.PI/cats.length;return {...c,x:420+292*Math.cos(angle),y:355+285*Math.sin(angle),count:intersection(rows,selected,c.id).length};});
- const center=nodes.find(n=>n.id===selected)||nodes[0];
- const [hover,setHover]=useState('');
- return <div aria-label="选中一个方向，连线连接具有共同论文的其他方向，数字是共同论文数。可用 Tab 键选择节点或连线。">
- <div className="paper-network"><svg viewBox="0 0 840 715" role="group" aria-label="研究方向交叉图">
- <g className="paper-network-lines">{nodes.filter(n=>n.id!==selected&&n.count).map(n=><g key={n.id} tabIndex={0} role="button" aria-label={`${center.name} × ${n.name}：${n.count} 篇；查看论文`} onClick={()=>onPair(selected,n.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onPair(selected,n.id)}}} onFocus={()=>setHover(`${center.name} × ${n.name} · ${n.count} 篇`)} onMouseEnter={()=>setHover(`${center.name} × ${n.name} · ${n.count} 篇`)}>
- <line x1={center.x} y1={center.y} x2={n.x} y2={n.y} strokeWidth={Math.min(8,1+n.count)} />
- <circle cx={(center.x+n.x)/2} cy={(center.y+n.y)/2} r={13}/><text x={(center.x+n.x)/2} y={(center.y+n.y)/2+4} textAnchor="middle">{n.count}</text>
- </g>)}</g>
- {nodes.map(n=><g key={n.id} className={`paper-network-node ${n.id===selected?'selected':n.count?'connected':'inactive'}`} tabIndex={0} role="button" aria-label={`${n.name}，${n.count} 篇关联，点击选择此方向`} onClick={()=>onSelect(n.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(n.id)}}} onFocus={()=>setHover(n.name)} onMouseEnter={()=>setHover(n.name)}>
- <circle cx={n.x} cy={n.y} r={37}/><text x={n.x} y={n.y-2} textAnchor="middle">{shortCategory[n.id]}</text><text className="paper-node-count" x={n.x} y={n.y+17} textAnchor="middle">{n.count} 篇</text>
- </g>)}
- </svg><div className="paper-network-caption" role="status">{hover||'点选节点探索方向，点选连线查看交叉论文'}</div></div></div>
-}
 export function DashboardContent({initialView={}}){
  const shell=useDataApp();
  const {activeTabId}=useDashboardTabs(tabs);
  const requestedTab=initialView.tab||activeTabId;
- const tab=tabs.some(t=>t.id===requestedTab)?requestedTab:'timeline';
+ const tab=tabs.find(t=>t.id===requestedTab||t.aliases?.includes(requestedTab))?.id||'timeline';
  const papers=shell.queries.papers.rows,cats=shell.queries.directions.rows;
  const catMap=useMemo(()=>Object.fromEntries(cats.map(c=>[c.id,c])),[cats]);
  const focus=shell.viewFocus||{};
@@ -66,16 +50,13 @@ export function DashboardContent({initialView={}}){
  const reset=()=>{shell.setFilter('venue','all');shell.setFilter('tier','all');updateFocus({topics:'',query:'',status:'all',sort:'date',corpus:'all'});};
  const selected=papers.find(p=>p.id===focus.paper);
  const connections=overlaps(papers,selected?.id).slice(0,8);
- const topic=catMap[focus.category]?focus.category:'post';
- const topicRows=papers.filter(p=>p.tags.includes(topic));
- const linkedCats=cats.filter(c=>c.id!==topic).map(c=>({...c,count:intersection(papers,topic,c.id).length})).filter(c=>c.count).sort((a,b)=>b.count-a.count);
  const doneCount=papers.filter(p=>marks[p.id]==='done').length;
  const exportRows=()=>{const blob=new Blob([JSON.stringify({title:shell.snapshot.title,cutoff:'2026-10-13',scope:opts,papers:filtered},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='nlp-2026-papers.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
  return <article className="paper-dashboard">
  {shell.canReturnFromExploration&&<button className="paper-text-button paper-return" onClick={shell.returnFromExploration}>← 返回上一个视图</button>}
- {tab!=='timeline'&&<div className="paper-scope"><span><b>{papers.length}</b> 篇重点论文 <i/> <b>{cats.length}</b> 个交叉方向</span><span>{papers.filter(p=>p.cohort==='2026 会议').length} 篇 2026 会议 + {papers.filter(p=>p.cohort==='历史背景').length} 篇历史背景 · 截至 2026-10-13</span><span className="paper-progress">已读 {doneCount} / {papers.length}</span></div>}
+ {tab!=='timeline'&&tab!=='evolution'&&<div className="paper-scope"><span><b>{papers.length}</b> 篇重点论文 <i/> <b>{cats.length}</b> 个交叉方向</span><span>{papers.filter(p=>p.cohort==='2026 会议').length} 篇 2026 会议 + {papers.filter(p=>p.cohort==='历史背景').length} 篇历史背景 · 截至 2026-10-13</span><span className="paper-progress">已读 {doneCount} / {papers.length}</span></div>}
  {tab==='timeline'&&<UnifiedTimeline papers={papers} models={shell.queries.modelReports.rows} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open} catalogCount={shell.queries.catalog.rows.length} onCoverage={()=>shell.exploreDashboard('coverage',{focus:{catalogVenue:'all',catalogTopic:'all',query:''}})}/>}
- {tab==='evolution'&&<Evolution branches={shell.queries.evolution.rows} papers={papers} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open}/>}
+ {tab==='evolution'&&<Evolution history={shell.queries.nlpHistory.rows} branches={shell.queries.evolution.rows} papers={papers} models={shell.queries.modelReports.rows} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open} onExplore={explore} onModel={model=>shell.exploreDashboard('timeline',{focus:{model,paper:'',timelineView:'timeline'}})}/>}
  {tab==='coverage'&&<Coverage coverage={shell.queries.coverage.rows} catalog={shell.queries.catalog.rows} papers={papers} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open}/>}
  {tab==='library'&&<>
  <Filters filters={shell.snapshot.filters} queries={shell.queries} values={shell.filters} onChange={shell.setFilter} showClear={false} ariaLabel="论文筛选"><label className="paper-search"><span aria-hidden="true">⌕</span><input aria-label="搜索论文" type="search" placeholder="搜索标题、问题、方法或关键词…" value={opts.query} onChange={e=>updateFocus({query:e.target.value})}/></label></Filters>
@@ -95,13 +76,6 @@ export function DashboardContent({initialView={}}){
  <DataComponent id="direction-landscape" title="研究方向与进展" queryId="directions" queryIds={["directions","papers"]} kind="custom" sourceRowsByQuery={{directions:cats,papers}} displayRows={cats}>
  <div className="paper-direction-grid">{cats.map((c,index)=><section className="paper-direction" key={c.id} data-reviewed-rows><div className="paper-direction-meta"><span style={{color:categoryColor[c.group]}}>{c.group}</span><span>{String(index+1).padStart(2,'0')} / {papers.filter(p=>p.tags.includes(c.id)).length} 篇</span></div><h3>{c.name}</h3><strong>{c.question}</strong><p>{c.progress}</p><div className="paper-gap"><b>还缺什么</b><p>{c.gap}</p></div><div className="paper-starters">{c.starters.slice(0,3).map(id=><button key={id} onClick={()=>open(id)}>{papers.find(p=>p.id===id)?.short} ↗</button>)}</div><button className="paper-text-button" onClick={()=>explore([c.id])}>查看该方向全部论文 →</button></section>)}</div>
  </DataComponent></>}
- {tab==='connections'&&<>
- <SectionHeader id="connections-heading" title="一篇论文，连接多个方向" filters={<Dropdown label="中心方向" value={topic} choices={cats.map(c=>c.id)} choiceLabels={Object.fromEntries(cats.map(c=>[c.id,c.name]))} onChange={category=>updateFocus({category})}/>} />
- <p className="paper-view-note">连线表示共同分类标签；数字是交叉论文数，不是引用次数。灰色节点表示本批样本中没有该交叉。</p>
- <div className="paper-connections-layout">
- <DataComponent id="topic-network" queryId="papers" kind="custom" title={`${catMap[topic].name}的交叉关系`} description="节点计数以当前中心方向为范围。点击连线查看同时覆盖两类的论文。" sourceRows={topicRows} displayRows={topicRows} variant="card"><TopicGraph rows={papers} cats={cats} selected={topic} onSelect={category=>updateFocus({category})} onPair={(a,b)=>explore([a,b])}/></DataComponent>
- <div className="paper-connection-rail"><DataComponent id="topic-pairs" queryId="papers" kind="custom" title="与哪些方向相连" sourceRows={topicRows} displayRows={linkedCats.map(c=>({direction:c.name,papers:c.count}))} variant="card"><div className="paper-pair-list">{linkedCats.map(c=><button key={c.id} onClick={()=>explore([topic,c.id])}><span>{c.name}</span><b>{c.count}</b><span>→</span></button>)}</div></DataComponent>
- <DataComponent id="topic-papers" queryId="papers" kind="custom" title={`这个方向的 ${topicRows.length} 篇论文`} sourceRows={topicRows} displayRows={topicRows} variant="card"><div className="paper-related-list">{topicRows.map(p=><button key={p.id} onClick={()=>open(p.id)}><Tier value={p.tier}/><span>{p.zh}<small>{p.venue} · {p.tags.length} 个方向</small></span><span>↗</span></button>)}</div></DataComponent></div></div></>}
  {tab==='routes'&&<>
  <div className="paper-view-intro"><h2>把论文串成一条阅读路线</h2><p>顺序按理解依赖组织，与含金量名次不同。先读摘要建立问题地图，再选择最相关的论文深入方法与实验。</p></div>
  <div className="paper-route-grid">{readingRoutes.map(r=>{const rr=r.items.map(id=>papers.find(p=>p.id===id));return <DataComponent key={r.id} id={`route-${r.id}`} queryId="papers" kind="custom" title={r.title} sourceRows={rr} displayRows={rr} variant="card"><p className="paper-route-intro" data-editable-id={`route-intro-${r.id}`}>{r.description}</p><ol className="paper-route">{rr.map((p,i)=><li key={p.id}><span className={`paper-step ${marks[p.id]==='done'?'done':''}`}>{marks[p.id]==='done'?'✓':i+1}</span><button onClick={()=>open(p.id)}><span>{p.zh}</span><small>{r.goals[i]}</small></button><Tier value={p.tier}/></li>)}</ol></DataComponent>})}</div>

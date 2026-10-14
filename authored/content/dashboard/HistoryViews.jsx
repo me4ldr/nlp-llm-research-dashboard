@@ -1,14 +1,8 @@
 import React,{useMemo} from 'react';
 import {DataComponent,Dropdown,DataTable,Button} from '../../data-app-public.jsx';
 const ext={target:'_blank',rel:'noopener noreferrer'};
-export function DateLabel({paper:p}){return <span className={`paper-date ${p.firstPublicDate?'':'approximate'}`}><time dateTime={p.date}>{p.date}</time><span>{p.firstPublicDate?'首次公开':p.datePrecision==='年'?'仅录用年份 · 日期待核':'论文集 · 首发待核'}</span></span>}
+export function DateLabel({paper:p}){return <span className={`paper-date ${p.firstPublicDate?'':'approximate'}`}><time dateTime={p.date}>{p.date}</time><span>{p.firstPublicDate?'首次公开':p.datePrecision==='年'?(p.cohort==='历史背景'?'出版年份 · 月日未核':'仅录用年份 · 日期待核'):p.cohort==='历史背景'?'出版月份 · 首发待核':'论文集 · 首发待核'}</span></span>}
 function TopicChoices({cats,value,onChange}){return <Dropdown label="研究方向" allLabel="全部方向" value={value||'all'} choices={['all',...cats.map(c=>c.id)]} choiceLabels={{all:'全部方向',...Object.fromEntries(cats.map(c=>[c.id,c.name]))}} onChange={onChange}/>}
-export function Evolution({branches,papers,cats,focus,setFocus,onOpen}){
- const selected=branches.find(b=>b.id===focus.branch),visible=selected?[selected]:branches;
- return <><div className="paper-view-intro"><h2>八条线索，理解问题怎样改变</h2><p>各条路线由近到远展开；读新论文时，可以往下回溯它面对的旧问题。阶段按研究问题与会议年度组织，具体首发见时间线；联系为概念梳理，不代表直接引用或公认的单一路线。</p></div>
- <div className="paper-history-controls"><Dropdown label="发展分支" allLabel="全部八条路线" value={selected?.id||'all'} choices={['all',...branches.map(b=>b.id)]} choiceLabels={{all:'全部八条路线',...Object.fromEntries(branches.map(b=>[b.id,b.title.split('：')[0]]))}} onChange={branch=>setFocus({branch})}/><span className="paper-view-note">从“当前瓶颈”反向追踪方法来源；点击论文可查看摘要与评价。</span></div>
- <div className={`paper-evolution-grid ${selected?'single':''}`}>{visible.map(b=>{const ids=[...new Set(b.stages.flatMap(s=>s[3]))],bp=ids.map(id=>papers.find(p=>p.id===id));return <DataComponent id={`evolution-${b.id}`} key={b.id} title={b.title} queryId="evolution" queryIds={['evolution','papers']} kind="custom" sourceRowsByQuery={{evolution:[b],papers:bp}} displayRows={b.stages.map(s=>({period:s[0],stage:s[1],interpretation:s[2],papers:s[3].join(', ')}))} variant="card"><p className="paper-evolution-question">{b.question}</p><div className="paper-frontier"><b>当前瓶颈</b><p>{b.frontier}</p></div><ol className="paper-evolution-stages">{b.stages.map((s,i)=><li key={i} data-reviewed-rows><time>{s[0]}</time><h3>{s[1]}</h3><p>{s[2]}</p><div className="paper-stage-links">{s[3].map(id=>{const p=papers.find(p=>p.id===id);return <button key={id} onClick={()=>onOpen(id)} title={`${p.title} · ${p.date} · ${p.dateBasis}`}><span>{p.short}</span><small>{p.venue} {p.year}</small><span>↗</span></button>})}</div></li>)}</ol></DataComponent>})}</div></>;
-}
 export function Coverage({coverage,catalog,papers,cats,focus,setFocus,onOpen}){
  const q=(focus.query||'').trim().toLocaleLowerCase(),venue=focus.catalogVenue||'all',topic=focus.catalogTopic||'all';
  const rows=useMemo(()=>catalog.filter(r=>(venue==='all'||r.venue===venue)&&(topic==='all'||r.tags.includes(topic))&&(!q||r.title.toLocaleLowerCase().includes(q))),[catalog,q,venue,topic]);

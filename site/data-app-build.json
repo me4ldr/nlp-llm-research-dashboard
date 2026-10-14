@@ -3,13 +3,13 @@
   "appId": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "html": {
     "path": "index.html",
-    "bytes": 9749813,
-    "sha256": "9599e015b1517311bead6169bffa4586b4c3bc649c4e7dd96b1c1de1e7db61c7"
+    "bytes": 9801040,
+    "sha256": "ea8a9d0992936606b2eec56b157d161ceadd27a5710119c1b8857de17b7d358b"
   },
   "snapshot": {
-    "path": "snapshot.8542d3f16ad4f381094ca6175759c48f775fc332c26a083e9db6c986c84e3f06.json",
-    "bytes": 10901703,
-    "sha256": "8542d3f16ad4f381094ca6175759c48f775fc332c26a083e9db6c986c84e3f06"
+    "path": "snapshot.fd68966dcd9b24acf10d85ba1fac55ba4d8ed8212e8892e37a44e569b3e5f3fd.json",
+    "bytes": 10948664,
+    "sha256": "fd68966dcd9b24acf10d85ba1fac55ba4d8ed8212e8892e37a44e569b3e5f3fd"
   },
   "assets": [
     {

@@ -66,6 +66,24 @@ def validate(site=ROOT / "site"):
         assert len(m["technicalPoints"]) >= 3
         assert set(m["relatedPaperIds"]) <= paper_ids
         assert m["technicalSource"].startswith("https://")
+    history, branches = queries["nlpHistory"]["rows"], queries["evolution"]["rows"]
+    history_ids, branch_ids = {h["id"] for h in history}, {b["id"] for b in branches}
+    direction_ids = {c["id"] for c in queries["directions"]["rows"]}
+    assert len(history_ids) == len(history) and len(history) >= 10
+    assert len(branch_ids) == len(branches)
+    assert [h["order"] for h in history] == sorted(h["order"] for h in history)
+    for h in history:
+        assert set(h["paperIds"]) <= paper_ids
+        assert set(h["modelIds"]) <= {m["id"] for m in models}
+        assert set(h["branchIds"]) <= branch_ids
+        assert h["question"] and h["advance"] and h["limit"] and h["sources"]
+    core_tags = []
+    for b in branches:
+        assert set(b["originStageIds"]) <= history_ids
+        assert set(b["tags"]) <= direction_ids and set(b["coreTags"]) <= set(b["tags"])
+        assert all(set(s[3]) <= paper_ids for s in b["stages"])
+        core_tags.extend(b["coreTags"])
+    assert set(core_tags) == direction_ids and len(core_tags) == len(set(core_tags)), "Map grouping must cover every direction exactly once"
     raw = json.dumps(data, ensure_ascii=False)
     assert not re.search(r'/Users/|[?&](?:token|api_key|access_token)=|gh[pousr]_[A-Za-z0-9]{25,}', raw), "Private metadata in publication"
     publication = json.loads((site / "publication.json").read_text())

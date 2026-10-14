@@ -16,6 +16,10 @@
 7. 将核实完成的内容写回原 Data 项目，保留已授权的 DataAppChrome 顶部按钮定制和访问量组件，使用 `--source` 构建并检查受影响视图；原项目需要已有锁定的 Vite 依赖。完成后将 buildStatus 设为 complete。运行 prepare_site.py、validate_site.py，再提交 site、authored 和 runtime-overrides；不得上传 work 缓存、飞书页面或凭据。不要使用预编译构建覆盖用户定制的顶部按钮，也不要因纯界面调整而更新研究证据日期。
 8. 等待 GitHub Pages 工作流成功，并通过线上 publication.json、哈希数据与页面内容回读核实。源站失败保留原资料，记录具体失败；部署失败不得声称上线。没有实质变化不生成空提交。
 
+## 发展脉络数据
+
+保留 `nlpHistory` 的阶段 ID、出版日期精度及 `evolution.originStageIds`。地图的主线按学习脉络从早到晚，时间线页按事件从近到远，两者不要混同。`evolution.coreTags` 将 16 个细分方向分入 8 条分支；分支交集基于全库论文方向标签，阶段阅读清单来自 `stages`，两种集合不同。新增方向时同步维护分组与交叉引用。基础历史文献核读日期和近期研究快照日期分别保留。
+
 ## 首批官方入口
 
 - ACL Anthology：https://aclanthology.org/ （会议目录与最近论文 RSS；发布由会议协调）
