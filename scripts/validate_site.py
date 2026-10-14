@@ -2,18 +2,33 @@
 import hashlib
 import json
 import re
+from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP_ID = "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae"
 
 
+class Metadata(HTMLParser):
+    def __init__(self, html):
+        super().__init__()
+        self.values = {}
+        self.feed(html)
+
+    def handle_starttag(self, tag, attributes):
+        if tag == "meta":
+            attrs = dict(attributes)
+            if "name" in attrs:
+                self.values[attrs["name"]] = attrs.get("content")
+
+
 def validate(site=ROOT / "site"):
     manifest = json.loads((site / "data-app-build.json").read_text())
-    assert manifest["kind"] == "separate-data-v1", "Unexpected bundle format"
+    assert manifest["kind"] in {"separate-data-v1", "source-inline-v1"}, "Unexpected bundle format"
     allowed = {"index.html", "data-app-build.json", ".nojekyll", "publication.json"}
-    for key in ("html", "snapshot"):
-        spec = manifest[key]
+    specs = [(key, manifest[key]) for key in ("html", "snapshot")]
+    specs.extend(("asset", spec) for spec in manifest.get("assets", []))
+    for key, spec in specs:
         assert Path(spec["path"]).name == spec["path"], "Unsafe bundle path"
         path = site / spec["path"]
         assert not path.is_symlink(), "Symlinks are not publishable"
@@ -23,8 +38,18 @@ def validate(site=ROOT / "site"):
         allowed.add(spec["path"])
     assert {p.name for p in site.iterdir()} == allowed, "Unexpected publication files"
     html = (site / "index.html").read_text()
-    assert 'name="data-app-local-thread"' not in html, "Local thread metadata leaked"
-    assert f'content="{manifest["snapshot"]["path"]}"' in html, "Snapshot path must be relative"
+    metadata = Metadata(html).values
+    assert "data-app-local-thread" not in metadata, "Local thread metadata leaked"
+    assert "data-app-local-reference" not in metadata, "Local source metadata leaked"
+    if manifest["kind"] == "separate-data-v1":
+        assert f'content="{manifest["snapshot"]["path"]}"' in html, "Snapshot path must be relative"
+    else:
+        assert metadata.get("data-app-snapshot-sha256") == manifest["snapshot"]["sha256"], "Embedded snapshot digest differs from provenance sidecar"
+        assert {spec["path"] for spec in manifest["assets"]} == {"visits.html"}
+        counter = (site / "visits.html").read_text()
+        assert 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=ResearchDashboardCount' in counter
+        assert "result.page_pv" in counter and "result.site_pv" not in counter
+        assert "/nlp-llm-research-dashboard/visits.html" in counter
     assert not re.search(r'(?:src|href)=[\"\']/snapshot\.', html)
     data = json.loads((site / manifest["snapshot"]["path"]).read_text())
     assert data["id"] == APP_ID
@@ -54,4 +79,3 @@ def validate(site=ROOT / "site"):
 
 if __name__ == "__main__":
     validate()
-

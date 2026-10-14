@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://busuanzi.ibruce.info; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>看板累计访问量</title>
+  <style>
+    html,body{margin:0;background:transparent;color:#6b7280;font:13px/32px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:nowrap}
+    body{display:flex;align-items:center;justify-content:flex-end;gap:6px;padding:0 4px;box-sizing:border-box}
+    svg{width:15px;height:15px;flex-shrink:0}strong{color:#374151;font-weight:600;font-variant-numeric:tabular-nums}
+    @media(prefers-color-scheme:dark){body{color:#a8adb7}strong{color:#e5e7eb}}
+  </style>
+</head>
+<body title="本看板累计打开次数（PV），从接入起统计，非独立访客数。由不蒜子提供统计。">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+  <span>访问量</span><strong id="count" role="status" aria-live="polite">加载中</strong>
+  <script>
+    (() => {
+      const count = document.getElementById('count');
+      // This dedicated, fixed URL makes every dashboard tab share one page-PV key.
+      // No dashboard search/filter state is sent to the counter provider.
+      if (location.hostname !== 'me4ldr.github.io' || location.pathname !== '/nlp-llm-research-dashboard/visits.html' || location.search || location.hash) {
+        count.textContent = '线上统计'; return;
+      }
+      let finished = false;
+      const script = document.createElement('script');
+      const timer = setTimeout(fail, 10000);
+      function fail() {
+        if (finished) return;
+        finished = true; clearTimeout(timer); count.textContent = '暂不可用'; script.remove();
+      }
+      window.ResearchDashboardCount = result => {
+        if (finished) return;
+        const value = result && result.page_pv;
+        if (!Number.isSafeInteger(value) || value < 0) { fail(); return; }
+        finished = true; clearTimeout(timer);
+        count.textContent = value.toLocaleString('zh-CN');
+        script.remove();
+      };
+      script.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=ResearchDashboardCount';
+      script.referrerPolicy = 'no-referrer-when-downgrade';
+      script.onerror = fail;
+      document.head.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
