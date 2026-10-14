@@ -1,0 +1,29 @@
+# 每日内容更新
+
+应用标识：`dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae`。
+仓库：`me4ldr/nlp-llm-research-dashboard`。
+网页：`https://me4ldr.github.io/nlp-llm-research-dashboard/`。
+计划时间：每天北京时间 09:30。内容由 Codex 对话定时任务整理；部署由本仓库 GitHub Actions 执行。
+
+## 每次运行
+
+1. 先读取 GitHub 默认分支和当前数据快照、上次检查记录，保留原应用 ID、布局、分类、阅读路线和跨条目关联。检查是否有他人新提交；出现冲突时处理冲突，不强推。
+2. 从上次成功检查向前重叠 7 天查找新资料，避免索引延迟造成遗漏。超大会议批次先同步目录，逐步整理重点，明确未读范围。年度滚动时加入新一届真实官网，不凭路径猜测论文集存在。
+3. 检查 ACL、EACL、EMNLP、NAACL、ICLR、ICML、NeurIPS、COLM 的官方论文集或录用列表，以及 arXiv 的 cs.CL、cs.AI、cs.LG 中与 NLP / LLM 有关的新作。arXiv 未核实录用前不能标成顶会论文；优先更新现有会议范围，再补值得跟踪的预印本。
+4. 检查已收录模型厂商的官方发布说明、报告、模型卡和定价页；新增型号需核实发布时间及具体版本。参数、上下文、开源许可、模态和价格未披露时写未知，不猜测。价格变化标明现价和依据日期，不能覆盖历史价却保留旧日期。
+5. 每篇整理问题、方法、证据、局限、值得读的原因、交叉方向。仅读摘要就标摘要级；技术结论查原文相关段落。每个模型补核心技术点、本代变化、披露程度和原始来源，链接到相关论文，区分继承方法与本代创新。
+6. 依稳定 URL / DOI / arXiv ID / 规范标题去重。保持旧 ID，更新查询来源和覆盖数量，检查全部交叉引用。发布和会议日期分别保留精度，未知日/月不得补造。
+7. 将核实完成的内容写回原 Data 项目，构建并检查受影响视图。完成后将 buildStatus 设为 complete。运行 prepare_site.py、validate_site.py，再提交 site 和 authored；不得上传 work 缓存、飞书页面或凭据。
+8. 等待 GitHub Pages 工作流成功，并通过线上 publication.json、哈希数据与页面内容回读核实。源站失败保留原资料，记录具体失败；部署失败不得声称上线。没有实质变化不生成空提交。
+
+## 首批官方入口
+
+- ACL Anthology：https://aclanthology.org/ （会议目录与最近论文 RSS；发布由会议协调）
+- ICLR：https://proceedings.iclr.cc/
+- ICML / PMLR：https://proceedings.mlr.press/
+- NeurIPS：https://proceedings.neurips.cc/ 与 https://neurips.cc/
+- COLM：https://colmweb.org/
+- arXiv：https://arxiv.org/；公告说明：https://info.arxiv.org/help/availability.html
+- 模型来源：以当前数据 modelReports 的 sources、technicalSource、reportUrl 为起点，使用已验证的官方发布入口发现新版本。
+
+尚未有正式源佐证的新条目放入本地候选文件，并保留检索日期和未解决问题。待核候选不计入已整理论文数，不自动获得阅读等级或技术结论。
