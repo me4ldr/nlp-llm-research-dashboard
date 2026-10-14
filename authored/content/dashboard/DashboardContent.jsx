@@ -3,11 +3,9 @@ import {useDataApp,useDashboardTabs,DataComponent,Section,SectionHeader,Filters,
 import {tierLabels,filterPapers,overlaps,shortCategory,readingRoutes} from './model.js';
 import './dashboard.css';
 import {Coverage,DateLabel} from './HistoryViews.jsx';
-import {Evolution} from './EvolutionPage.jsx';
 import {UnifiedTimeline} from './UnifiedTimeline.jsx';
 const tabs=[
- {id:'timeline',label:'时间线',aliases:['models'],filterIds:[],focusFields:['corpus','topic','dateMode','query','paper','entryType','year','month','vendor','openness','modality','timelineView','layout','model','compare']},
- {id:'evolution',label:'发展脉络',aliases:['connections'],filterIds:[],focusFields:['stage','branch','category','peer','order','paper','nodeType','panel','peerBranch']},
+ {id:'timeline',label:'时间线',aliases:['models','evolution','connections'],filterIds:[],focusFields:['corpus','topic','dateMode','query','paper','entryType','year','month','vendor','openness','modality','timelineView','layout','model','compare','topics','highlights','chronology']},
  {id:'library',label:'论文库',filterIds:['venue','tier'],focusFields:['topics','query','status','sort','paper','layout','corpus']},
  {id:'directions',label:'方向全景',filterIds:[],focusFields:['paper']},
  {id:'routes',label:'阅读路线',filterIds:[],focusFields:['paper']},
@@ -54,9 +52,8 @@ export function DashboardContent({initialView={}}){
  const exportRows=()=>{const blob=new Blob([JSON.stringify({title:shell.snapshot.title,cutoff:'2026-10-13',scope:opts,papers:filtered},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='nlp-2026-papers.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
  return <article className="paper-dashboard">
  {shell.canReturnFromExploration&&<button className="paper-text-button paper-return" onClick={shell.returnFromExploration}>← 返回上一个视图</button>}
- {tab!=='timeline'&&tab!=='evolution'&&<div className="paper-scope"><span><b>{papers.length}</b> 篇重点论文 <i/> <b>{cats.length}</b> 个交叉方向</span><span>{papers.filter(p=>p.cohort==='2026 会议').length} 篇 2026 会议 + {papers.filter(p=>p.cohort==='历史背景').length} 篇历史背景 · 截至 2026-10-13</span><span className="paper-progress">已读 {doneCount} / {papers.length}</span></div>}
- {tab==='timeline'&&<UnifiedTimeline papers={papers} models={shell.queries.modelReports.rows} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open} catalogCount={shell.queries.catalog.rows.length} onCoverage={()=>shell.exploreDashboard('coverage',{focus:{catalogVenue:'all',catalogTopic:'all',query:''}})}/>}
- {tab==='evolution'&&<Evolution history={shell.queries.nlpHistory.rows} branches={shell.queries.evolution.rows} papers={papers} models={shell.queries.modelReports.rows} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open} onExplore={explore} onModel={model=>shell.exploreDashboard('timeline',{focus:{model,paper:'',timelineView:'timeline'}})}/>}
+ {tab!=='timeline'&&<div className="paper-scope"><span><b>{papers.length}</b> 篇重点论文 <i/> <b>{cats.length}</b> 个交叉方向</span><span>{papers.filter(p=>p.cohort==='2026 会议').length} 篇 2026 会议 + {papers.filter(p=>p.cohort==='历史背景').length} 篇历史背景 · 截至 2026-10-13</span><span className="paper-progress">已读 {doneCount} / {papers.length}</span></div>}
+ {tab==='timeline'&&<UnifiedTimeline history={shell.queries.nlpHistory.rows} papers={papers} models={shell.queries.modelReports.rows} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open} catalogCount={shell.queries.catalog.rows.length} onCoverage={()=>shell.exploreDashboard('coverage',{focus:{catalogVenue:'all',catalogTopic:'all',query:''}})}/>}
  {tab==='coverage'&&<Coverage coverage={shell.queries.coverage.rows} catalog={shell.queries.catalog.rows} papers={papers} cats={cats} focus={focus} setFocus={updateFocus} onOpen={open}/>}
  {tab==='library'&&<>
  <Filters filters={shell.snapshot.filters} queries={shell.queries} values={shell.filters} onChange={shell.setFilter} showClear={false} ariaLabel="论文筛选"><label className="paper-search"><span aria-hidden="true">⌕</span><input aria-label="搜索论文" type="search" placeholder="搜索标题、问题、方法或关键词…" value={opts.query} onChange={e=>updateFocus({query:e.target.value})}/></label></Filters>

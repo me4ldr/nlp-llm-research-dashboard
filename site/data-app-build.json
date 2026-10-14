@@ -3,8 +3,8 @@
   "appId": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "html": {
     "path": "index.html",
-    "bytes": 9801040,
-    "sha256": "ea8a9d0992936606b2eec56b157d161ceadd27a5710119c1b8857de17b7d358b"
+    "bytes": 9784490,
+    "sha256": "96120387ed48aba3f4f5b8dde2ae99adf17963c7c4b9c1bf9c3d8afb6849e36a"
   },
   "snapshot": {
     "path": "snapshot.fd68966dcd9b24acf10d85ba1fac55ba4d8ed8212e8892e37a44e569b3e5f3fd.json",
