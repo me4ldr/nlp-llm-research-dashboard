@@ -1,17 +1,19 @@
+import {matchesInstitution,institutionSearchText} from './affiliations.js';
 import {modelSearchText} from './ModelTechnology.jsx';
 import {matchesCorpus} from './model.js';
 
 export function timelineEvents({papers,models,history,filters}) {
- const {type,query,topics,corpus,dateMode,vendor,openness,modality,highlights,chronology}=filters;
+ const {type,query,topics,corpus,dateMode,vendor,openness,modality,highlights,chronology,institution,institutionType}=filters;
+ const q=(query||'').trim().toLocaleLowerCase();
  const paperMilestones=new Set(history.flatMap(s=>s.paperIds));
  const modelMilestones=new Set(history.flatMap(s=>s.modelIds||[]));
  const pr=type==='model'?[]:papers.filter(p=>
-  (!query||[p.title,p.zh,p.short,p.summary,p.categories,p.venue].join(' ').toLocaleLowerCase().includes(query))&&
-  topics.every(t=>p.tags.includes(t))&&matchesCorpus(p,corpus)&&
+  (!q||[p.title,p.zh,p.short,p.summary,p.categories,p.venue,institutionSearchText(p)].join(' ').toLocaleLowerCase().includes(q))&&
+  topics.every(t=>p.tags.includes(t))&&matchesCorpus(p,corpus)&&matchesInstitution(p,institution,institutionType)&&
   (dateMode==='all'||p.firstPublicDate)&&(highlights==='all'||paperMilestones.has(p.id))
  ).map(p=>({id:`paper-${p.id}`,kind:'paper',date:p.firstPublicDate||p.date,title:p.zh,record:p,milestone:paperMilestones.has(p.id)}));
  const mr=type==='paper'?[]:models.filter(m=>
-  (!query||modelSearchText(m).includes(query))&&topics.every(t=>(m.technicalTopics||[]).includes(t))&&
+  (!q||modelSearchText(m).includes(q))&&topics.every(t=>(m.technicalTopics||[]).includes(t))&&
   (vendor==='all'||m.vendor===vendor)&&(openness==='all'||m.openness===openness)&&(modality==='all'||m.multimodal===modality)&&
   (highlights==='all'||modelMilestones.has(m.id))
  ).map(m=>({id:`model-${m.id}`,kind:'model',date:m.releaseDate,title:m.name,record:m,milestone:modelMilestones.has(m.id)}));

@@ -16,6 +16,12 @@
 7. 将核实完成的内容写回原 Data 项目，保留已授权的 DataAppChrome 顶部按钮定制和访问量组件，使用 `--source` 构建并检查受影响视图；原项目需要已有锁定的 Vite 依赖。完成后将 buildStatus 设为 complete。运行 prepare_site.py、validate_site.py，再提交 site、authored 和 runtime-overrides；不得上传 work 缓存、飞书页面或凭据。不要使用预编译构建覆盖用户定制的顶部按钮，也不要因纯界面调整而更新研究证据日期。
 8. 等待 GitHub Pages 工作流成功，并通过线上 publication.json、哈希数据与页面内容回读核实。源站失败保留原资料，记录具体失败；部署失败不得声称上线。没有实质变化不生成空提交。
 
+## 论文作者单位
+
+维护每篇重点论文的 `institutions`（id/name/nameEn/type）、`institutionLabels`、`affiliationStatus`、`affiliationSources`、`affiliationsCheckedAt` 与核验成功时的 `affiliationsVerifiedAt`。单位必须查所引版本的作者署名、脚注或官方研究历史资料；按研究开展时的归属记录，不从作者姓名、邮箱、当前任职、转载站点或致谢资助方推断。院系／实验室归并到所属大学或企业，沿用已有机构 ID；联合署名保留所有已确认单位，不把第一项称为牵头机构。同名不明机构不能强行合并。
+
+`type` 为 university/company/research/other；性质未确认和独立研究者列 other，并在 affiliationNote 说明。无法确认单位时 institutions 为空、status 为 pending，页面显示待核实，不能解释为无所属单位。仅核对单位不更新论文阅读深度、技术证据核验日、历史价格日期或研究刷新记录。同步 `affiliationEnrichment` 的覆盖数量，会议题目索引不自动继承作者单位。论文库与时间线保留大学／企业、校企合作和具体机构筛选，中英文名称可搜索，详情保留原始来源。
+
 ## 发展脉络数据
 
 保留 `nlpHistory` 的阶段 ID、论文及模型引用和出版日期精度。里程碑从 `nlpHistory.paperIds` 和 `modelIds` 去重生成，已合并进统一时间线。页面默认从近到远，也可切换从早到晚；按论文首次公开／出版日期和模型发布日期分别排序。只有年份的记录必须放在该年“日期待核”组，不推断月日。历史阶段有重叠，不能按阶段归属打乱日期。

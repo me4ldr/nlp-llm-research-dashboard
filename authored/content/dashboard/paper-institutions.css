@@ -1,0 +1,18 @@
+:is(.paper-dashboard,.paper-dialog) .paper-institutions{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:12px;line-height:1.45;min-width:0}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-label{color:var(--secondary);margin-right:2px;white-space:nowrap}
+:is(.paper-dashboard,.paper-dialog) .paper-institution{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:4px 8px;background:var(--muted);color:var(--text);border:1px solid var(--border);border-radius:6px;text-align:left;font:inherit;overflow-wrap:anywhere}
+:is(.paper-dashboard,.paper-dialog) button.paper-institution{cursor:pointer}
+:is(.paper-dashboard,.paper-dialog) button.paper-institution:hover{border-color:var(--secondary)}
+:is(.paper-dashboard,.paper-dialog) .paper-institution small{flex:none;color:var(--secondary);font-size:10px;padding-right:6px;border-right:1px solid var(--border)}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-more{font:inherit;background:none;border:0;color:var(--secondary);cursor:pointer;padding:5px}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-unknown{color:var(--secondary);font-size:12px}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-detail{margin:18px 0;padding:16px;border:1px solid var(--border);border-radius:10px}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-detail h3{margin:0 0 10px;font-size:15px}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-detail p{margin:6px 0;color:var(--secondary);font-size:12px;line-height:1.6}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-evidence{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:12px;color:var(--secondary);margin-top:10px}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-coverage{font-size:12px;color:var(--secondary)}
+:is(.paper-dashboard,.paper-dialog) .paper-library-corpus{flex-wrap:wrap}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-filterbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 14px;min-width:0}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-filterbar>*{max-width:100%}
+:is(.paper-dashboard,.paper-dialog) .paper-institution-filterbar .paper-institution-coverage{margin-left:auto}
+@media(max-width:640px){:is(.paper-dashboard,.paper-dialog) .paper-institution-filterbar .paper-institution-coverage{margin-left:0;flex-basis:100%}:is(.paper-dashboard,.paper-dialog) .paper-institution-detail{padding:12px}}

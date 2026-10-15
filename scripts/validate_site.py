@@ -62,6 +62,27 @@ def validate(site=ROOT / "site"):
     for p in papers:
         assert p["summary"] and p["why"] and p["limit"]
         assert p["url"].startswith("https://")
+    institutions = {}
+    for p in papers:
+        assert p["affiliationStatus"] in {"verified", "pending", "partial"}
+        units = p["institutions"]
+        assert len({i["id"] for i in units}) == len(units), "Duplicate institution within a paper"
+        assert p["institutionLabels"] == (" · ".join(i["name"] for i in units) or "待核实")
+        if p["affiliationStatus"] == "verified":
+            assert units and p["affiliationSources"] and p["affiliationsVerifiedAt"]
+        else:
+            assert p["affiliationNote"], "Unknown affiliations need an explanation"
+        for source in p["affiliationSources"]:
+            assert source["url"].startswith("https://") and source["label"]
+        for unit in units:
+            assert unit["type"] in {"university", "company", "research", "other"}
+            assert unit["id"] and unit["name"] and unit["nameEn"]
+            assert institutions.setdefault(unit["id"], unit) == unit, "Institution ID has conflicting definitions"
+    verified = sum(p["affiliationStatus"] == "verified" for p in papers)
+    enrichment = data["affiliationEnrichment"]
+    assert enrichment["verifiedPapers"] == verified
+    assert enrichment["pendingPapers"] == len(papers) - verified
+    assert enrichment["institutionCount"] == len(institutions)
     for m in models:
         assert len(m["technicalPoints"]) >= 3
         assert set(m["relatedPaperIds"]) <= paper_ids
