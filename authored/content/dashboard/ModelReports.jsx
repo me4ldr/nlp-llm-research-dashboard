@@ -8,7 +8,7 @@ function Price({m,detail=false}){return <div className="model-price"><strong>{m.
 function Parameter({m}){return <><strong>{m.parameterLabel}</strong><small>激活：{m.activeLabel}</small></>}
 function Badges({m}){return <div className="model-badges"><span>{m.multimodal}</span><span className={m.openness==='闭源'?'':'open'}>{m.openness}</span></div>}
 const fields=[['厂商',m=>m.vendor],['发布事件',m=>`${m.releaseDate} · ${m.dateBasis}`],['总参数',m=>m.parameterLabel],['激活参数',m=>m.activeLabel],['架构',m=>m.architecture],['上下文（tokens）',m=>m.context],['输入模态',m=>m.inputModalities],['输出模态',m=>m.outputModalities],['开放程度',m=>m.openness],['许可',m=>m.license]];
-export function ModelReports({models,focus,setFocus,mode="full",papers=[],onOpenPaper}){
+export function ModelReports({models,focus,setFocus,mode="full",papers=[],onOpenPaper,checkedAt}){
  const vendor=focus.vendor||ALL,year=focus.year||ALL,open=focus.openness||ALL,modality=focus.modality||ALL,q=(focus.query||'').trim().toLowerCase();
  const vendors=[...new Set(models.map(m=>m.vendor))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
  const years=[...new Set(models.map(m=>m.year))].sort().reverse();
@@ -18,9 +18,9 @@ export function ModelReports({models,focus,setFocus,mode="full",papers=[],onOpen
  const comparison=selectedIds.map(id=>models.find(m=>m.id===id));
  const pick=id=>setFocus({compare:selectedIds.includes(id)?selectedIds.filter(x=>x!==id).join(','):selectedIds.length<4?[...selectedIds,id].join(','):selectedIds.join(',')});
  const reset=()=>setFocus({vendor:ALL,year:ALL,openness:ALL,modality:ALL,query:''});
- const exportRows=()=>{const blob=new Blob([JSON.stringify({title:'大模型技术报告',checkedAt:'2026-10-13',scope:{vendor,year,openness:open,modality,query:q},models:rows},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='llm-technical-reports.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+ const exportRows=()=>{const blob=new Blob([JSON.stringify({title:'大模型技术报告',checkedAt,scope:{vendor,year,openness:open,modality,query:q},models:rows},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='llm-technical-reports.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
  return <div className="model-reports">
- {mode==='full'&&<><div className="paper-scope"><span><b>{models.length}</b> 个关键型号 <i/><b>{vendors.length}</b> 家研发机构</span><span>2022-11-30 起 · 核验截至 2026-10-13</span><span className="paper-progress">发布日期 ↓ 从近到远</span></div>
+ {mode==='full'&&<><div className="paper-scope"><span><b>{models.length}</b> 个关键型号 <i/><b>{vendors.length}</b> 家研发机构</span><span>2022-11-30 起 · 本次检查 {checkedAt}；逐项核验日期见详情</span><span className="paper-progress">发布日期 ↓ 从近到远</span></div>
  <div className="paper-view-intro model-intro"><div><span className="model-eyebrow">MODEL RELEASE ATLAS / 2022—2026</span><h2>从 ChatGPT，读到这一代大模型</h2><p>按厂商回看代际变化，或选中最多 4 个型号并排比较。覆盖主流通用语言与多模态模型的关键版本，不穷举所有尺寸、微调版和量化版。</p></div><div className="model-intro-note">B = 十亿参数，T = 万亿参数。<br/>“未公开”不猜测；“未核实”保留缺口。</div></div>
  </>}
  {mode!=='tools'&&<><div className="model-controls" aria-label="模型筛选">

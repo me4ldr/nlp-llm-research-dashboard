@@ -1,4 +1,5 @@
 import {modelSearchText} from './ModelTechnology.jsx';
+import {matchesCorpus} from './model.js';
 
 export function timelineEvents({papers,models,history,filters}) {
  const {type,query,topics,corpus,dateMode,vendor,openness,modality,highlights,chronology}=filters;
@@ -6,7 +7,7 @@ export function timelineEvents({papers,models,history,filters}) {
  const modelMilestones=new Set(history.flatMap(s=>s.modelIds||[]));
  const pr=type==='model'?[]:papers.filter(p=>
   (!query||[p.title,p.zh,p.short,p.summary,p.categories,p.venue].join(' ').toLocaleLowerCase().includes(query))&&
-  topics.every(t=>p.tags.includes(t))&&(corpus==='all'||p.cohort===(corpus==='current'?'2026 会议':'历史背景'))&&
+  topics.every(t=>p.tags.includes(t))&&matchesCorpus(p,corpus)&&
   (dateMode==='all'||p.firstPublicDate)&&(highlights==='all'||paperMilestones.has(p.id))
  ).map(p=>({id:`paper-${p.id}`,kind:'paper',date:p.firstPublicDate||p.date,title:p.zh,record:p,milestone:paperMilestones.has(p.id)}));
  const mr=type==='paper'?[]:models.filter(m=>

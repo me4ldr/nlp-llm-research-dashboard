@@ -1,7 +1,8 @@
 export const tierLabels = {S:'优先建立全景','A+':'重点拓展',A:'按方向选读'};
+export function matchesCorpus(paper,corpus='all') { return corpus==='all'||paper.cohort===({current:'2026 会议',preprint:'2026 预印本',history:'历史背景'}[corpus]); }
 export function filterPapers(rows, {query='',topics=[],venue='all',tier='all',status='all',sort='date',corpus='all'}={}, marks={}) {
  const q=query.trim().toLocaleLowerCase();
- const filtered=rows.filter(p=>(corpus==='all'||p.cohort===(corpus==='current'?'2026 会议':'历史背景'))&&(venue==='all'||p.venue===venue)&&(tier==='all'||p.tier===tier)&&topics.every(t=>p.tags.includes(t))&&(status==='all'||(marks[p.id]||'unread')===status)&&(!q||[p.title,p.zh,p.summary,p.categories,p.award,p.venue].join(' ').toLocaleLowerCase().includes(q)));
+ const filtered=rows.filter(p=>matchesCorpus(p,corpus)&&(venue==='all'||p.venue===venue)&&(tier==='all'||p.tier===tier)&&topics.every(t=>p.tags.includes(t))&&(status==='all'||(marks[p.id]||'unread')===status)&&(!q||[p.title,p.zh,p.summary,p.categories,p.award,p.venue].join(' ').toLocaleLowerCase().includes(q)));
  return filtered.sort(sort==='date'?(a,b)=>b.date.localeCompare(a.date)||a.rank-b.rank:sort==='title'?(a,b)=>a.title.localeCompare(b.title):sort==='venue'?(a,b)=>a.venue.localeCompare(b.venue)||a.rank-b.rank:(a,b)=>a.rank-b.rank);
 }
 export function overlaps(rows, id) { const selected=rows.find(p=>p.id===id); if(!selected)return [];return rows.filter(p=>p.id!==id).map(p=>({...p,shared:p.tags.filter(t=>selected.tags.includes(t))})).filter(p=>p.shared.length).sort((a,b)=>b.shared.length-a.shared.length||a.rank-b.rank); }
