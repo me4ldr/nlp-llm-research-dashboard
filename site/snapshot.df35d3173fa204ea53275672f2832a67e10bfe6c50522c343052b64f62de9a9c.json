@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-10-16T02:09:29.294635+00:00",
+  "generatedAt": "2026-10-19T01:28:29.055394+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -10443,11 +10443,685 @@
           "affiliationsCheckedAt": "2026-10-16",
           "affiliationsVerifiedAt": "2026-10-16",
           "affiliationNote": "按 v1 作者署名／单位脚注整理；联合署名次序不表示牵头或贡献排名。北京中关村学院署名已确认；组织性质本次未另核，暂列其他。"
+        },
+        {
+          "id": "abridgekv",
+          "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+          "zh": "把长推理压进可学习的暂停 token 缓存",
+          "titleZh": "把长推理压进可学习的暂停 token 缓存",
+          "short": "AbridgeKV",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 157,
+          "tags": [
+            "context",
+            "eff",
+            "reason",
+            "post"
+          ],
+          "url": "https://arxiv.org/abs/2610.20641",
+          "summary": "每生成 512 个 token，就用可学习的暂停 token 编码这一块内容，再释放原 KV。摘要位置留在原块内部，并按各层的实测重要性分配缓存。Qwen3-4B-Base 同数据 SFT 对照中，保留四分之一持久缓存，在 446 道数学题上得到 43.0% avg@8，完整缓存为 43.8%；定制 vLLM 的饱和 H100 实验报告约 3.2 倍完成速度。",
+          "why": "将缓存压缩、长思维链和训练时适应联系起来，也检查压缩后是否因为生成变长而抵消省下的内存。",
+          "limit": "证据集中于一个 4B 基座和数学 SFT，未直接验证已完成 RL 的模型或多模态 Agent。3.2 倍是特定饱和服务设置，batch=1 吞吐增益约 1.05 倍；压缩比例固定，部分淘汰基线仅测 60 题子集。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 2–4 节方法、训练与服务实验；Limitations）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.20641v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：PagedAttention / vLLM",
+              "url": "https://arxiv.org/abs/2309.06180"
+            },
+            {
+              "label": "关联阅读（概念对照）：FreqKV",
+              "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ac4c13a5c6ec1bba68c9ce1d908321d2-Abstract-Conference.html"
+            }
+          ],
+          "categories": "长上下文 · 效率与优化 · 推理与验证 · 后训练与对齐",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-07",
+          "firstPublicDate": "2026-10-07",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.20641",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "princeton",
+              "name": "普林斯顿大学",
+              "nameEn": "Princeton University",
+              "type": "university"
+            },
+            {
+              "id": "microsoft",
+              "name": "微软",
+              "nameEn": "Microsoft",
+              "type": "company"
+            }
+          ],
+          "institutionLabels": "普林斯顿大学 · 微软",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.20641v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。Microsoft Research 归并微软。首版提交日为 10 月 7 日，RSS 在 10 月 16 日公告；保留首版日期，不按发现日改写。",
+          "relatedPaperIds": [
+            "paged",
+            "freq"
+          ]
+        },
+        {
+          "id": "rlvr-decontam-cost",
+          "title": "What Should We Remove? Evaluating the Reliability and Costs of RLVR Data Decontamination",
+          "zh": "去污染也会误删：检验 RLVR 数据清洗策略的可靠性",
+          "titleZh": "去污染也会误删：检验 RLVR 数据清洗策略的可靠性",
+          "short": "RLVR 去污染成本",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 158,
+          "tags": [
+            "data",
+            "post",
+            "eval"
+          ],
+          "url": "https://arxiv.org/abs/2610.21229",
+          "summary": "对 16 个数学 RLVR 语料、六个基准，使用 594 对双人盲审标签和 80 个训练样本的全部候选匹配，比较八种清洗规则。余弦阈值 0.80 在抽样删除的 59 项中误删 52 项；已有裁判复核规则在留出集的已判定精确率为 98.1%、候选集内召回为 98.2%。贡献是审计规则及误删成本，而非新检测器。",
+          "why": "把“清掉多少污染”推进到“误删多少有用数据”，适合评估训练集质量和基准可信度。",
+          "limit": "52/59 是抽样观察，不能外推为总体误删率；召回只在候选生成器找到的匹配内计算。裁判规则只删了六个抽样项，另有一个未定，零确认误删不等于零风险；未重训模型验证清洗后的能力收益。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–5 节样本、盲审与规则对照；第 7 节局限）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.21229v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：Training Quality",
+              "url": "https://neurips.cc/virtual/2026/poster/150721"
+            },
+            {
+              "label": "关联阅读（概念对照）：RLVR",
+              "url": "https://arxiv.org/abs/2602.15515"
+            }
+          ],
+          "categories": "预训练与数据 · 后训练与对齐 · 评测与可靠性",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.21229",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "independent",
+              "name": "独立研究者",
+              "nameEn": "Independent Researcher",
+              "type": "other"
+            }
+          ],
+          "institutionLabels": "独立研究者",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.21229v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "trainquality",
+            "obfuscation"
+          ]
+        },
+        {
+          "id": "tokenizer-metrics-audit",
+          "title": "No Single Tokenizer Feature Reliably Predicts Downstream Language Model Performance",
+          "zh": "分词器的单一内在指标，难以稳定预测下游能力",
+          "titleZh": "分词器的单一内在指标，难以稳定预测下游能力",
+          "short": "分词指标跨语种审计",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 159,
+          "tags": [
+            "language",
+            "data",
+            "eval",
+            "mechanism"
+          ],
+          "url": "https://arxiv.org/abs/2610.21679",
+          "summary": "比较三组约 200 个模型、九种语言、48 个下游基准与 29 个分词指标。分词器确实影响任务表现，但指标相关性的大小甚至方向，会随语言、任务和模型组改变；控制参数量后的额外解释力很小。新提出的字符凝聚与边界指标也只在部分设置有效，不能单凭压缩率或形态边界选出普遍最优分词器。",
+          "why": "连接语言学、预训练设计和评测，帮助识别只在单语、单模型实验中成立的经验结论。",
+          "limit": "模型最大约 1B，部分任务接近随机水平；不同模型组在词表、训练数据等方面的控制程度不同。各语言基准和标注资源不均；结论不表示压缩率对训练成本或多语公平性没有价值。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 4 节设置、第 5–9 节相关性与讨论；Limitations）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.21679v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：未完成体悖论",
+              "url": "https://aclanthology.org/2026.acl-long.689.pdf"
+            },
+            {
+              "label": "关联阅读（概念对照）：PolyGloss",
+              "url": "https://aclanthology.org/2026.acl-long.1657/"
+            }
+          ],
+          "categories": "语言学与多语言 · 预训练与数据 · 评测与可靠性 · 能力机理与理论",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.21679",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "eleutherai",
+              "name": "EleutherAI",
+              "nameEn": "EleutherAI",
+              "type": "other"
+            },
+            {
+              "id": "basel",
+              "name": "巴塞尔大学",
+              "nameEn": "University of Basel",
+              "type": "university"
+            },
+            {
+              "id": "ntust",
+              "name": "台湾科技大学",
+              "nameEn": "National Taiwan University of Science and Technology",
+              "type": "university"
+            },
+            {
+              "id": "academia-sinica",
+              "name": "中央研究院",
+              "nameEn": "Academia Sinica",
+              "type": "research"
+            },
+            {
+              "id": "rochester",
+              "name": "罗切斯特大学",
+              "nameEn": "University of Rochester",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "EleutherAI · 巴塞尔大学 · 台湾科技大学 · 中央研究院 · 罗切斯特大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.21679v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。EleutherAI 署名已确认，本次未另核组织性质，暂列其他；未把算力提供方列为作者单位。",
+          "relatedPaperIds": [
+            "imperfect",
+            "poly"
+          ]
+        },
+        {
+          "id": "contextlift",
+          "title": "ContextLift: Breaking the Spurious Correlation Behind Conditional Emergent Misalignment",
+          "zh": "用反事实上下文打破微调后的条件性失调",
+          "titleZh": "用反事实上下文打破微调后的条件性失调",
+          "short": "ContextLift",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 160,
+          "tags": [
+            "safety",
+            "post",
+            "data",
+            "mechanism"
+          ],
+          "url": "https://arxiv.org/abs/2610.21633",
+          "summary": "从微调提示中提取情境句，附到一半通用安全样本的复制件上，保持原对齐答案、样本量和训练预算，使“领域情境”不再只对应不当回答。在 Qwen2.5-7B 的三类不当建议微调中，带领域线索的广泛失调率由 18.9–58.2% 降到 2.6–12.8%；消融表明仅重复安全样本无效。",
+          "why": "用数据干预解释安全微调为什么表面有效、遇到特定语境却失效，可与虚假相关及泛化机制一起读。",
+          "limit": "主要是单模型、LoRA、固定混入比例和单一 LLM 裁判。方法仍保留被直接询问时的狭窄不当建议，不代表已让模型全面安全；不覆盖未出现在训练提示中的触发方式，复制情境也需保留原数据的隐私约束。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 2–3 节方法和对照实验；Limitations 与伦理说明）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.21633v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：RLVR",
+              "url": "https://arxiv.org/abs/2602.15515"
+            }
+          ],
+          "categories": "安全、隐私与遗忘 · 后训练与对齐 · 预训练与数据 · 能力机理与理论",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.21633",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "bonn",
+              "name": "波恩大学",
+              "nameEn": "University of Bonn",
+              "type": "university"
+            },
+            {
+              "id": "lamarr",
+              "name": "Lamarr Institute",
+              "nameEn": "Lamarr Institute",
+              "type": "research"
+            }
+          ],
+          "institutionLabels": "波恩大学 · Lamarr Institute",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.21633v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。Bonn-Aachen International Center for Information Technology 归并波恩大学；Lamarr 保留联合署名。",
+          "relatedPaperIds": [
+            "obfuscation"
+          ]
+        },
+        {
+          "id": "retrieved-not-read",
+          "title": "Retrieved but Not Read: Understanding Why Search-Augmented LLMs Fail to Use Available Evidence",
+          "zh": "搜到了却没读：检索证据为何没有进入最终答案",
+          "titleZh": "搜到了却没读：检索证据为何没有进入最终答案",
+          "short": "Retrieved but Not Read",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 161,
+          "tags": [
+            "rag",
+            "eval",
+            "mechanism",
+            "agents"
+          ],
+          "url": "https://arxiv.org/abs/2610.21731",
+          "summary": "用 225 个发生变化的时效事实，比较实际网页搜索和固定检索菜单；固定设置确保正确页面可访问。不同模型只看摘要、不打开页面的比例为 2.6–76.0%。直接提供证据能减少旧答案，但不能消除；层间读出显示新证据可能一度占优，最终又被旧值压过。",
+          "why": "把检索可达性、实际阅读和最终采纳分开，补充只统计召回率的 RAG 评测。",
+          "limit": "只有一个闭源模型；固定菜单会补入正确页面，不等于自然检索分布。准确率排除弃答，要求固定答案行也影响行为；阅读深度与错误率是关联，体育领域的层间探针并非因果干预。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–5 节设置、检索干预和层间分析；Limitations）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.21731v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：RAG",
+              "url": "https://arxiv.org/abs/2005.11401"
+            },
+            {
+              "label": "关联阅读（概念对照）：Lost in the Middle",
+              "url": "https://arxiv.org/abs/2307.03172"
+            }
+          ],
+          "categories": "知识检索与 RAG · 评测与可靠性 · 能力机理与理论 · Agent 与工具",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.21731",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "imperial",
+              "name": "帝国理工学院",
+              "nameEn": "Imperial College London",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "帝国理工学院",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.21731v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。按论文注明的研究开展时归属整理。",
+          "relatedPaperIds": [
+            "rag2020",
+            "lostmiddle"
+          ]
+        },
+        {
+          "id": "weave-code-evolution",
+          "title": "WEAVE: Weaving Real-World Code Evolution into Dependency-Structured Tasks for Benchmarking and Training Code Agents",
+          "zh": "把真实代码演进组织成有依赖的多 PR 任务",
+          "titleZh": "把真实代码演进组织成有依赖的多 PR 任务",
+          "short": "WEAVE",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 162,
+          "tags": [
+            "agents",
+            "eval",
+            "domain",
+            "post"
+          ],
+          "url": "https://arxiv.org/abs/2610.22039",
+          "summary": "从 PR 的代码位置、配置和依赖变更建立有向图，重建可执行的多 PR 任务。Graph Credit 将每个节点得分限制在上游前提的完成程度内，避免只通过下游测试就拿到虚高进度分。300 个评测任务中，普通测试分比依赖分平均高 10.5 个百分点；联合奖励也用于训练代码 Agent。",
+          "why": "把代码演进、长程任务评测和稠密可验证奖励接在一起，提供比单个 issue 更丰富的进展度量。",
+          "limit": "依赖图从变更线索推断，人工样本上的依赖恢复 AP 为 37.7%，并非完美因果图。测试归属不明的节点不参加局部评分；RL 使用混合奖励与课程，不能把全部收益归因于 Graph Credit 单项。未复现仓库环境和训练。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–5 节图构建、评分和实验）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.22039v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：FeatureBench",
+              "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/25203d1cc8c58381eab578f4fcf9c4f8-Abstract-Conference.html"
+            },
+            {
+              "label": "关联阅读（概念对照）：OPRD",
+              "url": "https://arxiv.org/abs/2610.21496"
+            }
+          ],
+          "categories": "Agent 与工具 · 评测与可靠性 · 领域任务与科学 · 后训练与对齐",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.22039",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "independent",
+              "name": "独立研究者",
+              "nameEn": "Independent Researcher",
+              "type": "other"
+            },
+            {
+              "id": "shanghai-ailab",
+              "name": "上海人工智能实验室",
+              "nameEn": "Shanghai Artificial Intelligence Laboratory",
+              "type": "research"
+            },
+            {
+              "id": "tsinghua",
+              "name": "清华大学",
+              "nameEn": "Tsinghua University",
+              "type": "university"
+            },
+            {
+              "id": "nus",
+              "name": "新加坡国立大学",
+              "nameEn": "National University of Singapore",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "独立研究者 · 上海人工智能实验室 · 清华大学 · 新加坡国立大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.22039v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。保留四类明确署名；不从作者邮箱推断额外大学。",
+          "relatedPaperIds": [
+            "featurebench",
+            "oprd-reminder"
+          ]
+        },
+        {
+          "id": "training-free-opd",
+          "title": "Training-Free On-Policy Distillation",
+          "zh": "用教师自身轨迹的统计量，免梯度合并专长模型",
+          "titleZh": "用教师自身轨迹的统计量，免梯度合并专长模型",
+          "short": "TF-OPD",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 163,
+          "tags": [
+            "post",
+            "eff",
+            "reason",
+            "mechanism"
+          ],
+          "url": "https://arxiv.org/abs/2610.22236",
+          "summary": "同一基座的数学和代码专家先生成轨迹，再前向统计逐层输入的二阶矩；用闭式最小二乘解合并线性层，无需梯度更新。清除少数占据大量 token 的循环重复轨迹，对困难数学题比简单权重相加更有帮助。Olmo 3 7B 上七项基准的合并模型均值为 61.1%，数学专家为 59.8%、代码专家为 53.6%。",
+          "why": "说明蒸馏与模型合并的联系，并把教师轨迹质量、输入分布和参数更新精度纳入分析。",
+          "limit": "要求共享基座和兼容结构，仍需生成、前向计算和线性求解；“精确解”针对逐层目标，不代表整个网络无损。主表专家用 BF16、合并模型用 FP16，不能忽略精度影响；困难竞赛集合小，作者另给同精度对照。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–4 节闭式方法、设置、消融与讨论；PDF 首页署名）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.22236v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：EOPD",
+              "url": "https://proceedings.mlr.press/v306/jin26e.html"
+            },
+            {
+              "label": "关联阅读（概念对照）：Waypoint-OPD",
+              "url": "https://arxiv.org/abs/2610.21601"
+            }
+          ],
+          "categories": "后训练与对齐 · 效率与优化 · 推理与验证 · 能力机理与理论",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.22236",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "uiuc",
+              "name": "伊利诺伊大学厄巴纳-香槟分校",
+              "nameEn": "University of Illinois Urbana-Champaign / UIUC",
+              "type": "university"
+            },
+            {
+              "id": "tsinghua",
+              "name": "清华大学",
+              "nameEn": "Tsinghua University",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "伊利诺伊大学厄巴纳-香槟分校 · 清华大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注（PDF 首页）",
+              "url": "https://arxiv.org/pdf/2610.22236v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "eopd",
+            "waypoint-opd"
+          ]
+        },
+        {
+          "id": "librarian-agents",
+          "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+          "zh": "先整理可复用的文件工作区，再回答未来问题",
+          "titleZh": "先整理可复用的文件工作区，再回答未来问题",
+          "short": "Librarian Agents",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 164,
+          "tags": [
+            "memory",
+            "rag",
+            "agents",
+            "post",
+            "context"
+          ],
+          "url": "https://arxiv.org/abs/2610.22273",
+          "summary": "建库 Agent 在问题到来前创建、合并或删除合成文件，保留原文与引用路径；通过 RL 奖励后续回答质量及导航成本。BrowseComp-Plus 的 50 个留出任务中，冻结 Qwen3.5-4B 回答器准确率为 0.75，重排检索为 0.44；另在 BRIGHT 派生的三个问答领域测试零样本迁移。",
+          "why": "把 RAG 索引、长期记忆与后训练连成一条线：可学习的对象不只是回答器，也可以是未来查询使用的资料组织方式。",
+          "limit": "只评估静态语料，文档更新后的维护尚未解决。建库约需 179K token，多次查询才有机会摊薄成本；复用实验含合成问题，BRIGHT 被改为问答任务，不能直接与标准检索排行榜比较。保留来源也不能保证摘要无遗漏。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 2 节方法及紧随其后的实验；第 4 节局限）",
+          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.22273v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：RAG",
+              "url": "https://arxiv.org/abs/2005.11401"
+            },
+            {
+              "label": "关联阅读（概念对照）：MemRL",
+              "url": "https://arxiv.org/abs/2601.03192"
+            },
+            {
+              "label": "关联阅读（概念对照）：Retrieved but Not Read",
+              "url": "https://arxiv.org/abs/2610.21731"
+            }
+          ],
+          "categories": "长期记忆 · 知识检索与 RAG · Agent 与工具 · 后训练与对齐 · 长上下文",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.22273",
+          "verifiedAt": "2026-10-19",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "stanford",
+              "name": "斯坦福大学",
+              "nameEn": "Stanford University",
+              "type": "university"
+            },
+            {
+              "id": "cmu",
+              "name": "卡内基梅隆大学",
+              "nameEn": "Carnegie Mellon University",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "斯坦福大学 · 卡内基梅隆大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.22273v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-19",
+          "affiliationsVerifiedAt": "2026-10-19",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "rag2020",
+            "memrl",
+            "retrieved-not-read"
+          ]
         }
       ],
       "source": {
-        "label": "156 篇精选论文及基础文献（73 篇 2026 会议 + 17 篇 2026 预印本 + 66 篇历史背景）",
-        "period": "2026-10-16 新核读 9 篇预印本；10 月 15 日新增 8 篇；其余逐条核验日期保留",
+        "label": "164 篇精选论文及基础文献（73 篇 2026 会议 + 25 篇 2026 预印本 + 66 篇历史背景）",
+        "period": "2026-10-19 新核读 8 篇预印本；其余条目保留各自核验日期",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -11649,6 +12323,38 @@
           {
             "label": "Learning Intrinsic Dynamics in Latent World Models",
             "url": "https://arxiv.org/abs/2610.21612"
+          },
+          {
+            "label": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+            "url": "https://arxiv.org/abs/2610.20641"
+          },
+          {
+            "label": "What Should We Remove? Evaluating the Reliability and Costs of RLVR Data Decontamination",
+            "url": "https://arxiv.org/abs/2610.21229"
+          },
+          {
+            "label": "No Single Tokenizer Feature Reliably Predicts Downstream Language Model Performance",
+            "url": "https://arxiv.org/abs/2610.21679"
+          },
+          {
+            "label": "ContextLift: Breaking the Spurious Correlation Behind Conditional Emergent Misalignment",
+            "url": "https://arxiv.org/abs/2610.21633"
+          },
+          {
+            "label": "Retrieved but Not Read: Understanding Why Search-Augmented LLMs Fail to Use Available Evidence",
+            "url": "https://arxiv.org/abs/2610.21731"
+          },
+          {
+            "label": "WEAVE: Weaving Real-World Code Evolution into Dependency-Structured Tasks for Benchmarking and Training Code Agents",
+            "url": "https://arxiv.org/abs/2610.22039"
+          },
+          {
+            "label": "Training-Free On-Policy Distillation",
+            "url": "https://arxiv.org/abs/2610.22236"
+          },
+          {
+            "label": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+            "url": "https://arxiv.org/abs/2610.22273"
           }
         ],
         "filters": [
@@ -11678,7 +12384,8 @@
           "新增 30 篇依据原始摘要整理；3 篇 NeurIPS 工作目前仅确认录用年份，置于年份末尾“日期待核”，不推断首次公开顺序。",
           "2026-10-15 新增的 8 篇为 arXiv 预印本，尚未核实会议录用；推荐 A 为初步阅读建议，未复现实验。其余候选不计为已整理。",
           "作者单位已核实 153 / 156 篇（2026-10-16 新增 9 篇，其余保留原核验日期）；按引用版本与研究开展时归属，院系／实验室归并，独立研究者另标。机构类型是编辑性分组；跨机构数量允许重叠，单位核验不代表全文重读。",
-          "2026-10-16 新增 9 篇 arXiv v1，均未核实顶会录用；核读方法及实验／局限的相关章节，未复现实验，A 为初步编辑性建议。"
+          "2026-10-16 新增 9 篇 arXiv v1，均未核实顶会录用；核读方法及实验／局限的相关章节，未复现实验，A 为初步编辑性建议。",
+          "2026-10-19 新增 8 篇 v1，均未核实会议录用，方法／实验相关段落重点核读，未复现；A 为初步编辑性建议。AbridgeKV 首版提交为 10 月 7 日、公告较晚，不把发现日期当论文首发。"
         ],
         "evidenceFlow": [
           {
@@ -11967,7 +12674,7 @@
           "status": "已检索官方目录",
           "curatedCount": 33,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-16"
+          "checkedAt": "2026-10-19"
         },
         {
           "id": "eacl26",
@@ -11980,7 +12687,7 @@
           "status": "已检索官方目录",
           "curatedCount": 8,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-16"
+          "checkedAt": "2026-10-19"
         },
         {
           "id": "iclr26",
@@ -11993,7 +12700,7 @@
           "status": "已检索官方目录",
           "curatedCount": 11,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-16"
+          "checkedAt": "2026-10-19"
         },
         {
           "id": "icml26",
@@ -12006,20 +12713,20 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-16"
+          "checkedAt": "2026-10-19"
         },
         {
           "id": "neurips26",
           "venue": "NeurIPS",
           "year": 2026,
-          "catalogCount": 9110,
+          "catalogCount": 9111,
           "indexedCount": 3486,
           "sourceUrl": "https://neurips.cc/Downloads/2026",
           "scope": "仅 Poster 条目；排除 workshop、教程和邀请报告；按 NLP／LLM 标题筛选；补入标题初筛遗漏的已核验重点论文",
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-16"
+          "checkedAt": "2026-10-19"
         },
         {
           "id": "colm26",
@@ -12032,7 +12739,7 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-16"
+          "checkedAt": "2026-10-19"
         },
         {
           "id": "emnlp26",
@@ -12051,7 +12758,7 @@
       ],
       "source": {
         "label": "2026 官方目录覆盖核对",
-        "period": "官方目录检查于 2026-10-16；7 个会议目录规模未变，核对 3 条改题",
+        "period": "2026-10-19 复核 6 个可解析目录；EMNLP 日程异常，保留上次可信快照",
         "grain": "每行一个会议目录及其检索边界",
         "links": [
           {
@@ -12095,7 +12802,8 @@
           "ACL/EACL/COLM/EMNLP 保留所选分轨的全部题目；ICLR/ICML/NeurIPS 用标题关键词初筛，有误收与漏收。",
           "目录计数是本次解析口径下的条目数，不是主会官方总录用数；未读摘要的条目不评级。",
           "EMNLP 5,548 条为主会、Findings、Industry、Demo 日程题目，排除 CL/TACL 63 篇期刊报告；尚未逐篇读摘要或补原文链接，不能当作已整理论文。NAACL 官网指向 2027 届，本次不虚设 2026 目录。",
-          "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。"
+          "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。",
+          "2026-10-19 NeurIPS Poster 目录为 9,111 项，NLP／LLM 标题初筛仍为 3,486 项。EMNLP 导出的表格变为 95 行并含异常日期和表头错位，未替换 5,548 条既有目录。"
         ]
       },
       "methods": [
@@ -387483,7 +388191,7 @@
       ],
       "source": {
         "label": "20,604 条官方会议目录候选；题目初筛与精选摘要分开计数",
-        "period": "官方目录检查于 2026-10-16；7 个会议目录规模未变，核对 3 条改题",
+        "period": "20,604 条题目候选；2026-10-19 比对 6 个目录，EMNLP 保留原快照",
         "grain": "每行一条会议目录记录；同一论文改题保留原 ID，跨会议同名条目保留",
         "links": [
           {
@@ -387527,7 +388235,8 @@
           "ACL/EACL/COLM/EMNLP 保留所选分轨的全部题目；ICLR/ICML/NeurIPS 用标题关键词初筛，有误收与漏收。",
           "目录计数是本次解析口径下的条目数，不是主会官方总录用数；未读摘要的条目不评级。",
           "EMNLP 5,548 条为主会、Findings、Industry、Demo 日程题目，排除 CL/TACL 63 篇期刊报告；尚未逐篇读摘要或补原文链接，不能当作已整理论文。NAACL 官网指向 2027 届，本次不虚设 2026 目录。",
-          "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。"
+          "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。",
+          "2026-10-19 无已确认新增 NLP／LLM 目录条目；已改题的 3 条沿用旧 ID。EMNLP 数据异常待核，未按异常源删减目录。"
         ]
       },
       "methods": [
@@ -388342,7 +389051,7 @@
             "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
           },
           "verifiedAt": "2026-10-13",
-          "notes": "",
+          "notes": "补核 10 月 8 日已上线的 Ultrafast 服务模式：Responses API 设置 service_tier=ultrafast，目标是缩短输出 token 间隔。≤272K 输入为 USD 12 / 60，长上下文 USD 24 / 90 每百万输入／输出 token（2026-10-19 核验），独立于上方 Standard 历史价格。最大输入 922K、最大输出 128K，共享 1.05M 上下文。",
           "sources": [
             {
               "label": "系统卡附录",
@@ -388354,6 +389063,18 @@
             },
             {
               "label": "API 价格来源",
+              "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+            },
+            {
+              "label": "Ultrafast 10 月 8 日更新",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "Ultrafast 价格（2026-10-19）",
+              "url": "https://developers.openai.com/api/docs/pricing"
+            },
+            {
+              "label": "输入、输出及服务规格",
               "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
             }
           ],
@@ -388387,7 +389108,18 @@
             "tea"
           ],
           "technicalSource": "https://openai.com/index/introducing-gpt-6-1-sol/",
-          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。 该版本未公开足以复现的内部架构和训练配方，以下重点是已公布的能力与服务变化。"
+          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。 该版本未公开足以复现的内部架构和训练配方，以下重点是已公布的能力与服务变化。",
+          "serviceCheckedAt": "2026-10-19",
+          "ultrafastPrice": {
+            "input": 12,
+            "output": 60,
+            "currency": "USD",
+            "unit": "每百万 tokens；≤272K 输入，未缓存输入／输出",
+            "asOf": "2026-10-19",
+            "url": "https://developers.openai.com/api/docs/pricing",
+            "longContextInput": 24,
+            "longContextOutput": 90
+          }
         },
         {
           "id": "claude55sonnet",
@@ -388865,7 +389597,7 @@
             "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
           },
           "verifiedAt": "2026-10-13",
-          "notes": "模型卡说明主干约 552B；权重仓库另含组件，总存储参数约 763B。输入 8B／输出 16B 是各阶段激活量，不能与仓库文件总量直接相比。",
+          "notes": "模型卡说明主干约 552B；权重仓库另含组件，总存储参数约 763B。输入 8B／输出 16B 是各阶段激活量，不能与仓库文件总量直接相比。 2026-10-19 核对：在线 deepseek-flash 已映射 1017 版；此条保留 9 月版本及原价格依据，新服务见 Flash-1017。",
           "sources": [
             {
               "label": "技术报告",
@@ -388882,6 +389614,10 @@
             {
               "label": "技术要点依据",
               "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+            },
+            {
+              "label": "在线别名已指向 1017 版（2026-10-19）",
+              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
             }
           ],
           "parameterLabel": "552B 主干",
@@ -388920,7 +389656,8 @@
             "eopd"
           ],
           "technicalSource": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
+          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。",
+          "availabilityCheckedAt": "2026-10-19"
         },
         {
           "id": "gpt6astra",
@@ -394296,11 +395033,121 @@
               "url": "https://deploymentsafety.openai.com/gpt-live-1-1"
             }
           ]
+        },
+        {
+          "id": "dsv41-1017",
+          "name": "DeepSeek-V4.1 Flash-1017",
+          "vendor": "DeepSeek",
+          "releaseDate": "2026-10-17",
+          "year": "2026",
+          "dateBasis": "官方权重仓库 Release 提交日（UTC）；API 切换具体时刻未核实",
+          "parameters": "552B 主干（沿用 V4.1 口径）",
+          "activeParameters": "输入 8B／输出 16B（继承）",
+          "architecture": "MoE；沿用 V4.1 CED",
+          "context": "1M",
+          "contextNote": "API 页最大输出 384K；模型卡本地推理建议 max_tokens ≥256K，后者不是 API 上限。",
+          "inputModalities": "文本、图像",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "开放权重 · 宽松许可",
+          "license": "MIT",
+          "openNote": "开放权重；不据此推定完整训练数据和训练流程均已公开。",
+          "innovation": "小版本更新：官方报告推理、代码、Agent 和视觉基准提升，任务输出更短；新增协议适配工具，未披露新的架构或完整训练配方。",
+          "reportUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
+          "reportType": "沿用 V4.1 技术报告；1017 模型卡",
+          "releaseUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/commit/1bae0e1088993b9b82de08f59de5be5a34e42170",
+          "price": {
+            "input": 2,
+            "output": 8,
+            "currency": "CNY",
+            "basis": "现价",
+            "note": "高峰未缓存输入／输出；空闲时段 ¥1 / ¥4。缓存命中为高峰 ¥0.04、空闲 ¥0.02／百万 tokens。北京时间工作日 9–12、14–18 高峰，法定节假日除外。",
+            "asOf": "2026-10-19",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+          },
+          "verifiedAt": "2026-10-19",
+          "notes": "主干参数沿用 V4.1 报告；新仓库存储约 763B，不能与激活量直接相比。deepseek-flash 已映射本版。Search / Fetch 独立计费，各 ¥5／千次成功且有结果请求；失败、无结果、超时不计费。Harness／Claude Code／Codex 的服务器端工具调用目前未计费，官方计划北京时间 11 月 1 日零时起收费（2026-10-19 核验）。",
+          "sources": [
+            {
+              "label": "1017 官方模型卡",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+            },
+            {
+              "label": "10 月 17 日 Release 提交",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/commit/1bae0e1088993b9b82de08f59de5be5a34e42170"
+            },
+            {
+              "label": "公开配置",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/blob/main/config.json"
+            },
+            {
+              "label": "沿用 V4.1 技术报告",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf"
+            },
+            {
+              "label": "API 版本与价格（2026-10-19）",
+              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+            },
+            {
+              "label": "Search / Fetch 计费与限制",
+              "url": "https://api-docs.deepseek.com/zh-cn/guides/search"
+            }
+          ],
+          "parameterLabel": "552B 主干；仓库存储约 763B",
+          "activeLabel": "输入 8B／输出 16B（继承）",
+          "priceLabel": "CNY 2 / 8（高峰）",
+          "generationChange": "相对 9 月 V4.1 Flash，更新权重和能力表现；两版公开 config.json 一致，CED、CSA2 与原生视觉属于继承方法。",
+          "technicalTopics": [
+            "arch",
+            "eff",
+            "context",
+            "multi",
+            "agents"
+          ],
+          "technicalPoints": [
+            {
+              "name": "权重迭代与 Agent 评测",
+              "detail": "官方同表 Terminal-Bench 4.0 从 31.2 到 42.3、DeepSWE v1.1 从 74.2 到 77.0；分别使用 Claude Code 与 Mini-SWE-V2。厂商结果未经独立复现。"
+            },
+            {
+              "name": "输出长度与执行时间",
+              "detail": "模型卡称任务完成更快、输出更短；未给出覆盖所有工作负载的统一加速倍数，不把此宣传解释为架构变化。"
+            },
+            {
+              "name": "沿用 CED / CSA2 / 原生视觉",
+              "detail": "与前版公开配置一致，包含 40 层文本主干、384 个路由专家和视觉模块；主干与仓库存储参数口径不同。"
+            },
+            {
+              "name": "协议适配与本地部署",
+              "detail": "没有 Jinja 聊天模板；提供 Python 编码参考及 deepseek-recipe，转换多种消息协议、处理思考和工具输出。工具实际执行及 HTTP 传输仍由调用方负责。"
+            }
+          ],
+          "technicalDisclosure": "公开权重、配置与评测；本次训练改动未详述",
+          "relatedPaperIds": [
+            "paged",
+            "freq",
+            "eopd",
+            "abridgekv"
+          ],
+          "technicalSource": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "technicalNote": "本次核读 1017 模型卡、发布提交、配置与 API 文档；架构细节沿用已核读的 9 月报告，未发现独立 1017 技术报告。关联论文仅用于概念对照，不代表厂商使用其方法。",
+          "datePrecision": "日",
+          "specUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "servicePricing": {
+            "search": 5,
+            "fetch": 5,
+            "currency": "CNY",
+            "unit": "每 1,000 次成功且产生结果的请求",
+            "asOf": "2026-10-19",
+            "url": "https://api-docs.deepseek.com/zh-cn/guides/search",
+            "serverToolBillingStarts": "2026-11-01T00:00:00+08:00"
+          }
         }
       ],
       "source": {
-        "label": "77 个关键型号的发布、规格与技术资料",
-        "period": "2022-11-30 起；2026-10-16 新核验 GPT-Live-1.1／Quip，更新 Opus 5.5 快速模式；旧规格与价格日期保留",
+        "label": "78 个关键型号的发布、规格与技术资料",
+        "period": "2022-11-30 起；2026-10-19 新核验 DeepSeek Flash-1017 与服务计费，补核 GPT-6.1 Sol Ultrafast；旧价格日期保留",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -394986,6 +395833,18 @@
           {
             "label": "快速模式价格",
             "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+          },
+          {
+            "label": "DeepSeek Flash-1017",
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          },
+          {
+            "label": "DeepSeek Search / Fetch",
+            "url": "https://api-docs.deepseek.com/zh-cn/guides/search"
+          },
+          {
+            "label": "OpenAI 服务更新",
+            "url": "https://developers.openai.com/api/docs/changelog"
           }
         ],
         "caveats": [
@@ -394998,7 +395857,8 @@
           "规格可能随接入平台变化；上下文标称上限不代表所有任务都能有效利用全窗口。未核实字段保留缺口，不作为零值。",
           "技术总结按披露深度区分架构／训练方法与能力／服务改进；关联论文为概念阅读建议，不推断引用关系或实际采用。",
           "Mistral Large 4 为公开 API 预览，官方承诺月底开放权重，不标为已开放。EmbeddingGemma 2 输出嵌入向量，其 API 计费不能与生成模型直接对比。",
-          "GPT-Live 两型号为产品语音发布；独立 API 规格及价格未核实。Opus 5.5 快速模式是服务配置，价格单列，不计为新模型或覆盖 Standard 价。"
+          "GPT-Live 两型号为产品语音发布；独立 API 规格及价格未核实。Opus 5.5 快速模式是服务配置，价格单列，不计为新模型或覆盖 Standard 价。",
+          "2026-10-19 1017 是权重小版本；架构继承与本次改进分开。Search／Fetch 和 Ultrafast 是服务信息，不能计作新架构或覆盖历史 token 价格。"
         ]
       },
       "methods": [
@@ -395583,31 +396443,31 @@
   },
   "id": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "researchRefresh": {
-    "checkedAt": "2026-10-16",
+    "checkedAt": "2026-10-19",
     "timezone": "Asia/Shanghai",
-    "windowStart": "2026-10-08",
-    "previousResearchCheck": "2026-10-15",
-    "papersAdded": 9,
-    "modelsAdded": 2,
+    "triggeredAt": "2026-10-18T01:33:42.924Z",
+    "windowStart": "2026-10-09",
+    "previousResearchCheck": "2026-10-16",
+    "papersAdded": 8,
+    "modelsAdded": 1,
     "modelsRevised": [
-      "claude55opus"
+      "dsv41",
+      "gpt61"
     ],
     "catalogAdded": 0,
-    "catalogTitlesRevised": 3,
-    "coverageNote": "检查 7 个会议目录及 NAACL 年度入口、16 家既有厂商入口；arXiv cs.CL/cs.AI/cs.LG 窗口返回 3,305 条，并定向核对 84 篇既有 arXiv 记录的版本元数据。",
+    "coverageNote": "接续 10 月 17 日未完成检查；检查 7 个会议入口和 NAACL，以及已收录厂商官方入口。6 个目录可比对，EMNLP 表格异常；arXiv 三分类 API 分页总数变化且部分请求失败，结合 10 月 16 日 RSS 与既有 ID 定向查修订。",
     "limitations": [
-      "arXiv API 实际查询使用 submittedDate，不能声称覆盖窗口前论文的全部修订；RSS 返回 10 月 15 日快照，另用既有 ID 定向核对。",
-      "部分厂商动态页／API 文档受限；OpenAI 新发布由官方安全中心和帮助中心补证，未更新无法核实的旧价格。未检索到不等于没有新作。",
-      "只有新增或变更字段标记本次核验；旧论文、机构及价格日期保留。",
-      "EMNLP 详细日程日期列存在与官方主会时段冲突的数据，保留上次日程字段，待源站澄清。"
+      "arXiv 分页快照不一致，不能声称完整收齐 7 日窗口；submittedDate 检索不覆盖窗口前论文的全部修订。10 月 18 日 RSS 是空日刊，不作为没有新论文的证据。",
+      "EMNLP 导出表异常，保留已发布目录；部分厂商动态页及新闻页不可用。未确认的模型或论文留在本地候选，不计入已整理数量。",
+      "只更新实际核验的字段与日期；旧论文、机构、模型技术证据及 Standard 历史价格不整体改为今天。浏览器渲染检查受既有安全策略限制，执行源构建、数据和筛选逻辑及上线包核验。"
     ]
   },
   "affiliationEnrichment": {
-    "checkedAt": "2026-10-16",
+    "checkedAt": "2026-10-19",
     "scope": "curated-papers",
-    "verifiedPapers": 153,
+    "verifiedPapers": 161,
     "pendingPapers": 3,
-    "institutionCount": 198,
+    "institutionCount": 203,
     "method": "按所引版本署名及研究开展时归属整理；大学院系和企业实验室归并到所属机构，机构次序不表示牵头或贡献排名。独立作者与性质未确认的机构列其他；同一论文允许多机构，不从作者现职或仅邮箱推断。会议题目索引未逐篇核对机构。"
   }
 }
