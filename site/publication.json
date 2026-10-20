@@ -1,14 +1,14 @@
 {
   "appId": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
-  "dataGeneratedAt": "2026-10-19T01:28:29.055394+00:00",
-  "snapshotSha256": "df35d3173fa204ea53275672f2832a67e10bfe6c50522c343052b64f62de9a9c",
+  "dataGeneratedAt": "2026-10-20T01:42:50.467292+00:00",
+  "snapshotSha256": "65114fcd5876286e9b955a262214e3b3719c700893da71e9d0c1a837ed88fe79",
   "counts": {
-    "papers": 164,
+    "papers": 170,
     "directions": 16,
     "coverage": 7,
     "catalog": 20604,
     "evolution": 8,
-    "modelReports": 78,
+    "modelReports": 79,
     "nlpHistory": 11
   },
   "refresh": {

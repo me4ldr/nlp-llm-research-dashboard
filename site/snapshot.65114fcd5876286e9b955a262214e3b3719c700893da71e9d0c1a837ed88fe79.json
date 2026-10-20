@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-10-19T01:28:29.055394+00:00",
+  "generatedAt": "2026-10-20T01:42:50.467292+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -11117,11 +11117,614 @@
             "memrl",
             "retrieved-not-read"
           ]
+        },
+        {
+          "id": "realcli",
+          "title": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
+          "zh": "CLI Agent 做完任务，还能持续听懂用户的修改吗",
+          "titleZh": "CLI Agent 做完任务，还能持续听懂用户的修改吗",
+          "short": "RealCLI",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 165,
+          "tags": [
+            "agents",
+            "eval",
+            "safety",
+            "domain"
+          ],
+          "url": "https://arxiv.org/abs/2610.22507",
+          "summary": "把 101 个容器化 CLI 任务配成两种模式：一次给齐要求，或由脚本用户逐步补充信息、修改约束和决定授权。结果验证与五维协作检查分开计分，再将两者相乘。11 个模型、3 种运行框架的实验中，最高联合协作分为 37.6%；对话里回应了约束，也可能未在最终产物中落实。",
+          "why": "给 Agent 评测补上跨轮约束保持、可引导性和信任校准，便于理解任务成功率为何不能代表协作体验。",
+          "limit": "用户由 GLM-5.3 按脚本模拟，协作裁判为 Opus 4.8，并非真人用户研究。联合分是任务成功率与经 75% 阈值聚合的协作分之积，不是“同时成功”的直接样本比例；结论受脚本、裁判、运行框架与预算影响。未复现实验。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 2–4 节任务、指标、构建和实验；附录 D.3–D.4 模拟用户与裁判）",
+          "verification": "2026-10-20 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.22507v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：多轮对话为何让模型迷失",
+              "url": "https://arxiv.org/abs/2505.06120"
+            },
+            {
+              "label": "关联阅读（概念对照）：SWE-bench",
+              "url": "https://arxiv.org/abs/2310.06770"
+            },
+            {
+              "label": "关联阅读（概念对照）：SWE-agent",
+              "url": "https://arxiv.org/abs/2405.15793"
+            }
+          ],
+          "categories": "Agent 与工具 · 评测与可靠性 · 安全、隐私与遗忘 · 领域任务与科学",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.22507",
+          "verifiedAt": "2026-10-20",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "beihang",
+              "name": "北京航空航天大学",
+              "nameEn": "Beihang University",
+              "type": "university"
+            },
+            {
+              "id": "ruc",
+              "name": "中国人民大学",
+              "nameEn": "Renmin University of China",
+              "type": "university"
+            },
+            {
+              "id": "iquest-research",
+              "name": "IQuest Research",
+              "nameEn": "IQuest Research",
+              "type": "other"
+            }
+          ],
+          "institutionLabels": "北京航空航天大学 · 中国人民大学 · IQuest Research",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.22507v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-20",
+          "affiliationsVerifiedAt": "2026-10-20",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。IQuest Research 署名已确认，组织性质未据原文确定，暂列其他。",
+          "relatedPaperIds": [
+            "swebench",
+            "sweagent",
+            "lost"
+          ]
+        },
+        {
+          "id": "first-passage-attention",
+          "title": "First Passage Attention",
+          "zh": "用路径最低点选择性遗忘，同时保留更早的关键内容",
+          "titleZh": "用路径最低点选择性遗忘，同时保留更早的关键内容",
+          "short": "First Passage Attention",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 166,
+          "tags": [
+            "arch",
+            "context",
+            "eff",
+            "mechanism"
+          ],
+          "url": "https://arxiv.org/abs/2610.22714",
+          "summary": "为每个 key 学习一个阈值，用后续标量路径的最低点决定注意力惩罚，允许删除中间内容而保留更早的 key；特殊情形包含 FoX 遗忘门和栈式记忆。110M 模型在 2.7B token、2K 窗口训练后，8K–16K 的 passkey 检索达到 100%，只留约四分之一 KV 时仍保持这一结果。",
+          "why": "把可表达性、结构化遗忘和 KV 驱逐联系起来；适合从 Transformer 向新注意力机制扩展阅读。",
+          "limit": "语言模型实验每种设置只有一个种子，规模为 110M；单头表达能力定理不能推广为整个深层网络的优越性。RULER 不在所有长度上胜出，BABILong 均低于 0.09；训练吞吐低于 FoX，不能把检索准确率直接说成全面提速或通用长上下文能力。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 2 节机制、第 3 节定理适用范围、第 4.2–4.3 节结果和开销、第 6 节局限）",
+          "verification": "2026-10-20 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.22714v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：局部注意力",
+              "url": "https://aclanthology.org/2026.acl-long.1739/"
+            },
+            {
+              "label": "关联阅读（概念对照）：Transformer",
+              "url": "https://arxiv.org/abs/1706.03762"
+            },
+            {
+              "label": "关联阅读（概念对照）：RULER",
+              "url": "https://arxiv.org/abs/2404.06654"
+            },
+            {
+              "label": "关联阅读（概念对照）：AbridgeKV",
+              "url": "https://arxiv.org/abs/2610.20641"
+            }
+          ],
+          "categories": "架构与生成范式 · 长上下文 · 效率与优化 · 能力机理与理论",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-15",
+          "firstPublicDate": "2026-10-15",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.22714",
+          "verifiedAt": "2026-10-20",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "bergen",
+              "name": "卑尔根大学",
+              "nameEn": "University of Bergen",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "卑尔根大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.22714v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-20",
+          "affiliationsVerifiedAt": "2026-10-20",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "transformer",
+            "local",
+            "ruler",
+            "abridgekv"
+          ]
+        },
+        {
+          "id": "reliance-hypothesis",
+          "title": "The Reliance Hypothesis: Chain-of-Thought Faithfulness Rises as Language Resource Level Falls",
+          "zh": "低资源语言的答案更依赖思维链，但不代表思维链完整透明",
+          "titleZh": "低资源语言的答案更依赖思维链，但不代表思维链完整透明",
+          "short": "Reliance Hypothesis",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 167,
+          "tags": [
+            "reason",
+            "language",
+            "mechanism",
+            "eval",
+            "safety"
+          ],
+          "url": "https://arxiv.org/abs/2610.22841",
+          "summary": "在八种语言的平行 MMMLU 选择题上，对四个 4–8B 模型的思维链做提前截断、填充、加错和改写干预。知识密集题中，资源越少，答案越常依赖思维链；推理密集题没有同样稳定的趋势。加错条件下，知识题被影响比例从英语约 4% 到约鲁巴语约 35%，主要差在影响发生频率。",
+          "why": "把思维链可信度研究从英语扩展到多语言，并区分答案依赖、置信度和可解释性，适合作为监控与多语言评测的交叉阅读。",
+          "limit": "资源量是 CulturaX 语料代理，不是各模型真实训练配比；语言、文字和分词因素仍纠缠。低资源语言有效输出更少，严格子集中的部分差异不再显著。干预只测答案是否依赖链，不能证明链揭示全部内部原因；观察结果未确立“知识不足导致依赖”的因果机制。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–4 节干预、跨语种比较及稳健性，第 5 节讨论与 Limitations）",
+          "verification": "2026-10-20 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.22841v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：CoT",
+              "url": "https://arxiv.org/abs/2201.11903"
+            },
+            {
+              "label": "关联阅读（概念对照）：Afri-MCQA",
+              "url": "https://aclanthology.org/2026.acl-long.1869/"
+            },
+            {
+              "label": "关联阅读（概念对照）：LAURA",
+              "url": "https://aclanthology.org/2026.acl-long.338/"
+            },
+            {
+              "label": "关联阅读（概念对照）：分词指标跨语种审计",
+              "url": "https://arxiv.org/abs/2610.21679"
+            }
+          ],
+          "categories": "推理与验证 · 语言学与多语言 · 能力机理与理论 · 评测与可靠性 · 安全、隐私与遗忘",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-16",
+          "firstPublicDate": "2026-10-16",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.22841",
+          "verifiedAt": "2026-10-20",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "cambridge",
+              "name": "剑桥大学",
+              "nameEn": "University of Cambridge",
+              "type": "university"
+            },
+            {
+              "id": "copenhagen",
+              "name": "哥本哈根大学",
+              "nameEn": "University of Copenhagen",
+              "type": "university"
+            },
+            {
+              "id": "tu-berlin",
+              "name": "柏林工业大学",
+              "nameEn": "Technische Universität Berlin",
+              "type": "university"
+            },
+            {
+              "id": "dfki",
+              "name": "德国人工智能研究中心",
+              "nameEn": "German Research Center for Artificial Intelligence / DFKI",
+              "type": "research"
+            }
+          ],
+          "institutionLabels": "剑桥大学 · 哥本哈根大学 · 柏林工业大学 · 德国人工智能研究中心",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.22841v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-20",
+          "affiliationsVerifiedAt": "2026-10-20",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "cot",
+            "afri",
+            "langbias",
+            "tokenizer-metrics-audit"
+          ]
+        },
+        {
+          "id": "lm2lm",
+          "title": "Language Models Learn to Improve Language Models",
+          "zh": "用真实实验校准代理奖励，训练模型提出更好的模型改进方案",
+          "titleZh": "用真实实验校准代理奖励，训练模型提出更好的模型改进方案",
+          "short": "LM2LM",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 168,
+          "tags": [
+            "agents",
+            "post",
+            "world",
+            "data",
+            "eval"
+          ],
+          "url": "https://arxiv.org/abs/2610.23344",
+          "summary": "冻结的研究世界模型根据真实实验记录预测方案收益，为提案模型提供 RL 奖励；定期执行当前策略高评分方案，把实测结果补回上下文以校准偏差。八个自回归／扩散模型家族环境中，Qwen3.8-27B 提案器在留出任务上获得更高平均实验收益；默认使用 200 次真实运行，而 ICL 对照使用 300 次。",
+          "why": "连接自动科研、世界模型、RL 与奖励过度优化，给出“低成本代理反馈 + 少量真实执行校准”的具体流程。",
+          "limit": "主要研究单步提案质量，目标模型多为小规模配置，不等于完成端到端科研或递归自我改进。约 33% 节省指数据生成成本；加 RL 训练后作者总成本为 $56.1k，对照 $60.0k。依赖外部强模型作为预测器和实现器，代理反馈仍有误差，AR 方案仍有 39.2% 负收益。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–4 节方法与实验、第 6 节局限；附录 C.1 目标规模及 G.2 总成本）",
+          "verification": "2026-10-20 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.23344v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：DGM",
+              "url": "https://arxiv.org/abs/2505.22954"
+            },
+            {
+              "label": "关联阅读（概念对照）：Absolute Zero",
+              "url": "https://arxiv.org/abs/2505.03335"
+            },
+            {
+              "label": "关联阅读（概念对照）：MLRBench",
+              "url": "https://aclanthology.org/2026.eacl-long.290/"
+            },
+            {
+              "label": "关联阅读（概念对照）：Verifier Error",
+              "url": "https://arxiv.org/abs/2605.02909"
+            }
+          ],
+          "categories": "Agent 与工具 · 后训练与对齐 · 世界模型与规划 · 预训练与数据 · 评测与可靠性",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-16",
+          "firstPublicDate": "2026-10-16",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.23344",
+          "verifiedAt": "2026-10-20",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "pennstate",
+              "name": "宾夕法尼亚州立大学",
+              "nameEn": "Pennsylvania State University",
+              "type": "university"
+            },
+            {
+              "id": "ucsc",
+              "name": "加利福尼亚大学圣克鲁兹分校",
+              "nameEn": "University of California, Santa Cruz",
+              "type": "university"
+            },
+            {
+              "id": "emory",
+              "name": "埃默里大学",
+              "nameEn": "Emory University",
+              "type": "university"
+            },
+            {
+              "id": "ucsb",
+              "name": "加利福尼亚大学圣巴巴拉分校",
+              "nameEn": "University of California, Santa Barbara",
+              "type": "university"
+            },
+            {
+              "id": "amazon",
+              "name": "亚马逊 / AWS",
+              "nameEn": "Amazon / AWS / Amazon AGI",
+              "type": "company"
+            }
+          ],
+          "institutionLabels": "宾夕法尼亚州立大学 · 加利福尼亚大学圣克鲁兹分校 · 埃默里大学 · 加利福尼亚大学圣巴巴拉分校 · 亚马逊 / AWS",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.23344v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-20",
+          "affiliationsVerifiedAt": "2026-10-20",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "dgm",
+            "mlrbench",
+            "verifiererror",
+            "absolutezero"
+          ]
+        },
+        {
+          "id": "execution-before-memory",
+          "title": "Execution Before Memory: Diagnosing Memory Failures in Video World Models",
+          "zh": "视频世界模型低分，可能先卡在没有执行动作",
+          "titleZh": "视频世界模型低分，可能先卡在没有执行动作",
+          "short": "MIST / M3-Agent",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 169,
+          "tags": [
+            "world",
+            "multi",
+            "memory",
+            "agents",
+            "eval"
+          ],
+          "url": "https://arxiv.org/abs/2610.23542",
+          "summary": "MIST 将场景建立、隐藏期间泄漏、执行揭示动作和最后状态匹配分开检查。43 个案例中基线有 41 个没有打开容器，尚不能据此判断遗忘。M3-Agent 查看末帧后改写失败动作；固定保留片段分析中 reveal 从 0.147 到 0.492，说明提示与执行路径会显著影响所谓记忆得分。",
+          "why": "为世界模型评测提供重要诊断：先确认要求的动作发生、状态能被看见，再讨论信息是否被记住。",
+          "limit": "主要实验限于一个生成模型家族。最佳候选使用报告结果的同一评分器选择，提示可能直接包含目标答案；这是带答案和评分信息的覆盖上界，不是可部署的独立记忆修复器。隐藏答案的改写控制失败，缺少人工标签，不能据提高后的分数断言模型存储了隐藏状态。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–8 节 MIST、提示改写、候选选择、评测结果与解释边界）",
+          "verification": "2026-10-20 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.23542v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：World Model Foresight",
+              "url": "https://aclanthology.org/2026.acl-long.623/"
+            },
+            {
+              "label": "关联阅读（概念对照）：World Models",
+              "url": "https://arxiv.org/abs/1803.10122"
+            },
+            {
+              "label": "关联阅读（概念对照）：V-JEPA 2",
+              "url": "https://arxiv.org/abs/2506.09985"
+            },
+            {
+              "label": "关联阅读（概念对照）：Concat IDM 世界模型",
+              "url": "https://arxiv.org/abs/2610.21612"
+            }
+          ],
+          "categories": "世界模型与规划 · 多模态与语音 · 长期记忆 · Agent 与工具 · 评测与可靠性",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-16",
+          "firstPublicDate": "2026-10-16",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.23542",
+          "verifiedAt": "2026-10-20",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "hku",
+              "name": "香港大学",
+              "nameEn": "The University of Hong Kong",
+              "type": "university"
+            },
+            {
+              "id": "umich",
+              "name": "密歇根大学安娜堡分校",
+              "nameEn": "University of Michigan, Ann Arbor",
+              "type": "university"
+            },
+            {
+              "id": "pku",
+              "name": "北京大学",
+              "nameEn": "Peking University / PKU",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "香港大学 · 密歇根大学安娜堡分校 · 北京大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.23542v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-20",
+          "affiliationsVerifiedAt": "2026-10-20",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "worldfail",
+            "worldmodels2018",
+            "vjepa2",
+            "intrinsic-world-dynamics"
+          ]
+        },
+        {
+          "id": "dlite",
+          "title": "DLite: History-free Speculative Decoding for Agentic AI",
+          "zh": "Agent 长上下文投机解码：草稿模型不再重复维护历史缓存",
+          "titleZh": "Agent 长上下文投机解码：草稿模型不再重复维护历史缓存",
+          "short": "DLite",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 170,
+          "tags": [
+            "eff",
+            "context",
+            "agents",
+            "post",
+            "arch"
+          ],
+          "url": "https://arxiv.org/abs/2610.23787",
+          "summary": "草稿网络直接读取目标模型隐状态，在局部位置并行预测，再用轻量低秩顺序头补上块内依赖；先向同构且有历史的教师蒸馏，再对齐目标模型。Qwen3-4B／8B、H800 实验中，SWE-bench 轨迹的解码相对普通自回归约快 2.68×／2.74×；高并发下收益有所缩小。",
+          "why": "连接投机解码、蒸馏与长程 Agent 的系统开销，解释为何接受长度高不必然等于端到端吞吐高。",
+          "limit": "去掉的是草稿模型历史 KV，目标模型仍保存历史缓存，且需要访问其隐状态与专门训练草稿网络。仅测试两种 Qwen3 尺寸及 H800；速度是解码环节指标，不是整个软件任务完成时间。部分对照数值来自论文或已有实现，不能据此声称所有部署环境都提升约 70%。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 4 节架构与两阶段训练，第 5 节设置、速度、并发及消融）",
+          "verification": "2026-10-20 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.23787v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：FlashAttention",
+              "url": "https://arxiv.org/abs/2205.14135"
+            },
+            {
+              "label": "关联阅读（概念对照）：PagedAttention / vLLM",
+              "url": "https://arxiv.org/abs/2309.06180"
+            },
+            {
+              "label": "关联阅读（概念对照）：LoopAhead",
+              "url": "https://arxiv.org/abs/2610.21594"
+            },
+            {
+              "label": "关联阅读（概念对照）：AbridgeKV",
+              "url": "https://arxiv.org/abs/2610.20641"
+            }
+          ],
+          "categories": "效率与优化 · 长上下文 · Agent 与工具 · 后训练与对齐 · 架构与生成范式",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-16",
+          "firstPublicDate": "2026-10-16",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）",
+          "dateSource": "https://arxiv.org/abs/2610.23787",
+          "verifiedAt": "2026-10-20",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "sjtu",
+              "name": "上海交通大学",
+              "nameEn": "Shanghai Jiao Tong University",
+              "type": "university"
+            },
+            {
+              "id": "sii",
+              "name": "上海创智学院",
+              "nameEn": "Shanghai Innovation Institute",
+              "type": "research"
+            },
+            {
+              "id": "tsinghua",
+              "name": "清华大学",
+              "nameEn": "Tsinghua University",
+              "type": "university"
+            },
+            {
+              "id": "infinigence-ai",
+              "name": "无问芯穹",
+              "nameEn": "Infinigence AI",
+              "type": "company"
+            }
+          ],
+          "institutionLabels": "上海交通大学 · 上海创智学院 · 清华大学 · 无问芯穹",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.23787v1"
+            },
+            {
+              "label": "无问芯穹机构性质：投资方公司介绍（非作者归属依据）",
+              "url": "https://ent-fund.org/en/portfolio/hk/details/155"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-20",
+          "affiliationsVerifiedAt": "2026-10-20",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "paged",
+            "flash",
+            "loopahead",
+            "abridgekv"
+          ]
         }
       ],
       "source": {
-        "label": "164 篇精选论文及基础文献（73 篇 2026 会议 + 25 篇 2026 预印本 + 66 篇历史背景）",
-        "period": "2026-10-19 新核读 8 篇预印本；其余条目保留各自核验日期",
+        "label": "170 篇精选论文及基础文献（73 篇 2026 会议 + 31 篇 2026 预印本 + 66 篇历史背景）",
+        "period": "2026-10-20 新核读 6 篇预印本；其余条目保留各自核验日期",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -12355,6 +12958,30 @@
           {
             "label": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
             "url": "https://arxiv.org/abs/2610.22273"
+          },
+          {
+            "label": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
+            "url": "https://arxiv.org/abs/2610.22507"
+          },
+          {
+            "label": "First Passage Attention",
+            "url": "https://arxiv.org/abs/2610.22714"
+          },
+          {
+            "label": "The Reliance Hypothesis: Chain-of-Thought Faithfulness Rises as Language Resource Level Falls",
+            "url": "https://arxiv.org/abs/2610.22841"
+          },
+          {
+            "label": "Language Models Learn to Improve Language Models",
+            "url": "https://arxiv.org/abs/2610.23344"
+          },
+          {
+            "label": "Execution Before Memory: Diagnosing Memory Failures in Video World Models",
+            "url": "https://arxiv.org/abs/2610.23542"
+          },
+          {
+            "label": "DLite: History-free Speculative Decoding for Agentic AI",
+            "url": "https://arxiv.org/abs/2610.23787"
           }
         ],
         "filters": [
@@ -12385,7 +13012,8 @@
           "2026-10-15 新增的 8 篇为 arXiv 预印本，尚未核实会议录用；推荐 A 为初步阅读建议，未复现实验。其余候选不计为已整理。",
           "作者单位已核实 153 / 156 篇（2026-10-16 新增 9 篇，其余保留原核验日期）；按引用版本与研究开展时归属，院系／实验室归并，独立研究者另标。机构类型是编辑性分组；跨机构数量允许重叠，单位核验不代表全文重读。",
           "2026-10-16 新增 9 篇 arXiv v1，均未核实顶会录用；核读方法及实验／局限的相关章节，未复现实验，A 为初步编辑性建议。",
-          "2026-10-19 新增 8 篇 v1，均未核实会议录用，方法／实验相关段落重点核读，未复现；A 为初步编辑性建议。AbridgeKV 首版提交为 10 月 7 日、公告较晚，不把发现日期当论文首发。"
+          "2026-10-19 新增 8 篇 v1，均未核实会议录用，方法／实验相关段落重点核读，未复现；A 为初步编辑性建议。AbridgeKV 首版提交为 10 月 7 日、公告较晚，不把发现日期当论文首发。",
+          "2026-10-20 新增 6 篇 v1，核读方法、结果与边界，未复现及核实会议录用；作者单位来自同版署名。LM2LM 的成本节省区分数据生成与总成本；MIST 最佳候选使用报告评分器，不能当作真实记忆提升。"
         ],
         "evidenceFlow": [
           {
@@ -12674,7 +13302,7 @@
           "status": "已检索官方目录",
           "curatedCount": 33,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-19"
+          "checkedAt": "2026-10-20"
         },
         {
           "id": "eacl26",
@@ -12687,7 +13315,7 @@
           "status": "已检索官方目录",
           "curatedCount": 8,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-19"
+          "checkedAt": "2026-10-20"
         },
         {
           "id": "iclr26",
@@ -12700,7 +13328,7 @@
           "status": "已检索官方目录",
           "curatedCount": 11,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-19"
+          "checkedAt": "2026-10-20"
         },
         {
           "id": "icml26",
@@ -12713,20 +13341,20 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-19"
+          "checkedAt": "2026-10-20"
         },
         {
           "id": "neurips26",
           "venue": "NeurIPS",
           "year": 2026,
-          "catalogCount": 9111,
+          "catalogCount": 9110,
           "indexedCount": 3486,
           "sourceUrl": "https://neurips.cc/Downloads/2026",
           "scope": "仅 Poster 条目；排除 workshop、教程和邀请报告；按 NLP／LLM 标题筛选；补入标题初筛遗漏的已核验重点论文",
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-19"
+          "checkedAt": "2026-10-20"
         },
         {
           "id": "colm26",
@@ -12739,7 +13367,7 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-19"
+          "checkedAt": "2026-10-20"
         },
         {
           "id": "emnlp26",
@@ -12752,13 +13380,13 @@
           "scope": "官方详细日程：主会 2,710、Findings 2,487、Industry 265、Demo 86；排除 CL 13 与 TACL 50 篇期刊报告。不将展示日期当首发日期；逐篇原文链接待核。",
           "status": "已检索官方详细日程",
           "coverage": "目录已纳入；摘要尚未整理",
-          "checkedAt": "2026-10-16",
+          "checkedAt": "2026-10-20",
           "detailSourceUrl": "https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490"
         }
       ],
       "source": {
         "label": "2026 官方目录覆盖核对",
-        "period": "2026-10-19 复核 6 个可解析目录；EMNLP 日程异常，保留上次可信快照",
+        "period": "2026-10-20 复核 7 个会议目录；EMNLP 日程恢复，题目集与既有快照一致",
         "grain": "每行一个会议目录及其检索边界",
         "links": [
           {
@@ -12803,7 +13431,8 @@
           "目录计数是本次解析口径下的条目数，不是主会官方总录用数；未读摘要的条目不评级。",
           "EMNLP 5,548 条为主会、Findings、Industry、Demo 日程题目，排除 CL/TACL 63 篇期刊报告；尚未逐篇读摘要或补原文链接，不能当作已整理论文。NAACL 官网指向 2027 届，本次不虚设 2026 目录。",
           "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。",
-          "2026-10-19 NeurIPS Poster 目录为 9,111 项，NLP／LLM 标题初筛仍为 3,486 项。EMNLP 导出的表格变为 95 行并含异常日期和表头错位，未替换 5,548 条既有目录。"
+          "2026-10-19 NeurIPS Poster 目录为 9,111 项，NLP／LLM 标题初筛仍为 3,486 项。EMNLP 导出的表格变为 95 行并含异常日期和表头错位，未替换 5,548 条既有目录。",
+          "2026-10-20 EMNLP 官方日程恢复为 5,611 条，其中 63 条 CL／TACL 期刊展示仍排除；5,548 条会议题目与旧目录一致。NeurIPS Poster 总量为 9,110，NLP／LLM 初筛仍为 3,486；源站移除项不在本看板初筛范围。"
         ]
       },
       "methods": [
@@ -275244,8 +275873,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "28-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-3a97738eafca",
@@ -275473,8 +276104,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "52-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-3847903c2f69",
@@ -277690,8 +278323,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "329-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-299c7177bf5e",
@@ -277749,8 +278384,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "343-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-fdd62f68d6cc",
@@ -278711,8 +279348,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "482-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-460142237a77",
@@ -278907,8 +279546,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "517-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d81c097d20a2",
@@ -280940,8 +281581,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "758-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d6090c39e44f",
@@ -281236,8 +281879,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "805-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-a311c93826f8",
@@ -281400,8 +282045,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "830-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-91465eee93f2",
@@ -281687,8 +282334,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "862-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-8fb08779f4f7",
@@ -282657,8 +283306,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1016-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-3550ad5679c8",
@@ -283279,8 +283930,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1082-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-fec112566797",
@@ -284914,8 +285567,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1257-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-02fda6f09666",
@@ -285058,8 +285713,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1271-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-6d0c1cd23155",
@@ -286774,8 +287431,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1491-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-0c8d1e8a1f9e",
@@ -287633,8 +288292,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1628-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-666782a1752b",
@@ -287774,8 +288435,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1649-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b120314e4fd7",
@@ -288463,8 +289126,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1733-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-eeda27319351",
@@ -288504,8 +289169,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1738-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-6093f9ba9cc7",
@@ -288624,8 +289291,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1753-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-9de8f79586c8",
@@ -288872,8 +289541,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1786-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-5f1da74401ed",
@@ -289468,8 +290139,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1872-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-998c73408c18",
@@ -289648,8 +290321,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1910-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-42859fadfac5",
@@ -290428,8 +291103,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2024-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-5ad90a76452d",
@@ -291097,8 +291774,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2118-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-1a7a441a41a6",
@@ -291402,8 +292081,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2160-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-7223e5f0b569",
@@ -291465,8 +292146,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2169-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e918e7f1b9c6",
@@ -292449,8 +293132,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2306-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-c71fda536ef2",
@@ -292555,8 +293240,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2319-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-eadcb588189e",
@@ -292782,8 +293469,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2354-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b1060c42fcf1",
@@ -294712,8 +295401,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2670-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-76ed7097c9ed",
@@ -294955,8 +295646,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2701-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-cf3efefbc004",
@@ -295954,8 +296647,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2852-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-0908167985dd",
@@ -297806,8 +298501,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3173-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-f3f217209e81",
@@ -298376,8 +299073,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3252-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d79047bbfdd3",
@@ -298602,8 +299301,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3280-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-346040c283b8",
@@ -299386,8 +300087,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3445-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e5e1a042ca5c",
@@ -299717,8 +300420,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3495-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-1ae186c9aaaa",
@@ -300552,8 +301257,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3607-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-bbf35a0731ee",
@@ -300647,8 +301354,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3632-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-cd8f51d7a21f",
@@ -301542,8 +302251,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3767-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-88b352c4a023",
@@ -303150,8 +303861,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4033-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-fceaa51b2bea",
@@ -303212,8 +303925,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4048-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-18bdd660ff80",
@@ -303563,8 +304278,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4107-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-514f1346f7cb",
@@ -304311,8 +305028,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4217-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-9451f5c925ec",
@@ -304957,8 +305676,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4328-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-0d342d4c0ac8",
@@ -305016,8 +305737,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4333-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-66c58306fbc3",
@@ -305480,8 +306203,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4413-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-60f73c3c129f",
@@ -305967,8 +306692,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4475-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d92e8e60a3be",
@@ -306596,8 +307323,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4577-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-1662d55d2e90",
@@ -307509,8 +308238,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4708-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-3b6d6a087ad7",
@@ -309981,8 +310712,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5118-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-673daba78db3",
@@ -311024,8 +311757,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5306-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-3a8c044d0236",
@@ -311084,8 +311819,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5329-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-911dad9a1810",
@@ -311591,8 +312328,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5436-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-8a0f56f8951c",
@@ -312847,8 +313586,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5680-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-0322ab9f42cd",
@@ -313738,8 +314479,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5879-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-7b4078acd724",
@@ -313899,8 +314642,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5908-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-f454658cfca1",
@@ -314098,8 +314843,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5946-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e5d6cef720ba",
@@ -314181,8 +314928,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5960-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-c5d94a3bbe0e",
@@ -314286,8 +315035,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5979-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-98d84df40fd7",
@@ -314885,8 +315636,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6084-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-8d374db6c89c",
@@ -314950,8 +315703,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8847-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-5d9d0f90165a",
@@ -315159,8 +315914,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6128-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b62c051916bc",
@@ -315321,8 +316078,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6152-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-81b06cf0d20a",
@@ -315401,8 +316160,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6174-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-08cde83ec079",
@@ -315626,8 +316387,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6222-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-8d2f0ca8f17b",
@@ -316036,8 +316799,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6292-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-55e2c351b2aa",
@@ -316826,8 +317591,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6424-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-a19a707be9b0",
@@ -317634,8 +318401,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6571-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-feb2c24b3ed8",
@@ -318126,8 +318895,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6647-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-330af63f5259",
@@ -318208,8 +318979,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6665-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-41aac207f46d",
@@ -318632,8 +319405,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6742-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d597c5b3f90d",
@@ -318734,8 +319509,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6758-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b94bba750041",
@@ -319509,8 +320286,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6865-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-bcddb7a25712",
@@ -320444,8 +321223,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7055-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-5d973e9baa55",
@@ -320506,8 +321287,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7073-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-4d050b13dfcb",
@@ -321954,8 +322737,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7351-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-9c7db6e26a05",
@@ -322059,8 +322844,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7367-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-90bb30e715d0",
@@ -322504,8 +323291,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7469-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-0f19e87bfd75",
@@ -323559,8 +324348,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7721-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-ed4a80d5b17a",
@@ -323761,8 +324552,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7757-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-64d456f100ac",
@@ -324196,8 +324989,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7864-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-2f65b41b6bd6",
@@ -324379,8 +325174,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7918-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b6efcdf4071c",
@@ -324500,8 +325297,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7947-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-4164c0718b52",
@@ -324766,8 +325565,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8030-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d3abcdce274c",
@@ -325075,8 +325876,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8084-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-4b975787e072",
@@ -325620,8 +326423,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8190-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-acef304f7364",
@@ -325779,8 +326584,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8235-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-32eabe2e12e1",
@@ -326076,8 +326883,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8313-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b8eec8e4f806",
@@ -326240,8 +327049,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8347-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-baf3e55ce4df",
@@ -326625,8 +327436,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8407-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-14ba67c618e7",
@@ -326903,8 +327716,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8485-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e8991fc9cb92",
@@ -327975,8 +328790,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8799-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-08bc57c44d8d",
@@ -328192,8 +329009,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8891-MAIN",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-9b1f026ef473",
@@ -328440,8 +329259,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8952-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-31dfbe264ac3",
@@ -330239,8 +331060,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "9773-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-ff483578b779",
@@ -330933,8 +331756,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "122-IND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-f3ab1b355c68",
@@ -331030,8 +331855,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "139-IND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-980f2c7e94f5",
@@ -331135,8 +331962,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "173-IND",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-43bffbe116b9",
@@ -332266,8 +333095,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "398-IND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-5c77e6de576d",
@@ -333118,8 +333949,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "549-IND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-c91a529aebb1",
@@ -335431,8 +336264,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "893-IND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b56b1516d66b",
@@ -335732,8 +336567,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "943-IND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-6d79e94ca936",
@@ -336434,8 +337271,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "101-DEMO",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-87b806ed3c78",
@@ -336771,8 +337610,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "149-DEMO",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-0eca7b3fb627",
@@ -337821,8 +338662,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "61-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-3503d63e20cd",
@@ -342739,8 +343582,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "951-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d816291ffab2",
@@ -343195,8 +344040,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1059-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-30eee5a11c0b",
@@ -343385,8 +344232,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1105-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-c951f67a7f0e",
@@ -344937,8 +345786,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1426-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-025dc4d528bf",
@@ -347167,8 +348018,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1837-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-474adfe7c614",
@@ -347507,8 +348360,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1894-FIND",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-ccf1a8969cb8",
@@ -350572,8 +351427,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2458-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d0befed1fbbd",
@@ -352265,8 +353122,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2707-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-ac8b33fa485e",
@@ -354300,8 +355159,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3096-FIND",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b56ec91da6f8",
@@ -354363,8 +355224,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3102-FIND",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-bc2a7b66b43e",
@@ -357973,8 +358836,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3766-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-4934690b67ee",
@@ -360533,8 +361398,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4228-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-c467979a41eb",
@@ -363856,8 +364723,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4886-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e8b859eb4d42",
@@ -366168,8 +367037,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5360-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e30440f794d6",
@@ -366892,8 +367763,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5528-FIND",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-58f47e23bed5",
@@ -367116,8 +367989,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5573-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-5e91d10a94de",
@@ -367466,8 +368341,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5651-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-6f0b01026ff6",
@@ -367652,8 +368529,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5672-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-00323d38b406",
@@ -369152,8 +370031,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5945-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-f1531e47bb7c",
@@ -369992,8 +370873,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6081-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-bde79dcbe64b",
@@ -370214,8 +371097,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "6121-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-74b64b82d4f8",
@@ -375917,8 +376802,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7215-FIND",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e852a9f7b15a",
@@ -376857,8 +377744,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7381-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-744230a1ebb4",
@@ -377124,8 +378013,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7434-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-605d2f409781",
@@ -377706,8 +378597,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7580-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-42dc2d2bd57d",
@@ -380238,8 +381131,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8054-FIND",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-6a8c4bb2d86d",
@@ -380644,8 +381539,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8109-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-27",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-7ce52089b9e8",
@@ -380849,8 +381746,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8146-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-97374ac7269c",
@@ -382675,8 +383574,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8543-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-b024185d7d1d",
@@ -382819,8 +383720,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8585-FIND",
-          "presentationDate": "",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-e3fed1b342f2",
@@ -384445,8 +385348,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8913-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-a96dbcaf52ca",
@@ -386092,8 +386997,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "9293-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-c969e87cb524",
@@ -386750,8 +387657,10 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "9429-FIND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "scheduleCheckedAt": "2026-10-20",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-8f586aac8577",
@@ -388191,7 +389100,7 @@
       ],
       "source": {
         "label": "20,604 条官方会议目录候选；题目初筛与精选摘要分开计数",
-        "period": "20,604 条题目候选；2026-10-19 比对 6 个目录，EMNLP 保留原快照",
+        "period": "20,604 条题目候选；2026-10-20 复核 7 个目录，未新增题目",
         "grain": "每行一条会议目录记录；同一论文改题保留原 ID，跨会议同名条目保留",
         "links": [
           {
@@ -388236,7 +389145,8 @@
           "目录计数是本次解析口径下的条目数，不是主会官方总录用数；未读摘要的条目不评级。",
           "EMNLP 5,548 条为主会、Findings、Industry、Demo 日程题目，排除 CL/TACL 63 篇期刊报告；尚未逐篇读摘要或补原文链接，不能当作已整理论文。NAACL 官网指向 2027 届，本次不虚设 2026 目录。",
           "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。",
-          "2026-10-19 无已确认新增 NLP／LLM 目录条目；已改题的 3 条沿用旧 ID。EMNLP 数据异常待核，未按异常源删减目录。"
+          "2026-10-19 无已确认新增 NLP／LLM 目录条目；已改题的 3 条沿用旧 ID。EMNLP 数据异常待核，未按异常源删减目录。",
+          "2026-10-20 EMNLP 表格已恢复，题目与 ID 全部保留；更新 140 条明确的展示日期，未定或 #N/A 项不当作论文日期，不整体改写题目核验日。"
         ]
       },
       "methods": [
@@ -395067,7 +395977,7 @@
             "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
           },
           "verifiedAt": "2026-10-19",
-          "notes": "主干参数沿用 V4.1 报告；新仓库存储约 763B，不能与激活量直接相比。deepseek-flash 已映射本版。Search / Fetch 独立计费，各 ¥5／千次成功且有结果请求；失败、无结果、超时不计费。Harness／Claude Code／Codex 的服务器端工具调用目前未计费，官方计划北京时间 11 月 1 日零时起收费（2026-10-19 核验）。",
+          "notes": "主干参数沿用 V4.1 报告；新仓库存储约 763B，不能与激活量直接相比。deepseek-flash 已映射本版。Search / Fetch 独立计费，各 ¥5／千次成功且有结果请求；失败、无结果、超时不计费。Harness／Claude Code／Codex 的服务器端工具调用目前未计费，官方计划北京时间 11 月 1 日零时起收费（2026-10-19 核验）。 2026-10-20 服务限制更新：Search 100 QPS、Fetch 25 QPS，按账号计；Fetch 另有目标域名限制。价格依据仍保留原核验日。",
           "sources": [
             {
               "label": "1017 官方模型卡",
@@ -395142,12 +396052,109 @@
             "asOf": "2026-10-19",
             "url": "https://api-docs.deepseek.com/zh-cn/guides/search",
             "serverToolBillingStarts": "2026-11-01T00:00:00+08:00"
+          },
+          "serviceCheckedAt": "2026-10-20",
+          "serviceLimits": {
+            "searchQps": 100,
+            "fetchQps": 25,
+            "scope": "账号级；Fetch 另受目标域名限制",
+            "asOf": "2026-10-20",
+            "url": "https://api-docs.deepseek.com/zh-cn/guides/search"
           }
+        },
+        {
+          "id": "minimax31flash",
+          "name": "MiniMax-M3.1-Flash",
+          "vendor": "MiniMax",
+          "releaseDate": "2026-10-19",
+          "year": "2026",
+          "dateBasis": "官方正式发布说明日期；与更早 Preview 和匿名试用区分",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "官方称更激进稀疏化；结构细节未披露",
+          "context": "1M",
+          "contextNote": "API 文档标为 1,000,000 tokens；独立最大输出上限未在本次来源中核实。",
+          "inputModalities": "文本、图像、视频",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "预告开放权重",
+          "license": "待权重发布后核实",
+          "openNote": "发布说明明确权重将稍后提供。API 指南称 open-weight，但未核验到本版正式权重和许可，暂不标为已开放。",
+          "innovation": "面向编码与工具工作流，通过更激进稀疏化降低推理成本，并提供五档自适应思考深度；内部结构和训练配方尚未详细披露。",
+          "reportUrl": "https://www.minimax.io/blog/minimax-m31f",
+          "reportType": "官方发布说明；未核验到独立技术报告",
+          "releaseUrl": "https://www.minimax.io/blog/minimax-m31f",
+          "specUrl": "https://platform.minimax.io/docs/guides/text-generation",
+          "price": {
+            "input": 0.15,
+            "output": 0.6,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "缓存输入 $0.015／百万 tokens；平价计费，未将订阅套餐或第三方限时免费并入 API 单价。",
+            "asOf": "2026-10-20",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "url": "https://platform.minimax.io/docs/pricing/overview"
+          },
+          "verifiedAt": "2026-10-20",
+          "notes": "API、M Plan 与 MiniMax Code 已提供。前版 M3 的参数、MSA 架构和许可证不能直接当作本版已披露规格；本次依据为正式发布说明与 API 指南，未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 19 日正式发布说明",
+              "url": "https://www.minimax.io/blog/minimax-m31f"
+            },
+            {
+              "label": "API 规格、模态与思考设置",
+              "url": "https://platform.minimax.io/docs/guides/text-generation"
+            },
+            {
+              "label": "当前 API 价格（2026-10-20）",
+              "url": "https://platform.minimax.io/docs/pricing/overview"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.15 / 0.60",
+          "generationChange": "正式 Flash 版本强调更高推理效率与 Agent／编码能力。相较已收录 M3 的 ≤512K 标准 API 输入／输出价，单价均减半；官方所述任务总费用约降 70% 是另一种工作负载口径。",
+          "technicalTopics": [
+            "agents",
+            "eff",
+            "context",
+            "multi",
+            "reason"
+          ],
+          "technicalPoints": [
+            {
+              "name": "稀疏化与推理效率",
+              "detail": "厂商称采用更激进的稀疏化，典型输出可达 200+ tokens/s、P50 为 170+；未公布足以复现的完整架构、硬件和工作负载条件，不作为统一加速承诺。"
+            },
+            {
+              "name": "可调思考深度",
+              "detail": "API 支持 low、medium、high、xhigh、max 五档 effort，默认 max；思考不能关闭。提高深度会增加输出 token 和延迟。"
+            },
+            {
+              "name": "长上下文与多模态输入",
+              "detail": "API 给出 1M 上下文，支持文本、图像和视频输入。未据此推断音频输入或图像／视频生成能力。"
+            },
+            {
+              "name": "Agent 能力与验证边界",
+              "detail": "官方报告 DeepSWE v1.1 为 73.7%、OSWorld V2 为 61.7；为厂商实验，本文未独立复现。改进的训练机制尚未公开，不能把基准提升写成已知训练创新。"
+            }
+          ],
+          "technicalDisclosure": "能力与服务规格已披露；架构和训练细节待报告",
+          "relatedPaperIds": [
+            "swebench",
+            "react",
+            "realcli",
+            "dlite"
+          ],
+          "technicalSource": "https://platform.minimax.io/docs/guides/text-generation",
+          "technicalNote": "只核读发布说明、API 指南和价格页；没有用旧 M3 报告填充本版未知参数。关联论文用于概念阅读，不表示厂商实际采用。"
         }
       ],
       "source": {
-        "label": "78 个关键型号的发布、规格与技术资料",
-        "period": "2022-11-30 起；2026-10-19 新核验 DeepSeek Flash-1017 与服务计费，补核 GPT-6.1 Sol Ultrafast；旧价格日期保留",
+        "label": "79 个关键型号的发布、规格与技术资料",
+        "period": "2022-11-30 起；2026-10-20 新核验 MiniMax-M3.1-Flash，补充 DeepSeek 服务限流；旧价格日期保留",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -395845,6 +396852,18 @@
           {
             "label": "OpenAI 服务更新",
             "url": "https://developers.openai.com/api/docs/changelog"
+          },
+          {
+            "label": "MiniMax M3.1 Flash 正式发布",
+            "url": "https://www.minimax.io/blog/minimax-m31f"
+          },
+          {
+            "label": "MiniMax API 规格",
+            "url": "https://platform.minimax.io/docs/guides/text-generation"
+          },
+          {
+            "label": "MiniMax API 当前价格",
+            "url": "https://platform.minimax.io/docs/pricing/overview"
           }
         ],
         "caveats": [
@@ -395858,7 +396877,8 @@
           "技术总结按披露深度区分架构／训练方法与能力／服务改进；关联论文为概念阅读建议，不推断引用关系或实际采用。",
           "Mistral Large 4 为公开 API 预览，官方承诺月底开放权重，不标为已开放。EmbeddingGemma 2 输出嵌入向量，其 API 计费不能与生成模型直接对比。",
           "GPT-Live 两型号为产品语音发布；独立 API 规格及价格未核实。Opus 5.5 快速模式是服务配置，价格单列，不计为新模型或覆盖 Standard 价。",
-          "2026-10-19 1017 是权重小版本；架构继承与本次改进分开。Search／Fetch 和 Ultrafast 是服务信息，不能计作新架构或覆盖历史 token 价格。"
+          "2026-10-19 1017 是权重小版本；架构继承与本次改进分开。Search／Fetch 和 Ultrafast 是服务信息，不能计作新架构或覆盖历史 token 价格。",
+          "2026-10-20 M3.1 Flash 权重尚待正式提供，参数及独立技术报告未核实；API 指南的 open-weight 标签与发布说明的将来时一并记录，暂按预告开放权重处理。"
         ]
       },
       "methods": [
@@ -396443,31 +397463,32 @@
   },
   "id": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "researchRefresh": {
-    "checkedAt": "2026-10-19",
+    "checkedAt": "2026-10-20",
     "timezone": "Asia/Shanghai",
-    "triggeredAt": "2026-10-18T01:33:42.924Z",
-    "windowStart": "2026-10-09",
-    "previousResearchCheck": "2026-10-16",
-    "papersAdded": 8,
+    "triggeredAt": "2026-10-20T01:31:01.641Z",
+    "windowStart": "2026-10-12",
+    "previousResearchCheck": "2026-10-19",
+    "papersAdded": 6,
     "modelsAdded": 1,
     "modelsRevised": [
-      "dsv41",
-      "gpt61"
+      "dsv41-1017"
     ],
     "catalogAdded": 0,
-    "coverageNote": "接续 10 月 17 日未完成检查；检查 7 个会议入口和 NAACL，以及已收录厂商官方入口。6 个目录可比对，EMNLP 表格异常；arXiv 三分类 API 分页总数变化且部分请求失败，结合 10 月 16 日 RSS 与既有 ID 定向查修订。",
+    "catalogSchedulesRevised": 140,
+    "coverageNote": "复核 7 个会议目录和 NAACL 入口；EMNLP 表格已恢复，会议标题集未变。arXiv cs.CL／cs.AI／cs.LG 的 10 月 12–20 日提交窗口取得 2,769 个唯一 ID，并定向检查 101 篇已有论文修订；选读 6 篇新预印本。",
     "limitations": [
-      "arXiv 分页快照不一致，不能声称完整收齐 7 日窗口；submittedDate 检索不覆盖窗口前论文的全部修订。10 月 18 日 RSS 是空日刊，不作为没有新论文的证据。",
-      "EMNLP 导出表异常，保留已发布目录；部分厂商动态页及新闻页不可用。未确认的模型或论文留在本地候选，不计入已整理数量。",
-      "只更新实际核验的字段与日期；旧论文、机构、模型技术证据及 Standard 历史价格不整体改为今天。浏览器渲染检查受既有安全策略限制，执行源构建、数据和筛选逻辑及上线包核验。"
+      "窗口完整性仅指本次 submittedDate API 元数据分页一致，不代表已全文阅读所有论文，也不覆盖窗口前所有论文的修订。其余候选保留本地待核。",
+      "OpenAI 新闻页、ChatGPT 发布说明与 xAI 新闻页仍返回 403；核查可访问的官方 API 文档和模型资料，无法据此排除所有产品更新。",
+      "WEAVE v2 仅核见联系邮箱变化，原文技术内容相同，保留旧 v1 阅读与机构核验日期。Google 视频模型服务变更另存待核，未混入生成文本模型版本。",
+      "旧论文、历史价格和技术证据日期不整体改写。浏览器渲染检查受既有安全策略限制，本次执行源构建、筛选与时间线逻辑及线上发布包核验。"
     ]
   },
   "affiliationEnrichment": {
-    "checkedAt": "2026-10-19",
+    "checkedAt": "2026-10-20",
     "scope": "curated-papers",
-    "verifiedPapers": 161,
+    "verifiedPapers": 167,
     "pendingPapers": 3,
-    "institutionCount": 203,
+    "institutionCount": 214,
     "method": "按所引版本署名及研究开展时归属整理；大学院系和企业实验室归并到所属机构，机构次序不表示牵头或贡献排名。独立作者与性质未确认的机构列其他；同一论文允许多机构，不从作者现职或仅邮箱推断。会议题目索引未逐篇核对机构。"
   }
 }
