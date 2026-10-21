@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-10-20T01:42:50.467292+00:00",
+  "generatedAt": "2026-10-21T07:57:15.545830+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -10172,12 +10172,16 @@
           "limit": "数据由同一生成模型依据 STAR 流程模拟；人工验证是抽样，不是全量审核。每个分叉只注入一种错误，尚不能覆盖真实对话的复合、连锁失败；非英语和其他流程分布待扩展。",
           "award": "",
           "awardUrl": "",
-          "depth": "正文重点核查（第 3–4 节定义与数据构造、Limitations；评测任务概览）",
-          "verification": "2026-10-16 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "depth": "v1 正文核读；v2 修订差异核查（许可与表述）",
+          "verification": "2026-10-21 比对 v2：数据许可明确为 CC BY 4.0，代码为 MIT；方法与报告数值未见实质变化。首发、原摘要和署名核验日保留。",
           "extra": [
             {
               "label": "核读的原文版本",
               "url": "https://arxiv.org/html/2610.21561v1"
+            },
+            {
+              "label": "v2：数据 CC BY 4.0／代码 MIT 说明",
+              "url": "https://arxiv.org/html/2610.21561v2"
             }
           ],
           "categories": "评测与可靠性 · Agent 与工具 · 安全、隐私与遗忘",
@@ -10191,8 +10195,8 @@
           "dateBasis": "首版预印本（UTC）",
           "firstPublicDate": "2026-10-15",
           "dateSource": "https://arxiv.org/abs/2610.21561",
-          "verifiedAt": "2026-10-16",
-          "reviewedVersion": "v1",
+          "verifiedAt": "2026-10-21",
+          "reviewedVersion": "v2",
           "institutions": [
             {
               "id": "idiap",
@@ -10229,7 +10233,8 @@
           ],
           "affiliationsCheckedAt": "2026-10-16",
           "affiliationsVerifiedAt": "2026-10-16",
-          "affiliationNote": "按 v1 作者署名／单位脚注整理；联合署名次序不表示牵头或贡献排名。"
+          "affiliationNote": "按 v1 作者署名／单位脚注整理；联合署名次序不表示牵头或贡献排名。",
+          "license": "数据 CC BY 4.0；代码 MIT"
         },
         {
           "id": "titan-translation",
@@ -10619,13 +10624,13 @@
             "mechanism"
           ],
           "url": "https://arxiv.org/abs/2610.21679",
-          "summary": "比较三组约 200 个模型、九种语言、48 个下游基准与 29 个分词指标。分词器确实影响任务表现，但指标相关性的大小甚至方向，会随语言、任务和模型组改变；控制参数量后的额外解释力很小。新提出的字符凝聚与边界指标也只在部分设置有效，不能单凭压缩率或形态边界选出普遍最优分词器。",
+          "summary": "v2 澄清为 159 个模型、200 多次模型—语言评估，覆盖九种语言、48 个下游基准和 29 个分词指标。相关性的大小甚至方向随语言、任务与模型组改变；控制参数量后，指标最多额外解释约 0.015 的 R²。新的 U-statistic 在一组英语／土耳其语模型中相关较强，但方向与预期相反，不能据此选择普遍最优分词器。",
           "why": "连接语言学、预训练设计和评测，帮助识别只在单语、单模型实验中成立的经验结论。",
-          "limit": "模型最大约 1B，部分任务接近随机水平；不同模型组在词表、训练数据等方面的控制程度不同。各语言基准和标注资源不均；结论不表示压缩率对训练成本或多语公平性没有价值。",
+          "limit": "不同模型组控制程度不一；TokSuite 非嵌入架构相同，但词表使总参数量从约 1.3B 到 2.3B 变化，不能把所有模型说成最大 1B。部分任务接近随机，语言资源与基准不均；该结果不否认分词压缩对成本或公平性的其他价值。",
           "award": "",
           "awardUrl": "",
-          "depth": "正文重点核查（第 4 节设置、第 5–9 节相关性与讨论；Limitations）",
-          "verification": "2026-10-19 核对原文 v1；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "depth": "v1 正文核读；v2 重点复核摘要、第 2–4 节统计口径、相关性及附录修订",
+          "verification": "2026-10-21 核对 v2 相对 v1 的实质修订：159 个模型、模型—语言评估次数、总参数规模、多重比较和相关方向；未复现实验。首发及署名核验日保留。",
           "extra": [
             {
               "label": "核读的原文版本",
@@ -10638,6 +10643,10 @@
             {
               "label": "关联阅读（概念对照）：PolyGloss",
               "url": "https://aclanthology.org/2026.acl-long.1657/"
+            },
+            {
+              "label": "v2 统计与结论修订",
+              "url": "https://arxiv.org/html/2610.21679v2"
             }
           ],
           "categories": "语言学与多语言 · 预训练与数据 · 评测与可靠性 · 能力机理与理论",
@@ -10651,8 +10660,8 @@
           "datePrecision": "日",
           "dateBasis": "首版预印本（UTC）",
           "dateSource": "https://arxiv.org/abs/2610.21679",
-          "verifiedAt": "2026-10-19",
-          "reviewedVersion": "v1",
+          "verifiedAt": "2026-10-21",
+          "reviewedVersion": "v2",
           "institutions": [
             {
               "id": "eleutherai",
@@ -11720,11 +11729,484 @@
             "loopahead",
             "abridgekv"
           ]
+        },
+        {
+          "id": "deepsea",
+          "title": "DeepSEA: A Multilingual Evaluation Benchmark for Southeast Asia",
+          "zh": "东南亚十二种语言的五任务评测：英语中转仍有优势",
+          "titleZh": "东南亚十二种语言的五任务评测：英语中转仍有优势",
+          "short": "DeepSEA",
+          "venue": "EMNLP",
+          "year": 2026,
+          "track": "主会；官方日程 2-MAIN",
+          "tier": "A",
+          "rank": 171,
+          "tags": [
+            "language",
+            "eval",
+            "reason",
+            "data"
+          ],
+          "url": "https://arxiv.org/abs/2610.26155",
+          "summary": "把 MGSM、IndoMMLU、XQuAD、CrossSum、WMT 等任务通过专业人工翻译扩展至十二种东南亚语言，评估数学与科学推理、问答、摘要和翻译。小模型在低资源语言上的落差更明显；英语思维链提示和先生成英语摘要再翻译，在所测设置中通常优于直接使用目标语言。",
+          "why": "补足多语言研究的地域与任务覆盖，可与语言资源量、思维链依赖和分词效率放在一起阅读。",
+          "limit": "源任务主要来自英语或印尼语，存在翻译痕迹，不能代表全部本地文化和方言。英语思维链实验同时改变指令语言与要求的推理语言，不能单独证明内部表征必然是英语；CrossSum 部分语言不严格平行。未复现实验。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3 节数据构建、第 4–5 节实验与分析、Limitations）",
+          "verification": "2026-10-21 核对原文 v1；题目与 EMNLP 官方主会日程 2-MAIN 对应。未复现实验；A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.26155v1"
+            },
+            {
+              "label": "EMNLP 官方详细日程（2-MAIN）",
+              "url": "https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490"
+            },
+            {
+              "label": "关联阅读（概念对照）：Afri-MCQA",
+              "url": "https://aclanthology.org/2026.acl-long.1869/"
+            },
+            {
+              "label": "关联阅读（概念对照）：XLM-R",
+              "url": "https://arxiv.org/abs/1911.02116"
+            },
+            {
+              "label": "关联阅读（概念对照）：分词指标跨语种审计",
+              "url": "https://arxiv.org/abs/2610.21679"
+            },
+            {
+              "label": "关联阅读（概念对照）：Reliance Hypothesis",
+              "url": "https://arxiv.org/abs/2610.22841"
+            }
+          ],
+          "categories": "语言学与多语言 · 评测与可靠性 · 推理与验证 · 预训练与数据",
+          "conference": "EMNLP 2026 · 主会",
+          "recommendation": "A",
+          "cohort": "2026 会议",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-19",
+          "firstPublicDate": "2026-10-19",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）；与会议展示日期区分",
+          "dateSource": "https://arxiv.org/abs/2610.26155",
+          "verifiedAt": "2026-10-21",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "google",
+              "name": "Google",
+              "nameEn": "Google / Google Brain / Google Research",
+              "type": "company"
+            }
+          ],
+          "institutionLabels": "Google",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.26155v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-21",
+          "affiliationsVerifiedAt": "2026-10-21",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。作者栏列 Google Research，并注明首位作者在 Google 实习期间完成；未从其 Monash 邮箱推断另一署名单位。",
+          "relatedPaperIds": [
+            "afri",
+            "xlmr",
+            "reliance-hypothesis",
+            "tokenizer-metrics-audit"
+          ],
+          "acceptanceSource": "https://2026.emnlp.org/program/",
+          "programId": "2-MAIN",
+          "presentationDate": "2026-10-25"
+        },
+        {
+          "id": "keep-bench",
+          "title": "KEEP-Bench: Evaluating Evidence Preservation in Context Compression",
+          "zh": "答案做对了，压缩上下文仍可能丢失关键证据",
+          "titleZh": "答案做对了，压缩上下文仍可能丢失关键证据",
+          "short": "KEEP-Bench",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 172,
+          "tags": [
+            "context",
+            "rag",
+            "eval",
+            "eff"
+          ],
+          "url": "https://arxiv.org/abs/2610.26827",
+          "summary": "将压缩后的文本直接与必要证据命题核对，覆盖并行指代、限定条件与少数观点三类结构，共 4,102 个案例。All-Rec 只有在全部必要命题保留时才得分；所测最强开放权重和闭源配置分别为 66.8% 与 61.6%。另以 EPR 对照证据保留与推理计算量，显示仅放大模型或输出预算仍有明显代价。",
+          "why": "为长上下文压缩与 RAG 提供比最终问答准确率更直接的保真诊断，适合检查摘要与记忆压缩是否遗漏条件。",
+          "limit": "主要是平均约 3.1K tokens 的受控文本案例，未直接评估 KV 或潜表示压缩。依赖 GPT-5.2 判断蕴含，在三类各 100 个命题判定上的人工一致率为 93%；不是无误裁判。EPR 基于估算 FLOPs，不等于端到端延迟或 API 成本。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3–5 节构造、裁判验证、All-Rec／EPR 与结果分析）",
+          "verification": "2026-10-21 核对原文 v1；未核实会议录用。未复现实验；A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.26827v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：Lost in the Middle",
+              "url": "https://arxiv.org/abs/2307.03172"
+            },
+            {
+              "label": "关联阅读（概念对照）：RULER",
+              "url": "https://arxiv.org/abs/2404.06654"
+            },
+            {
+              "label": "关联阅读（概念对照）：Latent Compaction",
+              "url": "https://arxiv.org/abs/2610.20582"
+            },
+            {
+              "label": "关联阅读（概念对照）：ContextLift",
+              "url": "https://arxiv.org/abs/2610.21633"
+            }
+          ],
+          "categories": "长上下文 · 知识检索与 RAG · 评测与可靠性 · 效率与优化",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-19",
+          "firstPublicDate": "2026-10-19",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）；与会议展示日期区分",
+          "dateSource": "https://arxiv.org/abs/2610.26827",
+          "verifiedAt": "2026-10-21",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "ucla",
+              "name": "加州大学洛杉矶分校",
+              "nameEn": "University of California, Los Angeles / UCLA",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "加州大学洛杉矶分校",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.26827v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-21",
+          "affiliationsVerifiedAt": "2026-10-21",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "lostmiddle",
+            "ruler",
+            "latent-compaction",
+            "contextlift"
+          ]
+        },
+        {
+          "id": "harnessrl",
+          "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
+          "zh": "让任务采样、探索提示和评分规则随强化学习共同调整",
+          "titleZh": "让任务采样、探索提示和评分规则随强化学习共同调整",
+          "short": "HarnessRL",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 173,
+          "tags": [
+            "post",
+            "data",
+            "memory",
+            "eval",
+            "reason"
+          ],
+          "url": "https://arxiv.org/abs/2610.26426",
+          "summary": "把开放式 RL 的失效分为无区分度奖励与虚假奖励，用训练历史检索定位问题，再分别调整任务采样、探索提示或评分细则。候选修改需在当前冻结策略上接受即时检验。五领域、4B／9B 实验中，比最强对照高 2.8–3.1 个平均分点；4B 达最佳分布外检查点用时 17.5 集群小时，对照 GRPO 为 20.4。",
+          "why": "把数据课程、训练记忆和奖励可靠性串联起来，展示开放任务中如何依据当前策略修订训练配置。",
+          "limit": "每步成本约为 GRPO 的 1.6 倍，步数近乎减半不等于总算力减半。主要在 Qwen3.5 两种规模、五个领域验证；奖励与配置调整依赖 Gemma-4-31B，部分评分仍依赖模型裁判。主表按评估集最佳检查点选取，作者另报告固定步数和等算力对照；未独立复现。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 2 节三个接口与即时检验、第 3 节设置、裁判、消融和成本分析）",
+          "verification": "2026-10-21 核对原文 v1；未核实会议录用。未复现实验；A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.26426v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：DeepSeek-R1",
+              "url": "https://arxiv.org/abs/2501.12948"
+            },
+            {
+              "label": "关联阅读（概念对照）：SAGE",
+              "url": "https://aclanthology.org/2026.acl-long.69/"
+            },
+            {
+              "label": "关联阅读（概念对照）：Verifier Error",
+              "url": "https://arxiv.org/abs/2605.02909"
+            },
+            {
+              "label": "关联阅读（概念对照）：LM2LM",
+              "url": "https://arxiv.org/abs/2610.23344"
+            }
+          ],
+          "categories": "后训练与对齐 · 预训练与数据 · 长期记忆 · 评测与可靠性 · 推理与验证",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-19",
+          "firstPublicDate": "2026-10-19",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）；与会议展示日期区分",
+          "dateSource": "https://arxiv.org/abs/2610.26426",
+          "verifiedAt": "2026-10-21",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "alibaba",
+              "name": "阿里巴巴",
+              "nameEn": "Alibaba Group / Tongyi Lab",
+              "type": "company"
+            },
+            {
+              "id": "montreal",
+              "name": "蒙特利尔大学",
+              "nameEn": "Université de Montréal",
+              "type": "university"
+            },
+            {
+              "id": "mila",
+              "name": "Mila",
+              "nameEn": "Mila – Quebec AI Institute",
+              "type": "research"
+            }
+          ],
+          "institutionLabels": "阿里巴巴 · 蒙特利尔大学 · Mila",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.26426v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-21",
+          "affiliationsVerifiedAt": "2026-10-21",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "r1",
+            "verifiererror",
+            "skillrl",
+            "lm2lm"
+          ]
+        },
+        {
+          "id": "safety-mid-training",
+          "title": "Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability",
+          "zh": "在中训练阶段，把安全判断与通用推理共同学习",
+          "titleZh": "在中训练阶段，把安全判断与通用推理共同学习",
+          "short": "Safety Mid-Training",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 174,
+          "tags": [
+            "safety",
+            "post",
+            "data",
+            "reason"
+          ],
+          "url": "https://arxiv.org/abs/2610.26809",
+          "summary": "让基座模型根据安全／通用问题、标签和参考答案生成结构化知识文档与推理回答，再用 Qwen3-32B 过滤；文档和回答混合做全 token 语言模型训练，随后接 SFT 或 GRPO。Qwen3 1.7B–8B 相对基座的平均攻击成功率降低 72%–81%，且在所测不含安全数据的后训练中仍保留较多安全收益。",
+          "why": "将安全从末端拒答扩展到中训练的数据与能力结构，可与安全遗忘、合成数据和后训练稳健性联读。",
+          "limit": "实验限于 Qwen3、Llama-3.2 及最大 8B，不能保证所有语言、攻击与真实多轮交互。所谓自生成仍依赖参考答案、标签及外部裁判；部分安全／开放题评估也由模型打分。数据生成每种规模约需 3–5 天，安全样本比例过高会损害能力并增加过度拒答。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（第 3 节数据与目标、第 4 节实验与消融、Limitations、附录 B 成本与评估）",
+          "verification": "2026-10-21 核对原文 v1；未核实会议录用。未复现实验；A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "核读的原文版本",
+              "url": "https://arxiv.org/html/2610.26809v1"
+            },
+            {
+              "label": "关联阅读（概念对照）：InstructGPT",
+              "url": "https://arxiv.org/abs/2203.02155"
+            },
+            {
+              "label": "关联阅读（概念对照）：Constitutional AI",
+              "url": "https://arxiv.org/abs/2212.08073"
+            },
+            {
+              "label": "关联阅读（概念对照）：Layer-wise Swapping",
+              "url": "https://aclanthology.org/2026.eacl-long.98/"
+            },
+            {
+              "label": "关联阅读（概念对照）：ContextLift",
+              "url": "https://arxiv.org/abs/2610.21633"
+            }
+          ],
+          "categories": "安全、隐私与遗忘 · 后训练与对齐 · 预训练与数据 · 推理与验证",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-19",
+          "firstPublicDate": "2026-10-19",
+          "datePrecision": "日",
+          "dateBasis": "首版预印本（UTC）；与会议展示日期区分",
+          "dateSource": "https://arxiv.org/abs/2610.26809",
+          "verifiedAt": "2026-10-21",
+          "reviewedVersion": "v1",
+          "institutions": [
+            {
+              "id": "jhu",
+              "name": "约翰斯·霍普金斯大学",
+              "nameEn": "Johns Hopkins University",
+              "type": "university"
+            },
+            {
+              "id": "washington",
+              "name": "华盛顿大学",
+              "nameEn": "University of Washington",
+              "type": "university"
+            },
+            {
+              "id": "stanford",
+              "name": "斯坦福大学",
+              "nameEn": "Stanford University",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "约翰斯·霍普金斯大学 · 华盛顿大学 · 斯坦福大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "v1 作者署名及单位脚注",
+              "url": "https://arxiv.org/html/2610.26809v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-21",
+          "affiliationsVerifiedAt": "2026-10-21",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "constitutional",
+            "instruct",
+            "layersafety",
+            "contextlift"
+          ]
+        },
+        {
+          "id": "fairstress",
+          "title": "Asymmetrically Unfair Decision Making and Reasoning in LLMs",
+          "zh": "FairStress：最终选择接近公平，受劝说时仍可能不对称",
+          "titleZh": "FairStress：最终选择接近公平，受劝说时仍可能不对称",
+          "short": "FairStress",
+          "venue": "技术报告",
+          "year": 2026,
+          "track": "独立技术报告；会议录用未核实",
+          "tier": "A",
+          "rank": 175,
+          "tags": [
+            "safety",
+            "eval",
+            "mechanism",
+            "post"
+          ],
+          "url": "https://allenai.org/papers/fairstress",
+          "summary": "用 300 个双候选决策场景、29 个领域、四档身份提示与成对劝说句，分别测最终选择、抗劝说能力、理由和内部状态。完整组合约 1,303 万项，另有 50,012 项 Core 子集。15 个模型在显式身份条件下，准确率差约 2.9 个百分点，但受劝说放弃正确选择的不对称达 9.3 个百分点。",
+          "why": "将公平性评估从单次答案扩展到决定是否稳固、如何解释，可联系迎合、推理透明度和对齐数据分布。",
+          "limit": "采用以平等为基准的对称公平定义，不覆盖考虑历史不平等的所有公平观。场景为合成、短文本、双候选，身份配对采用美国中心的惯例。训练数据审计只覆盖 OLMo-3，关联不能证明因果；内部与言语表征仅提供间接线索。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核查（官方报告第 1–10 页的方法、结果、训练数据审计；第 10–11 页局限及伦理定义）",
+          "verification": "2026-10-21 核读官方所链报告；未核实会议录用，未复现实验。A 为初步编辑阅读建议。",
+          "extra": [
+            {
+              "label": "官方报告 PDF",
+              "url": "https://allenai.org/papers/fairstress"
+            },
+            {
+              "label": "官方发布说明与日期",
+              "url": "https://allenai.org/blog/fairstress"
+            },
+            {
+              "label": "关联阅读（概念对照）：Constitutional AI",
+              "url": "https://arxiv.org/abs/2212.08073"
+            },
+            {
+              "label": "关联阅读（概念对照）：含混反驳与迎合",
+              "url": "https://arxiv.org/abs/2610.17703"
+            },
+            {
+              "label": "关联阅读（概念对照）：Reliance Hypothesis",
+              "url": "https://arxiv.org/abs/2610.22841"
+            }
+          ],
+          "categories": "安全、隐私与遗忘 · 评测与可靠性 · 能力机理与理论 · 后训练与对齐",
+          "conference": "2026 独立技术报告（未核实录用）",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "新作跟踪",
+          "curated": true,
+          "date": "2026-10-20",
+          "firstPublicDate": "2026-10-20",
+          "datePrecision": "日",
+          "dateBasis": "官方随报告发布说明日期；更早版本日期未核实",
+          "dateSource": "https://allenai.org/blog/fairstress",
+          "verifiedAt": "2026-10-21",
+          "reviewedVersion": "2026-10-21 下载的官方报告",
+          "institutions": [
+            {
+              "id": "ai2",
+              "name": "艾伦人工智能研究所",
+              "nameEn": "Allen Institute for AI / Ai2",
+              "type": "research"
+            },
+            {
+              "id": "uiuc",
+              "name": "伊利诺伊大学厄巴纳-香槟分校",
+              "nameEn": "University of Illinois Urbana-Champaign / UIUC",
+              "type": "university"
+            },
+            {
+              "id": "cmu",
+              "name": "卡内基梅隆大学",
+              "nameEn": "Carnegie Mellon University",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "艾伦人工智能研究所 · 伊利诺伊大学厄巴纳-香槟分校 · 卡内基梅隆大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "官方报告第 1 页作者单位",
+              "url": "https://allenai.org/papers/fairstress"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-10-21",
+          "affiliationsVerifiedAt": "2026-10-21",
+          "affiliationNote": "联合署名次序不表示牵头或贡献排名。",
+          "relatedPaperIds": [
+            "pushback-haystack",
+            "reliance-hypothesis",
+            "constitutional"
+          ]
         }
       ],
       "source": {
-        "label": "170 篇精选论文及基础文献（73 篇 2026 会议 + 31 篇 2026 预印本 + 66 篇历史背景）",
-        "period": "2026-10-20 新核读 6 篇预印本；其余条目保留各自核验日期",
+        "label": "175 篇精选论文及基础文献（74 篇 2026 会议 + 35 篇 2026 预印本／独立报告 + 66 篇历史背景）",
+        "period": "2026-10-21 新核读 5 篇，复核 2 篇 v2 修订；其余条目保留各自核验日期",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -12982,6 +13464,26 @@
           {
             "label": "DLite: History-free Speculative Decoding for Agentic AI",
             "url": "https://arxiv.org/abs/2610.23787"
+          },
+          {
+            "label": "DeepSEA: A Multilingual Evaluation Benchmark for Southeast Asia",
+            "url": "https://arxiv.org/abs/2610.26155"
+          },
+          {
+            "label": "KEEP-Bench: Evaluating Evidence Preservation in Context Compression",
+            "url": "https://arxiv.org/abs/2610.26827"
+          },
+          {
+            "label": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
+            "url": "https://arxiv.org/abs/2610.26426"
+          },
+          {
+            "label": "Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability",
+            "url": "https://arxiv.org/abs/2610.26809"
+          },
+          {
+            "label": "Asymmetrically Unfair Decision Making and Reasoning in LLMs",
+            "url": "https://allenai.org/papers/fairstress"
           }
         ],
         "filters": [
@@ -13013,7 +13515,8 @@
           "作者单位已核实 153 / 156 篇（2026-10-16 新增 9 篇，其余保留原核验日期）；按引用版本与研究开展时归属，院系／实验室归并，独立研究者另标。机构类型是编辑性分组；跨机构数量允许重叠，单位核验不代表全文重读。",
           "2026-10-16 新增 9 篇 arXiv v1，均未核实顶会录用；核读方法及实验／局限的相关章节，未复现实验，A 为初步编辑性建议。",
           "2026-10-19 新增 8 篇 v1，均未核实会议录用，方法／实验相关段落重点核读，未复现；A 为初步编辑性建议。AbridgeKV 首版提交为 10 月 7 日、公告较晚，不把发现日期当论文首发。",
-          "2026-10-20 新增 6 篇 v1，核读方法、结果与边界，未复现及核实会议录用；作者单位来自同版署名。LM2LM 的成本节省区分数据生成与总成本；MIST 最佳候选使用报告评分器，不能当作真实记忆提升。"
+          "2026-10-20 新增 6 篇 v1，核读方法、结果与边界，未复现及核实会议录用；作者单位来自同版署名。LM2LM 的成本节省区分数据生成与总成本；MIST 最佳候选使用报告评分器，不能当作真实记忆提升。",
+          "2026-10-21 DeepSEA 与 EMNLP 主会日程对应；其余新作未核实会议录用。FairStress 是官方独立技术报告，归入未核实录用的预印本／报告组，其日期来自官方发布说明。新条目均核读方法、结果、局限及署名，未复现实验。分词器评估按 v2 修正模型数与统计结果；DialFork 按 v2 区分数据和代码许可。"
         ],
         "evidenceFlow": [
           {
@@ -13302,7 +13805,7 @@
           "status": "已检索官方目录",
           "curatedCount": 33,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-20"
+          "checkedAt": "2026-10-21"
         },
         {
           "id": "eacl26",
@@ -13315,7 +13818,7 @@
           "status": "已检索官方目录",
           "curatedCount": 8,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-20"
+          "checkedAt": "2026-10-21"
         },
         {
           "id": "iclr26",
@@ -13328,7 +13831,7 @@
           "status": "已检索官方目录",
           "curatedCount": 11,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-20"
+          "checkedAt": "2026-10-21"
         },
         {
           "id": "icml26",
@@ -13341,20 +13844,20 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-20"
+          "checkedAt": "2026-10-21"
         },
         {
           "id": "neurips26",
           "venue": "NeurIPS",
           "year": 2026,
           "catalogCount": 9110,
-          "indexedCount": 3486,
+          "indexedCount": 3487,
           "sourceUrl": "https://neurips.cc/Downloads/2026",
           "scope": "仅 Poster 条目；排除 workshop、教程和邀请报告；按 NLP／LLM 标题筛选；补入标题初筛遗漏的已核验重点论文",
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-20"
+          "checkedAt": "2026-10-21"
         },
         {
           "id": "colm26",
@@ -13367,7 +13870,7 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-10-20"
+          "checkedAt": "2026-10-21"
         },
         {
           "id": "emnlp26",
@@ -13375,18 +13878,18 @@
           "year": 2026,
           "catalogCount": 5548,
           "indexedCount": 5548,
-          "curatedCount": 0,
+          "curatedCount": 1,
           "sourceUrl": "https://2026.emnlp.org/program/",
-          "scope": "官方详细日程：主会 2,710、Findings 2,487、Industry 265、Demo 86；排除 CL 13 与 TACL 50 篇期刊报告。不将展示日期当首发日期；逐篇原文链接待核。",
+          "scope": "官方详细日程：主会 2,710、Findings 2,487、Industry 265、Demo 86；排除 CL 13 与 TACL 50 篇期刊报告。不将展示日期当首发日期；已对应 DeepSEA 原文，其余逐篇原文链接待核。",
           "status": "已检索官方详细日程",
-          "coverage": "目录已纳入；摘要尚未整理",
-          "checkedAt": "2026-10-20",
+          "coverage": "目录已纳入；1 篇已核读原文，其余候选待核",
+          "checkedAt": "2026-10-21",
           "detailSourceUrl": "https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490"
         }
       ],
       "source": {
         "label": "2026 官方目录覆盖核对",
-        "period": "2026-10-20 复核 7 个会议目录；EMNLP 日程恢复，题目集与既有快照一致",
+        "period": "2026-10-21 复核 7 个会议目录；EMNLP 新增 1 篇原文整理，NeurIPS 修订标题",
         "grain": "每行一个会议目录及其检索边界",
         "links": [
           {
@@ -13432,7 +13935,8 @@
           "EMNLP 5,548 条为主会、Findings、Industry、Demo 日程题目，排除 CL/TACL 63 篇期刊报告；尚未逐篇读摘要或补原文链接，不能当作已整理论文。NAACL 官网指向 2027 届，本次不虚设 2026 目录。",
           "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。",
           "2026-10-19 NeurIPS Poster 目录为 9,111 项，NLP／LLM 标题初筛仍为 3,486 项。EMNLP 导出的表格变为 95 行并含异常日期和表头错位，未替换 5,548 条既有目录。",
-          "2026-10-20 EMNLP 官方日程恢复为 5,611 条，其中 63 条 CL／TACL 期刊展示仍排除；5,548 条会议题目与旧目录一致。NeurIPS Poster 总量为 9,110，NLP／LLM 初筛仍为 3,486；源站移除项不在本看板初筛范围。"
+          "2026-10-20 EMNLP 官方日程恢复为 5,611 条，其中 63 条 CL／TACL 期刊展示仍排除；5,548 条会议题目与旧目录一致。NeurIPS Poster 总量为 9,110，NLP／LLM 初筛仍为 3,486；源站移除项不在本看板初筛范围。",
+          "2026-10-21 NeurIPS Poster 总数仍为 9,110；一个既有条目改名后进入筛选，初筛 3,487。五项改名保留原 ID；EMNLP 有效日期更改与改期未定分开处理。"
         ]
       },
       "methods": [
@@ -203416,7 +203920,7 @@
           "reading": "仅题目初筛"
         },
         {
-          "title": "An In-Depth Analysis of Hallucination Detection Methods for Vision-Language Models",
+          "title": "Robustness of Internal Signals for Hallucination Detection in Vision-Language Models",
           "url": "https://neurips.cc/virtual/2026/poster/139199",
           "track": "官网 Poster 目录；细分轨未逐篇核对",
           "venue": "NeurIPS",
@@ -203431,7 +203935,11 @@
           "id": "idx-af63ef900daf",
           "categories": "评测与可靠性 · 多模态与语音",
           "curatedId": "",
-          "reading": "仅题目初筛"
+          "reading": "仅题目初筛",
+          "previousTitles": [
+            "An In-Depth Analysis of Hallucination Detection Methods for Vision-Language Models"
+          ],
+          "titleCheckedAt": "2026-10-21"
         },
         {
           "title": "An Open-Source Training Dataset for Foundation Models for Black-box Optimization",
@@ -213979,7 +214487,7 @@
           "reading": "仅题目初筛"
         },
         {
-          "title": "Diagnosing Math-Reasoning Failure Structure with Milestone Oracles",
+          "title": "Solving Every Step Is Not Enough: Milestone Oracles Reveal a Composition Gap in LLM Math Reasoning",
           "url": "https://neurips.cc/virtual/2026/poster/139575",
           "track": "官网 Poster 目录；细分轨未逐篇核对",
           "venue": "NeurIPS",
@@ -213993,7 +214501,11 @@
           "id": "idx-80b57a754cec",
           "categories": "推理与验证",
           "curatedId": "",
-          "reading": "仅题目初筛"
+          "reading": "仅题目初筛",
+          "previousTitles": [
+            "Diagnosing Math-Reasoning Failure Structure with Milestone Oracles"
+          ],
+          "titleCheckedAt": "2026-10-21"
         },
         {
           "title": "DiagnosticIQ: A Benchmark for LLM-Based Industrial Maintenance Action Recommendation from Symbolic Rules",
@@ -217742,7 +218254,7 @@
           "reading": "仅题目初筛"
         },
         {
-          "title": "EV-AUDIT: A Co-Evolutionary Auditing Framework for Task Hijacking in Multi-Agent Systems",
+          "title": "PurpleAudit: A Co-Evolutionary Auditing Framework for Task Hijacking in Multi-Agent Systems",
           "url": "https://neurips.cc/virtual/2026/poster/139127",
           "track": "官网 Poster 目录；细分轨未逐篇核对",
           "venue": "NeurIPS",
@@ -217756,7 +218268,11 @@
           "id": "idx-fee4d57e8a71",
           "categories": "Agent 与工具",
           "curatedId": "",
-          "reading": "仅题目初筛"
+          "reading": "仅题目初筛",
+          "previousTitles": [
+            "EV-AUDIT: A Co-Evolutionary Auditing Framework for Task Hijacking in Multi-Agent Systems"
+          ],
+          "titleCheckedAt": "2026-10-21"
         },
         {
           "title": "Even Sailors Need Calm Seas: Taming the Geometry of VLMs for Fast Adversarial Fine-Tuning",
@@ -226760,7 +227276,7 @@
           "reading": "仅题目初筛"
         },
         {
-          "title": "JRDB-AVR: An Active Visual Reasoning Benchmark for Real-World Embodied Environments",
+          "title": "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments",
           "url": "https://neurips.cc/virtual/2026/poster/139326",
           "track": "官网 Poster 目录；细分轨未逐篇核对",
           "venue": "NeurIPS",
@@ -226775,7 +227291,11 @@
           "id": "idx-b111e2baede1",
           "categories": "推理与验证 · 评测与可靠性",
           "curatedId": "",
-          "reading": "仅题目初筛"
+          "reading": "仅题目初筛",
+          "previousTitles": [
+            "JRDB-AVR: An Active Visual Reasoning Benchmark for Real-World Embodied Environments"
+          ],
+          "titleCheckedAt": "2026-10-21"
         },
         {
           "title": "JuICE: A Benchmark for Evaluating LLM-Judge in Identifying Cultural Errors",
@@ -245504,7 +246024,7 @@
           "reading": "仅题目初筛"
         },
         {
-          "title": "SciReason: A Controllable Benchmark for Scientific Reasoning in LLMs",
+          "title": "SciR: A Controllable Benchmark for Scientific Reasoning in LLMs",
           "url": "https://neurips.cc/virtual/2026/poster/139704",
           "track": "官网 Poster 目录；细分轨未逐篇核对",
           "venue": "NeurIPS",
@@ -245520,7 +246040,11 @@
           "id": "idx-0d49fe7e7a75",
           "categories": "推理与验证 · 评测与可靠性 · 领域任务与科学",
           "curatedId": "",
-          "reading": "仅题目初筛"
+          "reading": "仅题目初筛",
+          "previousTitles": [
+            "SciReason: A Controllable Benchmark for Scientific Reasoning in LLMs"
+          ],
+          "titleCheckedAt": "2026-10-21"
         },
         {
           "title": "SciResearchBench: Benchmarking AI Agents on Complex Scientific Literature Discovery",
@@ -275729,13 +276253,15 @@
           ],
           "sourceUrl": "https://2026.emnlp.org/program/",
           "screening": "官方日程题目与分轨核对；未逐篇读摘要",
-          "curated": false,
+          "curated": true,
           "categories": "评测与可靠性 · 语言学与多语言",
-          "curatedId": null,
-          "reading": "题目初筛；原文待核",
+          "curatedId": "deepsea",
+          "reading": "原文方法／实验与局限重点核读；主会日程已对应",
           "programId": "2-MAIN",
           "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "verifiedAt": "2026-10-15",
+          "paperUrl": "https://arxiv.org/abs/2610.26155",
+          "curationCheckedAt": "2026-10-21"
         },
         {
           "id": "idx-404c78da802c",
@@ -278447,8 +278973,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "352-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-27",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-69c83c86d6d0",
@@ -287733,8 +288262,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "1530-MAIN",
-          "presentationDate": "#N/A",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "#N/A",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-8649316ba18d",
@@ -292353,8 +292885,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "2201-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-25",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-755c5556395f",
@@ -298356,8 +298891,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "3137-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-27",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-786ca91d47ac",
@@ -303820,8 +304358,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4019-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-25",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-f4444920a1ab",
@@ -307387,8 +307928,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4587-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-26",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-56da17b2c4da",
@@ -309468,8 +310012,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "4900-MAIN",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-26",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-25",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-d49087975833",
@@ -310533,8 +311080,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5081-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-27",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-a16b6d6e85a8",
@@ -313482,8 +314032,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5665-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-26",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-17a1d6c23c52",
@@ -326062,8 +326615,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "8128-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-26",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-2fa89261ebde",
@@ -329694,8 +330250,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "9090-MAIN",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-26",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-3751eb4a3c80",
@@ -330973,8 +331532,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "9708-MAIN",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-27",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-bb96eb8776df",
@@ -332246,8 +332808,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "237-IND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-26",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-921f9c744444",
@@ -333015,8 +333580,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "384-IND",
-          "presentationDate": "2026-10-26",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "2026-10-25",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-26",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "会议展示日期；不是论文首发日期"
         },
         {
           "id": "idx-156e920b3653",
@@ -338480,8 +339048,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "23-FIND",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-27",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-d4a0b7e978df",
@@ -365901,8 +366472,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "5123-FIND",
-          "presentationDate": "2026-10-25",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-25",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-f50caa779ea6",
@@ -379344,8 +379918,11 @@
           "curatedId": null,
           "reading": "题目初筛；原文待核",
           "programId": "7113-FIND",
-          "presentationDate": "2026-10-27",
-          "verifiedAt": "2026-10-15"
+          "presentationDate": "",
+          "verifiedAt": "2026-10-15",
+          "previousPresentationDate": "2026-10-27",
+          "scheduleCheckedAt": "2026-10-21",
+          "presentationDateBasis": "官方本次日程未给出有效日期，展示时间待定；不表示撤稿"
         },
         {
           "id": "idx-74a01a2bbef4",
@@ -389096,11 +389673,30 @@
           "programId": "9823-FIND",
           "presentationDate": "",
           "verifiedAt": "2026-10-15"
+        },
+        {
+          "title": "GeoFidelity-Bench: Evaluating Block-Conditioned Geographic Fidelity in Text-to-Image Street-View Generation",
+          "url": "https://neurips.cc/virtual/2026/poster/139512",
+          "track": "官网 Poster 目录；细分轨未逐篇核对",
+          "venue": "NeurIPS",
+          "year": 2026,
+          "tags": [
+            "eval"
+          ],
+          "sourceUrl": "https://neurips.cc/Downloads/2026",
+          "screening": "目录标题规则初筛；未逐篇读摘要",
+          "curated": false,
+          "id": "idx-837d0a3b24c6",
+          "categories": "评测与可靠性",
+          "curatedId": null,
+          "reading": "题目初筛；原文待核",
+          "verifiedAt": "2026-10-21",
+          "indexNote": "官方既有 Poster 改名后进入 NLP／LLM 标题筛选范围；不代表今天新录用或发布。"
         }
       ],
       "source": {
         "label": "20,604 条官方会议目录候选；题目初筛与精选摘要分开计数",
-        "period": "20,604 条题目候选；2026-10-20 复核 7 个目录，未新增题目",
+        "period": "20,605 条题目候选；2026-10-21 复核目录，1 条既有 Poster 新进入初筛",
         "grain": "每行一条会议目录记录；同一论文改题保留原 ID，跨会议同名条目保留",
         "links": [
           {
@@ -389146,7 +389742,8 @@
           "EMNLP 5,548 条为主会、Findings、Industry、Demo 日程题目，排除 CL/TACL 63 篇期刊报告；尚未逐篇读摘要或补原文链接，不能当作已整理论文。NAACL 官网指向 2027 届，本次不虚设 2026 目录。",
           "2026-10-16 修正 EACL 1 条、COLM 2 条题名，原 ID 与分类保留。EMNLP 日期列出现与主会日程矛盾的值，日程字段保留上次记录并待核，不影响题目计数或论文首发日期。",
           "2026-10-19 无已确认新增 NLP／LLM 目录条目；已改题的 3 条沿用旧 ID。EMNLP 数据异常待核，未按异常源删减目录。",
-          "2026-10-20 EMNLP 表格已恢复，题目与 ID 全部保留；更新 140 条明确的展示日期，未定或 #N/A 项不当作论文日期，不整体改写题目核验日。"
+          "2026-10-20 EMNLP 表格已恢复，题目与 ID 全部保留；更新 140 条明确的展示日期，未定或 #N/A 项不当作论文日期，不整体改写题目核验日。",
+          "2026-10-21 保留全部既有 ID，修订 5 个 NeurIPS 标题；新增 1 条是改名后匹配关键词，并非新发布。EMNLP DeepSEA 对应已整理原文；展示日期缺失改为待定，不当作撤稿或论文首发日期。"
         ]
       },
       "methods": [
@@ -389961,7 +390558,7 @@
             "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
           },
           "verifiedAt": "2026-10-13",
-          "notes": "补核 10 月 8 日已上线的 Ultrafast 服务模式：Responses API 设置 service_tier=ultrafast，目标是缩短输出 token 间隔。≤272K 输入为 USD 12 / 60，长上下文 USD 24 / 90 每百万输入／输出 token（2026-10-19 核验），独立于上方 Standard 历史价格。最大输入 922K、最大输出 128K，共享 1.05M 上下文。",
+          "notes": "补核 10 月 8 日已上线的 Ultrafast 服务模式：Responses API 设置 service_tier=ultrafast，目标是缩短输出 token 间隔。≤272K 输入为 USD 12 / 60，长上下文 USD 24 / 90 每百万输入／输出 token（2026-10-19 核验），独立于上方 Standard 历史价格。最大输入 922K、最大输出 128K，共享 1.05M 上下文。 2026-10-21 缓存服务核验：Responses API 新增 12 小时最低保留期，写入总价为未缓存输入的 2.5 倍；默认 30 分钟为 1.25 倍。由 30 分钟升级为 12 小时需重新支付长保留写入费用；12 小时不代表删除期限。原 token 单价及其依据日期保留。",
           "sources": [
             {
               "label": "系统卡附录",
@@ -389986,6 +390583,10 @@
             {
               "label": "输入、输出及服务规格",
               "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+            },
+            {
+              "label": "12 小时缓存、费用与升级规则（2026-10-21）",
+              "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
             }
           ],
           "parameterLabel": "未公开",
@@ -390029,6 +390630,16 @@
             "url": "https://developers.openai.com/api/docs/pricing",
             "longContextInput": 24,
             "longContextOutput": 90
+          },
+          "cacheServicePricing": {
+            "asOf": "2026-10-21",
+            "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+            "api": "Responses API",
+            "defaultTtl": "30m",
+            "extendedTtl": "12h",
+            "defaultWriteMultiplier": 1.25,
+            "extendedWriteMultiplier": 2.5,
+            "readMultiplier": 0.05
           }
         },
         {
@@ -390148,7 +390759,7 @@
             "url": "https://developers.openai.com/api/docs/models/gpt-6-sol"
           },
           "verifiedAt": "2026-10-13",
-          "notes": "",
+          "notes": " 2026-10-21 缓存服务核验：Responses API 新增 12 小时最低保留期，写入总价为未缓存输入的 2.5 倍；默认 30 分钟为 1.25 倍。由 30 分钟升级为 12 小时需重新支付长保留写入费用；12 小时不代表删除期限。原 token 单价及其依据日期保留。",
           "specUrl": "https://developers.openai.com/api/docs/models/gpt-6-sol",
           "sources": [
             {
@@ -390166,6 +390777,10 @@
             {
               "label": "API 价格来源",
               "url": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+            },
+            {
+              "label": "12 小时缓存、费用与升级规则（2026-10-21）",
+              "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
             }
           ],
           "parameterLabel": "未公开",
@@ -390198,7 +390813,17 @@
             "tea"
           ],
           "technicalSource": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
+          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。",
+          "cacheServicePricing": {
+            "asOf": "2026-10-21",
+            "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+            "api": "Responses API",
+            "defaultTtl": "30m",
+            "extendedTtl": "12h",
+            "defaultWriteMultiplier": 1.25,
+            "extendedWriteMultiplier": 2.5,
+            "readMultiplier": 0.1
+          }
         },
         {
           "id": "gpt6luna",
@@ -390233,7 +390858,7 @@
             "url": "https://developers.openai.com/api/docs/models/gpt-6-luna"
           },
           "verifiedAt": "2026-10-13",
-          "notes": "",
+          "notes": " 2026-10-21 缓存服务核验：Responses API 新增 12 小时最低保留期，写入总价为未缓存输入的 2.5 倍；默认 30 分钟为 1.25 倍。由 30 分钟升级为 12 小时需重新支付长保留写入费用；12 小时不代表删除期限。原 token 单价及其依据日期保留。",
           "specUrl": "https://developers.openai.com/api/docs/models/gpt-6-luna",
           "sources": [
             {
@@ -390251,6 +390876,10 @@
             {
               "label": "API 价格来源",
               "url": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+            },
+            {
+              "label": "12 小时缓存、费用与升级规则（2026-10-21）",
+              "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
             }
           ],
           "parameterLabel": "未公开",
@@ -390282,7 +390911,17 @@
             "tea"
           ],
           "technicalSource": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
+          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。",
+          "cacheServicePricing": {
+            "asOf": "2026-10-21",
+            "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+            "api": "Responses API",
+            "defaultTtl": "30m",
+            "extendedTtl": "12h",
+            "defaultWriteMultiplier": 1.25,
+            "extendedWriteMultiplier": 2.5,
+            "readMultiplier": 0.1
+          }
         },
         {
           "id": "claude55opus",
@@ -390602,7 +391241,7 @@
             "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
           },
           "verifiedAt": "2026-10-13",
-          "notes": "",
+          "notes": " 2026-10-21 缓存服务核验：Responses API 新增 12 小时最低保留期，写入总价为未缓存输入的 2.5 倍；默认 30 分钟为 1.25 倍。由 30 分钟升级为 12 小时需重新支付长保留写入费用；12 小时不代表删除期限。原 token 单价及其依据日期保留。",
           "specUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
           "sources": [
             {
@@ -390620,6 +391259,10 @@
             {
               "label": "API 价格来源",
               "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+            },
+            {
+              "label": "12 小时缓存、费用与升级规则（2026-10-21）",
+              "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
             }
           ],
           "parameterLabel": "未公开",
@@ -390652,7 +391295,17 @@
             "centaur"
           ],
           "technicalSource": "https://openai.com/index/gpt-6-astra/",
-          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
+          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。",
+          "cacheServicePricing": {
+            "asOf": "2026-10-21",
+            "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+            "api": "Responses API",
+            "defaultTtl": "30m",
+            "extendedTtl": "12h",
+            "defaultWriteMultiplier": 1.25,
+            "extendedWriteMultiplier": 2.5,
+            "readMultiplier": 0.1
+          }
         },
         {
           "id": "gemini38",
@@ -391102,7 +391755,7 @@
             "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
           },
           "verifiedAt": "2026-10-13",
-          "notes": "此前 6 月 26 日有限预览；本行采用家族正式发布日。",
+          "notes": "此前 6 月 26 日有限预览；本行采用家族正式发布日。 2026-10-21 缓存服务核验：Responses API 新增 12 小时最低保留期，写入总价为未缓存输入的 2.5 倍；默认 30 分钟为 1.25 倍。由 30 分钟升级为 12 小时需重新支付长保留写入费用；12 小时不代表删除期限。原 token 单价及其依据日期保留。",
           "specUrl": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
           "sources": [
             {
@@ -391120,6 +391773,10 @@
             {
               "label": "API 价格来源",
               "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+            },
+            {
+              "label": "12 小时缓存、费用与升级规则（2026-10-21）",
+              "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
             }
           ],
           "parameterLabel": "未公开",
@@ -391152,7 +391809,17 @@
             "swereplay"
           ],
           "technicalSource": "https://openai.com/index/gpt-5-6/",
-          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
+          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。",
+          "cacheServicePricing": {
+            "asOf": "2026-10-21",
+            "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+            "api": "Responses API",
+            "defaultTtl": "30m",
+            "extendedTtl": "12h",
+            "defaultWriteMultiplier": 1.25,
+            "extendedWriteMultiplier": 2.5,
+            "readMultiplier": 0.1
+          }
         },
         {
           "id": "claude5",
@@ -396150,11 +396817,331 @@
           ],
           "technicalSource": "https://platform.minimax.io/docs/guides/text-generation",
           "technicalNote": "只核读发布说明、API 指南和价格页；没有用旧 M3 报告填充本版未知参数。关联论文用于概念阅读，不表示厂商实际采用。"
+        },
+        {
+          "id": "voxtral3-small-transcribe",
+          "name": "Voxtral Small Transcribe 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "32K",
+          "contextNote": "官方模型卡标注 32K；语音时长限制与 token 上下文不等同。",
+          "inputModalities": "音频、文本提示",
+          "outputModalities": "文本",
+          "multimodal": "语音理解",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "面向批量转录与说话人分离，结合领域关键词和自由文本提示进行上下文偏置；家族语音代理另由 SDK 串联推理与工具。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "音频分钟",
+            "amount": 0.004,
+            "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0"
+          },
+          "verifiedAt": "2026-10-21",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.004 / 分钟",
+          "generationChange": "转录覆盖扩展到约 50 种语言，增强说话人分离和领域词识别；Small 为本代主力转录版本。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "说话人分离与转录",
+              "detail": "官方在多语转录和公共说话人分离集上比较 WER／cpWER；这些结果来自厂商报告，不是统一真实场景保证。"
+            },
+            {
+              "name": "领域上下文偏置",
+              "detail": "允许提供关键术语与自由文本，改善特定词汇召回，不要求针对每个领域微调。"
+            },
+            {
+              "name": "能力与架构边界",
+              "detail": "模型页另列翻译、语音问答、摘要与函数调用；未公开参数规模或可复现训练配方。不能把 SDK 的完整代理能力都归因于此模型。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+        },
+        {
+          "id": "voxtral3-mini-transcribe",
+          "name": "Voxtral Mini Transcribe 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "4B",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "32K",
+          "contextNote": "官方模型卡标注 32K；语音时长限制与 token 上下文不等同。",
+          "inputModalities": "音频、文本提示",
+          "outputModalities": "文本",
+          "multimodal": "语音理解",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "4B 的批量转录模型，在较低按分钟价格下提供多语识别、说话人分离和领域上下文偏置。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "音频分钟",
+            "amount": 0.0035,
+            "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"
+          },
+          "verifiedAt": "2026-10-21",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"
+            }
+          ],
+          "parameterLabel": "4B",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.0035 / 分钟",
+          "generationChange": "Mini 转录版强调较小模型与转录质量的平衡；与 Realtime 版为不同 API 型号，不能混用规格与价格。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "4B 转录模型",
+              "detail": "4B 参数来自发布说明，仅适用于此 Mini 批量转录版；没有将此数字复制给 Small、Realtime 或 TTS。"
+            },
+            {
+              "name": "领域词与说话人",
+              "detail": "提供领域提示和说话人分离，减少仅靠通用转录对术语和多人音频的遗漏。"
+            },
+            {
+              "name": "评估边界",
+              "detail": "厂商报告 FLEURS 及说话人分离结果；语种、错误率口径和数据集不同，不据此推断任意录音上全面优于其他模型。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+        },
+        {
+          "id": "voxtral3-realtime",
+          "name": "Voxtral Mini Transcribe Realtime 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "未披露",
+          "contextNote": "模型卡没有给出可核实的 token 上下文上限，不从旧版或其他家族成员外推。",
+          "inputModalities": "流式音频、文本提示",
+          "outputModalities": "流式文本",
+          "multimodal": "实时语音理解",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "通过 WebSocket 在同一流式会话中完成转录、说话人分离、上下文偏置和话轮结束预测。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "音频分钟",
+            "amount": 0.008,
+            "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"
+          },
+          "verifiedAt": "2026-10-21",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.008 / 分钟",
+          "generationChange": "面向实时语音代理新增声学与语义结合的结束检测，可在延迟和转录质量之间调节。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "可配置流式延迟",
+              "detail": "模型卡给出 80–2,400 ms 可配置延迟；发布说明称 35+ 语种、可低于 500 ms，不等于完整语音代理端到端延迟。"
+            },
+            {
+              "name": "原生话轮结束预测",
+              "detail": "结合声音信号与语义判断用户是否说完，面向减少等待与过早打断的权衡。"
+            },
+            {
+              "name": "流式组合接口",
+              "detail": "转录、说话人分离和上下文偏置在同一会话使用；独立最大上下文和参数量本次未核实。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+        },
+        {
+          "id": "voxtral3-tts",
+          "name": "Voxtral TTS 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "未披露",
+          "contextNote": "模型卡没有给出可核实的 token 上下文上限，不从旧版或其他家族成员外推。",
+          "inputModalities": "文本、声音参考",
+          "outputModalities": "音频",
+          "multimodal": "语音生成",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "按文本语境和显式情绪、语速、重音指令生成声音，支持声音适配、批量及实时合成。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按百万字符计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "百万字符",
+            "amount": 13,
+            "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+          },
+          "verifiedAt": "2026-10-21",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 13 / 百万字符",
+          "generationChange": "加强语境化语音、发音提示和专业声音适配；Pro Voice 官方要求约 30 分钟音频，与短参考的零样本方案区分。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "语境与表达控制",
+              "detail": "根据文本语义调节声音，并允许显式控制情绪、节奏和强调；发音提示适合名字与领域术语。"
+            },
+            {
+              "name": "专业声音适配",
+              "detail": "发布说明的 Pro Voice 使用约 30 分钟音频，面向跨语言保留音色与风格；不将所有声音克隆模式混为同一要求。"
+            },
+            {
+              "name": "披露不一致待核",
+              "detail": "发布说明称 35+ 语言、50+ 方言，模型卡文字仍为 9 种语言。保留冲突，不把较大数字当作已确认的全部 API 覆盖。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
         }
       ],
       "source": {
-        "label": "79 个关键型号的发布、规格与技术资料",
-        "period": "2022-11-30 起；2026-10-20 新核验 MiniMax-M3.1-Flash，补充 DeepSeek 服务限流；旧价格日期保留",
+        "label": "83 个关键型号的发布、规格与技术资料",
+        "period": "2022-11-30 起；2026-10-21 新核验 Voxtral 3 的 4 个公开预览型号，补充 GPT 缓存服务规则",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -396864,6 +397851,14 @@
           {
             "label": "MiniMax API 当前价格",
             "url": "https://platform.minimax.io/docs/pricing/overview"
+          },
+          {
+            "label": "Voxtral 3 官方发布说明",
+            "url": "https://mistral.ai/news/voxtral-3/"
+          },
+          {
+            "label": "OpenAI 缓存服务与计费规则",
+            "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
           }
         ],
         "caveats": [
@@ -396878,7 +397873,8 @@
           "Mistral Large 4 为公开 API 预览，官方承诺月底开放权重，不标为已开放。EmbeddingGemma 2 输出嵌入向量，其 API 计费不能与生成模型直接对比。",
           "GPT-Live 两型号为产品语音发布；独立 API 规格及价格未核实。Opus 5.5 快速模式是服务配置，价格单列，不计为新模型或覆盖 Standard 价。",
           "2026-10-19 1017 是权重小版本；架构继承与本次改进分开。Search／Fetch 和 Ultrafast 是服务信息，不能计作新架构或覆盖历史 token 价格。",
-          "2026-10-20 M3.1 Flash 权重尚待正式提供，参数及独立技术报告未核实；API 指南的 open-weight 标签与发布说明的将来时一并记录，暂按预告开放权重处理。"
+          "2026-10-20 M3.1 Flash 权重尚待正式提供，参数及独立技术报告未核实；API 指南的 open-weight 标签与发布说明的将来时一并记录，暂按预告开放权重处理。",
+          "2026-10-21 Voxtral 按音频分钟或百万字符计费，不能与每百万 tokens 单价直接排序；TTS 语种数量在发布说明与模型卡间不一致，明确待核。自部署不等于公开权重。GPT 12 小时缓存为服务更新，不改写旧模型发布日期和原单价依据日期。"
         ]
       },
       "methods": [
@@ -397463,30 +398459,40 @@
   },
   "id": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "researchRefresh": {
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-21",
     "timezone": "Asia/Shanghai",
-    "triggeredAt": "2026-10-20T01:31:01.641Z",
-    "windowStart": "2026-10-12",
-    "previousResearchCheck": "2026-10-19",
-    "papersAdded": 6,
-    "modelsAdded": 1,
-    "modelsRevised": [
-      "dsv41-1017"
+    "triggeredAt": "2026-10-21T01:34:44.199Z",
+    "windowStart": "2026-10-13",
+    "previousResearchCheck": "2026-10-20",
+    "papersAdded": 5,
+    "papersRevised": [
+      "tokenizer-metrics-audit",
+      "dialfork"
     ],
-    "catalogAdded": 0,
-    "catalogSchedulesRevised": 140,
-    "coverageNote": "复核 7 个会议目录和 NAACL 入口；EMNLP 表格已恢复，会议标题集未变。arXiv cs.CL／cs.AI／cs.LG 的 10 月 12–20 日提交窗口取得 2,769 个唯一 ID，并定向检查 101 篇已有论文修订；选读 6 篇新预印本。",
+    "modelsAdded": 4,
+    "modelsRevised": [
+      "gpt56",
+      "gpt6astra",
+      "gpt6sol",
+      "gpt6luna",
+      "gpt61"
+    ],
+    "catalogAdded": 1,
+    "catalogTitlesRevised": 5,
+    "catalogSchedulesRevised": 17,
+    "coverageNote": "复核 7 个会议目录及 NAACL 入口；7 天重叠的 arXiv cs.CL／cs.AI／cs.LG submittedDate 窗口取得 3,428 个唯一 ID，定向检查 107 篇已有论文。新增 1 篇会议论文、3 篇预印本和 1 篇独立报告；未读候选不计入整理数。",
     "limitations": [
-      "窗口完整性仅指本次 submittedDate API 元数据分页一致，不代表已全文阅读所有论文，也不覆盖窗口前所有论文的修订。其余候选保留本地待核。",
-      "OpenAI 新闻页、ChatGPT 发布说明与 xAI 新闻页仍返回 403；核查可访问的官方 API 文档和模型资料，无法据此排除所有产品更新。",
-      "WEAVE v2 仅核见联系邮箱变化，原文技术内容相同，保留旧 v1 阅读与机构核验日期。Google 视频模型服务变更另存待核，未混入生成文本模型版本。",
-      "旧论文、历史价格和技术证据日期不整体改写。浏览器渲染检查受既有安全策略限制，本次执行源构建、筛选与时间线逻辑及线上发布包核验。"
+      "元数据窗口分页一致不代表已全文阅读全部论文，也不覆盖所有窗口前的论文修订；其余候选继续保留本地待核。",
+      "OpenAI 新闻页、ChatGPT 发布说明及 xAI 新闻页仍返回 403；其他临时网络失败重试恢复。不能据可访问 API 文档排除全部产品更新。",
+      "TF-OPD v2 的提取正文与 v1 相同，保留原核读日期；Claude 新闻列表日期变化不覆盖 Opus 5.5 官方 9 月 22 日发布日期。",
+      "Voxtral TTS 发布说明与模型卡语种数量冲突，公开权重及独立技术报告未核实；旧论文证据日期和历史价格不整体改写。",
+      "浏览器渲染检查受既有安全策略限制；执行源构建、筛选与时间线逻辑及线上完整发布包核验，不声称完成截图或交互检查。"
     ]
   },
   "affiliationEnrichment": {
-    "checkedAt": "2026-10-20",
+    "checkedAt": "2026-10-21",
     "scope": "curated-papers",
-    "verifiedPapers": 167,
+    "verifiedPapers": 172,
     "pendingPapers": 3,
     "institutionCount": 214,
     "method": "按所引版本署名及研究开展时归属整理；大学院系和企业实验室归并到所属机构，机构次序不表示牵头或贡献排名。独立作者与性质未确认的机构列其他；同一论文允许多机构，不从作者现职或仅邮箱推断。会议题目索引未逐篇核对机构。"
