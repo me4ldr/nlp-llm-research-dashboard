@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-10-27T05:33:10.945040+00:00",
+  "generatedAt": "2026-10-27T07:52:52.561992+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -392079,6 +392079,907 @@
           ]
         },
         {
+          "id": "kimik31pro",
+          "name": "Kimi K3.1 Pro",
+          "vendor": "Moonshot AI",
+          "releaseDate": "2026-10-23",
+          "year": "2026",
+          "dateBasis": "Kimi Code 官方上线记录；研究博客标注 10 月 24 日",
+          "datePrecision": "日",
+          "parameters": "3T 级；精确总量未单独披露",
+          "activeParameters": null,
+          "parameterLabel": "3T 级（官方口径）",
+          "activeLabel": "未单独披露",
+          "architecture": "K3 基座的后训练版本；未披露本代结构改动",
+          "context": "1,048,576",
+          "contextNote": "API 上下文按官方定价页；产品会员可用窗口取决于套餐，不把百万窗口等同于全程有效记忆。",
+          "inputModalities": "文本、图像、视频",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "已上线 · 权重待开放",
+          "license": "本代权重许可待公布",
+          "openNote": "截至 2026-10-27，官方承诺于 11 月 4 日前发布完整权重；未核实到已发布的 K3.1 权重，不沿用 K3 许可或把预告记作已开源。",
+          "innovation": "在 K3 基础上扩大后训练与多领域联合强化学习，提升长程编程、3D 工具使用及金融任务；重点是训练与执行能力迭代，未披露新的基础架构。",
+          "reportUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+          "reportType": "官方技术博客；未找到本代独立完整报告",
+          "releaseUrl": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+          "specUrl": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
+          "price": {
+            "input": 2,
+            "output": 10,
+            "cachedInput": 0.2,
+            "currency": "USD",
+            "basis": "现价",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "asOf": "2026-10-27",
+            "url": "https://www.kimi.ai/zh-hans/resources/kimi-k3-1-pro-pricing",
+            "note": "标准版；全窗口统一计价，不含税及工具费。缓存命中 0.20，5 分钟／1 小时写入 2／4；输入、命中、写入按互斥类别计费。Highspeed 输入／输出 4／20、命中仍为 0.20、两档写入 4／8；不能将整张账单简单翻倍。"
+          },
+          "priceLabel": "USD 2 / 10；Highspeed 4 / 20",
+          "verifiedAt": "2026-10-27",
+          "specificationCheckedAt": "2026-10-27",
+          "notes": "技术博客日期为 10 月 24 日，时间线采用官方 Kimi Code 明示的 10 月 23 日上线事件。API 指南的评测段落仍有占位及不同口径数值；未用于性能结论。精确参数不直接继承 K3 的 2.8T／104B。Highspeed 作为同模型服务档记录，不重复计入型号数。",
+          "generationChange": "相对 K3，增加后训练计算并强化多步工作；标准 API 输入／输出标价由 3／15 降到 2／10 美元，每项降低三分之一，实际费用仍受推理长度、缓存和工具调用影响。",
+          "technicalTopics": [
+            "post",
+            "reason",
+            "agents",
+            "multi",
+            "context",
+            "eff",
+            "safety",
+            "domain"
+          ],
+          "technicalPoints": [
+            {
+              "name": "数百领域联合强化学习",
+              "detail": "扩大 K3 后训练，联动 RL 框架、长上下文推理、沙箱、rollout 调度与环境质量检查。官方未给出完整奖励定义、各领域配比或可复现训练配置。"
+            },
+            {
+              "name": "长程编程与工具执行",
+              "detail": "任务覆盖代码仓库、Blender／CAD 脚本与金融工作流；3D 成果依赖工具执行，不是原生输出 3D 或视频。官方 Terminal-Bench 4.0 为 65.7%，使用 Claude Code 执行框架；不能脱离框架、预算比较裸模型。"
+            },
+            {
+              "name": "视觉输入与百万上下文",
+              "detail": "API 示例支持图像及视频输入，输出文本并可调用工具。1,048,576 是服务窗口规格；未披露本代独立视觉编码器或新的注意力结构。"
+            },
+            {
+              "name": "持续思考与高速服务档",
+              "detail": "API 支持 low／high／max，默认 max；Kimi Code 文档默认 high，需区分接入渠道。Highspeed 宣称同等质量下速度约 2–3 倍，属厂商服务指标，未独立测量。"
+            },
+            {
+              "name": "训练数据中的风险控制",
+              "detail": "官方在中期训练与 RL 环境中移除网络攻击相关数据，同时保留一般编码任务；其内部评测显示攻击能力降低，但通用编码提升仍会迁移到网络任务，不能等同于风险消失。"
+            }
+          ],
+          "technicalDisclosure": "部分训练方法与厂商评测",
+          "relatedPaperIds": [
+            "retool",
+            "swebench",
+            "sabench"
+          ],
+          "technicalSource": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+          "technicalNote": "核读技术博客的方法、评测脚注与开放计划，交叉核对官方 Code 上线日、API 示例和价格。厂商不同基准采用不同框架／预算，部分为内部评测；未复现实验。关联论文是阅读背景，不表示厂商采用其方法。",
+          "highspeedPrice": {
+            "model": "kimi-k3.1-pro-highspeed",
+            "input": 4,
+            "output": 20,
+            "cachedInput": 0.2,
+            "cacheWrite5m": 4,
+            "cacheWrite1h": 8,
+            "currency": "USD",
+            "unit": "每百万 tokens",
+            "asOf": "2026-10-27",
+            "url": "https://www.kimi.ai/zh-hans/resources/kimi-k3-1-pro-pricing"
+          },
+          "sources": [
+            {
+              "label": "技术博客／训练及评测脚注",
+              "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+            },
+            {
+              "label": "10 月 23 日 Kimi Code 上线记录",
+              "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
+            },
+            {
+              "label": "研究索引：博客日期 10 月 24 日",
+              "url": "https://www.kimi.ai/blog/"
+            },
+            {
+              "label": "API 模态与推理设置；评测占位段不作依据",
+              "url": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart"
+            },
+            {
+              "label": "标准／Highspeed 价格与缓存口径",
+              "url": "https://www.kimi.ai/zh-hans/resources/kimi-k3-1-pro-pricing"
+            },
+            {
+              "label": "平台当前价交叉核对",
+              "url": "https://platform.kimi.ai/"
+            },
+            {
+              "label": "官方权重仓库目录",
+              "url": "https://huggingface.co/moonshotai"
+            }
+          ]
+        },
+        {
+          "id": "voxtral3-small-transcribe",
+          "name": "Voxtral Small Transcribe 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "32K",
+          "contextNote": "官方模型卡标注 32K；语音时长限制与 token 上下文不等同。",
+          "inputModalities": "音频、文本提示",
+          "outputModalities": "文本",
+          "multimodal": "语音理解",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "面向批量转录与说话人分离，结合领域关键词和自由文本提示进行上下文偏置；家族语音代理另由 SDK 串联推理与工具。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "音频分钟",
+            "amount": 0.004,
+            "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0"
+          },
+          "verifiedAt": "2026-10-21",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.004 / 分钟",
+          "generationChange": "转录覆盖扩展到约 50 种语言，增强说话人分离和领域词识别；Small 为本代主力转录版本。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "说话人分离与转录",
+              "detail": "官方在多语转录和公共说话人分离集上比较 WER／cpWER；这些结果来自厂商报告，不是统一真实场景保证。"
+            },
+            {
+              "name": "领域上下文偏置",
+              "detail": "允许提供关键术语与自由文本，改善特定词汇召回，不要求针对每个领域微调。"
+            },
+            {
+              "name": "能力与架构边界",
+              "detail": "模型页另列翻译、语音问答、摘要与函数调用；未公开参数规模或可复现训练配方。不能把 SDK 的完整代理能力都归因于此模型。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+        },
+        {
+          "id": "voxtral3-mini-transcribe",
+          "name": "Voxtral Mini Transcribe 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "4B",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "32K",
+          "contextNote": "官方模型卡标注 32K；语音时长限制与 token 上下文不等同。",
+          "inputModalities": "音频、文本提示",
+          "outputModalities": "文本",
+          "multimodal": "语音理解",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "4B 的批量转录模型，在较低按分钟价格下提供多语识别、说话人分离和领域上下文偏置。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "音频分钟",
+            "amount": 0.0035,
+            "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"
+          },
+          "verifiedAt": "2026-10-21",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"
+            }
+          ],
+          "parameterLabel": "4B",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.0035 / 分钟",
+          "generationChange": "Mini 转录版强调较小模型与转录质量的平衡；与 Realtime 版为不同 API 型号，不能混用规格与价格。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "4B 转录模型",
+              "detail": "4B 参数来自发布说明，仅适用于此 Mini 批量转录版；没有将此数字复制给 Small、Realtime 或 TTS。"
+            },
+            {
+              "name": "领域词与说话人",
+              "detail": "提供领域提示和说话人分离，减少仅靠通用转录对术语和多人音频的遗漏。"
+            },
+            {
+              "name": "评估边界",
+              "detail": "厂商报告 FLEURS 及说话人分离结果；语种、错误率口径和数据集不同，不据此推断任意录音上全面优于其他模型。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+        },
+        {
+          "id": "voxtral3-realtime",
+          "name": "Voxtral Mini Transcribe Realtime 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "未披露",
+          "contextNote": "模型卡没有给出可核实的 token 上下文上限，不从旧版或其他家族成员外推。",
+          "inputModalities": "流式音频、文本提示",
+          "outputModalities": "流式文本",
+          "multimodal": "实时语音理解",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "通过 WebSocket 在同一流式会话中完成转录、说话人分离、上下文偏置和话轮结束预测。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "音频分钟",
+            "amount": 0.008,
+            "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"
+          },
+          "verifiedAt": "2026-10-21",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.008 / 分钟",
+          "generationChange": "面向实时语音代理新增声学与语义结合的结束检测，可在延迟和转录质量之间调节。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "可配置流式延迟",
+              "detail": "模型卡给出 80–2,400 ms 可配置延迟；发布说明称 35+ 语种、可低于 500 ms，不等于完整语音代理端到端延迟。"
+            },
+            {
+              "name": "原生话轮结束预测",
+              "detail": "结合声音信号与语义判断用户是否说完，面向减少等待与过早打断的权衡。"
+            },
+            {
+              "name": "流式组合接口",
+              "detail": "转录、说话人分离和上下文偏置在同一会话使用；独立最大上下文和参数量本次未核实。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+        },
+        {
+          "id": "voxtral3-tts",
+          "name": "Voxtral TTS 3",
+          "vendor": "Mistral AI",
+          "releaseDate": "2026-10-20",
+          "year": "2026",
+          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "语音专用模型；完整架构与训练配方未披露",
+          "context": "未披露",
+          "contextNote": "模型卡没有给出可核实的 token 上下文上限，不从旧版或其他家族成员外推。",
+          "inputModalities": "文本、声音参考",
+          "outputModalities": "音频",
+          "multimodal": "语音生成",
+          "openness": "API／自部署；开放权重未核实",
+          "license": "商用部署条款待逐项核实",
+          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
+          "innovation": "按文本语境和显式情绪、语速、重音指令生成声音，支持声音适配、批量及实时合成。",
+          "reportUrl": "https://mistral.ai/news/voxtral-3/",
+          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
+          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "按百万字符计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+            "asOf": "2026-10-21",
+            "unit": "百万字符",
+            "amount": 13,
+            "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+          },
+          "verifiedAt": "2026-10-27",
+          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 20 日家族发布说明与价格表",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "本型号模型卡与现价（2026-10-21）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            },
+            {
+              "label": "TTS 语言数量更正后的模型卡（2026-10-27）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 13 / 百万字符",
+          "generationChange": "加强语境化语音、发音提示和专业声音适配；Pro Voice 官方要求约 30 分钟音频，与短参考的零样本方案区分。",
+          "technicalTopics": [
+            "multi",
+            "language",
+            "agents",
+            "eff"
+          ],
+          "technicalPoints": [
+            {
+              "name": "语境与表达控制",
+              "detail": "根据文本语义调节声音，并允许显式控制情绪、节奏和强调；发音提示适合名字与领域术语。"
+            },
+            {
+              "name": "专业声音适配",
+              "detail": "发布说明的 Pro Voice 使用约 30 分钟音频，面向跨语言保留音色与风格；不将所有声音克隆模式混为同一要求。"
+            },
+            {
+              "name": "多语言声音生成",
+              "detail": "截至 2026-10-27，模型卡已改为 35+ 语言、50+ 方言，与 10 月 20 日发布说明一致；此前的“9 种语言”冲突已澄清。该数量仍是厂商规格，未逐语种独立测试。"
+            }
+          ],
+          "technicalDisclosure": "能力／服务披露",
+          "relatedPaperIds": [
+            "attention2014",
+            "transformer",
+            "realcli"
+          ],
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。",
+          "specificationCheckedAt": "2026-10-27"
+        },
+        {
+          "id": "minimax31flash",
+          "name": "MiniMax-M3.1-Flash",
+          "vendor": "MiniMax",
+          "releaseDate": "2026-10-19",
+          "year": "2026",
+          "dateBasis": "官方正式发布说明日期；与更早 Preview 和匿名试用区分",
+          "datePrecision": "日",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "architecture": "官方称更激进稀疏化；结构细节未披露",
+          "context": "1M",
+          "contextNote": "API 文档标为 1,000,000 tokens；独立最大输出上限未在本次来源中核实。",
+          "inputModalities": "文本、图像、视频",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "预告开放权重",
+          "license": "待权重发布后核实",
+          "openNote": "发布说明明确权重将稍后提供。API 指南称 open-weight，但未核验到本版正式权重和许可，暂不标为已开放。",
+          "innovation": "面向编码与工具工作流，通过更激进稀疏化降低推理成本，并提供五档自适应思考深度；内部结构和训练配方尚未详细披露。",
+          "reportUrl": "https://www.minimax.io/blog/minimax-m31f",
+          "reportType": "官方发布说明；未核验到独立技术报告",
+          "releaseUrl": "https://www.minimax.io/blog/minimax-m31f",
+          "specUrl": "https://platform.minimax.io/docs/guides/text-generation",
+          "price": {
+            "input": 0.15,
+            "output": 0.6,
+            "currency": "USD",
+            "basis": "现价",
+            "note": "缓存输入 $0.015／百万 tokens；平价计费，未将订阅套餐或第三方限时免费并入 API 单价。",
+            "asOf": "2026-10-20",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "url": "https://platform.minimax.io/docs/pricing/overview"
+          },
+          "verifiedAt": "2026-10-20",
+          "notes": "API、M Plan 与 MiniMax Code 已提供。前版 M3 的参数、MSA 架构和许可证不能直接当作本版已披露规格；本次依据为正式发布说明与 API 指南，未复现厂商评测。",
+          "sources": [
+            {
+              "label": "10 月 19 日正式发布说明",
+              "url": "https://www.minimax.io/blog/minimax-m31f"
+            },
+            {
+              "label": "API 规格、模态与思考设置",
+              "url": "https://platform.minimax.io/docs/guides/text-generation"
+            },
+            {
+              "label": "当前 API 价格（2026-10-20）",
+              "url": "https://platform.minimax.io/docs/pricing/overview"
+            }
+          ],
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "priceLabel": "USD 0.15 / 0.60",
+          "generationChange": "正式 Flash 版本强调更高推理效率与 Agent／编码能力。相较已收录 M3 的 ≤512K 标准 API 输入／输出价，单价均减半；官方所述任务总费用约降 70% 是另一种工作负载口径。",
+          "technicalTopics": [
+            "agents",
+            "eff",
+            "context",
+            "multi",
+            "reason"
+          ],
+          "technicalPoints": [
+            {
+              "name": "稀疏化与推理效率",
+              "detail": "厂商称采用更激进的稀疏化，典型输出可达 200+ tokens/s、P50 为 170+；未公布足以复现的完整架构、硬件和工作负载条件，不作为统一加速承诺。"
+            },
+            {
+              "name": "可调思考深度",
+              "detail": "API 支持 low、medium、high、xhigh、max 五档 effort，默认 max；思考不能关闭。提高深度会增加输出 token 和延迟。"
+            },
+            {
+              "name": "长上下文与多模态输入",
+              "detail": "API 给出 1M 上下文，支持文本、图像和视频输入。未据此推断音频输入或图像／视频生成能力。"
+            },
+            {
+              "name": "Agent 能力与验证边界",
+              "detail": "官方报告 DeepSWE v1.1 为 73.7%、OSWorld V2 为 61.7；为厂商实验，本文未独立复现。改进的训练机制尚未公开，不能把基准提升写成已知训练创新。"
+            }
+          ],
+          "technicalDisclosure": "能力与服务规格已披露；架构和训练细节待报告",
+          "relatedPaperIds": [
+            "swebench",
+            "react",
+            "realcli",
+            "dlite"
+          ],
+          "technicalSource": "https://platform.minimax.io/docs/guides/text-generation",
+          "technicalNote": "只核读发布说明、API 指南和价格页；没有用旧 M3 报告填充本版未知参数。关联论文用于概念阅读，不表示厂商实际采用。"
+        },
+        {
+          "id": "dsv41-1017",
+          "name": "DeepSeek-V4.1 Flash-1017",
+          "vendor": "DeepSeek",
+          "releaseDate": "2026-10-17",
+          "year": "2026",
+          "dateBasis": "官方权重仓库 Release 提交日（UTC）；API 切换具体时刻未核实",
+          "parameters": "552B 主干（沿用 V4.1 口径）",
+          "activeParameters": "输入 8B／输出 16B（继承）",
+          "architecture": "MoE；沿用 V4.1 CED",
+          "context": "1M",
+          "contextNote": "API 页最大输出 384K；模型卡本地推理建议 max_tokens ≥256K，后者不是 API 上限。",
+          "inputModalities": "文本、图像",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "开放权重 · 宽松许可",
+          "license": "MIT",
+          "openNote": "开放权重；不据此推定完整训练数据和训练流程均已公开。",
+          "innovation": "小版本更新：官方报告推理、代码、Agent 和视觉基准提升，任务输出更短；新增协议适配工具，未披露新的架构或完整训练配方。",
+          "reportUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
+          "reportType": "沿用 V4.1 技术报告；1017 模型卡",
+          "releaseUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/commit/1bae0e1088993b9b82de08f59de5be5a34e42170",
+          "price": {
+            "input": 2,
+            "output": 8,
+            "currency": "CNY",
+            "basis": "现价",
+            "note": "高峰未缓存输入／输出；空闲时段 ¥1 / ¥4。缓存命中为高峰 ¥0.04、空闲 ¥0.02／百万 tokens。北京时间工作日 9–12、14–18 高峰，法定节假日除外。",
+            "asOf": "2026-10-19",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+          },
+          "verifiedAt": "2026-10-19",
+          "notes": "主干参数沿用 V4.1 报告；新仓库存储约 763B，不能与激活量直接相比。deepseek-flash 已映射本版。Search / Fetch 独立计费，各 ¥5／千次成功且有结果请求；失败、无结果、超时不计费。Harness／Claude Code／Codex 的服务器端工具调用目前未计费，官方计划北京时间 11 月 1 日零时起收费（2026-10-19 核验）。 2026-10-20 服务限制更新：Search 100 QPS、Fetch 25 QPS，按账号计；Fetch 另有目标域名限制。价格依据仍保留原核验日。",
+          "sources": [
+            {
+              "label": "1017 官方模型卡",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+            },
+            {
+              "label": "10 月 17 日 Release 提交",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/commit/1bae0e1088993b9b82de08f59de5be5a34e42170"
+            },
+            {
+              "label": "公开配置",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/blob/main/config.json"
+            },
+            {
+              "label": "沿用 V4.1 技术报告",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf"
+            },
+            {
+              "label": "API 版本与价格（2026-10-19）",
+              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+            },
+            {
+              "label": "Search / Fetch 计费与限制",
+              "url": "https://api-docs.deepseek.com/zh-cn/guides/search"
+            }
+          ],
+          "parameterLabel": "552B 主干；仓库存储约 763B",
+          "activeLabel": "输入 8B／输出 16B（继承）",
+          "priceLabel": "CNY 2 / 8（高峰）",
+          "generationChange": "相对 9 月 V4.1 Flash，更新权重和能力表现；两版公开 config.json 一致，CED、CSA2 与原生视觉属于继承方法。",
+          "technicalTopics": [
+            "arch",
+            "eff",
+            "context",
+            "multi",
+            "agents"
+          ],
+          "technicalPoints": [
+            {
+              "name": "权重迭代与 Agent 评测",
+              "detail": "官方同表 Terminal-Bench 4.0 从 31.2 到 42.3、DeepSWE v1.1 从 74.2 到 77.0；分别使用 Claude Code 与 Mini-SWE-V2。厂商结果未经独立复现。"
+            },
+            {
+              "name": "输出长度与执行时间",
+              "detail": "模型卡称任务完成更快、输出更短；未给出覆盖所有工作负载的统一加速倍数，不把此宣传解释为架构变化。"
+            },
+            {
+              "name": "沿用 CED / CSA2 / 原生视觉",
+              "detail": "与前版公开配置一致，包含 40 层文本主干、384 个路由专家和视觉模块；主干与仓库存储参数口径不同。"
+            },
+            {
+              "name": "协议适配与本地部署",
+              "detail": "没有 Jinja 聊天模板；提供 Python 编码参考及 deepseek-recipe，转换多种消息协议、处理思考和工具输出。工具实际执行及 HTTP 传输仍由调用方负责。"
+            }
+          ],
+          "technicalDisclosure": "公开权重、配置与评测；本次训练改动未详述",
+          "relatedPaperIds": [
+            "paged",
+            "freq",
+            "eopd",
+            "abridgekv"
+          ],
+          "technicalSource": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "technicalNote": "本次核读 1017 模型卡、发布提交、配置与 API 文档；架构细节沿用已核读的 9 月报告，未发现独立 1017 技术报告。关联论文仅用于概念对照，不代表厂商使用其方法。",
+          "datePrecision": "日",
+          "specUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "servicePricing": {
+            "search": 5,
+            "fetch": 5,
+            "currency": "CNY",
+            "unit": "每 1,000 次成功且产生结果的请求",
+            "asOf": "2026-10-19",
+            "url": "https://api-docs.deepseek.com/zh-cn/guides/search",
+            "serverToolBillingStarts": "2026-11-01T00:00:00+08:00"
+          },
+          "serviceCheckedAt": "2026-10-20",
+          "serviceLimits": {
+            "searchQps": 100,
+            "fetchQps": 25,
+            "scope": "账号级；Fetch 另受目标域名限制",
+            "asOf": "2026-10-20",
+            "url": "https://api-docs.deepseek.com/zh-cn/guides/search"
+          }
+        },
+        {
+          "id": "gpt-live11",
+          "name": "GPT-Live-1.1",
+          "vendor": "OpenAI",
+          "year": "2026",
+          "releaseDate": "2026-10-15",
+          "dateBasis": "ChatGPT Voice 开始推出；系统卡同日发布",
+          "verifiedAt": "2026-10-16",
+          "parameters": null,
+          "activeParameters": null,
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "architecture": "全双工语音；可向思考模型委派",
+          "context": "未披露",
+          "contextNote": "系统卡未给出 token 窗口；不把产品通话时长当作模型上下文。",
+          "inputModalities": "音频（语音）",
+          "outputModalities": "音频（语音）",
+          "multimodal": "语音输入与输出",
+          "openness": "闭源",
+          "license": "专有服务",
+          "openNote": "未发布模型权重或完整训练配方。",
+          "innovation": "延续全双工交互，改进多语口音和搜索时的口头反馈；复杂任务可委派思考模型。",
+          "reportUrl": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
+          "reportType": "官方系统卡（安全／行为评测）",
+          "releaseUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "specUrl": "https://deploymentsafety.openai.com/gpt-live-1-1",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "未核实",
+            "note": "本次来源确认产品上线，未核实独立 API 型号或单价；不套用 Realtime API 或订阅价格。",
+            "asOf": "2026-10-16",
+            "unit": "API 计费单位未披露",
+            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+          },
+          "priceLabel": "独立 API 单价未核实",
+          "generationChange": "接替 GPT-Live-1；全双工是继承能力，本次发布强调语音自然度改进。",
+          "technicalTopics": [
+            "multi",
+            "agents",
+            "safety"
+          ],
+          "technicalDisclosure": "交互机制与安全评测；底层架构未披露",
+          "technicalSource": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
+          "technicalPoints": [
+            {
+              "name": "全双工交互（继承）",
+              "detail": "持续收听并发声，依据停顿、打断与节奏决定回应时机。"
+            },
+            {
+              "name": "语音与思考模型分工",
+              "detail": "系统卡描述双模型系统；委派能力不等于语音模型自身具备代码执行能力。"
+            },
+            {
+              "name": "分开检验语音安全",
+              "detail": "分别使用真实来源与合成挑战样本；这些分数不代表线上风险发生率。"
+            }
+          ],
+          "technicalNote": "核读系统卡第 1–5 节及发布说明；未复现。参数、上下文和独立 API 价格未核实，关联论文仅作概念阅读。",
+          "relatedPaperIds": [
+            "lychee",
+            "lost"
+          ],
+          "notes": "Plus 及更高层级的默认语音模型；按账户与地区逐步推出。安全并非全面提升：系统卡报告 1.1 在部分合成风险类别出现退步。",
+          "sources": [
+            {
+              "label": "10 月 15 日发布说明",
+              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+            },
+            {
+              "label": "官方系统卡",
+              "url": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf"
+            },
+            {
+              "label": "系统卡网页版",
+              "url": "https://deploymentsafety.openai.com/gpt-live-1-1"
+            }
+          ]
+        },
+        {
+          "id": "gpt-live11-quip",
+          "name": "GPT-Live-1.1 Quip",
+          "vendor": "OpenAI",
+          "year": "2026",
+          "releaseDate": "2026-10-15",
+          "dateBasis": "ChatGPT Voice 开始推出；系统卡同日发布",
+          "verifiedAt": "2026-10-16",
+          "parameters": null,
+          "activeParameters": null,
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "architecture": "全双工语音；可向思考模型委派",
+          "context": "未披露",
+          "contextNote": "系统卡未给出 token 窗口；不把产品通话时长当作模型上下文。",
+          "inputModalities": "音频（语音）",
+          "outputModalities": "音频（语音）",
+          "multimodal": "语音输入与输出",
+          "openness": "闭源",
+          "license": "专有服务",
+          "openNote": "未发布模型权重或完整训练配方。",
+          "innovation": "延续全双工交互，改进多语口音和搜索时的口头反馈；复杂任务可委派思考模型。",
+          "reportUrl": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
+          "reportType": "官方系统卡（安全／行为评测）",
+          "releaseUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "specUrl": "https://deploymentsafety.openai.com/gpt-live-1-1",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "未核实",
+            "note": "本次来源确认产品上线，未核实独立 API 型号或单价；不套用 Realtime API 或订阅价格。",
+            "asOf": "2026-10-16",
+            "unit": "API 计费单位未披露",
+            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+          },
+          "priceLabel": "独立 API 单价未核实",
+          "generationChange": "接替 GPT-Live-1 mini；全双工是继承能力，本次发布强调语音自然度改进。",
+          "technicalTopics": [
+            "multi",
+            "agents",
+            "safety"
+          ],
+          "technicalDisclosure": "交互机制与安全评测；底层架构未披露",
+          "technicalSource": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
+          "technicalPoints": [
+            {
+              "name": "全双工交互（继承）",
+              "detail": "持续收听并发声，依据停顿、打断与节奏决定回应时机。"
+            },
+            {
+              "name": "语音与思考模型分工",
+              "detail": "系统卡描述双模型系统；委派能力不等于语音模型自身具备代码执行能力。"
+            },
+            {
+              "name": "分开检验语音安全",
+              "detail": "分别使用真实来源与合成挑战样本；这些分数不代表线上风险发生率。"
+            }
+          ],
+          "technicalNote": "核读系统卡第 1–5 节及发布说明；未复现。参数、上下文和独立 API 价格未核实，关联论文仅作概念阅读。",
+          "relatedPaperIds": [
+            "lychee",
+            "lost"
+          ],
+          "notes": "面向其他用户的默认语音模型；官方称 mini 版本；按账户与地区逐步推出。系统卡的不同安全评测表现有升有降，不将产品更新解释为全面安全提升。",
+          "sources": [
+            {
+              "label": "10 月 15 日发布说明",
+              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+            },
+            {
+              "label": "官方系统卡",
+              "url": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf"
+            },
+            {
+              "label": "系统卡网页版",
+              "url": "https://deploymentsafety.openai.com/gpt-live-1-1"
+            }
+          ]
+        },
+        {
+          "id": "glm-legal",
+          "name": "GLM-Legal（Beta）",
+          "vendor": "智谱 Z.AI",
+          "year": "2026",
+          "releaseDate": "2026-10-12",
+          "datePrecision": "日",
+          "dateBasis": "官方发布与 Beta 申请；本次补录",
+          "parameters": "未披露",
+          "activeParameters": "未披露",
+          "parameterLabel": "本型号未披露",
+          "activeLabel": "未披露",
+          "architecture": "基于 GLM-5.3-Flash；法律中训练与后训练",
+          "context": "未核实",
+          "contextNote": "未找到本型号独立上下文规格，不从基座或评测站概览自动继承。",
+          "inputModalities": "文本；其他模态未核实",
+          "outputModalities": "文本",
+          "multimodal": "多模态待核实",
+          "openness": "Beta API；权重未核实",
+          "license": "本型号许可未核实",
+          "openNote": "官方提供 API 申请入口；未核验本型号独立权重和许可证，不沿用基座开放许可。",
+          "innovation": "面向法律工作，结合领域中训练、真实任务强化学习，以及模型与工具流程共同迭代。",
+          "generationChange": "在 GLM-5.3-Flash 基础上针对合同审阅、证据分析和合规研究优化，属于领域特化版本。",
+          "reportUrl": "https://z.ai/blog/glm-legal",
+          "reportType": "官方发布与训练概述；独立报告未核实",
+          "releaseUrl": "https://z.ai/blog/glm-legal",
+          "specUrl": "https://z.ai/blog/glm-legal",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "型号映射待核实",
+            "asOf": "2026-10-22",
+            "unit": "每百万 tokens",
+            "url": "https://docs.z.ai/guides/overview/pricing",
+            "note": "定价页新列 GLM-5.3-FlashX-Legal（输入 0.37、缓存输入 0.075、输出 1.25 美元／百万 tokens）；与 GLM-Legal Beta 的确切型号关系未核实，暂不直接套用。"
+          },
+          "priceLabel": "本型号价格待核实",
+          "verifiedAt": "2026-10-22",
+          "notes": "参数、上下文、模态及公开权重未从基座外推。所列评测为发布方报告，不能把 19.2% 全部通过率解释为普遍可独立处理法律任务。",
+          "sources": [
+            {
+              "label": "10 月 12 日官方发布与训练方法",
+              "url": "https://z.ai/blog/glm-legal"
+            },
+            {
+              "label": "官方 Beta API 申请",
+              "url": "https://z.ai/consultation/legal"
+            },
+            {
+              "label": "官方定价页：Legal 型号映射待核",
+              "url": "https://docs.z.ai/guides/overview/pricing"
+            }
+          ],
+          "technicalTopics": [
+            "domain",
+            "data",
+            "post",
+            "agents",
+            "eval"
+          ],
+          "technicalDisclosure": "训练概述；完整配方未披露",
+          "technicalSource": "https://z.ai/blog/glm-legal",
+          "technicalNote": "阅读官方发布中的训练与评测说明，未复现。关联论文用于概念对照，不表示厂商实际采用。",
+          "technicalPoints": [
+            {
+              "name": "法律领域中训练",
+              "detail": "增加法律语料，强化事实、规则与结论之间的联系；语料规模和配方未完整公开。"
+            },
+            {
+              "name": "模型与工具流程共同迭代",
+              "detail": "在数万法律环境中做强化学习，同时调整上下文、工具和反馈流程，并用从业者反馈修订评测。"
+            },
+            {
+              "name": "结果与边界",
+              "detail": "官方报告 Harvey LAB 全部通过率 19.2%，较基座高 12.5 个百分点；任务与评测协议限定其解释范围。"
+            }
+          ],
+          "relatedPaperIds": [
+            "harnessrl",
+            "safety-mid-training",
+            "verifiererror"
+          ]
+        },
+        {
           "id": "claude55haiku",
           "name": "Claude Haiku 5.5",
           "vendor": "Anthropic",
@@ -392161,6 +393062,187 @@
           ],
           "technicalSource": "https://www.anthropic.com/claude-haiku-5-5",
           "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。 该版本未公开足以复现的内部架构和训练配方，以下重点是已公布的能力与服务变化。"
+        },
+        {
+          "year": "2026",
+          "releaseDate": "2026-10-06",
+          "verifiedAt": "2026-10-22",
+          "activeParameters": 52,
+          "activeLabel": "52B（规格页；另文 49B 待核）",
+          "notes": "2026-10-22 复核当前规格与价格，并对照 10 月 21 日公告：49B／52B 激活参数披露冲突；价格现为 1.36 / 4.18 美元，旧优惠价及依据日期另存。发布日与既有训练概述保持原样。",
+          "technicalNote": "核读官方发布说明和规格／模型卡；未复现实验。关联论文为概念阅读建议，不表示厂商采用了该方法。",
+          "id": "mistral-large4-preview",
+          "name": "Mistral Large 4（公开预览）",
+          "vendor": "Mistral AI",
+          "dateBasis": "API 公开预览；权重尚未发布",
+          "parameters": 1050,
+          "parameterLabel": "1.05T（另列 1.6B 视觉编码器）",
+          "architecture": "细粒度 MoE；原生多模态",
+          "context": "1M",
+          "contextNote": "官方规格页标注 1M 上下文；最大输出本次未核实。发布博客用约 1T，规格页细化为 1.05T 并另列 1.6B 视觉编码器，未擅自合并计算。",
+          "inputModalities": "文本、图像",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "预告开放权重",
+          "license": "预览期；最终权重许可尚未核实",
+          "openNote": "2026-10-21 官方合作公告仍计划 10 月底发布权重；模型卡虽写 open-weight，本次未核验到对应下载和许可，保留“预告开放权重”。",
+          "innovation": "从零训练约万亿参数多模态 MoE，推进代码、工具调用、视觉定位和专业任务；以共享环境与验证接口扩展异步长程强化学习。",
+          "reportUrl": "https://mistral.ai/news/mistral-large-4/",
+          "reportType": "官方发布说明（含训练概述）",
+          "releaseUrl": "https://mistral.ai/news/mistral-large-4/",
+          "specUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+          "price": {
+            "input": 1.36,
+            "output": 4.18,
+            "cachedInput": 0.14,
+            "currency": "USD",
+            "basis": "现价",
+            "asOf": "2026-10-22",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+            "note": "当前规格页列输入 1.36、输出 4.18、缓存输入 0.14 美元／百万 tokens；2026-10-15 记录的优惠价为 0.68 / 2.09。具体变价生效日未核实，旧价已保留。"
+          },
+          "priceLabel": "USD 1.36 / 4.18",
+          "generationChange": "相比 Large 3，本代扩大到约万亿参数并强化视觉和长程工具任务；规格页列 52B 激活参数，但 10 月 21 日官方合作公告称 49B，差异待核。仍按公开预览记录。",
+          "technicalTopics": [
+            "arch",
+            "post",
+            "agents",
+            "multi",
+            "language"
+          ],
+          "technicalDisclosure": "架构规格／训练概述",
+          "technicalSource": "https://mistral.ai/news/mistral-large-4/",
+          "technicalPoints": [
+            {
+              "name": "细粒度专家与视觉编码器",
+              "detail": "当前模型卡仍列 1.05T 总参数、52B 激活参数和 1.6B 视觉编码器；10 月 21 日官方合作公告写约 1T／49B，未说明统计口径或版本差异。保留冲突，不据此认定新模型或改架构。"
+            },
+            {
+              "name": "可组合的 RL 环境与验证",
+              "detail": "同一训练接口组合对话、科学任务、安全、事实性及长程工具使用；奖励模型、单元测试、LLM 裁判和静态检查按任务组合。"
+            },
+            {
+              "name": "异步长轨迹训练",
+              "detail": "官方称 actor 并行生成、训练异步进行，支持多次上下文压缩与百万 token rollout 预算。约 3,000 GPU 训练运行每日产生约 330 亿 token，其中约 160 亿为过滤后可训练输出；这是训练预算而非 API 上下文。"
+            }
+          ],
+          "relatedPaperIds": [
+            "react",
+            "arts-hybrid",
+            "cipr-interfaces"
+          ],
+          "sources": [
+            {
+              "label": "预览发布日期与训练概述",
+              "url": "https://mistral.ai/news/mistral-large-4/"
+            },
+            {
+              "label": "参数、上下文与当前优惠价",
+              "url": "https://docs.mistral.ai/models/mistral-large-4-0"
+            },
+            {
+              "label": "10 月 21 日官方合作公告：49B 与权重计划",
+              "url": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/"
+            },
+            {
+              "label": "10 月 22 日复核模型卡及现价",
+              "url": "https://docs.mistral.ai/models/mistral-large-4-0"
+            }
+          ],
+          "priceHistory": [
+            {
+              "input": 0.68,
+              "output": 2.09,
+              "currency": "USD",
+              "basis": "现价（限时优惠）",
+              "note": "规格页显示促销输入 $0.68、输出 $2.09；划线原价 $1.36 / $4.18。优惠截止日期未核实；缓存另价。",
+              "asOf": "2026-10-15",
+              "unit": "每百万 tokens；未缓存输入／文本输出",
+              "url": "https://docs.mistral.ai/models/mistral-large-4-0"
+            }
+          ]
+        },
+        {
+          "year": "2026",
+          "releaseDate": "2026-10-06",
+          "verifiedAt": "2026-10-15",
+          "activeParameters": null,
+          "activeLabel": "不适用／未披露",
+          "notes": "",
+          "technicalNote": "核读官方发布说明和规格／模型卡；未复现实验。关联论文为概念阅读建议，不表示厂商采用了该方法。",
+          "id": "embeddinggemma2",
+          "name": "EmbeddingGemma 2",
+          "vendor": "Google DeepMind",
+          "dateBasis": "模型与权重发布",
+          "parameters": 0.74,
+          "parameterLabel": "740M（全模态）",
+          "architecture": "Gemma 4 骨干；模块化视觉／音频编码器",
+          "context": "8K",
+          "contextNote": "8K 为输入上下文；官方给出的容量示例包括约 5.5 分钟音频、29 张图像或 58 帧视频，组合输入需共享预算。输出为 768 维向量，可截断为 512/256/128 维。",
+          "inputModalities": "文本（含代码）、图像、音频、视频",
+          "outputModalities": "嵌入向量（非生成文本）",
+          "multimodal": "多模态嵌入",
+          "openness": "开放权重",
+          "license": "Apache 2.0",
+          "openNote": "权重与模型卡可下载；未将开放权重等同于完整训练数据开放。",
+          "innovation": "以 740M 参数将文本、代码、图像、音频和视频映射到统一嵌入空间，支持按模态加载与多维度向量截断，用于端侧检索、分类及多模态 RAG。",
+          "reportUrl": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2",
+          "reportType": "官方模型卡",
+          "releaseUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+          "specUrl": "https://huggingface.co/google/embeddinggemma-2",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "不适用",
+            "note": "开放权重嵌入模型；未核实独立官方托管 API 单价，自部署硬件成本另计。",
+            "asOf": "2026-10-15",
+            "unit": "嵌入服务；不可套用文本生成输入／输出计费",
+            "url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2"
+          },
+          "priceLabel": "官方托管 API 价未核实",
+          "generationChange": "从前代文本嵌入扩展到多模态统一空间，输入窗口由 2K 扩至 8K，并支持可选模态编码器和 128–768 维输出。",
+          "technicalTopics": [
+            "rag",
+            "multi",
+            "eff",
+            "language"
+          ],
+          "technicalDisclosure": "架构／训练模型卡",
+          "technicalSource": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2",
+          "technicalPoints": [
+            {
+              "name": "可选模态模块",
+              "detail": "文本模块 270M、视觉编码器 170M、音频编码器 300M；可仅加载所需模态，合计全模态 740M。"
+            },
+            {
+              "name": "Matryoshka 向量表示",
+              "detail": "训练支持 768、512、256、128 维嵌入；较小维度降低向量存储开销，不表示编码器计算成本按同倍率下降。"
+            },
+            {
+              "name": "端侧跨模态检索",
+              "detail": "统一向量空间支持以文字或语音检索图像、音视频；模型卡披露多语言能力及任务前缀。它是检索组件，不能独立生成问答。"
+            }
+          ],
+          "relatedPaperIds": [
+            "rag2020",
+            "afri"
+          ],
+          "sources": [
+            {
+              "label": "发布／日期来源",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"
+            },
+            {
+              "label": "官方模型卡",
+              "url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2"
+            },
+            {
+              "label": "权重、模块参数与许可",
+              "url": "https://huggingface.co/google/embeddinggemma-2"
+            }
+          ]
         },
         {
           "id": "gemini4",
@@ -393211,6 +394293,114 @@
           ],
           "technicalSource": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
           "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
+        },
+        {
+          "id": "glm53flash",
+          "name": "GLM-5.3-Flash",
+          "vendor": "Z.ai",
+          "releaseDate": "2026-08-26",
+          "year": "2026",
+          "dateBasis": "官方研究博客首发；AutoClaw 8 月 27 日再次介绍",
+          "datePrecision": "日",
+          "parameters": "320B",
+          "activeParameters": "18B",
+          "parameterLabel": "320B（官方标称）",
+          "activeLabel": "18B",
+          "architecture": "MoE · 稀疏＋线性混合注意力 · mHC",
+          "context": "1,048,576",
+          "contextNote": "公开 checkpoint 配置为 1,048,576；官方托管 API 标为 1M 上下文、128K 最大输出。训练或评测中的上下文限制不替代服务规格。",
+          "inputModalities": "文本、图像、视频；API 支持文件",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "开放权重 · MIT",
+          "license": "MIT",
+          "openNote": "官方 Hugging Face 仓库已提供 safetensors 权重和 MIT 元数据；不代表训练语料与全部流程已公开。",
+          "innovation": "从新基座训练，将稀疏和线性注意力、mHC 与原生多模态语料结合，压低长上下文推理成本并支持视觉反馈驱动的 Agent。",
+          "reportUrl": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+          "reportType": "官方模型卡及本代技术博客",
+          "releaseUrl": "https://z.ai/blog/glm-5.3-flash",
+          "specUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+          "price": {
+            "input": 0.15,
+            "output": 0.5,
+            "cachedInput": 0.03,
+            "currency": "USD",
+            "basis": "现价",
+            "asOf": "2026-10-27",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "url": "https://docs.z.ai/guides/overview/pricing",
+            "note": "Z.ai 官方 Flash API，缓存命中 0.03，缓存存储当前限时免费；工具费用另计。FlashX 为独立高速服务档，输入／输出 0.37／1.25、缓存 0.075，不混用。"
+          },
+          "priceLabel": "USD 0.15 / 0.50",
+          "verifiedAt": "2026-10-27",
+          "specificationCheckedAt": "2026-10-27",
+          "notes": "本次为历史漏收补录，不是 10 月新发布。10 月 22 日 Mistral 托管上线记录不作为模型首发日；GLM-5 家族报告不能冒充 Flash 独立完整报告。模型卡个别评测脚注尚为空，相关条件不推定已披露。",
+          "generationChange": "相对 GLM-5.3，使用新基座与原生多模态训练，重点转向效率；相对相近总参数的 GLM-4.5，激活参数从 32B 降为 18B、层数从 92 降为 45。不能把不同对照对象混写成同一代变化。",
+          "technicalTopics": [
+            "arch",
+            "eff",
+            "multi",
+            "context",
+            "agents",
+            "data"
+          ],
+          "technicalPoints": [
+            {
+              "name": "稀疏＋线性注意力与 IndexPool",
+              "detail": "线性状态建模结合全局稀疏检索；IndexPool 把四个缓存 key 加权汇成一个，降低索引开销。官方相对 GLM-5.3 报告注意力计算约减少至 1/3、KV 缓存至 1/4.4，属于特定结构对照，非端到端加速保证。"
+            },
+            {
+              "name": "稀疏专家与跨层连接",
+              "detail": "checkpoint 配置含 45 个文本层、288 个路由专家、每 token 激活 8 个，以及 mHC 和一层 MTP。官方标称 320B 总量、18B 激活；不能把较小激活量误当作所需显存。"
+            },
+            {
+              "name": "30T 多模态预训练",
+              "detail": "从预训练阶段联合学习文本和视觉信息，模型卡公布 30T-token 语料规模；视觉反馈可用于检查网页、图表与工具结果。未公开完整语料清单及复现训练配方。"
+            },
+            {
+              "name": "软硬件协同推理",
+              "detail": "官方披露 ReplaySSM、W8A8、混合缓存量化、Layer Split 与编码／预填充／解码分离；同硬件相对初始服务基线约三倍性能，不能泛化为任意 GPU 或其他模型的三倍。"
+            }
+          ],
+          "technicalDisclosure": "方法与公开权重配置",
+          "relatedPaperIds": [
+            "mamba",
+            "dsmoe",
+            "llava",
+            "retool"
+          ],
+          "technicalSource": "https://autoclaw.z.ai/blog/model/glm-5.3-flash",
+          "technicalNote": "核读官方模型卡、配置、AutoClaw 技术介绍及 API 文档；原始博客日期由官方检索记录确认，其直接 HTML 无正文，8 月 27 日官方复述可直接读取。未复现实验，关联论文仅作背景。",
+          "sources": [
+            {
+              "label": "本代官方模型卡与权重",
+              "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+            },
+            {
+              "label": "首发日期：8 月 26 日官方博客",
+              "url": "https://z.ai/blog/glm-5.3-flash"
+            },
+            {
+              "label": "8 月 27 日官方技术复述",
+              "url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash"
+            },
+            {
+              "label": "权重配置／注意力和专家数量",
+              "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/blob/main/config.json"
+            },
+            {
+              "label": "托管 API 规格及 FlashX 区分",
+              "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash"
+            },
+            {
+              "label": "官方 API 当前价格",
+              "url": "https://docs.z.ai/guides/overview/pricing"
+            },
+            {
+              "label": "GLM-5 家族报告（非本代独立报告）",
+              "url": "https://arxiv.org/abs/2602.15763"
+            }
+          ]
         },
         {
           "id": "glm53",
@@ -398030,968 +399220,11 @@
           ],
           "technicalSource": "https://openai.com/index/chatgpt/",
           "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
-        },
-        {
-          "year": "2026",
-          "releaseDate": "2026-10-06",
-          "verifiedAt": "2026-10-22",
-          "activeParameters": 52,
-          "activeLabel": "52B（规格页；另文 49B 待核）",
-          "notes": "2026-10-22 复核当前规格与价格，并对照 10 月 21 日公告：49B／52B 激活参数披露冲突；价格现为 1.36 / 4.18 美元，旧优惠价及依据日期另存。发布日与既有训练概述保持原样。",
-          "technicalNote": "核读官方发布说明和规格／模型卡；未复现实验。关联论文为概念阅读建议，不表示厂商采用了该方法。",
-          "id": "mistral-large4-preview",
-          "name": "Mistral Large 4（公开预览）",
-          "vendor": "Mistral AI",
-          "dateBasis": "API 公开预览；权重尚未发布",
-          "parameters": 1050,
-          "parameterLabel": "1.05T（另列 1.6B 视觉编码器）",
-          "architecture": "细粒度 MoE；原生多模态",
-          "context": "1M",
-          "contextNote": "官方规格页标注 1M 上下文；最大输出本次未核实。发布博客用约 1T，规格页细化为 1.05T 并另列 1.6B 视觉编码器，未擅自合并计算。",
-          "inputModalities": "文本、图像",
-          "outputModalities": "文本",
-          "multimodal": "多模态理解",
-          "openness": "预告开放权重",
-          "license": "预览期；最终权重许可尚未核实",
-          "openNote": "2026-10-21 官方合作公告仍计划 10 月底发布权重；模型卡虽写 open-weight，本次未核验到对应下载和许可，保留“预告开放权重”。",
-          "innovation": "从零训练约万亿参数多模态 MoE，推进代码、工具调用、视觉定位和专业任务；以共享环境与验证接口扩展异步长程强化学习。",
-          "reportUrl": "https://mistral.ai/news/mistral-large-4/",
-          "reportType": "官方发布说明（含训练概述）",
-          "releaseUrl": "https://mistral.ai/news/mistral-large-4/",
-          "specUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
-          "price": {
-            "input": 1.36,
-            "output": 4.18,
-            "cachedInput": 0.14,
-            "currency": "USD",
-            "basis": "现价",
-            "asOf": "2026-10-22",
-            "unit": "每百万 tokens；未缓存输入／文本输出",
-            "url": "https://docs.mistral.ai/models/mistral-large-4-0",
-            "note": "当前规格页列输入 1.36、输出 4.18、缓存输入 0.14 美元／百万 tokens；2026-10-15 记录的优惠价为 0.68 / 2.09。具体变价生效日未核实，旧价已保留。"
-          },
-          "priceLabel": "USD 1.36 / 4.18",
-          "generationChange": "相比 Large 3，本代扩大到约万亿参数并强化视觉和长程工具任务；规格页列 52B 激活参数，但 10 月 21 日官方合作公告称 49B，差异待核。仍按公开预览记录。",
-          "technicalTopics": [
-            "arch",
-            "post",
-            "agents",
-            "multi",
-            "language"
-          ],
-          "technicalDisclosure": "架构规格／训练概述",
-          "technicalSource": "https://mistral.ai/news/mistral-large-4/",
-          "technicalPoints": [
-            {
-              "name": "细粒度专家与视觉编码器",
-              "detail": "当前模型卡仍列 1.05T 总参数、52B 激活参数和 1.6B 视觉编码器；10 月 21 日官方合作公告写约 1T／49B，未说明统计口径或版本差异。保留冲突，不据此认定新模型或改架构。"
-            },
-            {
-              "name": "可组合的 RL 环境与验证",
-              "detail": "同一训练接口组合对话、科学任务、安全、事实性及长程工具使用；奖励模型、单元测试、LLM 裁判和静态检查按任务组合。"
-            },
-            {
-              "name": "异步长轨迹训练",
-              "detail": "官方称 actor 并行生成、训练异步进行，支持多次上下文压缩与百万 token rollout 预算。约 3,000 GPU 训练运行每日产生约 330 亿 token，其中约 160 亿为过滤后可训练输出；这是训练预算而非 API 上下文。"
-            }
-          ],
-          "relatedPaperIds": [
-            "react",
-            "arts-hybrid",
-            "cipr-interfaces"
-          ],
-          "sources": [
-            {
-              "label": "预览发布日期与训练概述",
-              "url": "https://mistral.ai/news/mistral-large-4/"
-            },
-            {
-              "label": "参数、上下文与当前优惠价",
-              "url": "https://docs.mistral.ai/models/mistral-large-4-0"
-            },
-            {
-              "label": "10 月 21 日官方合作公告：49B 与权重计划",
-              "url": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/"
-            },
-            {
-              "label": "10 月 22 日复核模型卡及现价",
-              "url": "https://docs.mistral.ai/models/mistral-large-4-0"
-            }
-          ],
-          "priceHistory": [
-            {
-              "input": 0.68,
-              "output": 2.09,
-              "currency": "USD",
-              "basis": "现价（限时优惠）",
-              "note": "规格页显示促销输入 $0.68、输出 $2.09；划线原价 $1.36 / $4.18。优惠截止日期未核实；缓存另价。",
-              "asOf": "2026-10-15",
-              "unit": "每百万 tokens；未缓存输入／文本输出",
-              "url": "https://docs.mistral.ai/models/mistral-large-4-0"
-            }
-          ]
-        },
-        {
-          "year": "2026",
-          "releaseDate": "2026-10-06",
-          "verifiedAt": "2026-10-15",
-          "activeParameters": null,
-          "activeLabel": "不适用／未披露",
-          "notes": "",
-          "technicalNote": "核读官方发布说明和规格／模型卡；未复现实验。关联论文为概念阅读建议，不表示厂商采用了该方法。",
-          "id": "embeddinggemma2",
-          "name": "EmbeddingGemma 2",
-          "vendor": "Google DeepMind",
-          "dateBasis": "模型与权重发布",
-          "parameters": 0.74,
-          "parameterLabel": "740M（全模态）",
-          "architecture": "Gemma 4 骨干；模块化视觉／音频编码器",
-          "context": "8K",
-          "contextNote": "8K 为输入上下文；官方给出的容量示例包括约 5.5 分钟音频、29 张图像或 58 帧视频，组合输入需共享预算。输出为 768 维向量，可截断为 512/256/128 维。",
-          "inputModalities": "文本（含代码）、图像、音频、视频",
-          "outputModalities": "嵌入向量（非生成文本）",
-          "multimodal": "多模态嵌入",
-          "openness": "开放权重",
-          "license": "Apache 2.0",
-          "openNote": "权重与模型卡可下载；未将开放权重等同于完整训练数据开放。",
-          "innovation": "以 740M 参数将文本、代码、图像、音频和视频映射到统一嵌入空间，支持按模态加载与多维度向量截断，用于端侧检索、分类及多模态 RAG。",
-          "reportUrl": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2",
-          "reportType": "官方模型卡",
-          "releaseUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
-          "specUrl": "https://huggingface.co/google/embeddinggemma-2",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "不适用",
-            "note": "开放权重嵌入模型；未核实独立官方托管 API 单价，自部署硬件成本另计。",
-            "asOf": "2026-10-15",
-            "unit": "嵌入服务；不可套用文本生成输入／输出计费",
-            "url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2"
-          },
-          "priceLabel": "官方托管 API 价未核实",
-          "generationChange": "从前代文本嵌入扩展到多模态统一空间，输入窗口由 2K 扩至 8K，并支持可选模态编码器和 128–768 维输出。",
-          "technicalTopics": [
-            "rag",
-            "multi",
-            "eff",
-            "language"
-          ],
-          "technicalDisclosure": "架构／训练模型卡",
-          "technicalSource": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2",
-          "technicalPoints": [
-            {
-              "name": "可选模态模块",
-              "detail": "文本模块 270M、视觉编码器 170M、音频编码器 300M；可仅加载所需模态，合计全模态 740M。"
-            },
-            {
-              "name": "Matryoshka 向量表示",
-              "detail": "训练支持 768、512、256、128 维嵌入；较小维度降低向量存储开销，不表示编码器计算成本按同倍率下降。"
-            },
-            {
-              "name": "端侧跨模态检索",
-              "detail": "统一向量空间支持以文字或语音检索图像、音视频；模型卡披露多语言能力及任务前缀。它是检索组件，不能独立生成问答。"
-            }
-          ],
-          "relatedPaperIds": [
-            "rag2020",
-            "afri"
-          ],
-          "sources": [
-            {
-              "label": "发布／日期来源",
-              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"
-            },
-            {
-              "label": "官方模型卡",
-              "url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2"
-            },
-            {
-              "label": "权重、模块参数与许可",
-              "url": "https://huggingface.co/google/embeddinggemma-2"
-            }
-          ]
-        },
-        {
-          "id": "gpt-live11",
-          "name": "GPT-Live-1.1",
-          "vendor": "OpenAI",
-          "year": "2026",
-          "releaseDate": "2026-10-15",
-          "dateBasis": "ChatGPT Voice 开始推出；系统卡同日发布",
-          "verifiedAt": "2026-10-16",
-          "parameters": null,
-          "activeParameters": null,
-          "parameterLabel": "未披露",
-          "activeLabel": "未披露",
-          "architecture": "全双工语音；可向思考模型委派",
-          "context": "未披露",
-          "contextNote": "系统卡未给出 token 窗口；不把产品通话时长当作模型上下文。",
-          "inputModalities": "音频（语音）",
-          "outputModalities": "音频（语音）",
-          "multimodal": "语音输入与输出",
-          "openness": "闭源",
-          "license": "专有服务",
-          "openNote": "未发布模型权重或完整训练配方。",
-          "innovation": "延续全双工交互，改进多语口音和搜索时的口头反馈；复杂任务可委派思考模型。",
-          "reportUrl": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
-          "reportType": "官方系统卡（安全／行为评测）",
-          "releaseUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-          "specUrl": "https://deploymentsafety.openai.com/gpt-live-1-1",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "未核实",
-            "note": "本次来源确认产品上线，未核实独立 API 型号或单价；不套用 Realtime API 或订阅价格。",
-            "asOf": "2026-10-16",
-            "unit": "API 计费单位未披露",
-            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-          },
-          "priceLabel": "独立 API 单价未核实",
-          "generationChange": "接替 GPT-Live-1；全双工是继承能力，本次发布强调语音自然度改进。",
-          "technicalTopics": [
-            "multi",
-            "agents",
-            "safety"
-          ],
-          "technicalDisclosure": "交互机制与安全评测；底层架构未披露",
-          "technicalSource": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
-          "technicalPoints": [
-            {
-              "name": "全双工交互（继承）",
-              "detail": "持续收听并发声，依据停顿、打断与节奏决定回应时机。"
-            },
-            {
-              "name": "语音与思考模型分工",
-              "detail": "系统卡描述双模型系统；委派能力不等于语音模型自身具备代码执行能力。"
-            },
-            {
-              "name": "分开检验语音安全",
-              "detail": "分别使用真实来源与合成挑战样本；这些分数不代表线上风险发生率。"
-            }
-          ],
-          "technicalNote": "核读系统卡第 1–5 节及发布说明；未复现。参数、上下文和独立 API 价格未核实，关联论文仅作概念阅读。",
-          "relatedPaperIds": [
-            "lychee",
-            "lost"
-          ],
-          "notes": "Plus 及更高层级的默认语音模型；按账户与地区逐步推出。安全并非全面提升：系统卡报告 1.1 在部分合成风险类别出现退步。",
-          "sources": [
-            {
-              "label": "10 月 15 日发布说明",
-              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-            },
-            {
-              "label": "官方系统卡",
-              "url": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf"
-            },
-            {
-              "label": "系统卡网页版",
-              "url": "https://deploymentsafety.openai.com/gpt-live-1-1"
-            }
-          ]
-        },
-        {
-          "id": "gpt-live11-quip",
-          "name": "GPT-Live-1.1 Quip",
-          "vendor": "OpenAI",
-          "year": "2026",
-          "releaseDate": "2026-10-15",
-          "dateBasis": "ChatGPT Voice 开始推出；系统卡同日发布",
-          "verifiedAt": "2026-10-16",
-          "parameters": null,
-          "activeParameters": null,
-          "parameterLabel": "未披露",
-          "activeLabel": "未披露",
-          "architecture": "全双工语音；可向思考模型委派",
-          "context": "未披露",
-          "contextNote": "系统卡未给出 token 窗口；不把产品通话时长当作模型上下文。",
-          "inputModalities": "音频（语音）",
-          "outputModalities": "音频（语音）",
-          "multimodal": "语音输入与输出",
-          "openness": "闭源",
-          "license": "专有服务",
-          "openNote": "未发布模型权重或完整训练配方。",
-          "innovation": "延续全双工交互，改进多语口音和搜索时的口头反馈；复杂任务可委派思考模型。",
-          "reportUrl": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
-          "reportType": "官方系统卡（安全／行为评测）",
-          "releaseUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-          "specUrl": "https://deploymentsafety.openai.com/gpt-live-1-1",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "未核实",
-            "note": "本次来源确认产品上线，未核实独立 API 型号或单价；不套用 Realtime API 或订阅价格。",
-            "asOf": "2026-10-16",
-            "unit": "API 计费单位未披露",
-            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-          },
-          "priceLabel": "独立 API 单价未核实",
-          "generationChange": "接替 GPT-Live-1 mini；全双工是继承能力，本次发布强调语音自然度改进。",
-          "technicalTopics": [
-            "multi",
-            "agents",
-            "safety"
-          ],
-          "technicalDisclosure": "交互机制与安全评测；底层架构未披露",
-          "technicalSource": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf",
-          "technicalPoints": [
-            {
-              "name": "全双工交互（继承）",
-              "detail": "持续收听并发声，依据停顿、打断与节奏决定回应时机。"
-            },
-            {
-              "name": "语音与思考模型分工",
-              "detail": "系统卡描述双模型系统；委派能力不等于语音模型自身具备代码执行能力。"
-            },
-            {
-              "name": "分开检验语音安全",
-              "detail": "分别使用真实来源与合成挑战样本；这些分数不代表线上风险发生率。"
-            }
-          ],
-          "technicalNote": "核读系统卡第 1–5 节及发布说明；未复现。参数、上下文和独立 API 价格未核实，关联论文仅作概念阅读。",
-          "relatedPaperIds": [
-            "lychee",
-            "lost"
-          ],
-          "notes": "面向其他用户的默认语音模型；官方称 mini 版本；按账户与地区逐步推出。系统卡的不同安全评测表现有升有降，不将产品更新解释为全面安全提升。",
-          "sources": [
-            {
-              "label": "10 月 15 日发布说明",
-              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-            },
-            {
-              "label": "官方系统卡",
-              "url": "https://deploymentsafety.openai.com/gpt-live-1-1/gpt-live-1-1.pdf"
-            },
-            {
-              "label": "系统卡网页版",
-              "url": "https://deploymentsafety.openai.com/gpt-live-1-1"
-            }
-          ]
-        },
-        {
-          "id": "dsv41-1017",
-          "name": "DeepSeek-V4.1 Flash-1017",
-          "vendor": "DeepSeek",
-          "releaseDate": "2026-10-17",
-          "year": "2026",
-          "dateBasis": "官方权重仓库 Release 提交日（UTC）；API 切换具体时刻未核实",
-          "parameters": "552B 主干（沿用 V4.1 口径）",
-          "activeParameters": "输入 8B／输出 16B（继承）",
-          "architecture": "MoE；沿用 V4.1 CED",
-          "context": "1M",
-          "contextNote": "API 页最大输出 384K；模型卡本地推理建议 max_tokens ≥256K，后者不是 API 上限。",
-          "inputModalities": "文本、图像",
-          "outputModalities": "文本",
-          "multimodal": "多模态理解",
-          "openness": "开放权重 · 宽松许可",
-          "license": "MIT",
-          "openNote": "开放权重；不据此推定完整训练数据和训练流程均已公开。",
-          "innovation": "小版本更新：官方报告推理、代码、Agent 和视觉基准提升，任务输出更短；新增协议适配工具，未披露新的架构或完整训练配方。",
-          "reportUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
-          "reportType": "沿用 V4.1 技术报告；1017 模型卡",
-          "releaseUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/commit/1bae0e1088993b9b82de08f59de5be5a34e42170",
-          "price": {
-            "input": 2,
-            "output": 8,
-            "currency": "CNY",
-            "basis": "现价",
-            "note": "高峰未缓存输入／输出；空闲时段 ¥1 / ¥4。缓存命中为高峰 ¥0.04、空闲 ¥0.02／百万 tokens。北京时间工作日 9–12、14–18 高峰，法定节假日除外。",
-            "asOf": "2026-10-19",
-            "unit": "每百万 tokens；未缓存输入／文本输出",
-            "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
-          },
-          "verifiedAt": "2026-10-19",
-          "notes": "主干参数沿用 V4.1 报告；新仓库存储约 763B，不能与激活量直接相比。deepseek-flash 已映射本版。Search / Fetch 独立计费，各 ¥5／千次成功且有结果请求；失败、无结果、超时不计费。Harness／Claude Code／Codex 的服务器端工具调用目前未计费，官方计划北京时间 11 月 1 日零时起收费（2026-10-19 核验）。 2026-10-20 服务限制更新：Search 100 QPS、Fetch 25 QPS，按账号计；Fetch 另有目标域名限制。价格依据仍保留原核验日。",
-          "sources": [
-            {
-              "label": "1017 官方模型卡",
-              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
-            },
-            {
-              "label": "10 月 17 日 Release 提交",
-              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/commit/1bae0e1088993b9b82de08f59de5be5a34e42170"
-            },
-            {
-              "label": "公开配置",
-              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/blob/main/config.json"
-            },
-            {
-              "label": "沿用 V4.1 技术报告",
-              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf"
-            },
-            {
-              "label": "API 版本与价格（2026-10-19）",
-              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
-            },
-            {
-              "label": "Search / Fetch 计费与限制",
-              "url": "https://api-docs.deepseek.com/zh-cn/guides/search"
-            }
-          ],
-          "parameterLabel": "552B 主干；仓库存储约 763B",
-          "activeLabel": "输入 8B／输出 16B（继承）",
-          "priceLabel": "CNY 2 / 8（高峰）",
-          "generationChange": "相对 9 月 V4.1 Flash，更新权重和能力表现；两版公开 config.json 一致，CED、CSA2 与原生视觉属于继承方法。",
-          "technicalTopics": [
-            "arch",
-            "eff",
-            "context",
-            "multi",
-            "agents"
-          ],
-          "technicalPoints": [
-            {
-              "name": "权重迭代与 Agent 评测",
-              "detail": "官方同表 Terminal-Bench 4.0 从 31.2 到 42.3、DeepSWE v1.1 从 74.2 到 77.0；分别使用 Claude Code 与 Mini-SWE-V2。厂商结果未经独立复现。"
-            },
-            {
-              "name": "输出长度与执行时间",
-              "detail": "模型卡称任务完成更快、输出更短；未给出覆盖所有工作负载的统一加速倍数，不把此宣传解释为架构变化。"
-            },
-            {
-              "name": "沿用 CED / CSA2 / 原生视觉",
-              "detail": "与前版公开配置一致，包含 40 层文本主干、384 个路由专家和视觉模块；主干与仓库存储参数口径不同。"
-            },
-            {
-              "name": "协议适配与本地部署",
-              "detail": "没有 Jinja 聊天模板；提供 Python 编码参考及 deepseek-recipe，转换多种消息协议、处理思考和工具输出。工具实际执行及 HTTP 传输仍由调用方负责。"
-            }
-          ],
-          "technicalDisclosure": "公开权重、配置与评测；本次训练改动未详述",
-          "relatedPaperIds": [
-            "paged",
-            "freq",
-            "eopd",
-            "abridgekv"
-          ],
-          "technicalSource": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-          "technicalNote": "本次核读 1017 模型卡、发布提交、配置与 API 文档；架构细节沿用已核读的 9 月报告，未发现独立 1017 技术报告。关联论文仅用于概念对照，不代表厂商使用其方法。",
-          "datePrecision": "日",
-          "specUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-          "servicePricing": {
-            "search": 5,
-            "fetch": 5,
-            "currency": "CNY",
-            "unit": "每 1,000 次成功且产生结果的请求",
-            "asOf": "2026-10-19",
-            "url": "https://api-docs.deepseek.com/zh-cn/guides/search",
-            "serverToolBillingStarts": "2026-11-01T00:00:00+08:00"
-          },
-          "serviceCheckedAt": "2026-10-20",
-          "serviceLimits": {
-            "searchQps": 100,
-            "fetchQps": 25,
-            "scope": "账号级；Fetch 另受目标域名限制",
-            "asOf": "2026-10-20",
-            "url": "https://api-docs.deepseek.com/zh-cn/guides/search"
-          }
-        },
-        {
-          "id": "minimax31flash",
-          "name": "MiniMax-M3.1-Flash",
-          "vendor": "MiniMax",
-          "releaseDate": "2026-10-19",
-          "year": "2026",
-          "dateBasis": "官方正式发布说明日期；与更早 Preview 和匿名试用区分",
-          "datePrecision": "日",
-          "parameters": "未披露",
-          "activeParameters": "未披露",
-          "architecture": "官方称更激进稀疏化；结构细节未披露",
-          "context": "1M",
-          "contextNote": "API 文档标为 1,000,000 tokens；独立最大输出上限未在本次来源中核实。",
-          "inputModalities": "文本、图像、视频",
-          "outputModalities": "文本",
-          "multimodal": "多模态理解",
-          "openness": "预告开放权重",
-          "license": "待权重发布后核实",
-          "openNote": "发布说明明确权重将稍后提供。API 指南称 open-weight，但未核验到本版正式权重和许可，暂不标为已开放。",
-          "innovation": "面向编码与工具工作流，通过更激进稀疏化降低推理成本，并提供五档自适应思考深度；内部结构和训练配方尚未详细披露。",
-          "reportUrl": "https://www.minimax.io/blog/minimax-m31f",
-          "reportType": "官方发布说明；未核验到独立技术报告",
-          "releaseUrl": "https://www.minimax.io/blog/minimax-m31f",
-          "specUrl": "https://platform.minimax.io/docs/guides/text-generation",
-          "price": {
-            "input": 0.15,
-            "output": 0.6,
-            "currency": "USD",
-            "basis": "现价",
-            "note": "缓存输入 $0.015／百万 tokens；平价计费，未将订阅套餐或第三方限时免费并入 API 单价。",
-            "asOf": "2026-10-20",
-            "unit": "每百万 tokens；未缓存输入／文本输出",
-            "url": "https://platform.minimax.io/docs/pricing/overview"
-          },
-          "verifiedAt": "2026-10-20",
-          "notes": "API、M Plan 与 MiniMax Code 已提供。前版 M3 的参数、MSA 架构和许可证不能直接当作本版已披露规格；本次依据为正式发布说明与 API 指南，未复现厂商评测。",
-          "sources": [
-            {
-              "label": "10 月 19 日正式发布说明",
-              "url": "https://www.minimax.io/blog/minimax-m31f"
-            },
-            {
-              "label": "API 规格、模态与思考设置",
-              "url": "https://platform.minimax.io/docs/guides/text-generation"
-            },
-            {
-              "label": "当前 API 价格（2026-10-20）",
-              "url": "https://platform.minimax.io/docs/pricing/overview"
-            }
-          ],
-          "parameterLabel": "未披露",
-          "activeLabel": "未披露",
-          "priceLabel": "USD 0.15 / 0.60",
-          "generationChange": "正式 Flash 版本强调更高推理效率与 Agent／编码能力。相较已收录 M3 的 ≤512K 标准 API 输入／输出价，单价均减半；官方所述任务总费用约降 70% 是另一种工作负载口径。",
-          "technicalTopics": [
-            "agents",
-            "eff",
-            "context",
-            "multi",
-            "reason"
-          ],
-          "technicalPoints": [
-            {
-              "name": "稀疏化与推理效率",
-              "detail": "厂商称采用更激进的稀疏化，典型输出可达 200+ tokens/s、P50 为 170+；未公布足以复现的完整架构、硬件和工作负载条件，不作为统一加速承诺。"
-            },
-            {
-              "name": "可调思考深度",
-              "detail": "API 支持 low、medium、high、xhigh、max 五档 effort，默认 max；思考不能关闭。提高深度会增加输出 token 和延迟。"
-            },
-            {
-              "name": "长上下文与多模态输入",
-              "detail": "API 给出 1M 上下文，支持文本、图像和视频输入。未据此推断音频输入或图像／视频生成能力。"
-            },
-            {
-              "name": "Agent 能力与验证边界",
-              "detail": "官方报告 DeepSWE v1.1 为 73.7%、OSWorld V2 为 61.7；为厂商实验，本文未独立复现。改进的训练机制尚未公开，不能把基准提升写成已知训练创新。"
-            }
-          ],
-          "technicalDisclosure": "能力与服务规格已披露；架构和训练细节待报告",
-          "relatedPaperIds": [
-            "swebench",
-            "react",
-            "realcli",
-            "dlite"
-          ],
-          "technicalSource": "https://platform.minimax.io/docs/guides/text-generation",
-          "technicalNote": "只核读发布说明、API 指南和价格页；没有用旧 M3 报告填充本版未知参数。关联论文用于概念阅读，不表示厂商实际采用。"
-        },
-        {
-          "id": "voxtral3-small-transcribe",
-          "name": "Voxtral Small Transcribe 3",
-          "vendor": "Mistral AI",
-          "releaseDate": "2026-10-20",
-          "year": "2026",
-          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
-          "datePrecision": "日",
-          "parameters": "未披露",
-          "activeParameters": "未披露",
-          "architecture": "语音专用模型；完整架构与训练配方未披露",
-          "context": "32K",
-          "contextNote": "官方模型卡标注 32K；语音时长限制与 token 上下文不等同。",
-          "inputModalities": "音频、文本提示",
-          "outputModalities": "文本",
-          "multimodal": "语音理解",
-          "openness": "API／自部署；开放权重未核实",
-          "license": "商用部署条款待逐项核实",
-          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
-          "innovation": "面向批量转录与说话人分离，结合领域关键词和自由文本提示进行上下文偏置；家族语音代理另由 SDK 串联推理与工具。",
-          "reportUrl": "https://mistral.ai/news/voxtral-3/",
-          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
-          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
-          "specUrl": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "现价",
-            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
-            "asOf": "2026-10-21",
-            "unit": "音频分钟",
-            "amount": 0.004,
-            "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0"
-          },
-          "verifiedAt": "2026-10-21",
-          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
-          "sources": [
-            {
-              "label": "10 月 20 日家族发布说明与价格表",
-              "url": "https://mistral.ai/news/voxtral-3/"
-            },
-            {
-              "label": "本型号模型卡与现价（2026-10-21）",
-              "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0"
-            }
-          ],
-          "parameterLabel": "未披露",
-          "activeLabel": "未披露",
-          "priceLabel": "USD 0.004 / 分钟",
-          "generationChange": "转录覆盖扩展到约 50 种语言，增强说话人分离和领域词识别；Small 为本代主力转录版本。",
-          "technicalTopics": [
-            "multi",
-            "language",
-            "agents",
-            "eff"
-          ],
-          "technicalPoints": [
-            {
-              "name": "说话人分离与转录",
-              "detail": "官方在多语转录和公共说话人分离集上比较 WER／cpWER；这些结果来自厂商报告，不是统一真实场景保证。"
-            },
-            {
-              "name": "领域上下文偏置",
-              "detail": "允许提供关键术语与自由文本，改善特定词汇召回，不要求针对每个领域微调。"
-            },
-            {
-              "name": "能力与架构边界",
-              "detail": "模型页另列翻译、语音问答、摘要与函数调用；未公开参数规模或可复现训练配方。不能把 SDK 的完整代理能力都归因于此模型。"
-            }
-          ],
-          "technicalDisclosure": "能力／服务披露",
-          "relatedPaperIds": [
-            "attention2014",
-            "transformer",
-            "realcli"
-          ],
-          "technicalSource": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
-          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
-        },
-        {
-          "id": "voxtral3-mini-transcribe",
-          "name": "Voxtral Mini Transcribe 3",
-          "vendor": "Mistral AI",
-          "releaseDate": "2026-10-20",
-          "year": "2026",
-          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
-          "datePrecision": "日",
-          "parameters": "4B",
-          "activeParameters": "未披露",
-          "architecture": "语音专用模型；完整架构与训练配方未披露",
-          "context": "32K",
-          "contextNote": "官方模型卡标注 32K；语音时长限制与 token 上下文不等同。",
-          "inputModalities": "音频、文本提示",
-          "outputModalities": "文本",
-          "multimodal": "语音理解",
-          "openness": "API／自部署；开放权重未核实",
-          "license": "商用部署条款待逐项核实",
-          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
-          "innovation": "4B 的批量转录模型，在较低按分钟价格下提供多语识别、说话人分离和领域上下文偏置。",
-          "reportUrl": "https://mistral.ai/news/voxtral-3/",
-          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
-          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
-          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "现价",
-            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
-            "asOf": "2026-10-21",
-            "unit": "音频分钟",
-            "amount": 0.0035,
-            "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"
-          },
-          "verifiedAt": "2026-10-21",
-          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
-          "sources": [
-            {
-              "label": "10 月 20 日家族发布说明与价格表",
-              "url": "https://mistral.ai/news/voxtral-3/"
-            },
-            {
-              "label": "本型号模型卡与现价（2026-10-21）",
-              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"
-            }
-          ],
-          "parameterLabel": "4B",
-          "activeLabel": "未披露",
-          "priceLabel": "USD 0.0035 / 分钟",
-          "generationChange": "Mini 转录版强调较小模型与转录质量的平衡；与 Realtime 版为不同 API 型号，不能混用规格与价格。",
-          "technicalTopics": [
-            "multi",
-            "language",
-            "agents",
-            "eff"
-          ],
-          "technicalPoints": [
-            {
-              "name": "4B 转录模型",
-              "detail": "4B 参数来自发布说明，仅适用于此 Mini 批量转录版；没有将此数字复制给 Small、Realtime 或 TTS。"
-            },
-            {
-              "name": "领域词与说话人",
-              "detail": "提供领域提示和说话人分离，减少仅靠通用转录对术语和多人音频的遗漏。"
-            },
-            {
-              "name": "评估边界",
-              "detail": "厂商报告 FLEURS 及说话人分离结果；语种、错误率口径和数据集不同，不据此推断任意录音上全面优于其他模型。"
-            }
-          ],
-          "technicalDisclosure": "能力／服务披露",
-          "relatedPaperIds": [
-            "attention2014",
-            "transformer",
-            "realcli"
-          ],
-          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
-          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
-        },
-        {
-          "id": "voxtral3-realtime",
-          "name": "Voxtral Mini Transcribe Realtime 3",
-          "vendor": "Mistral AI",
-          "releaseDate": "2026-10-20",
-          "year": "2026",
-          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
-          "datePrecision": "日",
-          "parameters": "未披露",
-          "activeParameters": "未披露",
-          "architecture": "语音专用模型；完整架构与训练配方未披露",
-          "context": "未披露",
-          "contextNote": "模型卡没有给出可核实的 token 上下文上限，不从旧版或其他家族成员外推。",
-          "inputModalities": "流式音频、文本提示",
-          "outputModalities": "流式文本",
-          "multimodal": "实时语音理解",
-          "openness": "API／自部署；开放权重未核实",
-          "license": "商用部署条款待逐项核实",
-          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
-          "innovation": "通过 WebSocket 在同一流式会话中完成转录、说话人分离、上下文偏置和话轮结束预测。",
-          "reportUrl": "https://mistral.ai/news/voxtral-3/",
-          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
-          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
-          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "现价",
-            "note": "按音频分钟计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
-            "asOf": "2026-10-21",
-            "unit": "音频分钟",
-            "amount": 0.008,
-            "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"
-          },
-          "verifiedAt": "2026-10-21",
-          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
-          "sources": [
-            {
-              "label": "10 月 20 日家族发布说明与价格表",
-              "url": "https://mistral.ai/news/voxtral-3/"
-            },
-            {
-              "label": "本型号模型卡与现价（2026-10-21）",
-              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"
-            }
-          ],
-          "parameterLabel": "未披露",
-          "activeLabel": "未披露",
-          "priceLabel": "USD 0.008 / 分钟",
-          "generationChange": "面向实时语音代理新增声学与语义结合的结束检测，可在延迟和转录质量之间调节。",
-          "technicalTopics": [
-            "multi",
-            "language",
-            "agents",
-            "eff"
-          ],
-          "technicalPoints": [
-            {
-              "name": "可配置流式延迟",
-              "detail": "模型卡给出 80–2,400 ms 可配置延迟；发布说明称 35+ 语种、可低于 500 ms，不等于完整语音代理端到端延迟。"
-            },
-            {
-              "name": "原生话轮结束预测",
-              "detail": "结合声音信号与语义判断用户是否说完，面向减少等待与过早打断的权衡。"
-            },
-            {
-              "name": "流式组合接口",
-              "detail": "转录、说话人分离和上下文偏置在同一会话使用；独立最大上下文和参数量本次未核实。"
-            }
-          ],
-          "technicalDisclosure": "能力／服务披露",
-          "relatedPaperIds": [
-            "attention2014",
-            "transformer",
-            "realcli"
-          ],
-          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
-          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
-        },
-        {
-          "id": "voxtral3-tts",
-          "name": "Voxtral TTS 3",
-          "vendor": "Mistral AI",
-          "releaseDate": "2026-10-20",
-          "year": "2026",
-          "dateBasis": "官方发布说明与模型卡日期；Public Preview",
-          "datePrecision": "日",
-          "parameters": "未披露",
-          "activeParameters": "未披露",
-          "architecture": "语音专用模型；完整架构与训练配方未披露",
-          "context": "未披露",
-          "contextNote": "模型卡没有给出可核实的 token 上下文上限，不从旧版或其他家族成员外推。",
-          "inputModalities": "文本、声音参考",
-          "outputModalities": "音频",
-          "multimodal": "语音生成",
-          "openness": "API／自部署；开放权重未核实",
-          "license": "商用部署条款待逐项核实",
-          "openNote": "发布说明支持 EU 托管 API 和自部署；本次未核验到对应版本公开权重及开源许可证。自部署可用不等于已开源。",
-          "innovation": "按文本语境和显式情绪、语速、重音指令生成声音，支持声音适配、批量及实时合成。",
-          "reportUrl": "https://mistral.ai/news/voxtral-3/",
-          "reportType": "官方发布说明与模型卡；独立技术报告未核实",
-          "releaseUrl": "https://mistral.ai/news/voxtral-3/",
-          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "现价",
-            "note": "按百万字符计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
-            "asOf": "2026-10-21",
-            "unit": "百万字符",
-            "amount": 13,
-            "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
-          },
-          "verifiedAt": "2026-10-27",
-          "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
-          "sources": [
-            {
-              "label": "10 月 20 日家族发布说明与价格表",
-              "url": "https://mistral.ai/news/voxtral-3/"
-            },
-            {
-              "label": "本型号模型卡与现价（2026-10-21）",
-              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
-            },
-            {
-              "label": "TTS 语言数量更正后的模型卡（2026-10-27）",
-              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
-            }
-          ],
-          "parameterLabel": "未披露",
-          "activeLabel": "未披露",
-          "priceLabel": "USD 13 / 百万字符",
-          "generationChange": "加强语境化语音、发音提示和专业声音适配；Pro Voice 官方要求约 30 分钟音频，与短参考的零样本方案区分。",
-          "technicalTopics": [
-            "multi",
-            "language",
-            "agents",
-            "eff"
-          ],
-          "technicalPoints": [
-            {
-              "name": "语境与表达控制",
-              "detail": "根据文本语义调节声音，并允许显式控制情绪、节奏和强调；发音提示适合名字与领域术语。"
-            },
-            {
-              "name": "专业声音适配",
-              "detail": "发布说明的 Pro Voice 使用约 30 分钟音频，面向跨语言保留音色与风格；不将所有声音克隆模式混为同一要求。"
-            },
-            {
-              "name": "多语言声音生成",
-              "detail": "截至 2026-10-27，模型卡已改为 35+ 语言、50+ 方言，与 10 月 20 日发布说明一致；此前的“9 种语言”冲突已澄清。该数量仍是厂商规格，未逐语种独立测试。"
-            }
-          ],
-          "technicalDisclosure": "能力／服务披露",
-          "relatedPaperIds": [
-            "attention2014",
-            "transformer",
-            "realcli"
-          ],
-          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
-          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。",
-          "specificationCheckedAt": "2026-10-27"
-        },
-        {
-          "id": "glm-legal",
-          "name": "GLM-Legal（Beta）",
-          "vendor": "智谱 Z.AI",
-          "year": "2026",
-          "releaseDate": "2026-10-12",
-          "datePrecision": "日",
-          "dateBasis": "官方发布与 Beta 申请；本次补录",
-          "parameters": "未披露",
-          "activeParameters": "未披露",
-          "parameterLabel": "本型号未披露",
-          "activeLabel": "未披露",
-          "architecture": "基于 GLM-5.3-Flash；法律中训练与后训练",
-          "context": "未核实",
-          "contextNote": "未找到本型号独立上下文规格，不从基座或评测站概览自动继承。",
-          "inputModalities": "文本；其他模态未核实",
-          "outputModalities": "文本",
-          "multimodal": "多模态待核实",
-          "openness": "Beta API；权重未核实",
-          "license": "本型号许可未核实",
-          "openNote": "官方提供 API 申请入口；未核验本型号独立权重和许可证，不沿用基座开放许可。",
-          "innovation": "面向法律工作，结合领域中训练、真实任务强化学习，以及模型与工具流程共同迭代。",
-          "generationChange": "在 GLM-5.3-Flash 基础上针对合同审阅、证据分析和合规研究优化，属于领域特化版本。",
-          "reportUrl": "https://z.ai/blog/glm-legal",
-          "reportType": "官方发布与训练概述；独立报告未核实",
-          "releaseUrl": "https://z.ai/blog/glm-legal",
-          "specUrl": "https://z.ai/blog/glm-legal",
-          "price": {
-            "input": null,
-            "output": null,
-            "currency": "USD",
-            "basis": "型号映射待核实",
-            "asOf": "2026-10-22",
-            "unit": "每百万 tokens",
-            "url": "https://docs.z.ai/guides/overview/pricing",
-            "note": "定价页新列 GLM-5.3-FlashX-Legal（输入 0.37、缓存输入 0.075、输出 1.25 美元／百万 tokens）；与 GLM-Legal Beta 的确切型号关系未核实，暂不直接套用。"
-          },
-          "priceLabel": "本型号价格待核实",
-          "verifiedAt": "2026-10-22",
-          "notes": "参数、上下文、模态及公开权重未从基座外推。所列评测为发布方报告，不能把 19.2% 全部通过率解释为普遍可独立处理法律任务。",
-          "sources": [
-            {
-              "label": "10 月 12 日官方发布与训练方法",
-              "url": "https://z.ai/blog/glm-legal"
-            },
-            {
-              "label": "官方 Beta API 申请",
-              "url": "https://z.ai/consultation/legal"
-            },
-            {
-              "label": "官方定价页：Legal 型号映射待核",
-              "url": "https://docs.z.ai/guides/overview/pricing"
-            }
-          ],
-          "technicalTopics": [
-            "domain",
-            "data",
-            "post",
-            "agents",
-            "eval"
-          ],
-          "technicalDisclosure": "训练概述；完整配方未披露",
-          "technicalSource": "https://z.ai/blog/glm-legal",
-          "technicalNote": "阅读官方发布中的训练与评测说明，未复现。关联论文用于概念对照，不表示厂商实际采用。",
-          "technicalPoints": [
-            {
-              "name": "法律领域中训练",
-              "detail": "增加法律语料，强化事实、规则与结论之间的联系；语料规模和配方未完整公开。"
-            },
-            {
-              "name": "模型与工具流程共同迭代",
-              "detail": "在数万法律环境中做强化学习，同时调整上下文、工具和反馈流程，并用从业者反馈修订评测。"
-            },
-            {
-              "name": "结果与边界",
-              "detail": "官方报告 Harvey LAB 全部通过率 19.2%，较基座高 12.5 个百分点；任务与评测协议限定其解释范围。"
-            }
-          ],
-          "relatedPaperIds": [
-            "harnessrl",
-            "safety-mid-training",
-            "verifiererror"
-          ]
         }
       ],
       "source": {
-        "label": "85 个关键型号的发布、规格与技术资料",
-        "period": "2022-11-30 起；2026-10-27 新增 GPT-6.1 Terra，并澄清 Voxtral TTS 3 语言数量；旧价格日期保留",
+        "label": "87 个关键型号的发布、规格与技术资料",
+        "period": "2022-11-30 起；2026-10-27 补入 Kimi K3.1 Pro 与历史 GLM-5.3-Flash，保留早前本日 GPT-6.1 Terra 更新",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -399729,6 +399962,62 @@
           {
             "label": "GPT-6.1 Terra · 10 月 26 日 API 发布记录",
             "url": "https://developers.openai.com/api/docs/changelog"
+          },
+          {
+            "label": "Kimi K3.1 Pro · 技术博客／训练及评测脚注",
+            "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+          },
+          {
+            "label": "Kimi K3.1 Pro · 10 月 23 日 Kimi Code 上线记录",
+            "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
+          },
+          {
+            "label": "Kimi K3.1 Pro · 研究索引：博客日期 10 月 24 日",
+            "url": "https://www.kimi.ai/blog/"
+          },
+          {
+            "label": "Kimi K3.1 Pro · API 模态与推理设置；评测占位段不作依据",
+            "url": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart"
+          },
+          {
+            "label": "Kimi K3.1 Pro · 标准／Highspeed 价格与缓存口径",
+            "url": "https://www.kimi.ai/zh-hans/resources/kimi-k3-1-pro-pricing"
+          },
+          {
+            "label": "Kimi K3.1 Pro · 平台当前价交叉核对",
+            "url": "https://platform.kimi.ai/"
+          },
+          {
+            "label": "Kimi K3.1 Pro · 官方权重仓库目录",
+            "url": "https://huggingface.co/moonshotai"
+          },
+          {
+            "label": "GLM-5.3-Flash · 本代官方模型卡与权重",
+            "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+          },
+          {
+            "label": "GLM-5.3-Flash · 首发日期：8 月 26 日官方博客",
+            "url": "https://z.ai/blog/glm-5.3-flash"
+          },
+          {
+            "label": "GLM-5.3-Flash · 8 月 27 日官方技术复述",
+            "url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash"
+          },
+          {
+            "label": "GLM-5.3-Flash · 权重配置／注意力和专家数量",
+            "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/blob/main/config.json"
+          },
+          {
+            "label": "GLM-5.3-Flash · 托管 API 规格及 FlashX 区分",
+            "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash"
+          },
+          {
+            "label": "GLM-5.3-Flash · 官方 API 当前价格",
+            "url": "https://docs.z.ai/guides/overview/pricing"
+          },
+          {
+            "label": "GLM-5.3-Flash · GLM-5 家族报告（非本代独立报告）",
+            "url": "https://arxiv.org/abs/2602.15763"
           }
         ],
         "caveats": [
@@ -399746,10 +400035,11 @@
           "2026-10-20 M3.1 Flash 权重尚待正式提供，参数及独立技术报告未核实；API 指南的 open-weight 标签与发布说明的将来时一并记录，暂按预告开放权重处理。",
           "2026-10-21 Voxtral 按音频分钟或百万字符计费，不能与每百万 tokens 单价直接排序；TTS 语种数量在发布说明与模型卡间不一致，明确待核。自部署不等于公开权重。GPT 12 小时缓存为服务更新，不改写旧模型发布日期和原单价依据日期。",
           "2026-10-22 GLM-Legal 的独立规格／权重和 Legal 定价型号映射未核实；不继承基座参数。Mistral Large 4 当前输入／输出为 1.36 / 4.18 美元／百万 tokens，旧优惠价存档；49B／52B 激活参数冲突明确保留。其他模型历史价格与核验日期未改写。",
-          "2026-10-26 Kimi K3.1 Pro 文档有未填评测数字、正式首发日待核，保留本地候选，不计入 84 个型号。K2 系列 API 退役计划不等于开放权重失效。Mistral 49B／52B 与 Voxtral TTS 语言数量冲突仍未解决。",
-          "2026-10-27 Voxtral TTS 3 模型卡现为 35+ 语言／50+ 方言，已澄清此前 9 语言冲突；历史价格仍为 10 月 21 日依据。GPT-6.1 Terra 参数与内部架构未公开；安全和性能对照为厂商评测。Kimi K3.1 Pro 仍有评测占位符、首发日待核，未计入 85 个型号。"
+          "2026-10-26 当时因指南不完整将 Kimi K3.1 Pro 留候选；该决定已于 10 月 27 日通过其他正式来源修正，现已补录。K2 系列 API 退役计划不等于开放权重失效。当时 Mistral 49B／52B 与 Voxtral TTS 语言数量存在冲突；后者已于 10 月 27 日澄清。",
+          "2026-10-27 Voxtral TTS 3 模型卡现为 35+ 语言／50+ 方言，已澄清此前 9 语言冲突；历史价格仍为 10 月 21 日依据。GPT-6.1 Terra 参数与内部架构未公开；安全和性能对照为厂商评测。Kimi K3.1 Pro 后经官方博客与 Code 更新记录交叉核验，已于本日补入；原 API 占位段不作性能依据。",
+          "2026-10-27 补漏：Kimi K3.1 Pro 按 10 月 23 日 Code 上线记入，博客为 10 月 24 日；Highspeed 作为服务档不重复计数。GLM-5.3-Flash 是 8 月 26 日历史补录。未披露字段逐项待核，不再阻止已确认发布的模型入库。"
         ],
-        "executedAt": "2026-10-27T05:33:10.945040+00:00"
+        "executedAt": "2026-10-27T07:52:52.561992+00:00"
       },
       "methods": [
         {
@@ -400342,21 +400632,27 @@
     "papersRevised": [
       "dialfork"
     ],
-    "modelsAdded": 1,
+    "modelsAdded": 3,
     "modelsRevised": [
       "voxtral3-tts"
     ],
     "catalogAdded": 0,
     "catalogTitlesRevised": 0,
     "catalogSchedulesRevised": 8,
-    "coverageNote": "补齐 10 月 15 日至 27 日 05:14 UTC 的 submittedDate 查询：9 页共 4,312 个唯一 arXiv ID，并定向检查 120 篇已有论文版本。完整复核 5 个会议目录及 NAACL 入口；ACL／EACL 下载截断保留上次快照。未读候选不计入整理数。",
+    "coverageNote": "补齐 10 月 15 日至 27 日 05:14 UTC 的 submittedDate 查询：9 页共 4,312 个唯一 arXiv ID，并定向检查 120 篇已有论文版本。完整复核 5 个会议目录及 NAACL 入口；ACL／EACL 下载截断保留上次快照。未读候选不计入整理数。 同日人工补漏交叉核对 Kimi 发布博客、Code 记录、API 与官方仓库；补入 K3.1 Pro 及历史 GLM-5.3-Flash。",
     "limitations": [
       "arXiv 查询元数据完整不等于全部论文已读，且只反映检索时已进入索引的条目；继续采用 7 天重叠窗口。",
       "ACL／EACL 两次传输均未完成；OpenAI 新闻／帮助及 xAI 新闻返回 403，Z.ai 博客根页 404。Terra 发布说明经网页检索读取，规格与系统卡直接可读。",
       "EMNLP 历史日程 8 个缺项继续待核；DTCH 活动性质待核，未当作新论文。",
-      "Kimi K3.1 Pro、MiniMax H3 变体和 LitPivot 留作候选；GLM-Legal 价格映射、Mistral 49B／52B 仍待核。Voxtral 语言披露已一致。",
+      "MiniMax H3 变体和 LitPivot 留作候选；GLM-Legal 价格映射、Mistral 49B／52B 仍待核。Voxtral 语言披露已一致。",
       "浏览器渲染检查受既有安全策略限制；执行源构建、筛选／时间线逻辑及线上完整包核验，不声称截图或交互验收。"
-    ]
+    ],
+    "modelsAddedIds": [
+      "gpt61-terra",
+      "kimik31pro",
+      "glm53flash"
+    ],
+    "followupAuditAt": "2026-10-27T07:52:52.561992+00:00"
   },
   "affiliationEnrichment": {
     "checkedAt": "2026-10-27",

@@ -41,3 +41,13 @@
 - 模型来源：以当前数据 modelReports 的 sources、technicalSource、reportUrl 为起点，使用已验证的官方发布入口发现新版本。
 
 尚未有正式源佐证的新条目放入本地候选文件，并保留检索日期和未解决问题。待核候选不计入已整理论文数，不自动获得阅读等级或技术结论。
+
+## 补漏与中断恢复
+
+- 分开记录任务触发、实际执行、完成核验与发布成功。没有提交可能是无变化，不能据此判定任务未执行；没有完成记录也不能写成检查成功。检查连续覆盖区间和未完成任务，从最早未覆盖日期继续补查并向前重叠 7 天。
+- 每阶段保存来源结果、候选、未完成范围与完成检查点；恢复时优先读取这些小文件。工具输出只返回必要字段和短摘录，完整目录／正文留在本地，避免把大量历史对话、论文元数据或原始 HTML 填入上下文。
+- 模型发现至少覆盖官方发布博客／索引、产品更新记录、API 模型表和官方权重仓库。官网改域或旧页失效时继续查官方新域及检索索引。单个指南存在占位符，只使该字段不能采用，不能替代对其他官方来源的检查。
+- 每次重新处理所有未解决候选；记录 `firstSeenAt`、`lastAttemptAt`、`status`、`unresolvedFields`、`sourcesTried` 与 `nextAction`。连续两次仍待核时必须换用其他官方入口，并明确剩余缺口；不能只复制上次理由。已经确认型号和发布事件、且有可归纳的正式资料时先入库，参数、独立报告、许可或价格等缺项逐字段标未知。
+- 发布、博客、API 开放和权重开放分别核实日期。Highspeed 等同模型服务档可在本行清楚列价，不重复当作新基础模型；历史补录按真实发布日期排序，不计作今日新发布。预告开放不等于已经开放权重。
+- Kimi 固定复查入口：[研究博客](https://www.kimi.ai/blog/)、[Kimi Code 最新动态](https://www.kimi.com/code/docs/en/kimi-code/whats-new.html)、[API 平台](https://platform.kimi.ai/)、[API 定价](https://platform.kimi.ai/docs/pricing/chat)、[官方权重](https://huggingface.co/moonshotai)。Z.ai 博客正文不可读时，交叉检查 [AutoClaw 官方模型介绍](https://autoclaw.z.ai/models/)、[API 文档](https://docs.z.ai/guides/overview/overview) 和 [官方权重](https://huggingface.co/zai-org)，不要只重试博客根页。
+- 截至 2026-10-27，Kimi K3.1 Pro 已补录，开放权重仍需复查 11 月 4 日前的兑现情况；GLM-5.3-Flash 是 8 月历史补录。缺口修复不表示已穷尽所有型号或未读论文。
