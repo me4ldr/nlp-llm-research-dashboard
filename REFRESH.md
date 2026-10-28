@@ -51,3 +51,5 @@
 - 发布、博客、API 开放和权重开放分别核实日期。Highspeed 等同模型服务档可在本行清楚列价，不重复当作新基础模型；历史补录按真实发布日期排序，不计作今日新发布。预告开放不等于已经开放权重。
 - Kimi 固定复查入口：[研究博客](https://www.kimi.ai/blog/)、[Kimi Code 最新动态](https://www.kimi.com/code/docs/en/kimi-code/whats-new.html)、[API 平台](https://platform.kimi.ai/)、[API 定价](https://platform.kimi.ai/docs/pricing/chat)、[官方权重](https://huggingface.co/moonshotai)。Z.ai 博客正文不可读时，交叉检查 [AutoClaw 官方模型介绍](https://autoclaw.z.ai/models/)、[API 文档](https://docs.z.ai/guides/overview/overview) 和 [官方权重](https://huggingface.co/zai-org)，不要只重试博客根页。
 - 截至 2026-10-27，Kimi K3.1 Pro 已补录，开放权重仍需复查 11 月 4 日前的兑现情况；GLM-5.3-Flash 是 8 月历史补录。缺口修复不表示已穷尽所有型号或未读论文。
+
+- 2026-10-28 已解决：Data 构建组件恢复；LitPivot 与 MiniMax H3 已补录；Mistral 49B／52B 为参数统计口径差异。H3 后续复查当前 API 价格、托管模块和稀疏注意力实现开放情况；NeurIPS Voice-Native Classroom 与 DTCH 均确认是 Bridging the Future 活动，不推定主会论文。UIST 只补入一篇，不算系统目录覆盖。
