@@ -53,3 +53,5 @@
 - 截至 2026-10-27，Kimi K3.1 Pro 已补录，开放权重仍需复查 11 月 4 日前的兑现情况；GLM-5.3-Flash 是 8 月历史补录。缺口修复不表示已穷尽所有型号或未读论文。
 
 - 2026-10-28 已解决：Data 构建组件恢复；LitPivot 与 MiniMax H3 已补录；Mistral 49B／52B 为参数统计口径差异。H3 后续复查当前 API 价格、托管模块和稀疏注意力实现开放情况；NeurIPS Voice-Native Classroom 与 DTCH 均确认是 Bridging the Future 活动，不推定主会论文。UIST 只补入一篇，不算系统目录覆盖。
+
+- 2026-10-29：补入五篇论文和 Qwen-Audio 3.1 Realtime Flash／Plus，H3 API 价格已核实。ACL／EACL 网页不完整时可用 acl-org/acl-anthology 官方 XML 与 Findings XML 补查；EMNLP 已唯一匹配 5,524 条正式链接，24 个历史标题未唯一匹配，不推定撤稿。arXiv 分页除 HTTP 成功还必须核对返回 queryTitle、startIndex、totalResults、唯一 ID 和日期边界；本次初始响应有旧范围，重取后才计为完整。候选文件记录 Qwen Flash 专属规格与通用指南的工具并用冲突，以及四篇旧修订待核读。
