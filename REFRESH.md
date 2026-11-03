@@ -57,3 +57,5 @@
 - 2026-10-29：补入五篇论文和 Qwen-Audio 3.1 Realtime Flash／Plus，H3 API 价格已核实。ACL／EACL 网页不完整时可用 acl-org/acl-anthology 官方 XML 与 Findings XML 补查；EMNLP 已唯一匹配 5,524 条正式链接，24 个历史标题未唯一匹配，不推定撤稿。arXiv 分页除 HTTP 成功还必须核对返回 queryTitle、startIndex、totalResults、唯一 ID 和日期边界；本次初始响应有旧范围，重取后才计为完整。候选文件记录 Qwen Flash 专属规格与通用指南的工具并用冲突，以及四篇旧修订待核读。
 
 - 2026-11-02：COLM 官方录用页现按段落列 OpenReview 论文链接，不能把表格解析零行解释为零录用。EMNLP 奖项入口为 https://2026.emnlp.org/program/awards/；SAC Highlights、COLM Spotlight 均与获奖区分。版本只比较正文时写 comparedVersion，不刷新旧正文核读日；Mistral Large 4 权重已核，Kimi K3.1 Pro 仍待核；16 个 EMNLP 历史标题尚未唯一匹配。
+
+- 2026-11-03：日期范围 API 即使分页完整也可能落后于月目录。月份切换时需对 cs.CL／AI／LG 官方月目录的 ID 再核 arXiv v1 提交历史，按完整 ID 去重，保留晚公告、较早提交及待查记录，不把月份编号当首发日。下次比较用 11 月 3 日合并窗口，原 API 分页另存本地。Qwen Flash 工具并用已依官方客户端事件定义消歧；不要重复创建带 Realtime 后缀的 TTS 型号。

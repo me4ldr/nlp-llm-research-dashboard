@@ -1,7 +1,7 @@
 import React,{useMemo} from 'react';
 import {DataComponent,Dropdown,DataTable,Button} from '../../data-app-public.jsx';
 const ext={target:'_blank',rel:'noopener noreferrer'};
-export function DateLabel({paper:p}){return <span className={`paper-date ${p.firstPublicDate?'':'approximate'}`}><time dateTime={p.date}>{p.date}</time><span>{p.firstPublicDate?'首次公开':p.datePrecision==='年'?(p.cohort==='历史背景'?'出版年份 · 月日未核':'仅录用年份 · 日期待核'):p.cohort==='历史背景'?'出版月份 · 首发待核':'论文集 · 首发待核'}</span></span>}
+export function DateLabel({paper:p}){return <span className={`paper-date ${p.firstPublicDate?'':'approximate'}`}><time dateTime={p.date}>{p.date}</time><span>{p.dateKind==='arxiv-submission'?'arXiv v1 提交':p.firstPublicDate?'首次公开':p.datePrecision==='年'?(p.cohort==='历史背景'?'出版年份 · 月日未核':'仅录用年份 · 日期待核'):p.cohort==='历史背景'?'出版月份 · 首发待核':'论文集 · 首发待核'}</span></span>}
 function TopicChoices({cats,value,onChange}){return <Dropdown label="研究方向" allLabel="全部方向" value={value||'all'} choices={['all',...cats.map(c=>c.id)]} choiceLabels={{all:'全部方向',...Object.fromEntries(cats.map(c=>[c.id,c.name]))}} onChange={onChange}/>}
 export function Coverage({coverage,catalog,papers,cats,focus,setFocus,onOpen}){
  const q=(focus.query||'').trim().toLocaleLowerCase(),venue=focus.catalogVenue||'all',topic=focus.catalogTopic||'all';
