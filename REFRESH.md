@@ -59,3 +59,5 @@
 - 2026-11-02：COLM 官方录用页现按段落列 OpenReview 论文链接，不能把表格解析零行解释为零录用。EMNLP 奖项入口为 https://2026.emnlp.org/program/awards/；SAC Highlights、COLM Spotlight 均与获奖区分。版本只比较正文时写 comparedVersion，不刷新旧正文核读日；Mistral Large 4 权重已核，Kimi K3.1 Pro 仍待核；16 个 EMNLP 历史标题尚未唯一匹配。
 
 - 2026-11-03：日期范围 API 即使分页完整也可能落后于月目录。月份切换时需对 cs.CL／AI／LG 官方月目录的 ID 再核 arXiv v1 提交历史，按完整 ID 去重，保留晚公告、较早提交及待查记录，不把月份编号当首发日。下次比较用 11 月 3 日合并窗口，原 API 分页另存本地。Qwen Flash 工具并用已依官方客户端事件定义消歧；不要重复创建带 Realtime 后缀的 TTS 型号。
+
+- 2026-11-24 恢复并补发：原任务只存在于旧 codex-dev 数据库，当前应用更新接口确认不存在；通过应用工具恢复同名同 ID 的 nlp 心跳任务，保持原对话和 09:30 时区计划。旧数据库启用状态不能代替当前应用的任务存续和运行记录。研究批次目录仍为 2026-11-23，覆盖截至该日 07:05 UTC；H3-Image 在 24 日补核。下一批从 11 月 23 日向前重叠 7 天，继续处理未读元数据及 StateBench／ToyBlocks 候选。Kimi 权重和结构已确认，首次公开日期未确认。Qwen4 预览和 GA 合并保留一个 ID；Fable／Mythos 计为服务版本，不能视作不同基础模型。
