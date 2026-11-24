@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-11-24T01:42:21.951536+00:00",
+  "generatedAt": "2026-11-24T02:58:27.197553+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -18567,8 +18567,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 33,
           "coverage": "4698 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-03",
-          "lastAttemptAt": "2026-11-23",
+          "checkedAt": "2026-11-24",
+          "lastAttemptAt": "2026-11-24",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.acl.xml"
         },
         {
@@ -18582,8 +18582,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 8,
           "coverage": "914 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-03",
-          "lastAttemptAt": "2026-11-03",
+          "checkedAt": "2026-11-24",
+          "lastAttemptAt": "2026-11-24",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.eacl.xml"
         },
         {
@@ -18597,8 +18597,8 @@
           "status": "已检索官方目录",
           "curatedCount": 11,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-03",
-          "lastAttemptAt": "2026-11-23"
+          "checkedAt": "2026-11-24",
+          "lastAttemptAt": "2026-11-24"
         },
         {
           "id": "icml26",
@@ -18611,8 +18611,8 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-03",
-          "lastAttemptAt": "2026-11-23"
+          "checkedAt": "2026-11-24",
+          "lastAttemptAt": "2026-11-24"
         },
         {
           "id": "neurips26",
@@ -18625,8 +18625,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "9,146 个 Poster 目录条目；已整理 10 篇论文；索引中 1 条已核为活动海报，DTCH 活动未加入",
-          "checkedAt": "2026-11-03",
-          "lastAttemptAt": "2026-11-23",
+          "checkedAt": "2026-11-24",
+          "lastAttemptAt": "2026-11-24",
           "notes": " 11 月 23 日按链接同步题名修订，缺项保留，不推定撤稿。"
         },
         {
@@ -18640,8 +18640,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "856 条官方录用记录全部匹配 OpenReview；10 篇重点核读",
-          "checkedAt": "2026-11-03",
-          "lastAttemptAt": "2026-11-23"
+          "checkedAt": "2026-11-24",
+          "lastAttemptAt": "2026-11-24"
         },
         {
           "id": "emnlp26",
@@ -18654,12 +18654,12 @@
           "scope": "论文集主会／Findings／Demo／Industry 共 5,533 篇（排除 Industry Overview）；另有日程历史版本与改题。8 条补用报告人、分轨与标题核对；16 条历史题目还未唯一匹配，其中 8 条缺于当前日程，不推定撤稿。",
           "status": "日程、论文集与官方奖项交叉核对",
           "coverage": "当前日程 5,540；保留历史索引 5,548 条，5,532 条已对应正式论文集，14 篇重点核读",
-          "checkedAt": "2026-11-03",
+          "checkedAt": "2026-11-24",
           "detailSourceUrl": "https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490",
           "anthologyCount": 5533,
           "anthologyMatchedCount": 5532,
           "anthologySourceUrl": "https://aclanthology.org/events/emnlp-2026/",
-          "lastAttemptAt": "2026-11-23"
+          "lastAttemptAt": "2026-11-24"
         },
         {
           "id": "uist26",
@@ -18677,7 +18677,7 @@
       ],
       "source": {
         "label": "2026 官方目录覆盖核对",
-        "period": "2026-11-03 复核七个系统目录，UIST 仍是单篇补充。",
+        "period": "2026-11-24 复核七个系统目录；题名与 ID 未见新增或变化，UIST 仍为历史单篇补充。",
         "grain": "每行一个会议目录及其检索边界",
         "links": [
           {
@@ -18733,7 +18733,7 @@
           "2026-11-02 EMNLP 奖项以官方栏目为准，COLM Spotlight 不计作奖项。",
           "2026-11-03 原目录题目或链接无变化不等于重新核读其中全部论文。"
         ],
-        "executedAt": "2026-11-03T02:16:07.079651+00:00"
+        "executedAt": "2026-11-24T02:58:27.197553+00:00"
       },
       "methods": [
         {
@@ -416743,6 +416743,300 @@
     "modelReports": {
       "rows": [
         {
+          "id": "glm54",
+          "name": "GLM-5.4",
+          "vendor": "智谱 Z.AI",
+          "releaseDate": "2026-11-23",
+          "year": "2026",
+          "dateBasis": "官方发布记录；当前已开放的具体产品或服务",
+          "datePrecision": "日",
+          "parameters": null,
+          "activeParameters": null,
+          "parameterLabel": "750B 级基座；完整精确参数待核",
+          "activeLabel": "未披露",
+          "architecture": "预训练 GLM-5 基座继续训练为 Loop Transformer；共享 28 层循环两次",
+          "context": "1M",
+          "contextNote": "官方服务规格为 1M 上下文、最大输出 128K；ZCode 近 966K 会自动压缩，不能视作完整历史永不丢失。",
+          "inputModalities": "文本、图像、视频、文件",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "预告开放权重",
+          "license": "厂商服务条款；未核实开放权重",
+          "openNote": "Coding Plan／ZCode／Chat 已可用；官方计划完成安全加固后开放权重，Model API 仍待安全评估，不能标为已开放。",
+          "reportUrl": "https://docs.z.ai/guides/llm/glm-5.4.md",
+          "reportType": "官方技术／服务说明；未核实独立完整训练报告",
+          "releaseUrl": "https://z.ai/blog/glm-5.4",
+          "specUrl": "https://docs.z.ai/guides/llm/glm-5.4.md",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "API 待开放；未公布可核单价",
+            "unit": "API 每 token 单价未披露",
+            "asOf": "2026-11-24",
+            "url": "https://docs.z.ai/guides/llm/glm-5.4.md",
+            "note": "Coding Plan 套餐配额不是 API 单价；本次不记录促销或将未知填零。"
+          },
+          "priceLabel": "API 待开放／单价未披露",
+          "verifiedAt": "2026-11-24",
+          "specificationCheckedAt": "2026-11-24",
+          "technicalDisclosure": "官方技术／服务文档核读",
+          "technicalNote": "核读官方原文相关技术、规格及局限；未复现厂商实验。关联论文为概念阅读，不证明实际采用。",
+          "sources": [
+            {
+              "label": "官方技术说明",
+              "url": "https://docs.z.ai/guides/llm/glm-5.4.md"
+            },
+            {
+              "label": "官方发布记录",
+              "url": "https://z.ai/blog/glm-5.4"
+            },
+            {
+              "label": "规格与限制",
+              "url": "https://docs.z.ai/guides/llm/glm-5.4.md"
+            },
+            {
+              "label": "ZCode：上下文、思考档与接入",
+              "url": "https://zcode.z.ai/en/docs/qa"
+            },
+            {
+              "label": "11 月 23 日 AutoClaw 接入",
+              "url": "https://autoclaw.z.ai/en/blog/model/GLM-5.4/"
+            }
+          ],
+          "innovation": "把预训练基座的一组共享层循环执行，用分轮门控、混合 KV 缓存和索引复用控制额外开销。",
+          "generationChange": "从常规单次前向转向共享 28 层、两次迭代；部分推理由显式输出转入隐状态深度。官方的 2T–3T 是能力比较，非本模型参数量。",
+          "notes": "11 月 23 日产品发布，API 尚未开放；750B 为官方基座尺度。厂商披露可能出现过长思考。30B 消融的约 10% 训练计算增加及 10–14% 输出缩短不能直接外推到 750B 正式模型。",
+          "technicalTopics": [
+            "arch",
+            "reason",
+            "context",
+            "eff",
+            "agents",
+            "multi"
+          ],
+          "relatedPaperIds": [
+            "transformer",
+            "loopahead",
+            "s2o"
+          ],
+          "technicalPoints": [
+            {
+              "name": "继续训练形成循环深度",
+              "detail": "保留预训练基座，令 28 个共享层迭代两次，避免从零训练；不是每个 token 已能自适应选择循环次数。"
+            },
+            {
+              "name": "逐轮门控控制激活尺度",
+              "detail": "各轮使用独立逐 token 门控，控制候选更新写入残差流的比例，缓解重复执行导致的激活膨胀。"
+            },
+            {
+              "name": "共享全局 KV 与独立局部窗口",
+              "detail": "第二轮复用第一轮选出的稀疏 KV，同时保留本轮局部窗口 KV；增加一轮只需额外局部缓存，而非复制完整百万上下文。"
+            },
+            {
+              "name": "复用稀疏索引与融合算子",
+              "detail": "第二轮复用第一轮的注意力索引，减少重复索引计算；推理端融合内核减少循环带来的中间读写。"
+            },
+            {
+              "name": "证据与开放问题",
+              "detail": "公开消融主要展示 30B 模型；自适应迭代仍是后续探索。厂商报告长链推理提升，也承认可能陷入冗长思考；未独立验证速度或跨模型能力比较。"
+            }
+          ],
+          "technicalSource": "https://docs.z.ai/guides/llm/glm-5.4.md"
+        },
+        {
+          "id": "qwen-audio31-live",
+          "name": "Qwen-Audio-3.1-Live",
+          "vendor": "阿里巴巴 Qwen",
+          "releaseDate": "2026-11-23",
+          "year": "2026",
+          "dateBasis": "11 月 23 日官方模型更新记录；计为 Live 服务版本",
+          "datePrecision": "日",
+          "parameters": null,
+          "activeParameters": null,
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "architecture": "语音前端与后台任务委派；内部模型架构未披露",
+          "context": "完整上下文未披露",
+          "contextNote": "65,536 tokens 是前端 system 指令与函数配置文本的合计限制，不是整个语音会话上下文长度。",
+          "inputModalities": "文本、音频",
+          "outputModalities": "文本、音频",
+          "multimodal": "实时语音对话",
+          "openness": "闭源 API",
+          "license": "厂商服务条款；未核实开放权重",
+          "openNote": "未确认本版本公开权重及许可。",
+          "reportUrl": "https://docs.qwencloud.com/developer-guides/speech/qwen-audio-live",
+          "reportType": "官方技术／服务说明；未核实独立完整训练报告",
+          "releaseUrl": "https://docs.qwencloud.com/changelog/models",
+          "specUrl": "https://docs.qwencloud.com/models/qwen-audio-3-1-live",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "现价 · 会话按秒",
+            "unit": "USD／连接会话秒",
+            "asOf": "2026-11-24",
+            "url": "https://docs.qwencloud.com/developer-guides/getting-started/model-prices",
+            "note": "新加坡 $0.000710/秒，北京 $0.000471/秒；连接建立后每次至少计 3 秒，静音、文本和空闲仍计费。Responses 后台模型按其 token 价格另收费。不将区域免费额度抵扣后的价格当作标准价。"
+          },
+          "priceLabel": "USD 0.000710/秒（新加坡）",
+          "verifiedAt": "2026-11-24",
+          "specificationCheckedAt": "2026-11-24",
+          "technicalDisclosure": "官方技术／服务文档核读",
+          "technicalNote": "核读官方原文相关技术、规格及局限；未复现厂商实验。关联论文为概念阅读，不证明实际采用。",
+          "sources": [
+            {
+              "label": "官方技术说明",
+              "url": "https://docs.qwencloud.com/developer-guides/speech/qwen-audio-live"
+            },
+            {
+              "label": "官方发布记录",
+              "url": "https://docs.qwencloud.com/changelog/models"
+            },
+            {
+              "label": "规格与限制",
+              "url": "https://docs.qwencloud.com/models/qwen-audio-3-1-live"
+            },
+            {
+              "label": "具体前端模型与双工条件",
+              "url": "https://docs.qwencloud.com/api-reference/qwen-audio-live/client-events"
+            },
+            {
+              "label": "分地区会话计价",
+              "url": "https://docs.qwencloud.com/developer-guides/getting-started/model-prices"
+            }
+          ],
+          "innovation": "把持续语音交流与后台任务处理分开，后台工作时前端仍可交谈并播报进度和结果。",
+          "generationChange": "提供 Client 与 Responses 两种任务委派模式，支持边交流边调用工具；服务路由与实际语音前端模型 ID 分开。",
+          "notes": "qwen-audio-3.1-live 是连接服务 ID。会话前端可选 4.0 Realtime Preview 或 3.1 Realtime Flash；双工模式要求 4.0 Preview。仅凭前端配置不另建独立基础模型记录。",
+          "technicalTopics": [
+            "multi",
+            "agents",
+            "reason"
+          ],
+          "relatedPaperIds": [
+            "react",
+            "toolformer",
+            "retool"
+          ],
+          "technicalPoints": [
+            {
+              "name": "语音交互与任务并行",
+              "detail": "前端持续监听、询问与回答，将需要业务 API 或复杂推理的任务委派给应用或后台模型，任务完成后回传结果。"
+            },
+            {
+              "name": "Client 与 Responses",
+              "detail": "Client 由应用执行任务；Responses 由 QwenCloud 调用指定后台模型。两者都可通过函数调用接入业务工具。"
+            },
+            {
+              "name": "双工依赖实际前端",
+              "detail": "连接路由使用 qwen-audio-3.1-live；客户端事件文档要求双工时 session.model 选 qwen-audio-4.0-realtime-preview，并启用 duplex。"
+            },
+            {
+              "name": "限制与计费边界",
+              "detail": "未披露完整会话窗口；系统指令和函数配置合计最多 65,536 tokens。按连接后的会话秒数计费，静音、文本传输及空闲仍计费，后台模型 token 费另算。"
+            }
+          ],
+          "servicePricing": {
+            "asOf": "2026-11-24",
+            "currency": "USD",
+            "unit": "session-second",
+            "singapore": 0.00071,
+            "beijing": 0.000471,
+            "minimumSeconds": 3,
+            "backendBilledSeparately": true
+          },
+          "technicalSource": "https://docs.qwencloud.com/developer-guides/speech/qwen-audio-live"
+        },
+        {
+          "id": "gpt62-chat-1123",
+          "name": "GPT-6.2（ChatGPT 11 月 23 日版）",
+          "vendor": "OpenAI",
+          "releaseDate": "2026-11-23",
+          "year": "2026",
+          "dateBasis": "11 月 23 日 ChatGPT 对话产品逐步上线；与 11 月 17 日 Astra／Sol API 区分",
+          "datePrecision": "日",
+          "parameters": null,
+          "activeParameters": null,
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "architecture": "GPT-6.2 Sol 的日常对话调整版；内部结构未披露",
+          "context": "未单独披露",
+          "contextNote": "本次对话产品说明未单列窗口；不套用 Astra／Sol API 的 1,050,000 tokens。",
+          "inputModalities": "文本、图像",
+          "outputModalities": "文本",
+          "multimodal": "多模态理解",
+          "openness": "闭源产品",
+          "license": "厂商服务条款；未核实开放权重",
+          "openNote": "未确认本版本公开权重及许可。",
+          "reportUrl": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
+          "reportType": "官方系统卡与产品发布记录",
+          "releaseUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026",
+          "specUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026",
+          "price": {
+            "input": null,
+            "output": null,
+            "currency": "USD",
+            "basis": "ChatGPT 产品；独立 API 未核实",
+            "unit": "订阅产品；不按本行 token 价比较",
+            "asOf": "2026-11-24",
+            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026",
+            "note": "未确认本对话调整版有独立 API ID／单价；不套用 GPT-6.2 Sol API 报价。"
+          },
+          "priceLabel": "ChatGPT 订阅产品；API 未单列",
+          "verifiedAt": "2026-11-24",
+          "specificationCheckedAt": "2026-11-24",
+          "technicalDisclosure": "官方技术／服务文档核读",
+          "technicalNote": "核读官方原文相关技术、规格及局限；未复现厂商实验。关联论文为概念阅读，不证明实际采用。",
+          "sources": [
+            {
+              "label": "官方技术说明",
+              "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt"
+            },
+            {
+              "label": "官方发布记录",
+              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026"
+            },
+            {
+              "label": "规格与限制",
+              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026"
+            }
+          ],
+          "innovation": "针对日常对话、图像理解、复杂指令和网络信息查询调整，并公开本版安全评估。",
+          "generationChange": "官方明确由 GPT-6.2 Sol 的一个对话调整版本提供；本次不改变 Work／Codex 版本，不视为另一个独立基础模型。",
+          "notes": "向 Plus、Pro、Business、Enterprise 逐步开放，企业受管理员设置影响。发布记录与系统卡的开放范围描述详略不同，以产品更新记录为准；能力及安全结果是厂商实验，不能证明所有真实场景可靠。",
+          "technicalTopics": [
+            "reason",
+            "multi",
+            "agents",
+            "safety",
+            "eval"
+          ],
+          "relatedPaperIds": [
+            "instruct",
+            "swebench"
+          ],
+          "technicalPoints": [
+            {
+              "name": "面向聊天的版本调整",
+              "detail": "使用 GPT-6.2 Sol 的日常对话版本，优化复杂指令、图像问题、联网检索及后续跟进；属于产品版本而非公开的新架构。"
+            },
+            {
+              "name": "专项能力测试",
+              "detail": "厂商的对话图像理解测试从 GPT-6 的 47.4% 到 71.7%，困难指令测试从 62.5% 到 78.1%；均为特定内部测试，不作跨厂商通用排名。"
+            },
+            {
+              "name": "推理与安全披露",
+              "detail": "系统卡描述继承的强化学习推理方式，并提供政策遵守、授权边界和监控性评估；没有披露本版完整训练配方或精确参数。"
+            },
+            {
+              "name": "独立服务边界",
+              "detail": "按 ChatGPT 订阅及产品权限使用，本次未确认独立 API 型号、专属价格或窗口。与 Astra／Sol API 价格分开。"
+            }
+          ],
+          "technicalSource": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt"
+        },
+        {
           "id": "gpt61-terra",
           "name": "GPT-6.1 Terra",
           "vendor": "OpenAI",
@@ -417307,20 +417601,20 @@
           "year": "2026",
           "dateBasis": "官方正式发布说明日期；与更早 Preview 和匿名试用区分",
           "datePrecision": "日",
-          "parameters": "未披露",
-          "activeParameters": "未披露",
-          "architecture": "官方称更激进稀疏化；结构细节未披露",
+          "parameters": 428,
+          "activeParameters": 23,
+          "architecture": "原生多模态 MoE；全层 MSA 稀疏注意力、量化感知训练与 DSpark 推测解码",
           "context": "1M",
           "contextNote": "API 文档标为 1,000,000 tokens；独立最大输出上限未在本次来源中核实。",
           "inputModalities": "文本、图像、视频",
           "outputModalities": "文本",
           "multimodal": "多模态理解",
-          "openness": "预告开放权重",
-          "license": "待权重发布后核实",
-          "openNote": "发布说明明确权重将稍后提供。API 指南称 open-weight，但未核验到本版正式权重和许可，暂不标为已开放。",
-          "innovation": "面向编码与工具工作流，通过更激进稀疏化降低推理成本，并提供五档自适应思考深度；内部结构和训练配方尚未详细披露。",
-          "reportUrl": "https://www.minimax.io/blog/minimax-m31f",
-          "reportType": "官方发布说明；未核验到独立技术报告",
+          "openness": "开放权重（附条件）",
+          "license": "MiniMax Community License；商业使用有通知／授权条件",
+          "openNote": "已核官方权重文件及随附 DSpark 草稿头，未下载完整权重。商业使用需展示署名；相关产品／服务年收入超过 2,000 万美元需事先书面授权，否则需一次通知；另有用途限制。以本版 LICENSE 为准。首次权重对外公开日仍待核，不能用提交日期代替。",
+          "innovation": "把原有前三层完整注意力改为稀疏注意力，并在专家和注意力路径采用量化感知训练，配套 DSpark 草稿头提高推理效率。",
+          "reportUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+          "reportType": "官方模型卡／配置；MSA 链接为继承方法，不是本版独立完整报告",
           "releaseUrl": "https://www.minimax.io/blog/minimax-m31f",
           "specUrl": "https://platform.minimax.io/docs/guides/text-generation",
           "price": {
@@ -417334,7 +417628,7 @@
             "url": "https://platform.minimax.io/docs/pricing/overview"
           },
           "verifiedAt": "2026-10-20",
-          "notes": "API、M Plan 与 MiniMax Code 已提供。前版 M3 的参数、MSA 架构和许可证不能直接当作本版已披露规格；本次依据为正式发布说明与 API 指南，未复现厂商评测。",
+          "notes": "11 月 24 日补核本版模型卡、配置、许可与权重文件目录；保留 10 月 19 日首发及 10 月 20 日价格依据。参数取模型卡约 428B／23B，未将仓库自动显示的量化张量统计 220B 当作总参数。未复现速度和能力基准。",
           "sources": [
             {
               "label": "10 月 19 日正式发布说明",
@@ -417347,12 +417641,28 @@
             {
               "label": "当前 API 价格（2026-10-20）",
               "url": "https://platform.minimax.io/docs/pricing/overview"
+            },
+            {
+              "label": "本版模型卡与参数",
+              "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+            },
+            {
+              "label": "本版注意力及量化配置",
+              "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/blob/main/config.json"
+            },
+            {
+              "label": "本版社区许可",
+              "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/blob/main/LICENSE"
+            },
+            {
+              "label": "权重与 DSpark 草稿头",
+              "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/tree/main"
             }
           ],
-          "parameterLabel": "未披露",
-          "activeLabel": "未披露",
+          "parameterLabel": "约 428B（模型卡口径）",
+          "activeLabel": "23B／token",
           "priceLabel": "USD 0.15 / 0.60",
-          "generationChange": "正式 Flash 版本强调更高推理效率与 Agent／编码能力。相较已收录 M3 的 ≤512K 标准 API 输入／输出价，单价均减半；官方所述任务总费用约降 70% 是另一种工作负载口径。",
+          "generationChange": "沿用 M3 核心 MoE；改为所有层使用稀疏注意力，对 routed experts 与 attention 做量化感知训练，以 DSpark 替换此前类似 EAGLE 的 MTP。",
           "technicalTopics": [
             "agents",
             "eff",
@@ -417362,8 +417672,16 @@
           ],
           "technicalPoints": [
             {
-              "name": "稀疏化与推理效率",
-              "detail": "厂商称采用更激进的稀疏化，典型输出可达 200+ tokens/s、P50 为 170+；未公布足以复现的完整架构、硬件和工作负载条件，不作为统一加速承诺。"
+              "name": "所有层使用 MSA",
+              "detail": "把原有前三层完整注意力改为稀疏注意力；本版配置的 60 层均启用 sparse attention，其余 MoE 核心沿用 M3。"
+            },
+            {
+              "name": "量化感知训练",
+              "detail": "模型卡明确专家与注意力路径参与量化感知训练；配置列出 routed MoE 的 NVFP4 与注意力路径的 MXFP8 设置，不能由文件体积倒推参数量减半。"
+            },
+            {
+              "name": "DSpark 草稿头",
+              "detail": "用 DSpark 替换此前类似 EAGLE 的 MTP，官方目录提供独立草稿头；需兼容的推理框架，不保证所有部署自动获同等加速。"
             },
             {
               "name": "可调思考深度",
@@ -417372,21 +417690,21 @@
             {
               "name": "长上下文与多模态输入",
               "detail": "API 给出 1M 上下文，支持文本、图像和视频输入。未据此推断音频输入或图像／视频生成能力。"
-            },
-            {
-              "name": "Agent 能力与验证边界",
-              "detail": "官方报告 DeepSWE v1.1 为 73.7%、OSWorld V2 为 61.7；为厂商实验，本文未独立复现。改进的训练机制尚未公开，不能把基准提升写成已知训练创新。"
             }
           ],
-          "technicalDisclosure": "能力与服务规格已披露；架构和训练细节待报告",
+          "technicalDisclosure": "本版架构／配置／附条件权重已披露；训练配方不完整",
           "relatedPaperIds": [
             "swebench",
             "react",
             "realcli",
             "dlite"
           ],
-          "technicalSource": "https://platform.minimax.io/docs/guides/text-generation",
-          "technicalNote": "只核读发布说明、API 指南和价格页；没有用旧 M3 报告填充本版未知参数。关联论文用于概念阅读，不表示厂商实际采用。"
+          "technicalSource": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+          "technicalNote": "本次核读本版模型卡、配置与许可证，并检查权重和草稿头文件目录；不把 MSA 通用方法或同名 dSpark 论文当作本代独立报告。",
+          "technicalUpdatedAt": "2026-11-24",
+          "specificationCheckedAt": "2026-11-24",
+          "opennessCheckedAt": "2026-11-24",
+          "weightReleaseDate": null
         },
         {
           "id": "dsv41-1017",
@@ -424174,13 +424492,13 @@
             "currency": "USD",
             "basis": "现价 · 视频按秒／图像按张",
             "unit": "视频 USD／秒；附加图像 USD／张",
-            "asOf": "2026-10-29",
+            "asOf": "2026-11-24",
             "url": "https://platform.minimax.io/docs/pricing/overview",
-            "note": "Base H3：768p 输出／输入视频各 $0.08/秒，2K 各 $0.13/秒；每任务前 5 图免费，额外图像 $0.04/张，音频输入免费。输入视频按所选输出分辨率计价。Highspeed 768p 各 $0.06/秒、额外图 $0.03；Lite 768p 各 $0.04/秒、480p 各 $0.025/秒、额外图 $0.02。Max 另有价表，不套用 Base。2K Regeneration 输出及原输入视频各 $0.05/秒、额外图 $0.025（前 5 图免费），输入素材重新计费且费用在原任务之外。Context-IR 单独按百万 tokens 收 $0.90 输入／$3.60 输出。"
+            "note": "Base H3：768p 输出／输入视频各 $0.08/秒，2K 各 $0.13/秒；每任务前 5 图免费，额外图像 $0.04/张，音频输入免费。输入视频按所选输出分辨率计价。Highspeed 768p 各 $0.06/秒、额外图 $0.03；Lite 768p 各 $0.04/秒、480p 各 $0.025/秒、额外图 $0.02。Max 另有价表，不套用 Base。2K Regeneration 输出及原输入视频各 $0.05/秒、额外图 $0.025（前 5 图免费），输入素材重新计费且费用在原任务之外。Context-IR 单独按百万 tokens 收 $0.90 输入／$3.60 输出。 11 月 24 日官方扩展服务表注明 Max／Max-Turbo 由 fal 提供，MG／NC／RH 分别为 MachGen／Nunchux AI／RunningHub；不是已验证的独立 MiniMax 基础模型。RH 使用 model=MiniMax-H3、480P，不是独立模型 ID。"
           },
           "priceLabel": "视频 USD 0.08/秒（768p）· 0.13/秒（2K）",
           "verifiedAt": "2026-10-28",
-          "notes": "历史补录：发布在 7 月 31 日，开放公告为 8 月 3 日，许可证文本日期为 8 月 2 日；不以今天核查日替代发布时间。33B 是生成主干而非整个系统参数；厂商展示与规格未独立复现。2026-10-29 仅补核当前托管价格；技术与开放范围仍沿用 10 月 28 日证据。",
+          "notes": "历史补录：发布在 7 月 31 日，开放公告为 8 月 3 日，许可证文本日期为 8 月 2 日；不以今天核查日替代发布时间。33B 是生成主干而非整个系统参数；厂商展示与规格未独立复现。2026-10-29 仅补核当前托管价格；技术与开放范围仍沿用 10 月 28 日证据。 11 月 24 日复核：官方 H3 仓库仍称 Context-IR、2K 与 H3 稀疏实现未随初始开放；通用 MSA 内核仓库的存在不能证明 H3 稀疏管线已开放。当前托管扩展档新增供应商标识，价格分档单列。",
           "generationChange": "相较 Hailuo-02，官方称重新设计 tokenizer 与生成架构，统一多模态任务、原生音视频生成和基于上下文的高分辨率重生成；开放范围只覆盖 Base 两个任务检查点及配套组件。",
           "technicalTopics": [
             "multi",
@@ -424235,6 +424553,14 @@
             {
               "label": "10 月 29 日核实：H3 分辨率／输入素材／重生成价目",
               "url": "https://platform.minimax.io/docs/pricing/overview"
+            },
+            {
+              "label": "11 月 24 日：扩展服务及实际供应商",
+              "url": "https://platform.minimax.io/docs/pricing/overview"
+            },
+            {
+              "label": "H3 当前开放模块边界",
+              "url": "https://github.com/MiniMax-AI/MiniMax-H3"
             }
           ],
           "previousPricingDisclosure": {
@@ -424248,7 +424574,7 @@
             "unit": "计费单位与单价待核",
             "url": "https://platform.minimax.io/docs/api-reference/video-generation-v2-create"
           },
-          "pricingCheckedAt": "2026-10-29",
+          "pricingCheckedAt": "2026-11-24",
           "servicePricing": {
             "asOf": "2026-10-29",
             "currency": "USD",
@@ -424285,6 +424611,74 @@
               }
             ],
             "source": "https://platform.minimax.io/docs/pricing/overview"
+          },
+          "priceHistory": [
+            {
+              "input": null,
+              "output": null,
+              "currency": "USD",
+              "basis": "现价 · 视频按秒／图像按张",
+              "unit": "视频 USD／秒；附加图像 USD／张",
+              "asOf": "2026-10-29",
+              "url": "https://platform.minimax.io/docs/pricing/overview",
+              "note": "Base H3：768p 输出／输入视频各 $0.08/秒，2K 各 $0.13/秒；每任务前 5 图免费，额外图像 $0.04/张，音频输入免费。输入视频按所选输出分辨率计价。Highspeed 768p 各 $0.06/秒、额外图 $0.03；Lite 768p 各 $0.04/秒、480p 各 $0.025/秒、额外图 $0.02。Max 另有价表，不套用 Base。2K Regeneration 输出及原输入视频各 $0.05/秒、额外图 $0.025（前 5 图免费），输入素材重新计费且费用在原任务之外。Context-IR 单独按百万 tokens 收 $0.90 输入／$3.60 输出。"
+            }
+          ],
+          "extendedServicePricing": {
+            "asOf": "2026-11-24",
+            "source": "https://platform.minimax.io/docs/pricing/overview",
+            "scope": "仅列 768p 代表档，RH 为 480p；不是所有任务／分辨率的完整价目",
+            "currency": "USD",
+            "unit": "视频秒／图像张",
+            "rows": [
+              {
+                "name": "H3-Max",
+                "provider": "fal",
+                "resolution": "768p",
+                "output": 0.08,
+                "inputVideo": 0.143,
+                "image": 0.074,
+                "freeImages": 2
+              },
+              {
+                "name": "H3-Max-Turbo",
+                "provider": "fal",
+                "resolution": "768p",
+                "textOrImageToVideoOutput": 0.04,
+                "referenceOutput": 0.08,
+                "referenceInputVideo": 0.12,
+                "image": 0.06,
+                "freeImages": 2
+              },
+              {
+                "name": "H3-MG",
+                "provider": "MachGen",
+                "resolution": "768p",
+                "textOrImageToVideoOutput": 0.04,
+                "referenceOutput": 0.06,
+                "referenceInputVideo": 0.06,
+                "image": 0
+              },
+              {
+                "name": "H3-NC",
+                "provider": "Nunchux AI",
+                "resolution": "768p",
+                "output": 0.03,
+                "inputVideo": 0.03,
+                "image": 0.015,
+                "freeImages": 5
+              },
+              {
+                "name": "H3-RH",
+                "provider": "RunningHub",
+                "resolution": "480p",
+                "output": 0.038,
+                "inputVideo": 0.038,
+                "image": 0.04,
+                "freeImages": 5,
+                "apiModel": "MiniMax-H3"
+              }
+            ]
           }
         },
         {
@@ -425361,6 +425755,14 @@
             {
               "name": "安全分类器与回退",
               "detail": "Fable 对高风险网络安全及生物请求实施额外分类和回退，表现需要结合实际路由判断。"
+            },
+            {
+              "name": "推理块与会话前缀绑定",
+              "detail": "修改历史、system 或工具后若与推理块绑定前缀不符会返回 400。5.2 两个服务可互读推理块，切到其他模型会丢弃不兼容推理块，影响跨模型长程工作流。"
+            },
+            {
+              "name": "工具与持续思考约束",
+              "detail": "持续开启 adaptive thinking；不能强制指定某个工具。旧 computer_20251124 工具在多数平台需迁移为新 toolset（Bedrock 例外）。这些是服务兼容条件，非底层架构披露。"
             }
           ],
           "technicalDisclosure": "服务能力与部分方法披露",
@@ -425369,7 +425771,7 @@
             "swebench"
           ],
           "technicalSource": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-          "technicalNote": "核读官方技术说明与规格，性能属于厂商声明，未实测或复现；内部训练细节未披露。",
+          "technicalNote": "核读官方技术说明与规格，性能属于厂商声明，未实测或复现；内部训练细节未披露。 11 月 24 日专属指南恢复可读，补核推理块、前缀和工具兼容约束；保留原价格与核验日。",
           "sources": [
             {
               "label": "官方规格与技术说明",
@@ -425382,8 +425784,13 @@
             {
               "label": "价格依据",
               "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+            },
+            {
+              "label": "5.2 专属指南：前缀／推理块／工具变化",
+              "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2"
             }
-          ]
+          ],
+          "technicalUpdatedAt": "2026-11-24"
         },
         {
           "id": "claude-mythos52",
@@ -425445,6 +425852,14 @@
             {
               "name": "安全分类器与回退",
               "detail": "Fable 对高风险网络安全及生物请求实施额外分类和回退，表现需要结合实际路由判断。"
+            },
+            {
+              "name": "推理块与会话前缀绑定",
+              "detail": "修改历史、system 或工具后若与推理块绑定前缀不符会返回 400。5.2 两个服务可互读推理块，切到其他模型会丢弃不兼容推理块，影响跨模型长程工作流。"
+            },
+            {
+              "name": "工具与持续思考约束",
+              "detail": "持续开启 adaptive thinking；不能强制指定某个工具。旧 computer_20251124 工具在多数平台需迁移为新 toolset（Bedrock 例外）。这些是服务兼容条件，非底层架构披露。"
             }
           ],
           "technicalDisclosure": "服务能力与部分方法披露",
@@ -425453,7 +425868,7 @@
             "swebench"
           ],
           "technicalSource": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-          "technicalNote": "核读官方技术说明与规格，性能属于厂商声明，未实测或复现；内部训练细节未披露。",
+          "technicalNote": "核读官方技术说明与规格，性能属于厂商声明，未实测或复现；内部训练细节未披露。 11 月 24 日专属指南恢复可读，补核推理块、前缀和工具兼容约束；保留原价格与核验日。",
           "sources": [
             {
               "label": "官方规格与技术说明",
@@ -425466,8 +425881,13 @@
             {
               "label": "价格依据",
               "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+            },
+            {
+              "label": "5.2 专属指南：前缀／推理块／工具变化",
+              "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2"
             }
-          ]
+          ],
+          "technicalUpdatedAt": "2026-11-24"
         },
         {
           "id": "gemini4-carbon",
@@ -426140,8 +426560,8 @@
         }
       ],
       "source": {
-        "label": "110 个模型／API 服务版本",
-        "period": "2026-11-23 补查 11 月 4–23 日缺口，并向前重叠至 10 月 27 日；旧证据日期逐条保留。",
+        "label": "113 个模型／服务版本",
+        "period": "2026-11-24 复查官方发布与规格；新增 11 月 23 日发布的服务，保留旧条目逐字段证据日期。",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -427087,6 +427507,18 @@
           {
             "label": "MiniMax H3-Image",
             "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+          },
+          {
+            "label": "GLM-5.4 · 技术／服务说明",
+            "url": "https://docs.z.ai/guides/llm/glm-5.4.md"
+          },
+          {
+            "label": "Qwen-Audio-3.1-Live · 技术／服务说明",
+            "url": "https://docs.qwencloud.com/developer-guides/speech/qwen-audio-live"
+          },
+          {
+            "label": "GPT-6.2（ChatGPT 11 月 23 日版） · 技术／服务说明",
+            "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt"
           }
         ],
         "caveats": [
@@ -427098,10 +427530,10 @@
           "模态描述区分模型研究能力与具体服务开放状态；视觉输入不等于可生成图像。",
           "规格可能随接入平台变化；上下文标称上限不代表所有任务都能有效利用全窗口。未核实字段保留缺口，不作为零值。",
           "技术总结按披露深度区分架构／训练方法与能力／服务改进；关联论文为概念阅读建议，不推断引用关系或实际采用。",
-          "Mistral Large 4 为公开 API 预览，官方承诺月底开放权重，不标为已开放。EmbeddingGemma 2 输出嵌入向量，其 API 计费不能与生成模型直接对比。",
+          "Mistral Large 4 首发时为 API 预览，已于 11 月 2 日核实 10 月 29 日改进版权重开放。EmbeddingGemma 2 输出嵌入向量，其 API 计费不能与生成模型直接对比。",
           "GPT-Live 两型号为产品语音发布；独立 API 规格及价格未核实。Opus 5.5 快速模式是服务配置，价格单列，不计为新模型或覆盖 Standard 价。",
           "2026-10-19 1017 是权重小版本；架构继承与本次改进分开。Search／Fetch 和 Ultrafast 是服务信息，不能计作新架构或覆盖历史 token 价格。",
-          "2026-10-20 M3.1 Flash 权重尚待正式提供，参数及独立技术报告未核实；API 指南的 open-weight 标签与发布说明的将来时一并记录，暂按预告开放权重处理。",
+          "2026-10-20 的 M3.1 Flash 待核状态已于 11 月 24 日更新：权重、约 428B／23B 与本版社区许可已核，首次公开日仍待核。",
           "2026-10-21 Voxtral 按音频分钟或百万字符计费，不能与每百万 tokens 单价直接排序；TTS 语种数量在发布说明与模型卡间不一致，明确待核。自部署不等于公开权重。GPT 12 小时缓存为服务更新，不改写旧模型发布日期和原单价依据日期。",
           "2026-10-22 GLM-Legal 的独立规格／权重和 Legal 定价型号映射未核实；不继承基座参数。Mistral Large 4 当前输入／输出为 1.36 / 4.18 美元／百万 tokens，旧优惠价存档；49B／52B 激活参数冲突明确保留。其他模型历史价格与核验日期未改写。",
           "2026-10-26 当时因指南不完整将 Kimi K3.1 Pro 留候选；该决定已于 10 月 27 日通过其他正式来源修正，现已补录。K2 系列 API 退役计划不等于开放权重失效。当时 Mistral 49B／52B 与 Voxtral TTS 语言数量存在冲突；后者已于 10 月 27 日澄清。",
@@ -427111,9 +427543,10 @@
           "2026-10-29 Flash 为 10 月 27 日服务上线，Plus 为 9 月 20 日历史补录，均未披露参数及架构。Flash 专属规格与通用指南对搜索／函数调用并用存在冲突，已显式保留。H3 按视频秒数、素材及任务计费，不能与文本每百万 token 价格直接比较。",
           "2026-11-02 服务版本数并非独立基础权重数；Kimi K3.1 权重仍待核，预告不视为兑现。",
           "2026-11-03 Plus 按万字符、Flash 按百万 token；不能直接比较这两个价格数字。Gemini 路由为 12 月起的预告，不覆盖旧价格。",
-          "2026-11-23 补核 14 个服务／型号。Fable 与 Mythos 同底层模型；Qwen4 预览和正式开放合在同一条。Genie 按视频输出量计价。"
+          "2026-11-23 批次补核 15 个服务／型号。Fable 与 Mythos 同底层模型；Qwen4 预览和正式开放合在同一条。Genie 按视频输出量计价。",
+          "2026-11-24：GLM-5.4 为 750B 级循环基座，2T–3T 是能力比喻；API 和权重待开放。Qwen Live 按秒且后台另收费，65,536 是指令／函数配置限制。ChatGPT GPT-6.2 为 Sol 对话调整版，不重复称为独立基础模型。"
         ],
-        "executedAt": "2026-11-23T07:18:57.441140+00:00"
+        "executedAt": "2026-11-24T02:58:27.197553+00:00"
       },
       "methods": [
         {
@@ -427711,26 +428144,26 @@
   },
   "id": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "researchRefresh": {
-    "checkedAt": "2026-11-23",
+    "checkedAt": "2026-11-24",
     "timezone": "Asia/Shanghai",
-    "previousResearchCheck": "2026-11-03",
-    "windowStart": "2026-10-27",
-    "windowEnd": "2026-11-23T07:05:00Z",
-    "papersAdded": 6,
-    "modelsAdded": 15,
+    "previousResearchCheck": "2026-11-23",
+    "windowStart": "2026-11-16",
+    "windowEnd": "2026-11-24T01:55:00Z",
+    "papersAdded": 0,
+    "modelsAdded": 3,
     "modelsRevised": [
-      "kimik31pro",
-      "dsv41-1017",
-      "gpt-live11"
+      "minimax31flash",
+      "minimax-h3",
+      "claude-fable52",
+      "claude-mythos52"
     ],
     "catalogAdded": 0,
-    "coverageNote": "补查期间 arXiv 日期范围 18 页、8,664 个唯一元数据 ID，其中 7,128 个未出现在前次窗口；重点核读 6 篇。153 篇已收录论文版本检查发现 2 个修订并比较。元数据候选不计入已读。",
+    "coverageNote": "arXiv 重叠窗口四页取得 1,925 个唯一元数据 ID，较前批无新 ID；11 月三个分类目录合计 7,531 个唯一 ID 与前次一致，复用已核提交历史。159 个既有 arXiv 版本未见新修订。七个系统会议目录未见新题名，历史候选继续待读。",
     "limitations": [
-      "本次已补重点，未逐篇核读遗漏期间全部候选。",
-      "完整 Findings XML 已重取，月目录另按论文项交叉核对；保留未读候选和未匹配的历史条目。",
-      "Kimi 首次权重公开日未独立核实；GLM-Legal 别名、H3 托管组件与 4 篇旧论文署名仍待核。",
-      "浏览器交互未验收，使用源构建、组件服务端渲染、筛选与线上快照核验。",
-      "H3-Image 模型卡和许可证于 11 月 24 日补核，其余发现窗口截至 11 月 23 日 07:05 UTC。"
+      "未逐篇核读此前积累的元数据候选，本次未新增已整理论文。",
+      "部分源站新闻／奖项页不可读；Findings 首次传输失败后完整重取。GLM 博客正文为空，采用官方技术文档与 AutoClaw／ZCode 交叉核对。",
+      "Kimi／MiniMax M3.1 首次权重公开日、GLM-Legal 别名及 4 篇旧论文署名仍待核。",
+      "浏览器交互未验收，使用 Data 源构建、实际组件服务端渲染、筛选与线上完整包核验。"
     ]
   },
   "affiliationEnrichment": {
