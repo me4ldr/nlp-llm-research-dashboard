@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-11-24T02:58:27.197553+00:00",
+  "generatedAt": "2026-11-25T01:40:55.836168+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -16768,11 +16768,384 @@
             "gepa-curator",
             "dpo"
           ]
+        },
+        {
+          "id": "statebench",
+          "title": "A Fine-Grained Hierarchy and Benchmark for State Tracking in Language Models",
+          "zh": "把长程状态跟踪分解为四级难度",
+          "titleZh": "把长程状态跟踪分解为四级难度",
+          "short": "StateBench",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 223,
+          "tags": [
+            "arch",
+            "context",
+            "memory",
+            "eval",
+            "mechanism"
+          ],
+          "url": "https://arxiv.org/abs/2611.03094",
+          "summary": "把变量状态跟踪拆成不可变赋值、可覆盖赋值、自引用更新和一般有限状态四级，在保持变量、取值和赋值位置可比的条件下构造 StateBench。直接训练的循环／混合架构在部分层级更能外推长度，但已有预训练模型没有自动实现其理论潜力，前沿模型在复杂长序列上仍明显退化。",
+          "why": "将“记住长文本”与“持续更新状态”分开，帮助判断长上下文、记忆和新架构究竟解决了哪种困难。",
+          "limit": "理论结论受数值精度及具体架构假设约束；主要是合成有限状态任务，不能直接推断真实 Agent 成功率。训练配置与预训练模型不同；GDN 正特征值版本在完整层级中的精确边界仍有开放问题。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（任务定义、主要理论结论、实验及结论）；未逐条验算证明／未复现",
+          "verification": "2026-11-25 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.03094v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/1706.03762"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2312.00752"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2610.41704"
+            }
+          ],
+          "categories": "架构与生成范式 · 长上下文 · 长期记忆 · 评测与可靠性 · 能力机理与理论",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-02",
+          "submissionDate": "2026-11-02",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.03094",
+          "verifiedAt": "2026-11-25",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "从一般有限状态实例逐级派生较简单问题，控制变量数、取值数与赋值位置，减少不同难度间的任务混杂。",
+            "比较六个 275M 规模的 Transformer、Gated DeltaNet 及混合模型，直接训练序列含 8–256 次赋值，评测最长 64,000 次状态变化；该数字不是上下文 token 数。",
+            "另外评测预训练开放模型和闭源前沿模型；架构可表达某类状态更新不等于预训练后已掌握，复杂层级上的长度泛化仍薄弱。"
+          ],
+          "institutions": [
+            {
+              "id": "ai2",
+              "name": "艾伦人工智能研究所",
+              "nameEn": "Allen Institute for AI / Ai2",
+              "type": "research"
+            },
+            {
+              "id": "nyu",
+              "name": "纽约大学",
+              "nameEn": "New York University",
+              "type": "university"
+            },
+            {
+              "id": "ttic",
+              "name": "TTIC（芝加哥）",
+              "nameEn": "Toyota Technological Institute at Chicago",
+              "type": "research"
+            }
+          ],
+          "institutionLabels": "艾伦人工智能研究所 · 纽约大学 · TTIC（芝加哥）",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.03094v1"
+            },
+            {
+              "label": "TTIC 官方机构性质与博士培养说明",
+              "url": "https://www.ttic.edu/about/"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-25",
+          "affiliationsVerifiedAt": "2026-11-25",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。 TTIC 为提供博士项目的计算机科学研究教育机构，在本看板归入研究机构。",
+          "relatedPaperIds": [
+            "transformer",
+            "mamba",
+            "graphniah"
+          ]
+        },
+        {
+          "id": "loopres",
+          "title": "Unlocking the Power of Loops in Pretrained LLMs with Loop Residuals",
+          "zh": "用分轮残差让共享层循环真正积累推理进展",
+          "titleZh": "用分轮残差让共享层循环真正积累推理进展",
+          "short": "LoopRes",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 224,
+          "tags": [
+            "arch",
+            "reason",
+            "eff",
+            "post"
+          ],
+          "url": "https://arxiv.org/abs/2611.31094",
+          "summary": "针对预训练模型重复执行共享层时各轮残差过于相似、容易跳过中间计算的问题，LoopRes 在残差注意力中加入分轮键，并限制可访问的历史循环窗口。六个模型上的数学和代码实验显示，增加循环计算后可获得比普通循环残差更好的收益。",
+          "why": "连接预训练模型复用与推理时深度扩展，解释为什么“把层多跑几遍”需要配套的残差设计。",
+          "limit": "证据集中在三个家族、六个骨干模型和数学／代码任务，最大为 30B-A3B；采用监督训练，未验证强化学习或所有真实任务。总计算会随循环增加，融合实现的低额外开销是相对同循环基线，不能理解成无成本提速。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、实验设置、结果及局限）；未复现",
+          "verification": "2026-11-25 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.31094v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2610.21594"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/1706.03762"
+            }
+          ],
+          "categories": "架构与生成范式 · 推理与验证 · 效率与优化 · 后训练与对齐",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-23",
+          "submissionDate": "2026-11-23",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.31094",
+          "verifiedAt": "2026-11-25",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "在内容键之外加入 loop-aware keys，区分共享层在不同轮次的输出，避免残差注意力过早收敛到相似分配。",
+            "仅让残差注意力读取最近 W 轮（默认 W=1），约束跨轮捷径，使后续轮更依赖逐步更新，同时限制残差来源数量。",
+            "循环模型的中间一半共享层，测试约 2 倍／4 倍计算配置；论文汇总覆盖九种数学与代码基准，不能把所有模型表的平均值直接跨表比较。"
+          ],
+          "institutions": [
+            {
+              "id": "nus",
+              "name": "新加坡国立大学",
+              "nameEn": "National University of Singapore",
+              "type": "university"
+            },
+            {
+              "id": "independent",
+              "name": "独立研究者",
+              "nameEn": "Independent Researcher",
+              "type": "other"
+            }
+          ],
+          "institutionLabels": "新加坡国立大学 · 独立研究者",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.31094v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-25",
+          "affiliationsVerifiedAt": "2026-11-25",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。",
+          "relatedPaperIds": [
+            "loopahead",
+            "transformer"
+          ]
+        },
+        {
+          "id": "empathy-threshold",
+          "title": "Lowering the Bar for Everyone: Hidden Validation-Seeking Goals in Empathetic RL",
+          "zh": "共情强化学习可能整体降低“赞同用户”的门槛",
+          "titleZh": "共情强化学习可能整体降低“赞同用户”的门槛",
+          "short": "共情 RL 与迎合",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 225,
+          "tags": [
+            "post",
+            "safety",
+            "eval",
+            "data"
+          ],
+          "url": "https://arxiv.org/abs/2611.30702",
+          "summary": "在受控共情对话训练中改变模拟用户寻求认同的比例，用信号检测分析区分模型的判断能力和赞同门槛。寻求认同者每增加 10 个百分点，对有过错用户的赞同率约增加 3–4 个百分点；主要体现为更容易赞同，而非辨别过错的能力同步下降。",
+          "why": "把迎合风险与训练用户的隐藏目标联系起来，提供比单一准确率更细的行为诊断。",
+          "limit": "核心因果实验依赖一个主要策略模型、一个用户模拟器家族及英语单轮 Reddit AITA 任务；社区判断不等于客观道德真值。公开检查点分析属于观察性证据，预注册的两个模型预测仅一个成立，不能据此推断所有模型。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、实验设置、结果及局限）；未复现",
+          "verification": "2026-11-25 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.30702v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2203.02155"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2305.18290"
+            }
+          ],
+          "categories": "后训练与对齐 · 安全、隐私与遗忘 · 评测与可靠性 · 预训练与数据",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-23",
+          "submissionDate": "2026-11-23",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.30702",
+          "verifiedAt": "2026-11-25",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "以 Qwen2.5-7B 为主要策略，在共情 RL 中控制隐藏的 validation-seeking 用户比例；另做模型、KL 与目标可见性等对照。",
+            "用判断敏感度与决策阈值分解行为：更多寻求认同的训练用户会把赞同门槛整体下移，用户明确要求诚实也未在该设置中显著阻止这种变化。",
+            "用三类自动裁判及 150 个回答的双人标注检查评测一致性；目标显式可见时可更有针对性地调整，但不是已验证的通用线上缓解方案。"
+          ],
+          "institutions": [
+            {
+              "id": "tsinghua",
+              "name": "清华大学",
+              "nameEn": "Tsinghua University",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "清华大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.30702v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-25",
+          "affiliationsVerifiedAt": "2026-11-25",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。",
+          "relatedPaperIds": [
+            "instruct",
+            "dpo"
+          ]
+        },
+        {
+          "id": "duet",
+          "title": "DUET: Dual-MDL Unsupervised Entropy-Trie Segmentation for Low-Resource Languages",
+          "zh": "用双重最短描述长度做极低资源形态切分",
+          "titleZh": "用双重最短描述长度做极低资源形态切分",
+          "short": "DUET",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 226,
+          "tags": [
+            "language",
+            "data",
+            "eval",
+            "eff"
+          ],
+          "url": "https://arxiv.org/abs/2611.30273",
+          "summary": "DUET 不依赖标注或预训练模型，先以双向 trie 的分支熵和形态范式生成切分候选，再用语料复用与构造树两层最短描述长度排序并抑制过切分。在五种低资源语言的可表面还原子集上，词素 F1 超过所测无监督基线，并可为部分语言谜题推理提供辅助切分。",
+          "why": "把数据极少时的语言结构归纳与 LLM 提示结合，同时保留无需大模型的可解释分词路径。",
+          "limit": "主实验是训练集上的传导式评测，并筛选可由表面形式恢复的词素；不覆盖复杂非拼接形态变化。并非所有指标最优：极低资源设置中边界 F1 低于部分基线。谜题收益不能外推为通用 BPE 替代或全部下游任务收益。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、实验设置、结果及局限）；未复现",
+          "verification": "2026-11-25 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.30273v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2610.21679"
+            }
+          ],
+          "categories": "语言学与多语言 · 预训练与数据 · 评测与可靠性 · 效率与优化",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-23",
+          "submissionDate": "2026-11-23",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.30273",
+          "verifiedAt": "2026-11-25",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "前向／后向 trie 的分支熵结合最大双团范式与递归词缀展开，先生成候选，再独立评价候选，避免仅靠局部频率决定边界。",
+            "语料级 MDL 奖励跨词复用，构造树级目标与保守筛选抑制过切分；不需要预训练模型或外部标注。",
+            "五语言标准设置宏平均词素 F1 为 0.541，Morfessor 为 0.519；边界 F1 为 0.601 对 0.597，差距较小。8–128 句、64 个随机种子的低资源实验及提示增强实验单独报告，不混用评测口径。"
+          ],
+          "institutions": [
+            {
+              "id": "tokyo",
+              "name": "东京大学",
+              "nameEn": "The University of Tokyo",
+              "type": "university"
+            },
+            {
+              "id": "kyoto",
+              "name": "京都大学",
+              "nameEn": "Kyoto University",
+              "type": "university"
+            },
+            {
+              "id": "riken",
+              "name": "理化学研究所",
+              "nameEn": "RIKEN",
+              "type": "research"
+            },
+            {
+              "id": "tohoku",
+              "name": "东北大学（日本）",
+              "nameEn": "Tohoku University",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "东京大学 · 京都大学 · 理化学研究所 · 东北大学（日本）",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.30273v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-25",
+          "affiliationsVerifiedAt": "2026-11-25",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。",
+          "relatedPaperIds": [
+            "tokenizer-metrics-audit"
+          ]
         }
       ],
       "source": {
-        "label": "222 篇精选论文（94 篇 2026 会议、62 篇预印本／报告、66 篇历史）",
-        "period": "2026-11-23 补查 11 月 4–23 日缺口，并向前重叠至 10 月 27 日；旧证据日期逐条保留。",
+        "label": "226 篇精选论文（94 篇 2026 会议、66 篇预印本／报告、66 篇历史）",
+        "period": "2026-11-25 核读新增 4 篇；近期检索窗口为 11 月 17–25 日，并复核整月目录和历史待核条目。旧阅读日期逐条保留。",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -18238,6 +18611,22 @@
           {
             "label": "THRIFTY",
             "url": "https://arxiv.org/abs/2611.27436"
+          },
+          {
+            "label": "A Fine-Grained Hierarchy and Benchmark for State Tracking in Language Models",
+            "url": "https://arxiv.org/abs/2611.03094"
+          },
+          {
+            "label": "Unlocking the Power of Loops in Pretrained LLMs with Loop Residuals",
+            "url": "https://arxiv.org/abs/2611.31094"
+          },
+          {
+            "label": "Lowering the Bar for Everyone: Hidden Validation-Seeking Goals in Empathetic RL",
+            "url": "https://arxiv.org/abs/2611.30702"
+          },
+          {
+            "label": "DUET: Dual-MDL Unsupervised Entropy-Trie Segmentation for Low-Resource Languages",
+            "url": "https://arxiv.org/abs/2611.30273"
           }
         ],
         "filters": [
@@ -18307,9 +18696,13 @@
           {
             "title": "每日更新（2026-10-16）",
             "detail": "从 10 月 8 日重叠窗口筛选 9 篇预印本，核读各行 depth 指定段落与作者单位；新增 2 个语音型号，快速模式与 Standard 价格分开。"
+          },
+          {
+            "title": "每日更新（2026-11-25）",
+            "detail": "补核 StateBench 历史候选及 LoopRes、共情 RL、DUET 的方法、主要实验、局限和署名。四篇均为录用未核实的预印本，不将元数据候选计入已整理。"
           }
         ],
-        "executedAt": "2026-11-23T07:18:57.441140+00:00"
+        "executedAt": "2026-11-25T01:40:55.836168+00:00"
       },
       "methods": [
         {
@@ -18567,8 +18960,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 33,
           "coverage": "4698 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-24",
-          "lastAttemptAt": "2026-11-24",
+          "checkedAt": "2026-11-25",
+          "lastAttemptAt": "2026-11-25",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.acl.xml"
         },
         {
@@ -18582,8 +18975,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 8,
           "coverage": "914 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-24",
-          "lastAttemptAt": "2026-11-24",
+          "checkedAt": "2026-11-25",
+          "lastAttemptAt": "2026-11-25",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.eacl.xml"
         },
         {
@@ -18597,8 +18990,8 @@
           "status": "已检索官方目录",
           "curatedCount": 11,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-24",
-          "lastAttemptAt": "2026-11-24"
+          "checkedAt": "2026-11-25",
+          "lastAttemptAt": "2026-11-25"
         },
         {
           "id": "icml26",
@@ -18611,8 +19004,8 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-24",
-          "lastAttemptAt": "2026-11-24"
+          "checkedAt": "2026-11-25",
+          "lastAttemptAt": "2026-11-25"
         },
         {
           "id": "neurips26",
@@ -18625,8 +19018,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "9,146 个 Poster 目录条目；已整理 10 篇论文；索引中 1 条已核为活动海报，DTCH 活动未加入",
-          "checkedAt": "2026-11-24",
-          "lastAttemptAt": "2026-11-24",
+          "checkedAt": "2026-11-25",
+          "lastAttemptAt": "2026-11-25",
           "notes": " 11 月 23 日按链接同步题名修订，缺项保留，不推定撤稿。"
         },
         {
@@ -18640,8 +19033,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "856 条官方录用记录全部匹配 OpenReview；10 篇重点核读",
-          "checkedAt": "2026-11-24",
-          "lastAttemptAt": "2026-11-24"
+          "checkedAt": "2026-11-25",
+          "lastAttemptAt": "2026-11-25"
         },
         {
           "id": "emnlp26",
@@ -18654,12 +19047,12 @@
           "scope": "论文集主会／Findings／Demo／Industry 共 5,533 篇（排除 Industry Overview）；另有日程历史版本与改题。8 条补用报告人、分轨与标题核对；16 条历史题目还未唯一匹配，其中 8 条缺于当前日程，不推定撤稿。",
           "status": "日程、论文集与官方奖项交叉核对",
           "coverage": "当前日程 5,540；保留历史索引 5,548 条，5,532 条已对应正式论文集，14 篇重点核读",
-          "checkedAt": "2026-11-24",
+          "checkedAt": "2026-11-25",
           "detailSourceUrl": "https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490",
           "anthologyCount": 5533,
           "anthologyMatchedCount": 5532,
           "anthologySourceUrl": "https://aclanthology.org/events/emnlp-2026/",
-          "lastAttemptAt": "2026-11-24"
+          "lastAttemptAt": "2026-11-25"
         },
         {
           "id": "uist26",
@@ -18677,7 +19070,7 @@
       ],
       "source": {
         "label": "2026 官方目录覆盖核对",
-        "period": "2026-11-24 复核七个系统目录；题名与 ID 未见新增或变化，UIST 仍为历史单篇补充。",
+        "period": "2026-11-25 与前日比较：七个系统会议目录未见题名变化；NAACL 官方入口一并复查，UIST 仍仅为历史单篇补充。",
         "grain": "每行一个会议目录及其检索边界",
         "links": [
           {
@@ -18733,7 +19126,7 @@
           "2026-11-02 EMNLP 奖项以官方栏目为准，COLM Spotlight 不计作奖项。",
           "2026-11-03 原目录题目或链接无变化不等于重新核读其中全部论文。"
         ],
-        "executedAt": "2026-11-24T02:58:27.197553+00:00"
+        "executedAt": "2026-11-25T01:40:55.836168+00:00"
       },
       "methods": [
         {
@@ -416961,31 +417354,32 @@
           "parameterLabel": "未披露",
           "activeLabel": "未披露",
           "architecture": "GPT-6.2 Sol 的日常对话调整版；内部结构未披露",
-          "context": "未单独披露",
-          "contextNote": "本次对话产品说明未单列窗口；不套用 Astra／Sol API 的 1,050,000 tokens。",
+          "context": "400K（chat-latest API）",
+          "contextNote": "11 月 25 日核实滚动别名 chat-latest：窗口 400,000、最大输入 272,000、最大输出 128,000 tokens。ChatGPT 产品本身的额度与窗口仍受产品规则限制；不把 API 规格直接套入订阅产品。",
           "inputModalities": "文本、图像",
           "outputModalities": "文本",
           "multimodal": "多模态理解",
-          "openness": "闭源产品",
+          "openness": "闭源产品／API",
           "license": "厂商服务条款；未核实开放权重",
           "openNote": "未确认本版本公开权重及许可。",
           "reportUrl": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
           "reportType": "官方系统卡与产品发布记录",
           "releaseUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026",
-          "specUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026",
+          "specUrl": "https://developers.openai.com/api/docs/models/chat-latest.md",
           "price": {
-            "input": null,
-            "output": null,
+            "input": 5,
+            "output": 30,
+            "cachedInput": 0.5,
             "currency": "USD",
-            "basis": "ChatGPT 产品；独立 API 未核实",
-            "unit": "订阅产品；不按本行 token 价比较",
-            "asOf": "2026-11-24",
-            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026",
-            "note": "未确认本对话调整版有独立 API ID／单价；不套用 GPT-6.2 Sol API 报价。"
+            "basis": "现价 · chat-latest 滚动 API 别名",
+            "unit": "每百万 tokens；未缓存输入／文本输出",
+            "asOf": "2026-11-25",
+            "url": "https://developers.openai.com/api/docs/pricing",
+            "note": "缓存输入 $0.50／百万 tokens。11 月 24 日更新的 chat-latest 指向当前 ChatGPT 对话模型，后续会随产品滚动；不是锁定 11 月 23 日权重的永久快照，也不是 ChatGPT 订阅价。"
           },
-          "priceLabel": "ChatGPT 订阅产品；API 未单列",
+          "priceLabel": "USD 5 / 30（chat-latest；每百万 tokens）",
           "verifiedAt": "2026-11-24",
-          "specificationCheckedAt": "2026-11-24",
+          "specificationCheckedAt": "2026-11-25",
           "technicalDisclosure": "官方技术／服务文档核读",
           "technicalNote": "核读官方原文相关技术、规格及局限；未复现厂商实验。关联论文为概念阅读，不证明实际采用。",
           "sources": [
@@ -417000,11 +417394,23 @@
             {
               "label": "规格与限制",
               "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026"
+            },
+            {
+              "label": "11 月 24 日 chat-latest 更新记录",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "滚动 API 规格及价目",
+              "url": "https://developers.openai.com/api/docs/models/chat-latest.md"
+            },
+            {
+              "label": "API 当前定价",
+              "url": "https://developers.openai.com/api/docs/pricing"
             }
           ],
           "innovation": "针对日常对话、图像理解、复杂指令和网络信息查询调整，并公开本版安全评估。",
           "generationChange": "官方明确由 GPT-6.2 Sol 的一个对话调整版本提供；本次不改变 Work／Codex 版本，不视为另一个独立基础模型。",
-          "notes": "向 Plus、Pro、Business、Enterprise 逐步开放，企业受管理员设置影响。发布记录与系统卡的开放范围描述详略不同，以产品更新记录为准；能力及安全结果是厂商实验，不能证明所有真实场景可靠。",
+          "notes": "向 Plus、Pro、Business、Enterprise 逐步开放，企业受管理员设置影响。发布记录与系统卡的开放范围描述详略不同，以产品更新记录为准；能力及安全结果是厂商实验，不能证明所有真实场景可靠。 11 月 25 日补核 chat-latest API；保留 11 月 23 日产品发布日和 24 日系统卡核读日，API 别名更新日单列。",
           "technicalTopics": [
             "reason",
             "multi",
@@ -417030,11 +417436,26 @@
               "detail": "系统卡描述继承的强化学习推理方式，并提供政策遵守、授权边界和监控性评估；没有披露本版完整训练配方或精确参数。"
             },
             {
-              "name": "独立服务边界",
-              "detail": "按 ChatGPT 订阅及产品权限使用，本次未确认独立 API 型号、专属价格或窗口。与 Astra／Sol API 价格分开。"
+              "name": "滚动 API 的版本与窗口",
+              "detail": "11 月 24 日 API 更新记录确认 chat-latest 已更新至最新 ChatGPT 模型。当前支持 Responses／Chat Completions，400K 窗口、272K 最大输入、128K 最大输出；别名会滚动，不能永久绑定本次产品权重。"
             }
           ],
-          "technicalSource": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt"
+          "technicalSource": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
+          "priceHistory": [
+            {
+              "input": null,
+              "output": null,
+              "currency": "USD",
+              "basis": "ChatGPT 产品；独立 API 未核实",
+              "unit": "订阅产品；不按本行 token 价比较",
+              "asOf": "2026-11-24",
+              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#november-23-2026",
+              "note": "未确认本对话调整版有独立 API ID／单价；不套用 GPT-6.2 Sol API 报价。"
+            }
+          ],
+          "technicalUpdatedAt": "2026-11-25",
+          "apiUpdateDate": "2026-11-24",
+          "apiAlias": "chat-latest"
         },
         {
           "id": "gpt61-terra",
@@ -417291,7 +417712,7 @@
           "reportUrl": "https://mistral.ai/news/voxtral-3/",
           "reportType": "官方发布说明与模型卡；独立技术报告未核实",
           "releaseUrl": "https://mistral.ai/news/voxtral-3/",
-          "specUrl": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-small-transcribe-3",
           "price": {
             "input": null,
             "output": null,
@@ -417312,7 +417733,7 @@
             },
             {
               "label": "本型号模型卡与现价（2026-10-21）",
-              "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0"
+              "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3"
             }
           ],
           "parameterLabel": "未披露",
@@ -417345,8 +417766,9 @@
             "transformer",
             "realcli"
           ],
-          "technicalSource": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
-          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-small-transcribe-3",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。",
+          "sourceLinksCheckedAt": "2026-11-25"
         },
         {
           "id": "voxtral3-mini-transcribe",
@@ -417371,7 +417793,7 @@
           "reportUrl": "https://mistral.ai/news/voxtral-3/",
           "reportType": "官方发布说明与模型卡；独立技术报告未核实",
           "releaseUrl": "https://mistral.ai/news/voxtral-3/",
-          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3",
           "price": {
             "input": null,
             "output": null,
@@ -417392,7 +417814,7 @@
             },
             {
               "label": "本型号模型卡与现价（2026-10-21）",
-              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"
+              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3"
             }
           ],
           "parameterLabel": "4B",
@@ -417425,8 +417847,9 @@
             "transformer",
             "realcli"
           ],
-          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
-          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。",
+          "sourceLinksCheckedAt": "2026-11-25"
         },
         {
           "id": "voxtral3-realtime",
@@ -417451,7 +417874,7 @@
           "reportUrl": "https://mistral.ai/news/voxtral-3/",
           "reportType": "官方发布说明与模型卡；独立技术报告未核实",
           "releaseUrl": "https://mistral.ai/news/voxtral-3/",
-          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "specUrl": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3",
           "price": {
             "input": null,
             "output": null,
@@ -417472,7 +417895,7 @@
             },
             {
               "label": "本型号模型卡与现价（2026-10-21）",
-              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"
+              "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3"
             }
           ],
           "parameterLabel": "未披露",
@@ -417505,8 +417928,9 @@
             "transformer",
             "realcli"
           ],
-          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
-          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。"
+          "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3",
+          "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。",
+          "sourceLinksCheckedAt": "2026-11-25"
         },
         {
           "id": "voxtral3-tts",
@@ -418579,6 +419003,14 @@
             {
               "label": "12 小时缓存、费用与升级规则（2026-10-21）",
               "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
+            },
+            {
+              "label": "11 月 24 日医疗配置发布",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "医疗配置分档价目",
+              "url": "https://developers.openai.com/api/docs/pricing"
             }
           ],
           "parameterLabel": "未公开",
@@ -418602,6 +419034,10 @@
             {
               "name": "更便宜的缓存读取",
               "detail": "降低复用输入的服务成本；这属于推理基础设施与定价变化，内部架构尚未披露。"
+            },
+            {
+              "name": "11 月 24 日：医疗服务配置",
+              "detail": "gpt-6.1-sol-healthcare 在 Responses API 中配套临床问答执行配置，联网时检索专用医学来源索引。Standard／Short 全球端点输入／输出为 $2 / $10、缓存输入 $0.1／百万 tokens（11 月 25 日价目；优惠至少到 12 月 31 日），地区附加费和工具费另计。该配置不表示底层重新训练，也不覆盖原通用 API 价。"
             }
           ],
           "technicalDisclosure": "能力／服务披露",
@@ -418632,7 +419068,38 @@
             "defaultWriteMultiplier": 1.25,
             "extendedWriteMultiplier": 2.5,
             "readMultiplier": 0.05
-          }
+          },
+          "serviceConfigurations": [
+            {
+              "id": "gpt-6.1-sol-healthcare",
+              "releaseDate": "2026-11-24",
+              "checkedAt": "2026-11-25",
+              "endpoint": "Responses API",
+              "description": "面向临床问题的服务执行配置；联网搜索使用专用医学来源索引。不是新基础模型架构或新训练报告。",
+              "price": {
+                "input": 2,
+                "output": 10,
+                "cachedInput": 0.1,
+                "currency": "USD",
+                "unit": "每百万 tokens",
+                "basis": "Standard／Short 全球端点优惠价；不含地区附加费及工具费用",
+                "asOf": "2026-11-25",
+                "url": "https://developers.openai.com/api/docs/pricing",
+                "promotionAtLeastThrough": "2026-12-31"
+              },
+              "sources": [
+                {
+                  "label": "配置发布记录",
+                  "url": "https://developers.openai.com/api/docs/changelog"
+                },
+                {
+                  "label": "专项配置价目",
+                  "url": "https://developers.openai.com/api/docs/pricing"
+                }
+              ]
+            }
+          ],
+          "technicalUpdatedAt": "2026-11-25"
         },
         {
           "id": "claude55sonnet",
@@ -419270,6 +419737,14 @@
             {
               "label": "12 小时缓存、费用与升级规则（2026-10-21）",
               "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
+            },
+            {
+              "label": "11 月 24 日医疗配置发布",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "医疗配置分档价目",
+              "url": "https://developers.openai.com/api/docs/pricing"
             }
           ],
           "parameterLabel": "未公开",
@@ -419293,6 +419768,10 @@
             {
               "name": "长任务中的意图保持",
               "detail": "官方评估强调接收新约束后仍保持原目标，以及更可靠地遵守任务范围。"
+            },
+            {
+              "name": "11 月 24 日：医疗服务配置",
+              "detail": "gpt-6-astra-healthcare 在 Responses API 中配套临床问答执行配置，联网时检索专用医学来源索引。Standard／Short 全球端点输入／输出为 $10 / $50、缓存输入 $1／百万 tokens（11 月 25 日价目；优惠至少到 12 月 31 日），地区附加费和工具费另计。该配置不表示底层重新训练，也不覆盖原通用 API 价。"
             }
           ],
           "technicalDisclosure": "部分方法披露",
@@ -419312,7 +419791,38 @@
             "defaultWriteMultiplier": 1.25,
             "extendedWriteMultiplier": 2.5,
             "readMultiplier": 0.1
-          }
+          },
+          "serviceConfigurations": [
+            {
+              "id": "gpt-6-astra-healthcare",
+              "releaseDate": "2026-11-24",
+              "checkedAt": "2026-11-25",
+              "endpoint": "Responses API",
+              "description": "面向临床问题的服务执行配置；联网搜索使用专用医学来源索引。不是新基础模型架构或新训练报告。",
+              "price": {
+                "input": 10,
+                "output": 50,
+                "cachedInput": 1,
+                "currency": "USD",
+                "unit": "每百万 tokens",
+                "basis": "Standard／Short 全球端点优惠价；不含地区附加费及工具费用",
+                "asOf": "2026-11-25",
+                "url": "https://developers.openai.com/api/docs/pricing",
+                "promotionAtLeastThrough": "2026-12-31"
+              },
+              "sources": [
+                {
+                  "label": "配置发布记录",
+                  "url": "https://developers.openai.com/api/docs/changelog"
+                },
+                {
+                  "label": "专项配置价目",
+                  "url": "https://developers.openai.com/api/docs/pricing"
+                }
+              ]
+            }
+          ],
+          "technicalUpdatedAt": "2026-11-25"
         },
         {
           "id": "gemini38",
@@ -425344,6 +425854,10 @@
             {
               "name": "推理预算与后台执行",
               "detail": "不接受 none 推理设置；可使用 2 小时／8 小时后台完成窗口，较 Standard 降价 30%／40%，新模型不支持 Flex。"
+            },
+            {
+              "name": "11 月 24 日：医疗服务配置",
+              "detail": "gpt-6.2-astra-healthcare 在 Responses API 中配套临床问答执行配置，联网时检索专用医学来源索引。Standard／Short 全球端点输入／输出为 $8 / $40、缓存输入 $0.4／百万 tokens（11 月 25 日价目；优惠至少到 12 月 31 日），地区附加费和工具费另计。该配置不表示底层重新训练，也不覆盖原通用 API 价。"
             }
           ],
           "technicalDisclosure": "服务能力与部分方法披露",
@@ -425365,8 +425879,47 @@
             {
               "label": "价格依据",
               "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md"
+            },
+            {
+              "label": "11 月 24 日医疗配置发布",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "医疗配置分档价目",
+              "url": "https://developers.openai.com/api/docs/pricing"
             }
-          ]
+          ],
+          "serviceConfigurations": [
+            {
+              "id": "gpt-6.2-astra-healthcare",
+              "releaseDate": "2026-11-24",
+              "checkedAt": "2026-11-25",
+              "endpoint": "Responses API",
+              "description": "面向临床问题的服务执行配置；联网搜索使用专用医学来源索引。不是新基础模型架构或新训练报告。",
+              "price": {
+                "input": 8,
+                "output": 40,
+                "cachedInput": 0.4,
+                "currency": "USD",
+                "unit": "每百万 tokens",
+                "basis": "Standard／Short 全球端点优惠价；不含地区附加费及工具费用",
+                "asOf": "2026-11-25",
+                "url": "https://developers.openai.com/api/docs/pricing",
+                "promotionAtLeastThrough": "2026-12-31"
+              },
+              "sources": [
+                {
+                  "label": "配置发布记录",
+                  "url": "https://developers.openai.com/api/docs/changelog"
+                },
+                {
+                  "label": "专项配置价目",
+                  "url": "https://developers.openai.com/api/docs/pricing"
+                }
+              ]
+            }
+          ],
+          "technicalUpdatedAt": "2026-11-25"
         },
         {
           "id": "gpt62-sol",
@@ -425428,6 +425981,10 @@
             {
               "name": "推理预算与后台执行",
               "detail": "不接受 none 推理设置；可使用 2 小时／8 小时后台完成窗口，较 Standard 降价 30%／40%，新模型不支持 Flex。"
+            },
+            {
+              "name": "11 月 24 日：医疗服务配置",
+              "detail": "gpt-6.2-sol-healthcare 在 Responses API 中配套临床问答执行配置，联网时检索专用医学来源索引。Standard／Short 全球端点输入／输出为 $2 / $10、缓存输入 $0.1／百万 tokens（11 月 25 日价目；优惠至少到 12 月 31 日），地区附加费和工具费另计。该配置不表示底层重新训练，也不覆盖原通用 API 价。"
             }
           ],
           "technicalDisclosure": "服务能力与部分方法披露",
@@ -425449,8 +426006,47 @@
             {
               "label": "价格依据",
               "url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol.md"
+            },
+            {
+              "label": "11 月 24 日医疗配置发布",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "医疗配置分档价目",
+              "url": "https://developers.openai.com/api/docs/pricing"
             }
-          ]
+          ],
+          "serviceConfigurations": [
+            {
+              "id": "gpt-6.2-sol-healthcare",
+              "releaseDate": "2026-11-24",
+              "checkedAt": "2026-11-25",
+              "endpoint": "Responses API",
+              "description": "面向临床问题的服务执行配置；联网搜索使用专用医学来源索引。不是新基础模型架构或新训练报告。",
+              "price": {
+                "input": 2,
+                "output": 10,
+                "cachedInput": 0.1,
+                "currency": "USD",
+                "unit": "每百万 tokens",
+                "basis": "Standard／Short 全球端点优惠价；不含地区附加费及工具费用",
+                "asOf": "2026-11-25",
+                "url": "https://developers.openai.com/api/docs/pricing",
+                "promotionAtLeastThrough": "2026-12-31"
+              },
+              "sources": [
+                {
+                  "label": "配置发布记录",
+                  "url": "https://developers.openai.com/api/docs/changelog"
+                },
+                {
+                  "label": "专项配置价目",
+                  "url": "https://developers.openai.com/api/docs/pricing"
+                }
+              ]
+            }
+          ],
+          "technicalUpdatedAt": "2026-11-25"
         },
         {
           "id": "gpt6-cyber",
@@ -426561,7 +427157,7 @@
       ],
       "source": {
         "label": "113 个模型／服务版本",
-        "period": "2026-11-24 复查官方发布与规格；新增 11 月 23 日发布的服务，保留旧条目逐字段证据日期。",
+        "period": "2026-11-25 核实 chat-latest API 更新和四项医疗服务配置；113 个模型／服务版本，旧发布及价格日期逐字段保留。",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -427519,6 +428115,14 @@
           {
             "label": "GPT-6.2（ChatGPT 11 月 23 日版） · 技术／服务说明",
             "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt"
+          },
+          {
+            "label": "chat-latest API 规格",
+            "url": "https://developers.openai.com/api/docs/models/chat-latest.md"
+          },
+          {
+            "label": "11 月 24 日医疗配置与聊天 API 更新",
+            "url": "https://developers.openai.com/api/docs/changelog"
           }
         ],
         "caveats": [
@@ -427544,9 +428148,10 @@
           "2026-11-02 服务版本数并非独立基础权重数；Kimi K3.1 权重仍待核，预告不视为兑现。",
           "2026-11-03 Plus 按万字符、Flash 按百万 token；不能直接比较这两个价格数字。Gemini 路由为 12 月起的预告，不覆盖旧价格。",
           "2026-11-23 批次补核 15 个服务／型号。Fable 与 Mythos 同底层模型；Qwen4 预览和正式开放合在同一条。Genie 按视频输出量计价。",
-          "2026-11-24：GLM-5.4 为 750B 级循环基座，2T–3T 是能力比喻；API 和权重待开放。Qwen Live 按秒且后台另收费，65,536 是指令／函数配置限制。ChatGPT GPT-6.2 为 Sol 对话调整版，不重复称为独立基础模型。"
+          "2026-11-24：GLM-5.4 为 750B 级循环基座，2T–3T 是能力比喻；API 和权重待开放。Qwen Live 按秒且后台另收费，65,536 是指令／函数配置限制。ChatGPT GPT-6.2 为 Sol 对话调整版，不重复称为独立基础模型。",
+          "2026-11-25：chat-latest 是会继续更新的 API 别名，400K 及 $5/$30 为当前 API 规格，不是 ChatGPT 订阅条件或固定权重快照。四个 healthcare 配置归入已有模型，不重复计为独立基础模型；专项优惠价与通用模型价分开。"
         ],
-        "executedAt": "2026-11-24T02:58:27.197553+00:00"
+        "executedAt": "2026-11-25T01:40:55.836168+00:00"
       },
       "methods": [
         {
@@ -428144,34 +428749,36 @@
   },
   "id": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "researchRefresh": {
-    "checkedAt": "2026-11-24",
+    "checkedAt": "2026-11-25",
     "timezone": "Asia/Shanghai",
-    "previousResearchCheck": "2026-11-23",
-    "windowStart": "2026-11-16",
-    "windowEnd": "2026-11-24T01:55:00Z",
-    "papersAdded": 0,
-    "modelsAdded": 3,
+    "previousResearchCheck": "2026-11-24",
+    "windowStart": "2026-11-17",
+    "windowEnd": "2026-11-25T01:27:00Z",
+    "papersAdded": 4,
+    "modelsAdded": 0,
     "modelsRevised": [
-      "minimax31flash",
-      "minimax-h3",
-      "claude-fable52",
-      "claude-mythos52"
+      "gpt62-chat-1123",
+      "gpt62-astra",
+      "gpt62-sol",
+      "gpt6astra",
+      "gpt61"
     ],
     "catalogAdded": 0,
-    "coverageNote": "arXiv 重叠窗口四页取得 1,925 个唯一元数据 ID，较前批无新 ID；11 月三个分类目录合计 7,531 个唯一 ID 与前次一致，复用已核提交历史。159 个既有 arXiv 版本未见新修订。七个系统会议目录未见新题名，历史候选继续待读。",
+    "coverageNote": "arXiv 日期查询五页取得 2,362 个唯一 ID；整月三分类七页合计 8,412 个唯一 ID，其中 881 个较昨日新见。额外核实的 28 个首版提交均早于本次窗口。159 个既有 arXiv 版本未见新修订；七个系统会议目录未见新题名。",
     "limitations": [
-      "未逐篇核读此前积累的元数据候选，本次未新增已整理论文。",
-      "部分源站新闻／奖项页不可读；Findings 首次传输失败后完整重取。GLM 博客正文为空，采用官方技术文档与 AutoClaw／ZCode 交叉核对。",
-      "Kimi／MiniMax M3.1 首次权重公开日、GLM-Legal 别名及 4 篇旧论文署名仍待核。",
+      "本次仅新增 4 篇正文重点核读；881 个新见元数据与此前历史队列未全部核读，不计为已整理。",
+      "StateBench 是 11 月 2 日提交的历史补录，另外三篇提交于 11 月 23 日；不把检查日或月目录公告日当作论文发布日期。",
+      "部分官方新闻、旧规格及奖项页不可读；已通过可用新目录恢复三项 Voxtral 规格和 Google 定价，未恢复项保留原版本。",
+      "Kimi／MiniMax M3.1 首次权重公开日、GLM-Legal 别名和 4 篇旧论文署名仍待核。",
       "浏览器交互未验收，使用 Data 源构建、实际组件服务端渲染、筛选与线上完整包核验。"
     ]
   },
   "affiliationEnrichment": {
-    "checkedAt": "2026-11-23",
+    "checkedAt": "2026-11-25",
     "scope": "curated-papers",
-    "verifiedPapers": 218,
+    "verifiedPapers": 222,
     "pendingPapers": 4,
-    "institutionCount": 256,
+    "institutionCount": 260,
     "method": "按所引版本署名及研究开展时归属整理；大学院系和企业实验室归并到所属机构，机构次序不表示牵头或贡献排名。独立作者与性质未确认的机构列其他；同一论文允许多机构，不从作者现职或仅邮箱推断。会议题目索引未逐篇核对机构。"
   }
 }

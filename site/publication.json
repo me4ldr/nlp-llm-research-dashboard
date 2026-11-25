@@ -1,9 +1,9 @@
 {
   "appId": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
-  "dataGeneratedAt": "2026-11-24T02:58:27.197553+00:00",
-  "snapshotSha256": "67504efd67127db645976eb581dfa3e76beda316f718a63d6b63622eaf20dbde",
+  "dataGeneratedAt": "2026-11-25T01:40:55.836168+00:00",
+  "snapshotSha256": "dc342ae3008b1e506a85b2a0a53887605c2d84d39154efb572b77bd1122f7a61",
   "counts": {
-    "papers": 222,
+    "papers": 226,
     "directions": 16,
     "coverage": 8,
     "catalog": 20606,
