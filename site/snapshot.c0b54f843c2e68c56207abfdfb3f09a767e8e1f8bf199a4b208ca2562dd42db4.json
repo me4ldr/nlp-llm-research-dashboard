@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-11-25T01:40:55.836168+00:00",
+  "generatedAt": "2026-11-26T09:02:50.509071+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -5418,13 +5418,18 @@
             "post"
           ],
           "url": "https://arxiv.org/abs/2403.03218",
-          "summary": "发布经过筛选的危险知识选择题代理评测，并研究以表示控制减少相关能力，同时观察一般能力保留。",
+          "summary": "v8 将危险知识选择题代理基准扩展为 4,157 题，并以 Contrastive Unlearn Tuning（Cut）研究选择性遗忘。在所测模型中减少部分敏感知识的可提取性，同时考察通用能力保留；基准分数不能等同于真实世界风险或安全保证。",
           "why": "把安全评测、能力遗忘与效用权衡联系起来。",
-          "limit": "代理知识分数不能直接测量现实危害，遗忘是否可逆也需检验。",
+          "limit": "选择题仅代理知识可提取性，不能测量端到端现实危害；静态题库会落后于风险变化。实验主要检验生物／网络知识遗忘与一般能力保留，不据此声称化学领域同样有效；开放权重经再训练仍可能恢复知识。",
           "award": "",
-          "depth": "摘要初读",
-          "verification": "原始论文摘要与首版提交记录已读取；历史会议／期刊信息与原论文记录一并保留。",
-          "extra": [],
+          "depth": "正文 v8 重点核读（基准设计、方法概述、实验设置与结果、局限）；未复现",
+          "verification": "2026-11-26 核读 arXiv v8；这是预印本修订，ICML 2024 录用信息和首版日期保留，不声称本次新增内容已通过会议复审。",
+          "extra": [
+            {
+              "label": "核读修订 v8",
+              "url": "https://arxiv.org/html/2403.03218v8"
+            }
+          ],
           "cohort": "历史背景",
           "role": "历史代表",
           "curated": true,
@@ -5505,12 +5510,6 @@
               "type": "university"
             },
             {
-              "id": "lapis",
-              "name": "Lapis Labs",
-              "nameEn": "Lapis Labs",
-              "type": "other"
-            },
-            {
               "id": "ucla",
               "name": "加州大学洛杉矶分校",
               "nameEn": "University of California, Los Angeles / UCLA",
@@ -5527,12 +5526,6 @@
               "name": "Sybil",
               "nameEn": "Sybil",
               "type": "other"
-            },
-            {
-              "id": "northeastern",
-              "name": "东北大学（美国）",
-              "nameEn": "Northeastern University",
-              "type": "university"
             },
             {
               "id": "cmu",
@@ -5577,17 +5570,187 @@
               "type": "company"
             }
           ],
-          "institutionLabels": "AI 安全中心 · 加州大学伯克利分校 · 麻省理工学院 · SecureBio · Scale AI · 纽约大学 · 海得拉巴国际信息技术学院 · 斯坦福大学 · 哈佛大学 · 南加州大学 · 伊利诺伊大学厄巴纳-香槟分校 · Lapis Labs · 加州大学洛杉矶分校 · 加州理工学院 · Sybil · 东北大学（美国） · 卡内基梅隆大学 · RTX BBN Technologies · 纽卡斯尔大学（澳大利亚） · 庆应义塾大学 · 阿里埃勒大学 · 亚利桑那州立大学 · xAI",
+          "institutionLabels": "AI 安全中心 · 加州大学伯克利分校 · 麻省理工学院 · SecureBio · Scale AI · 纽约大学 · 海得拉巴国际信息技术学院 · 斯坦福大学 · 哈佛大学 · 南加州大学 · 伊利诺伊大学厄巴纳-香槟分校 · 加州大学洛杉矶分校 · 加州理工学院 · Sybil · 卡内基梅隆大学 · RTX BBN Technologies · 纽卡斯尔大学（澳大利亚） · 庆应义塾大学 · 阿里埃勒大学 · 亚利桑那州立大学 · xAI",
           "affiliationStatus": "verified",
-          "affiliationsCheckedAt": "2026-10-15",
+          "affiliationsCheckedAt": "2026-11-26",
           "affiliationSources": [
             {
-              "label": "原论文署名（HTML） · 2403.03218v7",
-              "url": "https://arxiv.org/html/2403.03218v7"
+              "label": "原文 v8 署名",
+              "url": "https://arxiv.org/html/2403.03218v8"
             }
           ],
-          "affiliationsVerifiedAt": "2026-10-15",
-          "affiliationNote": "Lapis Labs、Sybil 名称已见署名，机构性质待核实，暂列其他。"
+          "affiliationsVerifiedAt": "2026-11-26",
+          "affiliationNote": "按 v8 作者署名归并 21 个机构；v7 的署名记录另存版本历史，不从当前名单推断机构撤销或人员现职。Sybil 性质未确认，列其他。",
+          "reviewHistory": [
+            {
+              "summary": "发布经过筛选的危险知识选择题代理评测，并研究以表示控制减少相关能力，同时观察一般能力保留。",
+              "limit": "代理知识分数不能直接测量现实危害，遗忘是否可逆也需检验。",
+              "depth": "摘要初读",
+              "verification": "原始论文摘要与首版提交记录已读取；历史会议／期刊信息与原论文记录一并保留。"
+            }
+          ],
+          "affiliationHistory": [
+            {
+              "institutions": [
+                {
+                  "id": "cais",
+                  "name": "AI 安全中心",
+                  "nameEn": "Center for AI Safety",
+                  "type": "research"
+                },
+                {
+                  "id": "berkeley",
+                  "name": "加州大学伯克利分校",
+                  "nameEn": "University of California, Berkeley / UC Berkeley / UCB",
+                  "type": "university"
+                },
+                {
+                  "id": "mit",
+                  "name": "麻省理工学院",
+                  "nameEn": "Massachusetts Institute of Technology",
+                  "type": "university"
+                },
+                {
+                  "id": "securebio",
+                  "name": "SecureBio",
+                  "nameEn": "SecureBio",
+                  "type": "research"
+                },
+                {
+                  "id": "scale",
+                  "name": "Scale AI",
+                  "nameEn": "Scale AI",
+                  "type": "company"
+                },
+                {
+                  "id": "nyu",
+                  "name": "纽约大学",
+                  "nameEn": "New York University",
+                  "type": "university"
+                },
+                {
+                  "id": "iiith",
+                  "name": "海得拉巴国际信息技术学院",
+                  "nameEn": "International Institute of Information Technology Hyderabad",
+                  "type": "university"
+                },
+                {
+                  "id": "stanford",
+                  "name": "斯坦福大学",
+                  "nameEn": "Stanford University",
+                  "type": "university"
+                },
+                {
+                  "id": "harvard",
+                  "name": "哈佛大学",
+                  "nameEn": "Harvard University",
+                  "type": "university"
+                },
+                {
+                  "id": "usc",
+                  "name": "南加州大学",
+                  "nameEn": "University of Southern California",
+                  "type": "university"
+                },
+                {
+                  "id": "uiuc",
+                  "name": "伊利诺伊大学厄巴纳-香槟分校",
+                  "nameEn": "University of Illinois Urbana-Champaign / UIUC",
+                  "type": "university"
+                },
+                {
+                  "id": "lapis",
+                  "name": "Lapis Labs",
+                  "nameEn": "Lapis Labs",
+                  "type": "other"
+                },
+                {
+                  "id": "ucla",
+                  "name": "加州大学洛杉矶分校",
+                  "nameEn": "University of California, Los Angeles / UCLA",
+                  "type": "university"
+                },
+                {
+                  "id": "caltech",
+                  "name": "加州理工学院",
+                  "nameEn": "California Institute of Technology",
+                  "type": "university"
+                },
+                {
+                  "id": "sybil",
+                  "name": "Sybil",
+                  "nameEn": "Sybil",
+                  "type": "other"
+                },
+                {
+                  "id": "northeastern",
+                  "name": "东北大学（美国）",
+                  "nameEn": "Northeastern University",
+                  "type": "university"
+                },
+                {
+                  "id": "cmu",
+                  "name": "卡内基梅隆大学",
+                  "nameEn": "Carnegie Mellon University",
+                  "type": "university"
+                },
+                {
+                  "id": "rtx",
+                  "name": "RTX BBN Technologies",
+                  "nameEn": "RTX BBN Technologies",
+                  "type": "company"
+                },
+                {
+                  "id": "newcastle",
+                  "name": "纽卡斯尔大学（澳大利亚）",
+                  "nameEn": "University of Newcastle",
+                  "type": "university"
+                },
+                {
+                  "id": "keio",
+                  "name": "庆应义塾大学",
+                  "nameEn": "Keio University",
+                  "type": "university"
+                },
+                {
+                  "id": "ariel",
+                  "name": "阿里埃勒大学",
+                  "nameEn": "Ariel University",
+                  "type": "university"
+                },
+                {
+                  "id": "asu",
+                  "name": "亚利桑那州立大学",
+                  "nameEn": "Arizona State University",
+                  "type": "university"
+                },
+                {
+                  "id": "xai",
+                  "name": "xAI",
+                  "nameEn": "xAI",
+                  "type": "company"
+                }
+              ],
+              "institutionLabels": "AI 安全中心 · 加州大学伯克利分校 · 麻省理工学院 · SecureBio · Scale AI · 纽约大学 · 海得拉巴国际信息技术学院 · 斯坦福大学 · 哈佛大学 · 南加州大学 · 伊利诺伊大学厄巴纳-香槟分校 · Lapis Labs · 加州大学洛杉矶分校 · 加州理工学院 · Sybil · 东北大学（美国） · 卡内基梅隆大学 · RTX BBN Technologies · 纽卡斯尔大学（澳大利亚） · 庆应义塾大学 · 阿里埃勒大学 · 亚利桑那州立大学 · xAI",
+              "affiliationSources": [
+                {
+                  "label": "原论文署名（HTML） · 2403.03218v7",
+                  "url": "https://arxiv.org/html/2403.03218v7"
+                }
+              ],
+              "affiliationsCheckedAt": "2026-10-15",
+              "affiliationsVerifiedAt": "2026-10-15",
+              "affiliationNote": "Lapis Labs、Sybil 名称已见署名，机构性质待核实，暂列其他。"
+            }
+          ],
+          "verifiedAt": "2026-11-26",
+          "reviewedVersion": "v8",
+          "revisionDate": "2026-11-25",
+          "technicalPoints": [
+            "v8 统计为 4,157 道选择题；与此前版本分开记录，避免把修订后规模误写为 2024 年初版规模。",
+            "Cut 将遗忘与效用保持作为两个目标，在表示空间降低特定知识的可提取性，同时约束一般能力的漂移；该结论限于论文所用数据与模型。",
+            "实验覆盖 Zephyr-7B 与 Yi-34B，并观察 MMLU、MT-Bench 等一般能力指标；减少代理评测得分不等于已经排除实际滥用风险。"
+          ]
         },
         {
           "id": "octotools",
@@ -17044,7 +17207,10 @@
           "relatedPaperIds": [
             "instruct",
             "dpo"
-          ]
+          ],
+          "comparedVersion": "v2",
+          "versionComparedAt": "2026-11-26",
+          "comparisonNote": "对照 v1／v2 的 56 个正文方法、表格、标题与段落，未见主要内容差异；保留 v1 核读深度和 11 月 25 日日期。"
         },
         {
           "id": "duet",
@@ -17141,11 +17307,473 @@
           "relatedPaperIds": [
             "tokenizer-metrics-audit"
           ]
+        },
+        {
+          "id": "formal-quantum",
+          "title": "Discovering formally verified quantum programs with AI",
+          "zh": "让 AI 搜索量子程序，并用 Lean 核对正确性与资源界",
+          "titleZh": "让 AI 搜索量子程序，并用 Lean 核对正确性与资源界",
+          "short": "形式化量子程序",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 227,
+          "tags": [
+            "agents",
+            "reason",
+            "domain",
+            "eval"
+          ],
+          "url": "https://arxiv.org/abs/2611.09822",
+          "summary": "用 Gemini 4 Carbon 驱动多个 Agent，在人类固定的任务规格下搜索量子程序和证明。Lean 核查功能正确性及资源界，独立比较器防止悄悄改变待证命题。v3 报告多个算法与科学模拟的资源节约，但这些是形式化成本模型下的收益，尚非量子硬件实测加速。",
+          "why": "把长程 Agent、形式化验证和科学计算连成可审计的发现流程，也展示了“正确证明”与“正确物理问题”之间的边界。",
+          "limit": "人类仍负责物理建模与规格；研究过程曾发现并修订规格问题。形式化证明只覆盖明确编码的假设和成本指标，所需规模仍超出预计的早期容错量子设备；未逐条验算全部证明或复现实验。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "PDF v3 重点核读（方法、主要结果、讨论与验证附录）；未逐条验算全部证明／未复现",
+          "verification": "2026-11-26 核读 45 页 PDF v3 的方法、主要结果、讨论及验证附录；不将 v1 的不同数值混入，未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v3（PDF）",
+              "url": "https://arxiv.org/pdf/2611.09822v3"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2210.03629"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2310.06770"
+            }
+          ],
+          "categories": "Agent 与工具 · 推理与验证 · 领域任务与科学 · 评测与可靠性",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-06",
+          "submissionDate": "2026-11-06",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.09822",
+          "verifiedAt": "2026-11-26",
+          "reviewedVersion": "v3",
+          "technicalPoints": [
+            "以经典—量子 Hoare 逻辑表达程序语义与成本界；LeanComparator 在独立沙箱中比较冻结的命题及传递依赖，拒绝未证明占位符或不允许的公理。",
+            "Agent 团队通过共享记录与定期讨论探索候选；想法、通过编译的证明以及完成独立核验的结果分开处理。v3 明确大规模实验使用 Gemini 4 Carbon。",
+            "v3 的并行 find-all 预期查询轮数改善最高 2.57 倍，定点 arcsin 的逻辑空间—时间成本 Q×T 改善超过 290 倍；这些不是壁钟运行时间或真实机器速度。"
+          ],
+          "institutions": [
+            {
+              "id": "deepmind",
+              "name": "DeepMind",
+              "nameEn": "DeepMind / Google DeepMind",
+              "type": "company"
+            },
+            {
+              "id": "google",
+              "name": "Google",
+              "nameEn": "Google / Google Brain / Google Research",
+              "type": "company"
+            }
+          ],
+          "institutionLabels": "DeepMind · Google",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "PDF v3 首页署名",
+              "url": "https://arxiv.org/pdf/2611.09822v3"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-26",
+          "affiliationsVerifiedAt": "2026-11-26",
+          "affiliationNote": "按 Google DeepMind 与 Google Quantum AI 署名归并到既有机构；顾问脚注不用于推断其其他现职。",
+          "relatedPaperIds": [
+            "react",
+            "swebench"
+          ],
+          "versionDate": "2026-11-16"
+        },
+        {
+          "id": "recap",
+          "title": "RECAP: Training Long-horizon LLM Agents with Context Compaction",
+          "zh": "把上下文压缩训练成可保留后续行为的策略",
+          "titleZh": "把上下文压缩训练成可保留后续行为的策略",
+          "short": "RECAP",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 228,
+          "tags": [
+            "agents",
+            "context",
+            "memory",
+            "post"
+          ],
+          "url": "https://arxiv.org/abs/2611.31258",
+          "summary": "RECAP 用同一策略的完整上下文表现作为自教师，衡量压缩前后下一步行为分布的偏差。把该偏差同时用于压缩摘要奖励和压缩后自蒸馏，配合任务奖励训练，在网页检索与软件修复任务中优于仅用任务奖励的上下文压缩训练。",
+          "why": "把长上下文压缩与后训练、长期记忆联系起来：好的摘要不仅要像原文，还应支持后续决策。",
+          "limit": "主要使用一个 4B 模型和两个任务域，最多三次压缩；完整上下文教师本身也可能出错。虽然不增加额外环境 rollout，仍需要教师前向计算，不能称为免费训练或已验证无限长程泛化。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、实验设置、结果及局限）；未复现",
+          "verification": "2026-11-26 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.31258v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2611.27973"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2210.03629"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2310.06770"
+            }
+          ],
+          "categories": "Agent 与工具 · 长上下文 · 长期记忆 · 后训练与对齐",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-10-19",
+          "submissionDate": "2026-10-19",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.31258",
+          "verifiedAt": "2026-11-26",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "用完整上下文与压缩上下文的 token 级 KL 衡量行为偏差：负 KL 为摘要提供奖励，压缩后的策略再接受 on-policy 自蒸馏。",
+            "使用 Qwen3.5-4B、关闭 thinking、32K 工作窗口及最多三次压缩；每域训练 300 题，评测 150 个保留的 BrowseComp-Plus 问题和 500 个 SWE-bench Verified 实例。",
+            "相对仅任务奖励训练，报告成功率从 58.2% 到 62.8%、46.8% 到 51.1%；摘要奖励单独使用并非总有益，结果支持两个信号配合而不是任意压缩都有效。"
+          ],
+          "institutions": [
+            {
+              "id": "epfl",
+              "name": "洛桑联邦理工学院",
+              "nameEn": "École Polytechnique Fédérale de Lausanne / EPFL",
+              "type": "university"
+            },
+            {
+              "id": "eth",
+              "name": "苏黎世联邦理工学院",
+              "nameEn": "ETH Zurich",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "洛桑联邦理工学院 · 苏黎世联邦理工学院",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.31258v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-26",
+          "affiliationsVerifiedAt": "2026-11-26",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。",
+          "relatedPaperIds": [
+            "memonce",
+            "react",
+            "swebench"
+          ]
+        },
+        {
+          "id": "include2",
+          "title": "INCLUDE-2.0: Disentangling Knowledge Gaps in Multilingual LLM Evaluation",
+          "zh": "区分多语言测评中的语言障碍与地区知识缺口",
+          "titleZh": "区分多语言测评中的语言障碍与地区知识缺口",
+          "short": "INCLUDE-2.0",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 229,
+          "tags": [
+            "language",
+            "eval",
+            "data"
+          ],
+          "url": "https://arxiv.org/abs/2611.31255",
+          "summary": "INCLUDE-2.0 汇集 91 种语言、86 个国家、超过 22 万道选择题，以四类地区依赖程度标注问题，并把原语言题与英语翻译成对评测。结果显示更强的总体能力不必然消除语言差距，深嵌于地区情境的知识仍是主要短板。",
+          "why": "避免把英语基准翻译成多语言后就视为全球覆盖，帮助定位语言理解与地区知识各自的缺口。",
+          "limit": "四选一结果是能力代理；GPT-5.5 参与元数据标注与英语翻译，翻译并未全部经人工核对。地区分类是操作性定义，成对答题不能证明模型内部是否拥有知识，平均分也会掩盖各地区差异。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、实验设置、结果及局限）；未复现",
+          "verification": "2026-11-26 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.31255v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://aclanthology.org/2026.acl-long.338/"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://aclanthology.org/2026.acl-long.1657/"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://aclanthology.org/2026.acl-long.1002/"
+            }
+          ],
+          "categories": "语言学与多语言 · 评测与可靠性 · 预训练与数据",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-10-18",
+          "submissionDate": "2026-10-18",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.31255",
+          "verifiedAt": "2026-11-26",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "覆盖 127 个语言—国家组合、22 种文字和 29 个学科；按地区无关、条件依赖、地区锚定、地区嵌入四级划分，约 78% 为新增题目。",
+            "对原语言与英语译题的对错组合分别统计，以语言切换是否恢复正确答案诊断可能的知识获取障碍；这属于评测解释，不是内部知识的直接观测。",
+            "评测 23 个模型，地区锚定到深度嵌入题的平均成绩明显下降；扩大模型规模虽改善总体分数，却未稳定缩小英语与原语言表现的差距。"
+          ],
+          "institutions": [
+            {
+              "id": "epfl",
+              "name": "洛桑联邦理工学院",
+              "nameEn": "École Polytechnique Fédérale de Lausanne / EPFL",
+              "type": "university"
+            },
+            {
+              "id": "oxford",
+              "name": "牛津大学",
+              "nameEn": "University of Oxford",
+              "type": "university"
+            },
+            {
+              "id": "tum",
+              "name": "慕尼黑工业大学",
+              "nameEn": "Technical University of Munich / Technische Universität München",
+              "type": "university"
+            },
+            {
+              "id": "imperial",
+              "name": "帝国理工学院",
+              "nameEn": "Imperial College London",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "洛桑联邦理工学院 · 牛津大学 · 慕尼黑工业大学 · 帝国理工学院",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 PDF 首页署名",
+              "url": "https://arxiv.org/pdf/2611.31255v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-26",
+          "affiliationsVerifiedAt": "2026-11-26",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。",
+          "relatedPaperIds": [
+            "langbias",
+            "poly",
+            "syntheticmulti"
+          ]
+        },
+        {
+          "id": "csrr",
+          "title": "On the Importance of Hidden-State Refinement in Masked Diffusion Language Models",
+          "zh": "让扩散语言模型在去噪轮次之间复用隐藏状态",
+          "titleZh": "让扩散语言模型在去噪轮次之间复用隐藏状态",
+          "short": "CSRR",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 230,
+          "tags": [
+            "arch",
+            "reason",
+            "eff",
+            "post",
+            "mechanism"
+          ],
+          "url": "https://arxiv.org/abs/2611.32416",
+          "summary": "研究发现部分掩码扩散语言模型相邻去噪步骤的隐藏状态变化有限，提出 CSRR：把上一步的最终隐藏状态作为跨步记忆，通过第一层的交叉注意力残差引入当前步。在数学与代码实验中，它比匹配数据的普通微调更有效利用迭代计算。",
+          "why": "把扩散生成、循环计算与隐藏状态精炼联系起来，提供不同于改变 token 采样器的迭代改进路径。",
+          "limit": "证据主要来自 LLaDA 8B 与 Dream 7B 家族及数学／代码任务；需训练新增模块，并增加状态存储和注意力计算。主结果为各配置选择残差系数，不能当成固定超参下的普遍收益；状态相似性本身也不证明因果机制。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、实验设置、结果及局限）；未复现",
+          "verification": "2026-11-26 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.32416v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2502.09992"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2610.42148"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2611.31094"
+            }
+          ],
+          "categories": "架构与生成范式 · 推理与验证 · 效率与优化 · 后训练与对齐 · 能力机理与理论",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-24",
+          "submissionDate": "2026-11-24",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.32416",
+          "verifiedAt": "2026-11-26",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "保留上一去噪步的最终隐藏状态并停止其梯度，在第一 Transformer 块自注意力之后、FFN 之前加入按系数缩放的交叉注意力残差，原 token 级去噪采样器不变。",
+            "用连续两次前向计算与原去噪交叉熵训练，可仅训练新增模块或联合 LoRA；不是无需训练的推理插件。",
+            "在 S1K 微调及匹配训练基线下测试数学与代码基准，并扩展到 Dream；附录固定系数 0.5 的结果作为较受约束的补充，不能与逐配置调参的主结果混用。"
+          ],
+          "institutions": [
+            {
+              "id": "zju",
+              "name": "浙江大学",
+              "nameEn": "Zhejiang University",
+              "type": "university"
+            },
+            {
+              "id": "zjut",
+              "name": "浙江工业大学",
+              "nameEn": "Zhejiang University of Technology",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "浙江大学 · 浙江工业大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.32416v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-26",
+          "affiliationsVerifiedAt": "2026-11-26",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。",
+          "relatedPaperIds": [
+            "llada",
+            "flide",
+            "loopres"
+          ]
+        },
+        {
+          "id": "decision-evaluation",
+          "title": "Decision Models: An Introduction and Capability Evaluation",
+          "zh": "评测直接输出选择、概率和分数的决策模型",
+          "titleZh": "评测直接输出选择、概率和分数的决策模型",
+          "short": "决策模型评测",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 231,
+          "tags": [
+            "eval",
+            "eff",
+            "agents",
+            "multi"
+          ],
+          "url": "https://arxiv.org/abs/2611.32368",
+          "summary": "以类型化选择、二元概率和有序分数定义决策模型，构造 1,000 个案例、9 个测试套件，比较 11 种系统配置的正确性、结果有效性与延迟。结果说明小型专用决策接口可以适用于高频路由，但精度与延迟的比较依赖部署条件和任务分布。",
+          "why": "为 Agent 路由、审核与结果校验提供不同于自由文本生成的评估口径，同时暴露概率接口与实际可靠性之间的差距。",
+          "limit": "每配置仅一次运行，任务权重固定；本地与远端服务的硬件、网络、执行器不同，不能视为纯模型速度排名。370 例来自也在预览训练清单中的四个数据集，最终逐题重合尚未核实；55 组比较未作多重检验校正。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、实验设置、结果及局限）；未复现",
+          "verification": "2026-11-26 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.32368v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2210.03629"
+            }
+          ],
+          "categories": "评测与可靠性 · 效率与优化 · Agent 与工具 · 多模态与语音",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-24",
+          "submissionDate": "2026-11-24",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.32368",
+          "verifiedAt": "2026-11-26",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "案例含 700 个英语、300 个中文问题，其中 100 个为图像输入；把相关案例归并为 940 个源单元，进行 4,000 次成组 bootstrap，避免简单当作完全独立样本。",
+            "choice／noul／score 接口分别提供类别、二元判断及有序评分；正确率、结构有效率和端到端耗时分开报告。",
+            "报告 StartLux Instant 正确率 95.3%，某 GPT 中等推理配置为 97.1%；自适应思考可改善准确率但增加尾延迟。这些是所设测试结果，论文没有评测 QwenCloud 新发布的 decision-model 服务。"
+          ],
+          "institutions": [
+            {
+              "id": "beihang",
+              "name": "北京航空航天大学",
+              "nameEn": "Beihang University",
+              "type": "university"
+            }
+          ],
+          "institutionLabels": "北京航空航天大学",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.32368v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-26",
+          "affiliationsVerifiedAt": "2026-11-26",
+          "affiliationNote": "按所读版本署名归并机构；不从邮箱、现职或致谢资助推断单位，不推断牵头单位。",
+          "relatedPaperIds": [
+            "react"
+          ]
         }
       ],
       "source": {
-        "label": "226 篇精选论文（94 篇 2026 会议、66 篇预印本／报告、66 篇历史）",
-        "period": "2026-11-25 核读新增 4 篇；近期检索窗口为 11 月 17–25 日，并复核整月目录和历史待核条目。旧阅读日期逐条保留。",
+        "label": "231 篇精选论文（94 篇 2026 会议、71 篇预印本／报告、66 篇历史）",
+        "period": "2026-11-26 新增 5 篇重点核读并更新 WMDP v8；近期窗口为 11 月 18–26 日，另补较早提交的历史候选。旧阅读日期逐条保留。",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -18627,6 +19255,26 @@
           {
             "label": "DUET: Dual-MDL Unsupervised Entropy-Trie Segmentation for Low-Resource Languages",
             "url": "https://arxiv.org/abs/2611.30273"
+          },
+          {
+            "label": "Discovering formally verified quantum programs with AI",
+            "url": "https://arxiv.org/abs/2611.09822"
+          },
+          {
+            "label": "RECAP: Training Long-horizon LLM Agents with Context Compaction",
+            "url": "https://arxiv.org/abs/2611.31258"
+          },
+          {
+            "label": "INCLUDE-2.0: Disentangling Knowledge Gaps in Multilingual LLM Evaluation",
+            "url": "https://arxiv.org/abs/2611.31255"
+          },
+          {
+            "label": "On the Importance of Hidden-State Refinement in Masked Diffusion Language Models",
+            "url": "https://arxiv.org/abs/2611.32416"
+          },
+          {
+            "label": "Decision Models: An Introduction and Capability Evaluation",
+            "url": "https://arxiv.org/abs/2611.32368"
           }
         ],
         "filters": [
@@ -18700,9 +19348,13 @@
           {
             "title": "每日更新（2026-11-25）",
             "detail": "补核 StateBench 历史候选及 LoopRes、共情 RL、DUET 的方法、主要实验、局限和署名。四篇均为录用未核实的预印本，不将元数据候选计入已整理。"
+          },
+          {
+            "title": "每日更新（2026-11-26）",
+            "detail": "核读形式化量子程序 v3、RECAP、INCLUDE-2.0、CSRR、决策模型评测；五篇录用均未核实。WMDP v8 更新正文与署名，旧版本记录保留；共情 RL v2 仅版本比对，不刷新原核读日期。"
           }
         ],
-        "executedAt": "2026-11-25T01:40:55.836168+00:00"
+        "executedAt": "2026-11-26T09:02:50.509071+00:00"
       },
       "methods": [
         {
@@ -18960,8 +19612,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 33,
           "coverage": "4698 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-25",
-          "lastAttemptAt": "2026-11-25",
+          "checkedAt": "2026-11-26",
+          "lastAttemptAt": "2026-11-26",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.acl.xml"
         },
         {
@@ -18975,8 +19627,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 8,
           "coverage": "914 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-25",
-          "lastAttemptAt": "2026-11-25",
+          "checkedAt": "2026-11-26",
+          "lastAttemptAt": "2026-11-26",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.eacl.xml"
         },
         {
@@ -18990,8 +19642,8 @@
           "status": "已检索官方目录",
           "curatedCount": 11,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-25",
-          "lastAttemptAt": "2026-11-25"
+          "checkedAt": "2026-11-26",
+          "lastAttemptAt": "2026-11-26"
         },
         {
           "id": "icml26",
@@ -19004,8 +19656,8 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-25",
-          "lastAttemptAt": "2026-11-25"
+          "checkedAt": "2026-11-26",
+          "lastAttemptAt": "2026-11-26"
         },
         {
           "id": "neurips26",
@@ -19018,8 +19670,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "9,146 个 Poster 目录条目；已整理 10 篇论文；索引中 1 条已核为活动海报，DTCH 活动未加入",
-          "checkedAt": "2026-11-25",
-          "lastAttemptAt": "2026-11-25",
+          "checkedAt": "2026-11-26",
+          "lastAttemptAt": "2026-11-26",
           "notes": " 11 月 23 日按链接同步题名修订，缺项保留，不推定撤稿。"
         },
         {
@@ -19033,8 +19685,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "856 条官方录用记录全部匹配 OpenReview；10 篇重点核读",
-          "checkedAt": "2026-11-25",
-          "lastAttemptAt": "2026-11-25"
+          "checkedAt": "2026-11-26",
+          "lastAttemptAt": "2026-11-26"
         },
         {
           "id": "emnlp26",
@@ -19047,12 +19699,12 @@
           "scope": "论文集主会／Findings／Demo／Industry 共 5,533 篇（排除 Industry Overview）；另有日程历史版本与改题。8 条补用报告人、分轨与标题核对；16 条历史题目还未唯一匹配，其中 8 条缺于当前日程，不推定撤稿。",
           "status": "日程、论文集与官方奖项交叉核对",
           "coverage": "当前日程 5,540；保留历史索引 5,548 条，5,532 条已对应正式论文集，14 篇重点核读",
-          "checkedAt": "2026-11-25",
+          "checkedAt": "2026-11-26",
           "detailSourceUrl": "https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490",
           "anthologyCount": 5533,
           "anthologyMatchedCount": 5532,
           "anthologySourceUrl": "https://aclanthology.org/events/emnlp-2026/",
-          "lastAttemptAt": "2026-11-25"
+          "lastAttemptAt": "2026-11-26"
         },
         {
           "id": "uist26",
@@ -19070,7 +19722,7 @@
       ],
       "source": {
         "label": "2026 官方目录覆盖核对",
-        "period": "2026-11-25 与前日比较：七个系统会议目录未见题名变化；NAACL 官方入口一并复查，UIST 仍仅为历史单篇补充。",
+        "period": "2026-11-26 七个系统会议目录未见题名增删；EMNLP 一条目录新增编辑部关注声明，NAACL 官方入口同步检查，UIST 仅保留历史补充。",
         "grain": "每行一个会议目录及其检索边界",
         "links": [
           {
@@ -19126,7 +19778,7 @@
           "2026-11-02 EMNLP 奖项以官方栏目为准，COLM Spotlight 不计作奖项。",
           "2026-11-03 原目录题目或链接无变化不等于重新核读其中全部论文。"
         ],
-        "executedAt": "2026-11-25T01:40:55.836168+00:00"
+        "executedAt": "2026-11-26T09:02:50.509071+00:00"
       },
       "methods": [
         {
@@ -328533,7 +329185,14 @@
           "anthologyCheckedAt": "2026-10-29",
           "award": "Outstanding Papers",
           "awardUrl": "https://2026.emnlp.org/program/awards/",
-          "awardCheckedAt": "2026-11-02"
+          "awardCheckedAt": "2026-11-02",
+          "editorialNotice": {
+            "label": "编辑部关注声明",
+            "date": "2026-11-24",
+            "checkedAt": "2026-11-26",
+            "url": "https://aclanthology.org/2026.emnlp-main.1823/",
+            "summary": "ACL Publication Ethics Committee 正在核查关于代码复现及结果数值一致性的质疑，并等待作者回应。官方提示谨慎使用其方法、数据和结果；这不是撤稿或最终调查结论，原获奖记录予以保留。"
+          }
         },
         {
           "id": "idx-1938873913ef",
@@ -416464,7 +417123,7 @@
       ],
       "source": {
         "label": "20,606 条官方会议目录候选；题目初筛与精选摘要分开计数",
-        "period": "2026-11-23 补查 11 月 4–23 日缺口，并向前重叠至 10 月 27 日；旧证据日期逐条保留。",
+        "period": "2026-11-26 与前日官方目录比较未见题名增删；EMNLP main.1823 新增 11 月 24 日编辑部关注声明。各条历史匹配与获奖核验日期保留。",
         "grain": "每行一条会议目录记录；同一论文改题保留原 ID，跨会议同名条目保留",
         "links": [
           {
@@ -416534,9 +417193,10 @@
           "2026-10-28 Voice-Native Classroom 已核为 Bridging the Future 活动海报，保留旧 ID 并显式区分；DTCH 同类活动继续不入论文索引。EMNLP 8 个历史缺项保留待核，不推定撤稿。",
           "2026-10-29 直接链接补齐不表示论文已读；新增两篇摘要在既有目录行关联。未把 Anthology Industry Overview 或 NeurIPS 培训活动加入研究论文数。",
           "2026-11-02 目录题目更新不表示逐篇核读；历史 ID 与展示日期保留。",
-          "2026-11-03 未唯一匹配的历史标题继续保留；不按未读目录条目推断等级或研究结论。"
+          "2026-11-03 未唯一匹配的历史标题继续保留；不按未读目录条目推断等级或研究结论。",
+          "编辑部关注声明表示调查仍在进行，不等同于撤稿或最终结论；对应条目保留原奖项并提供官方声明链接。"
         ],
-        "executedAt": "2026-11-23T07:18:57.441140+00:00"
+        "executedAt": "2026-11-26T09:02:50.509071+00:00"
       },
       "methods": [
         {
@@ -417959,13 +418619,13 @@
           "price": {
             "input": null,
             "output": null,
-            "currency": "USD",
-            "basis": "现价",
-            "note": "按百万字符计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
-            "asOf": "2026-10-21",
-            "unit": "百万字符",
             "amount": 13,
-            "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            "currency": "USD",
+            "basis": "当前金额已见；计费单位冲突待核",
+            "unit": "待核（tokens／字符）",
+            "asOf": "2026-11-26",
+            "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+            "note": "11 月 26 日模型卡通用价格栏列 $13 / M Tokens，历史官方发布依据为每百万字符；当前总价目页未成功读取，尚不能确认是模板标签还是计费变化。金额 13 保留，单位不作换算；原按字符报价另存历史。"
           },
           "verifiedAt": "2026-10-27",
           "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
@@ -417981,11 +418641,15 @@
             {
               "label": "TTS 语言数量更正后的模型卡（2026-10-27）",
               "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            },
+            {
+              "label": "11 月 26 日模型卡价格栏（单位冲突）",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
             }
           ],
           "parameterLabel": "未披露",
           "activeLabel": "未披露",
-          "priceLabel": "USD 13 / 百万字符",
+          "priceLabel": "USD 13 / 单位待核",
           "generationChange": "加强语境化语音、发音提示和专业声音适配；Pro Voice 官方要求约 30 分钟音频，与短参考的零样本方案区分。",
           "technicalTopics": [
             "multi",
@@ -418005,6 +418669,10 @@
             {
               "name": "多语言声音生成",
               "detail": "截至 2026-10-27，模型卡已改为 35+ 语言、50+ 方言，与 10 月 20 日发布说明一致；此前的“9 种语言”冲突已澄清。该数量仍是厂商规格，未逐语种独立测试。"
+            },
+            {
+              "name": "当前计费单位待核",
+              "detail": "恢复读取的模型卡价格栏与历史发布的字符计费单位不一致；当前标为待核，不能据此断言已经改为 token 计费或直接比较成本。"
             }
           ],
           "technicalDisclosure": "能力／服务披露",
@@ -418015,7 +418683,21 @@
           ],
           "technicalSource": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
           "technicalNote": "依据官方发布与模型卡；模型结构、权重和许可未核实的部分明确保留未知。关联论文为概念阅读，不代表厂商实际采用。",
-          "specificationCheckedAt": "2026-10-27"
+          "specificationCheckedAt": "2026-10-27",
+          "priceHistory": [
+            {
+              "input": null,
+              "output": null,
+              "currency": "USD",
+              "basis": "现价",
+              "note": "按百万字符计费；不是每百万文本 tokens 输入／输出价，且不含另收费的完整 Voice Agent 服务。",
+              "asOf": "2026-10-21",
+              "unit": "百万字符",
+              "amount": 13,
+              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            }
+          ],
+          "technicalUpdatedAt": "2026-11-26"
         },
         {
           "id": "minimax31flash",
@@ -426545,12 +427227,17 @@
             {
               "name": "推理等级",
               "detail": "Carbon 支持 low／medium／high。"
+            },
+            {
+              "name": "量子程序形式化发现案例",
+              "detail": "《Discovering formally verified quantum programs with AI》v3 明确大规模实验使用 Gemini 4 Carbon，配合 Agent 协作与独立 Lean 检查器搜索量子程序。收益为形式化资源成本改善，不是物理硬件实测；该案例不表示新增模型架构。"
             }
           ],
           "technicalDisclosure": "服务能力与部分方法披露",
           "relatedPaperIds": [
             "retool",
-            "swebench"
+            "swebench",
+            "formal-quantum"
           ],
           "technicalSource": "https://aistudio.google.com/docs/models/gemini-4-carbon",
           "technicalNote": "核读官方技术说明与规格，性能属于厂商声明，未实测或复现；内部训练细节未披露。",
@@ -426566,8 +427253,13 @@
             {
               "label": "价格依据",
               "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            },
+            {
+              "label": "量子程序研究 v3（应用案例）",
+              "url": "https://arxiv.org/pdf/2611.09822v3"
             }
-          ]
+          ],
+          "technicalUpdatedAt": "2026-11-26"
         },
         {
           "id": "gemini4-hydrogen",
@@ -427043,6 +427735,10 @@
             {
               "name": "缓存及思考摘要",
               "detail": "支持显式缓存和 CoT Summary，工具循环依赖保留推理上下文；架构参数与训练配方尚未公开。"
+            },
+            {
+              "name": "11 月 25 日：预览别名转正式路由",
+              "detail": "北京时间 10:00 起 qwen4-max-preview 停止独立预览，现有调用自动路由到 qwen4-max，并按正式版计费与抵扣额度；预览折扣结束。这是服务路由变化，不是新基础模型或训练版本。"
             }
           ],
           "technicalDisclosure": "服务能力与部分方法披露",
@@ -427064,9 +427760,21 @@
             {
               "label": "价格依据",
               "url": "https://docs.qwencloud.com/developer-guides/getting-started/model-prices"
+            },
+            {
+              "label": "预览路由及计费切换记录",
+              "url": "https://docs.qwencloud.com/changelog/models"
             }
           ],
-          "generalAvailabilityDate": "2026-11-16"
+          "generalAvailabilityDate": "2026-11-16",
+          "technicalUpdatedAt": "2026-11-26",
+          "apiRoutingChange": {
+            "effectiveAt": "2026-11-25T10:00:00+08:00",
+            "oldId": "qwen4-max-preview",
+            "targetId": "qwen4-max",
+            "source": "https://docs.qwencloud.com/changelog/models",
+            "checkedAt": "2026-11-26"
+          }
         },
         {
           "id": "minimax-h3-image",
@@ -427153,11 +427861,102 @@
               "url": "https://platform.minimax.io/docs/pricing/overview"
             }
           ]
+        },
+        {
+          "id": "qwen-decision",
+          "name": "QwenCloud decision-model",
+          "vendor": "QwenCloud",
+          "releaseDate": "2026-11-25",
+          "year": "2026",
+          "dateBasis": "官方模型更新记录的服务上线日；不推断底层权重首发日",
+          "datePrecision": "日",
+          "parameters": null,
+          "activeParameters": null,
+          "parameterLabel": "未披露",
+          "activeLabel": "未披露",
+          "architecture": "内部架构／基础权重未披露",
+          "context": "268,288",
+          "contextNote": "官方服务窗口与最大输入均为 268,288 tokens；输出为决策结果，未列最大输出 token 数。",
+          "inputModalities": "文本、图像",
+          "outputModalities": "类型化决策结果（类别、概率、分数）",
+          "multimodal": "多模态理解",
+          "openness": "闭源 API",
+          "license": "厂商服务条款；未找到公开权重许可",
+          "openNote": "已核对服务文档；未找到独立训练报告或公开权重，不推断基于 Qwen4。",
+          "innovation": "面向分类、路由、判断与评分的结构化决策服务；一次前向可并行处理多个问题。",
+          "reportUrl": "https://docs.qwencloud.com/api-reference/decision-model-api",
+          "reportType": "官方 API／服务规格；未找到独立训练报告",
+          "releaseUrl": "https://docs.qwencloud.com/changelog/models",
+          "specUrl": "https://docs.qwencloud.com/models/decision-model-stable",
+          "price": {
+            "input": 0.042,
+            "output": null,
+            "currency": "USD",
+            "basis": "官方原价；不含限时优惠",
+            "unit": "每百万输入 tokens",
+            "asOf": "2026-11-26",
+            "url": "https://docs.qwencloud.com/developer-guides/getting-started/model-prices",
+            "note": "新加坡与北京均列输入 $0.042／百万 tokens；未单列输出 token 单价，未知不能填为零。免费额度与预览版政策不作为正式单价。"
+          },
+          "priceLabel": "USD 0.042 / 未单列（输入／输出）",
+          "verifiedAt": "2026-11-26",
+          "specificationCheckedAt": "2026-11-26",
+          "notes": "decision-model-preview 仅见 API 支持名，独立上线事件待核，不另计基础模型。",
+          "generationChange": "新增面向高频业务决策的正式服务接口；已披露的是输出协议与服务规格，尚不能归纳底层训练或架构的代际创新。",
+          "technicalTopics": [
+            "agents",
+            "eval",
+            "eff",
+            "multi"
+          ],
+          "technicalPoints": [
+            {
+              "name": "类型化决策接口",
+              "detail": "choice／noul／score 返回选择、二元概率或有序评分，提供分布及相应置信度；评分以有序取值的加权期望表达。"
+            },
+            {
+              "name": "一次前向并行处理",
+              "detail": "官方 API 描述为一次前向同时处理多个决策问题，使用 /compatible-mode/v1/systemone；不是面向自由文本的逐 token 生成接口。"
+            },
+            {
+              "name": "模态与服务边界",
+              "detail": "支持文本和图像输入、268,288 token 输入窗口。未支持工具调用、联网、流式、缓存、Batch 或微调；类型化决策结果不等于通用 Structured Outputs 功能。"
+            },
+            {
+              "name": "披露与评测限制",
+              "detail": "未披露参数、训练配方和独立技术报告，不能归入某个已知基础模型。关联《Decision Models》用于理解评测口径，该论文没有测试此 QwenCloud 服务。"
+            }
+          ],
+          "technicalDisclosure": "API 行为与服务规格披露；训练细节未披露",
+          "relatedPaperIds": [
+            "decision-evaluation",
+            "react"
+          ],
+          "technicalSource": "https://docs.qwencloud.com/api-reference/decision-model-api",
+          "technicalNote": "核读官方发布、API 参数和规格及当前价格；未调用服务实测。并行一次前向为厂商接口说明，未有独立复现。",
+          "sources": [
+            {
+              "label": "官方上线记录",
+              "url": "https://docs.qwencloud.com/changelog/models"
+            },
+            {
+              "label": "服务规格与原价",
+              "url": "https://docs.qwencloud.com/models/decision-model-stable"
+            },
+            {
+              "label": "决策 API 协议",
+              "url": "https://docs.qwencloud.com/api-reference/decision-model-api"
+            },
+            {
+              "label": "官方价目",
+              "url": "https://docs.qwencloud.com/developer-guides/getting-started/model-prices"
+            }
+          ]
         }
       ],
       "source": {
         "label": "113 个模型／服务版本",
-        "period": "2026-11-25 核实 chat-latest API 更新和四项医疗服务配置；113 个模型／服务版本，旧发布及价格日期逐字段保留。",
+        "period": "2026-11-26 新增 QwenCloud 决策服务、记录 Qwen4 路由切换和 Gemini 4 Carbon 应用案例；Voxtral TTS 3 当前计费单位冲突待核，历史报价保留。共 114 个模型／服务版本。",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -428123,6 +428922,14 @@
           {
             "label": "11 月 24 日医疗配置与聊天 API 更新",
             "url": "https://developers.openai.com/api/docs/changelog"
+          },
+          {
+            "label": "QwenCloud 决策模型服务",
+            "url": "https://docs.qwencloud.com/models/decision-model-stable"
+          },
+          {
+            "label": "决策模型 API",
+            "url": "https://docs.qwencloud.com/api-reference/decision-model-api"
           }
         ],
         "caveats": [
@@ -428149,9 +428956,10 @@
           "2026-11-03 Plus 按万字符、Flash 按百万 token；不能直接比较这两个价格数字。Gemini 路由为 12 月起的预告，不覆盖旧价格。",
           "2026-11-23 批次补核 15 个服务／型号。Fable 与 Mythos 同底层模型；Qwen4 预览和正式开放合在同一条。Genie 按视频输出量计价。",
           "2026-11-24：GLM-5.4 为 750B 级循环基座，2T–3T 是能力比喻；API 和权重待开放。Qwen Live 按秒且后台另收费，65,536 是指令／函数配置限制。ChatGPT GPT-6.2 为 Sol 对话调整版，不重复称为独立基础模型。",
-          "2026-11-25：chat-latest 是会继续更新的 API 别名，400K 及 $5/$30 为当前 API 规格，不是 ChatGPT 订阅条件或固定权重快照。四个 healthcare 配置归入已有模型，不重复计为独立基础模型；专项优惠价与通用模型价分开。"
+          "2026-11-25：chat-latest 是会继续更新的 API 别名，400K 及 $5/$30 为当前 API 规格，不是 ChatGPT 订阅条件或固定权重快照。四个 healthcare 配置归入已有模型，不重复计为独立基础模型；专项优惠价与通用模型价分开。",
+          "2026-11-26：decision-model 是类型化决策服务，基础权重与训练未知；预览别名不另计。部分厂商页面超时、拒绝访问或返回地区不可用提示，旧数据保留原日期；本次没有重新核实全部旧型号。"
         ],
-        "executedAt": "2026-11-25T01:40:55.836168+00:00"
+        "executedAt": "2026-11-26T09:02:50.509071+00:00"
       },
       "methods": [
         {
@@ -428749,34 +429557,35 @@
   },
   "id": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "researchRefresh": {
-    "checkedAt": "2026-11-25",
+    "checkedAt": "2026-11-26",
     "timezone": "Asia/Shanghai",
-    "previousResearchCheck": "2026-11-24",
-    "windowStart": "2026-11-17",
-    "windowEnd": "2026-11-25T01:27:00Z",
-    "papersAdded": 4,
-    "modelsAdded": 0,
+    "previousResearchCheck": "2026-11-25",
+    "windowStart": "2026-11-18",
+    "windowEnd": "2026-11-26T01:28:00Z",
+    "papersAdded": 5,
+    "papersRevised": [
+      "wmdp"
+    ],
+    "modelsAdded": 1,
     "modelsRevised": [
-      "gpt62-chat-1123",
-      "gpt62-astra",
-      "gpt62-sol",
-      "gpt6astra",
-      "gpt61"
+      "qwen4-max",
+      "gemini4-carbon",
+      "voxtral3-tts"
     ],
     "catalogAdded": 0,
-    "coverageNote": "arXiv 日期查询五页取得 2,362 个唯一 ID；整月三分类七页合计 8,412 个唯一 ID，其中 881 个较昨日新见。额外核实的 28 个首版提交均早于本次窗口。159 个既有 arXiv 版本未见新修订；七个系统会议目录未见新题名。",
+    "coverageNote": "arXiv 日期查询六页取得 2,887 个唯一 ID；整月三分类八页共 9,407 个 ID，较前日新见 995 条。额外 53 条均已核实 v1 提交历史且早于窗口。163 个已收录 arXiv ID 中发现并处理 WMDP v8、共情 RL v2 两次修订；会议题名无变化，一条编辑部声明入库。",
     "limitations": [
-      "本次仅新增 4 篇正文重点核读；881 个新见元数据与此前历史队列未全部核读，不计为已整理。",
-      "StateBench 是 11 月 2 日提交的历史补录，另外三篇提交于 11 月 23 日；不把检查日或月目录公告日当作论文发布日期。",
-      "部分官方新闻、旧规格及奖项页不可读；已通过可用新目录恢复三项 Voxtral 规格和 Google 定价，未恢复项保留原版本。",
-      "Kimi／MiniMax M3.1 首次权重公开日、GLM-Legal 别名和 4 篇旧论文署名仍待核。",
-      "浏览器交互未验收，使用 Data 源构建、实际组件服务端渲染、筛选与线上完整包核验。"
+      "只新增 5 篇重点核读；月目录新增元数据及以前未读队列不是已整理论文。",
+      "RECAP 与 INCLUDE-2.0 分别按原始 v1 提交日 10 月 19 日和 10 月 18 日排序，不按 2611 编号推断发布日期。",
+      "部分厂商来源超时、403 或返回地区不可用页面，未恢复项保留旧版本；旧价格没有统一改成今天。",
+      "Kimi／MiniMax M3.1 首次权重公开日、若干型号别名和 4 篇旧论文署名仍待核。",
+      "浏览器交互未验收；使用 Data 源构建、实际组件服务端渲染、筛选与线上完整包核验。"
     ]
   },
   "affiliationEnrichment": {
-    "checkedAt": "2026-11-25",
+    "checkedAt": "2026-11-26",
     "scope": "curated-papers",
-    "verifiedPapers": 222,
+    "verifiedPapers": 227,
     "pendingPapers": 4,
     "institutionCount": 260,
     "method": "按所引版本署名及研究开展时归属整理；大学院系和企业实验室归并到所属机构，机构次序不表示牵头或贡献排名。独立作者与性质未确认的机构列其他；同一论文允许多机构，不从作者现职或仅邮箱推断。会议题目索引未逐篇核对机构。"
