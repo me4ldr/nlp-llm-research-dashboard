@@ -1,7 +1,7 @@
 {
   "surface": "dashboard",
   "title": "2026 NLP / 大模型论文地图",
-  "generatedAt": "2026-11-26T09:02:50.509071+00:00",
+  "generatedAt": "2026-11-27T01:58:38.770398+00:00",
   "buildStatus": "complete",
   "status": "reviewed",
   "filters": [
@@ -17769,11 +17769,207 @@
           "relatedPaperIds": [
             "react"
           ]
+        },
+        {
+          "id": "pazabench",
+          "title": "PazaBench: Large-Scale ASR Benchmark for Low-Resource Languages in Africa",
+          "zh": "用统一口径比较非洲低资源语音识别的准确率与速度",
+          "titleZh": "用统一口径比较非洲低资源语音识别的准确率与速度",
+          "short": "PazaBench",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 232,
+          "tags": [
+            "language",
+            "multi",
+            "eval",
+            "eff",
+            "data"
+          ],
+          "url": "https://arxiv.org/abs/2611.31578",
+          "summary": "PazaBench 将六个公开语料统一到同一评测流程，比较 52 个语音识别模型在 39 种非洲语言上的词／字符错误率和推理速度。总体平均分会掩盖语言覆盖差异；排除仅支持英语的模型后，部分架构组的比较结论也随之改变。",
+          "why": "把低资源语言覆盖、识别质量与部署速度一起评估，帮助识别多语言平均榜单掩盖的短板。",
+          "limit": "公开语料可能与训练数据重叠，模型训练与覆盖范围不一致，架构比较不是因果实验。正文写 60 个数据集—语言划分、附录写 61 个，尚未消歧，不将此数作为稳定统计。单卡速度不能直接代表在线服务延迟。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、主要结果、局限与数据附录）；PDF 首页署名目视核验；未复现",
+          "verification": "2026-11-27 核读 v1 的所列正文段落；未核实会议录用。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.31578v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2611.31255"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2610.36911"
+            }
+          ],
+          "categories": "语言学与多语言 · 多模态与语音 · 评测与可靠性 · 效率与优化 · 预训练与数据",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-11-23",
+          "submissionDate": "2026-11-23",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.31578",
+          "verifiedAt": "2026-11-27",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "汇集 199,438 条音频，统一 16 kHz 单声道及文本规范化；同时报告 WER、CER 与实时速度倍数 RTFx，按语言及语料拆分观察。",
+            "效率测试使用单张 NVIDIA A100 80GB、batch size 1 和各模型官方默认解码设置；准确率、速度及语言覆盖需要共同比较。",
+            "52 个模型中有 19 个仅支持英语。排除这些模型后，编码器组与 LLM 语音识别组原先接近的汇总结论不再成立，说明评测集合会影响架构比较。"
+          ],
+          "institutions": [
+            {
+              "id": "microsoft",
+              "name": "微软",
+              "nameEn": "Microsoft",
+              "type": "company"
+            }
+          ],
+          "institutionLabels": "微软",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "PDF v1 首页共同署名",
+              "url": "https://arxiv.org/pdf/2611.31578v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-27",
+          "affiliationsVerifiedAt": "2026-11-27",
+          "affiliationNote": "PDF 首页四位作者共同署名 Microsoft Research Africa, Nairobi，按既有机构归并到微软；并非仅依据邮箱。",
+          "relatedPaperIds": [
+            "include2",
+            "basque-speech-lm"
+          ],
+          "sourceDiscrepancies": [
+            {
+              "field": "datasetLanguageSplits",
+              "mainText": 60,
+              "appendix": 61,
+              "status": "unresolved",
+              "checkedAt": "2026-11-27",
+              "source": "https://arxiv.org/html/2611.31578v1"
+            }
+          ]
+        },
+        {
+          "id": "memory-density",
+          "title": "Semantic Density Does Not Predict Agent-Memory Collapse",
+          "zh": "语义密度能提前预警 Agent 记忆失效吗",
+          "titleZh": "语义密度能提前预警 Agent 记忆失效吗",
+          "short": "Memory Density",
+          "venue": "arXiv",
+          "year": 2026,
+          "track": "预印本；录用未核实",
+          "tier": "A",
+          "rank": 233,
+          "tags": [
+            "memory",
+            "agents",
+            "eval",
+            "mechanism",
+            "context"
+          ],
+          "url": "https://arxiv.org/abs/2611.33184",
+          "summary": "论文检查 805 个记忆快照、154 条构建序列与 13 种记忆方法，检验语义密度等几何统计量能否提前预警性能下降。主分析未发现经多重比较校正后稳定的提前信号；长程实验中，整库注入方案的失败更符合输入容量溢出，而非已经证实的语义拥挤机制。",
+          "why": "为 Agent 记忆健康监控提供负面证据：不能只用向量相似度解释失效，还要检查容量、检索策略与当前任务表现。",
+          "limit": "主要变点比较只有很少的可配对序列，统计功效有限；登记分析时作者已知总体研究现象。长程实验仅单一任务顺序／随机种子，部分特征不可得；未检出稳定信号不等于证明所有几何预警都无效。",
+          "award": "",
+          "awardUrl": "",
+          "depth": "正文重点核读（方法、主要结果、统计附录与长程实验）；未复现",
+          "verification": "2026-11-27 核读 v1 的方法、主要结果及统计／长程实验附录。文首工作坊模板文字不作为录用证据；v1 提交日为 10 月 28 日，不按 2611 编号推断日期。",
+          "extra": [
+            {
+              "label": "核读原文 v1",
+              "url": "https://arxiv.org/html/2611.33184v1"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2611.27973"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2611.31258"
+            },
+            {
+              "label": "关联阅读",
+              "url": "https://arxiv.org/abs/2610.34073"
+            }
+          ],
+          "categories": "长期记忆 · Agent 与工具 · 评测与可靠性 · 能力机理与理论 · 长上下文",
+          "conference": "arXiv 2026 · 预印本",
+          "recommendation": "A",
+          "cohort": "2026 预印本",
+          "role": "方向重点阅读",
+          "curated": true,
+          "date": "2026-10-28",
+          "submissionDate": "2026-10-28",
+          "firstPublicDate": null,
+          "dateKind": "arxiv-submission",
+          "datePrecision": "日",
+          "dateBasis": "arXiv v1 提交日（UTC）；首次公告日未独立核实。",
+          "dateSource": "https://arxiv.org/abs/2611.33184",
+          "verifiedAt": "2026-11-27",
+          "reviewedVersion": "v1",
+          "technicalPoints": [
+            "主分析在载入各检查点准确率前登记，采用 PELT 变点、时序相关及 BH 多重比较校正。平均两两余弦相似度及其他已登记统计量未形成稳定的提前预警；这属于部分盲法。",
+            "用当前／变化量几何特征和记忆条目数、token 数预测后续是否低于无记忆基线，并按环境、实验组或方法留出；几何特征没有稳定优于计数特征。",
+            "PropWorld 比较五种记忆策略和两个基座，运行 5,000 个任务。失败方案把整个记忆库注入上下文，绕过原 ReasoningBank 的 top-k 检索；不能称为原算法的复现结论。",
+            "GPT 侧从最后非零得分到首次零分时，提示由 258,952 增至 291,064 tokens，跨过所核实的 272,000 输入上限；相关拒绝被计作失败，容量监控是关键解释线索。"
+          ],
+          "institutions": [
+            {
+              "id": "independent",
+              "name": "独立研究者",
+              "nameEn": "Independent Researcher",
+              "type": "other"
+            },
+            {
+              "id": "vasuki",
+              "name": "Vasuki",
+              "nameEn": "Vasuki Inc.",
+              "type": "company"
+            },
+            {
+              "id": "piramal",
+              "name": "Piramal Finance",
+              "nameEn": "Piramal Finance",
+              "type": "company"
+            }
+          ],
+          "institutionLabels": "独立研究者 · Vasuki · Piramal Finance",
+          "affiliationStatus": "verified",
+          "affiliationSources": [
+            {
+              "label": "原文 v1 首页署名",
+              "url": "https://arxiv.org/html/2611.33184v1"
+            }
+          ],
+          "affiliationsCheckedAt": "2026-11-27",
+          "affiliationsVerifiedAt": "2026-11-27",
+          "affiliationNote": "原文署名：Saksham Gupta 为 Independent Researcher，Yash Choudhary 为 Vasuki Inc.，Arpit Upadhyay 为 Piramal Finance。不因第一作者邮箱含学校名称推断其大学任职。",
+          "relatedPaperIds": [
+            "memonce",
+            "recap",
+            "memory-tax"
+          ]
         }
       ],
       "source": {
-        "label": "231 篇精选论文（94 篇 2026 会议、71 篇预印本／报告、66 篇历史）",
-        "period": "2026-11-26 新增 5 篇重点核读并更新 WMDP v8；近期窗口为 11 月 18–26 日，另补较早提交的历史候选。旧阅读日期逐条保留。",
+        "label": "233 篇精选论文（94 篇 2026 会议、73 篇预印本／报告、66 篇历史）",
+        "period": "2026-11-27 补读 2 篇历史候选；窗口为 11 月 19–27 日。各条原始提交日、旧阅读日期保留。",
         "grain": "每行一篇论文；多标签分类允许交叉",
         "links": [
           {
@@ -19275,6 +19471,14 @@
           {
             "label": "Decision Models: An Introduction and Capability Evaluation",
             "url": "https://arxiv.org/abs/2611.32368"
+          },
+          {
+            "label": "PazaBench: Large-Scale ASR Benchmark for Low-Resource Languages in Africa",
+            "url": "https://arxiv.org/abs/2611.31578"
+          },
+          {
+            "label": "Semantic Density Does Not Predict Agent-Memory Collapse",
+            "url": "https://arxiv.org/abs/2611.33184"
           }
         ],
         "filters": [
@@ -19352,9 +19556,13 @@
           {
             "title": "每日更新（2026-11-26）",
             "detail": "核读形式化量子程序 v3、RECAP、INCLUDE-2.0、CSRR、决策模型评测；五篇录用均未核实。WMDP v8 更新正文与署名，旧版本记录保留；共情 RL v2 仅版本比对，不刷新原核读日期。"
+          },
+          {
+            "title": "每日更新（2026-11-27）",
+            "detail": "核读 PazaBench 与 Agent 记忆语义密度研究，分别按 11 月 23 日及 10 月 28 日 v1 提交日归位；两篇录用未核实，补齐方法、局限、署名与关联阅读。"
           }
         ],
-        "executedAt": "2026-11-26T09:02:50.509071+00:00"
+        "executedAt": "2026-11-27T01:58:38.770398+00:00"
       },
       "methods": [
         {
@@ -19612,8 +19820,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 33,
           "coverage": "4698 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-26",
-          "lastAttemptAt": "2026-11-26",
+          "checkedAt": "2026-11-27",
+          "lastAttemptAt": "2026-11-27",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.acl.xml"
         },
         {
@@ -19627,8 +19835,8 @@
           "status": "已复核官方 Anthology XML",
           "curatedCount": 8,
           "coverage": "914 条，官方 Anthology XML 限定分轨复核；目录检索不等于正文阅读",
-          "checkedAt": "2026-11-26",
-          "lastAttemptAt": "2026-11-26",
+          "checkedAt": "2026-11-27",
+          "lastAttemptAt": "2026-11-27",
           "xmlSourceUrl": "https://github.com/acl-org/acl-anthology/blob/master/data/xml/2026.eacl.xml"
         },
         {
@@ -19642,8 +19850,8 @@
           "status": "已检索官方目录",
           "curatedCount": 11,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-26",
-          "lastAttemptAt": "2026-11-26"
+          "checkedAt": "2026-11-27",
+          "lastAttemptAt": "2026-11-27"
         },
         {
           "id": "icml26",
@@ -19656,8 +19864,8 @@
           "status": "已检索官方目录",
           "curatedCount": 7,
           "coverage": "官方目录已检索；代表作已整理",
-          "checkedAt": "2026-11-26",
-          "lastAttemptAt": "2026-11-26"
+          "checkedAt": "2026-11-27",
+          "lastAttemptAt": "2026-11-27"
         },
         {
           "id": "neurips26",
@@ -19670,8 +19878,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "9,146 个 Poster 目录条目；已整理 10 篇论文；索引中 1 条已核为活动海报，DTCH 活动未加入",
-          "checkedAt": "2026-11-26",
-          "lastAttemptAt": "2026-11-26",
+          "checkedAt": "2026-11-27",
+          "lastAttemptAt": "2026-11-27",
           "notes": " 11 月 23 日按链接同步题名修订，缺项保留，不推定撤稿。"
         },
         {
@@ -19685,8 +19893,8 @@
           "status": "已检索官方目录",
           "curatedCount": 10,
           "coverage": "856 条官方录用记录全部匹配 OpenReview；10 篇重点核读",
-          "checkedAt": "2026-11-26",
-          "lastAttemptAt": "2026-11-26"
+          "checkedAt": "2026-11-27",
+          "lastAttemptAt": "2026-11-27"
         },
         {
           "id": "emnlp26",
@@ -19699,12 +19907,12 @@
           "scope": "论文集主会／Findings／Demo／Industry 共 5,533 篇（排除 Industry Overview）；另有日程历史版本与改题。8 条补用报告人、分轨与标题核对；16 条历史题目还未唯一匹配，其中 8 条缺于当前日程，不推定撤稿。",
           "status": "日程、论文集与官方奖项交叉核对",
           "coverage": "当前日程 5,540；保留历史索引 5,548 条，5,532 条已对应正式论文集，14 篇重点核读",
-          "checkedAt": "2026-11-26",
+          "checkedAt": "2026-11-27",
           "detailSourceUrl": "https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490",
           "anthologyCount": 5533,
           "anthologyMatchedCount": 5532,
           "anthologySourceUrl": "https://aclanthology.org/events/emnlp-2026/",
-          "lastAttemptAt": "2026-11-26"
+          "lastAttemptAt": "2026-11-27"
         },
         {
           "id": "uist26",
@@ -19722,7 +19930,7 @@
       ],
       "source": {
         "label": "2026 官方目录覆盖核对",
-        "period": "2026-11-26 七个系统会议目录未见题名增删；EMNLP 一条目录新增编辑部关注声明，NAACL 官方入口同步检查，UIST 仅保留历史补充。",
+        "period": "2026-11-27 七个系统会议目录未见题名增删；ACL Anthology 的部分摘要格式更新另存比对记录。NAACL 官方入口同步检查，UIST 仅保留历史补充。",
         "grain": "每行一个会议目录及其检索边界",
         "links": [
           {
@@ -19778,7 +19986,7 @@
           "2026-11-02 EMNLP 奖项以官方栏目为准，COLM Spotlight 不计作奖项。",
           "2026-11-03 原目录题目或链接无变化不等于重新核读其中全部论文。"
         ],
-        "executedAt": "2026-11-26T09:02:50.509071+00:00"
+        "executedAt": "2026-11-27T01:58:38.770398+00:00"
       },
       "methods": [
         {
@@ -417123,7 +417331,7 @@
       ],
       "source": {
         "label": "20,606 条官方会议目录候选；题目初筛与精选摘要分开计数",
-        "period": "2026-11-26 与前日官方目录比较未见题名增删；EMNLP main.1823 新增 11 月 24 日编辑部关注声明。各条历史匹配与获奖核验日期保留。",
+        "period": "2026-11-27 与前日官方目录比对未见题名增删或新增奖项／编辑部声明；旧匹配与核验日期保留。",
         "grain": "每行一条会议目录记录；同一论文改题保留原 ID，跨会议同名条目保留",
         "links": [
           {
@@ -417196,7 +417404,7 @@
           "2026-11-03 未唯一匹配的历史标题继续保留；不按未读目录条目推断等级或研究结论。",
           "编辑部关注声明表示调查仍在进行，不等同于撤稿或最终结论；对应条目保留原奖项并提供官方声明链接。"
         ],
-        "executedAt": "2026-11-26T09:02:50.509071+00:00"
+        "executedAt": "2026-11-27T01:58:38.770398+00:00"
       },
       "methods": [
         {
@@ -418621,11 +418829,11 @@
             "output": null,
             "amount": 13,
             "currency": "USD",
-            "basis": "当前金额已见；计费单位冲突待核",
-            "unit": "待核（tokens／字符）",
-            "asOf": "2026-11-26",
-            "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
-            "note": "11 月 26 日模型卡通用价格栏列 $13 / M Tokens，历史官方发布依据为每百万字符；当前总价目页未成功读取，尚不能确认是模板标签还是计费变化。金额 13 保留，单位不作换算；原按字符报价另存历史。"
+            "basis": "官方 USD Standard 现价",
+            "unit": "百万字符",
+            "asOf": "2026-11-27",
+            "url": "https://docs.mistral.ai/inference/pricing",
+            "note": "2026-11-27 总价目与型号卡均明确 $13 / M Chars，解决前日模板单位冲突；金额未变，不视为降价，也不换算为文本 token 单价。区域推理附加费等另按实际档位计。"
           },
           "verifiedAt": "2026-10-27",
           "notes": "四个公开预览型号分开记录。语音代理 SDK 串联转录、独立推理模型、工具和语音合成，不据此标成单一端到端全模态模型。未复现厂商评测。",
@@ -418645,11 +418853,15 @@
             {
               "label": "11 月 26 日模型卡价格栏（单位冲突）",
               "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            },
+            {
+              "label": "11 月 27 日官方总价目与字符计费单位",
+              "url": "https://docs.mistral.ai/inference/pricing"
             }
           ],
           "parameterLabel": "未披露",
           "activeLabel": "未披露",
-          "priceLabel": "USD 13 / 单位待核",
+          "priceLabel": "USD 13 / 百万字符",
           "generationChange": "加强语境化语音、发音提示和专业声音适配；Pro Voice 官方要求约 30 分钟音频，与短参考的零样本方案区分。",
           "technicalTopics": [
             "multi",
@@ -418671,8 +418883,8 @@
               "detail": "截至 2026-10-27，模型卡已改为 35+ 语言、50+ 方言，与 10 月 20 日发布说明一致；此前的“9 种语言”冲突已澄清。该数量仍是厂商规格，未逐语种独立测试。"
             },
             {
-              "name": "当前计费单位待核",
-              "detail": "恢复读取的模型卡价格栏与历史发布的字符计费单位不一致；当前标为待核，不能据此断言已经改为 token 计费或直接比较成本。"
+              "name": "计费单位已核实",
+              "detail": "11 月 27 日官方总价目和本型号卡均标为每百万字符 13 美元（USD Standard）。前日单位冲突已消歧，历史记录保留；不是 token 输入／输出价。"
             }
           ],
           "technicalDisclosure": "能力／服务披露",
@@ -418695,9 +418907,20 @@
               "unit": "百万字符",
               "amount": 13,
               "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0"
+            },
+            {
+              "input": null,
+              "output": null,
+              "amount": 13,
+              "currency": "USD",
+              "basis": "当前金额已见；计费单位冲突待核",
+              "unit": "待核（tokens／字符）",
+              "asOf": "2026-11-26",
+              "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+              "note": "11 月 26 日模型卡通用价格栏列 $13 / M Tokens，历史官方发布依据为每百万字符；当前总价目页未成功读取，尚不能确认是模板标签还是计费变化。金额 13 保留，单位不作换算；原按字符报价另存历史。"
             }
           ],
-          "technicalUpdatedAt": "2026-11-26"
+          "technicalUpdatedAt": "2026-11-27"
         },
         {
           "id": "minimax31flash",
@@ -420235,6 +420458,14 @@
             {
               "label": "API 价格来源",
               "url": "https://docs.x.ai/developers/models"
+            },
+            {
+              "label": "图像输入要求（页面标注 11 月 25 日）",
+              "url": "https://docs.x.ai/developers/models"
+            },
+            {
+              "label": "Grok 4.7 型号与别名",
+              "url": "https://docs.x.ai/developers/models/grok-4.7"
             }
           ],
           "parameterLabel": "未公开",
@@ -420258,6 +420489,10 @@
             {
               "name": "自我验证",
               "detail": "强化检查与修正结果的行为；验证是否有效仍取决于工具和任务的可检验性。"
+            },
+            {
+              "name": "图像接口约束与滚动别名",
+              "detail": "当前图像输入上限为每张 25 MiB，支持 JPEG、PNG、WebP、ICO；宽高至少 8 像素且面积至少 512 像素。图像 URL 需为可公开读取的 HTTPS，并在 5 秒内下载完成。Grok 4.7 模型页列出 grok-4.7-latest 别名；这些是接口规格，不表示新权重版本。"
             }
           ],
           "technicalDisclosure": "部分方法披露",
@@ -420267,7 +420502,8 @@
             "verifiererror"
           ],
           "technicalSource": "https://x.ai/news/grok-4-7",
-          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。"
+          "technicalNote": "按官方报告、模型卡或发布说明整理；“本代变化”为编辑性归纳。关联论文用于解释相关技术，不表示厂商使用了该论文的方法。",
+          "technicalUpdatedAt": "2026-11-27"
         },
         {
           "id": "dsv41",
@@ -427923,6 +428159,10 @@
               "detail": "支持文本和图像输入、268,288 token 输入窗口。未支持工具调用、联网、流式、缓存、Batch 或微调；类型化决策结果不等于通用 Structured Outputs 功能。"
             },
             {
+              "name": "图像数量与 SDK 限制",
+              "detail": "11 月 27 日 API 文档明确：每个问题最多 4 张图、每次请求最多 16 张，可用公网 URL 或 Base64 Data URL。图像输入需使用 HTTP；DashScope Python SDK 2.0.1 的 client.decision.create 尚无 images 参数。"
+            },
+            {
               "name": "披露与评测限制",
               "detail": "未披露参数、训练配方和独立技术报告，不能归入某个已知基础模型。关联《Decision Models》用于理解评测口径，该论文没有测试此 QwenCloud 服务。"
             }
@@ -427950,13 +428190,18 @@
             {
               "label": "官方价目",
               "url": "https://docs.qwencloud.com/developer-guides/getting-started/model-prices"
+            },
+            {
+              "label": "11 月 27 日图像请求协议与限制",
+              "url": "https://docs.qwencloud.com/api-reference/decision-model-api"
             }
-          ]
+          ],
+          "technicalUpdatedAt": "2026-11-27"
         }
       ],
       "source": {
         "label": "113 个模型／服务版本",
-        "period": "2026-11-26 新增 QwenCloud 决策服务、记录 Qwen4 路由切换和 Gemini 4 Carbon 应用案例；Voxtral TTS 3 当前计费单位冲突待核，历史报价保留。共 114 个模型／服务版本。",
+        "period": "2026-11-27 核实 Voxtral TTS 3 每百万字符计费单位、补充 Qwen 决策服务和 Grok 图像限制／别名；仍为 114 个模型／服务版本。旧价格依据日期保留。",
         "grain": "每行一个关键模型版本或明确规格的代表型号",
         "links": [
           {
@@ -428930,6 +429175,10 @@
           {
             "label": "决策模型 API",
             "url": "https://docs.qwencloud.com/api-reference/decision-model-api"
+          },
+          {
+            "label": "OpenAI 自助微调新建任务截止日期",
+            "url": "https://developers.openai.com/api/docs/deprecations#update-to-openais-self-serve-fine-tuning"
           }
         ],
         "caveats": [
@@ -428957,9 +429206,11 @@
           "2026-11-23 批次补核 15 个服务／型号。Fable 与 Mythos 同底层模型；Qwen4 预览和正式开放合在同一条。Genie 按视频输出量计价。",
           "2026-11-24：GLM-5.4 为 750B 级循环基座，2T–3T 是能力比喻；API 和权重待开放。Qwen Live 按秒且后台另收费，65,536 是指令／函数配置限制。ChatGPT GPT-6.2 为 Sol 对话调整版，不重复称为独立基础模型。",
           "2026-11-25：chat-latest 是会继续更新的 API 别名，400K 及 $5/$30 为当前 API 规格，不是 ChatGPT 订阅条件或固定权重快照。四个 healthcare 配置归入已有模型，不重复计为独立基础模型；专项优惠价与通用模型价分开。",
-          "2026-11-26：decision-model 是类型化决策服务，基础权重与训练未知；预览别名不另计。部分厂商页面超时、拒绝访问或返回地区不可用提示，旧数据保留原日期；本次没有重新核实全部旧型号。"
+          "2026-11-26：decision-model 是类型化决策服务，基础权重与训练未知；预览别名不另计。部分厂商页面超时、拒绝访问或返回地区不可用提示，旧数据保留原日期；本次没有重新核实全部旧型号。",
+          "2026-11-27：Voxtral TTS 3 前日单位冲突已消歧；Mistral Multimodal Embed 仅见预览规格，首发及权重等证据未齐，保留候选、不计入已整理。未重新核实全部旧型号。",
+          "2026-11-27 平台服务更新：OpenAI 将所有组织新建自助微调任务的截止日从 2027-01-06 提前至 2026-12-15；既有微调模型推理持续到对应基础模型退役。此为平台服务政策，不新增模型记录，也不推断任一旧型号当前均可微调。"
         ],
-        "executedAt": "2026-11-26T09:02:50.509071+00:00"
+        "executedAt": "2026-11-27T01:58:38.770398+00:00"
       },
       "methods": [
         {
@@ -429557,37 +429808,35 @@
   },
   "id": "dashboard:7b32c0d7-dcb0-494c-a504-165fc9d27aae",
   "researchRefresh": {
-    "checkedAt": "2026-11-26",
+    "checkedAt": "2026-11-27",
     "timezone": "Asia/Shanghai",
-    "previousResearchCheck": "2026-11-25",
-    "windowStart": "2026-11-18",
-    "windowEnd": "2026-11-26T01:28:00Z",
-    "papersAdded": 5,
-    "papersRevised": [
-      "wmdp"
-    ],
-    "modelsAdded": 1,
+    "previousResearchCheck": "2026-11-26",
+    "windowStart": "2026-11-19",
+    "windowEnd": "2026-11-27T01:33:00Z",
+    "papersAdded": 2,
+    "papersRevised": [],
+    "modelsAdded": 0,
     "modelsRevised": [
-      "qwen4-max",
-      "gemini4-carbon",
-      "voxtral3-tts"
+      "voxtral3-tts",
+      "qwen-decision",
+      "grok47"
     ],
     "catalogAdded": 0,
-    "coverageNote": "arXiv 日期查询六页取得 2,887 个唯一 ID；整月三分类八页共 9,407 个 ID，较前日新见 995 条。额外 53 条均已核实 v1 提交历史且早于窗口。163 个已收录 arXiv ID 中发现并处理 WMDP v8、共情 RL v2 两次修订；会议题名无变化，一条编辑部声明入库。",
+    "coverageNote": "arXiv 日期查询六页取得 2,511 个唯一 ID；整月三分类八页共 9,407 个 ID，两者相比前批均无新 ID。168 个已收录 arXiv ID 未见新版本；消化旧队列补读两篇。会议题名、获奖与声明记录未见变化。",
     "limitations": [
-      "只新增 5 篇重点核读；月目录新增元数据及以前未读队列不是已整理论文。",
-      "RECAP 与 INCLUDE-2.0 分别按原始 v1 提交日 10 月 19 日和 10 月 18 日排序，不按 2611 编号推断发布日期。",
-      "部分厂商来源超时、403 或返回地区不可用页面，未恢复项保留旧版本；旧价格没有统一改成今天。",
-      "Kimi／MiniMax M3.1 首次权重公开日、若干型号别名和 4 篇旧论文署名仍待核。",
+      "新增两篇为待核队列补读，不代表今日新发表；以前未读队列继续保留，不计入已整理。",
+      "部分厂商入口超时、403 或返回地区不可用页面，未恢复项保留旧版本，未统一刷新全部资料和价格日期。",
+      "Mistral Multimodal Embed 首发／权重等证据、Kimi 与 M3.1 首次权重公开日、若干别名和 4 篇旧论文署名仍待核。",
+      "PazaBench 的数据集—语言划分数量在正文与附录不一致，条目中明确保留。",
       "浏览器交互未验收；使用 Data 源构建、实际组件服务端渲染、筛选与线上完整包核验。"
     ]
   },
   "affiliationEnrichment": {
-    "checkedAt": "2026-11-26",
+    "checkedAt": "2026-11-27",
     "scope": "curated-papers",
-    "verifiedPapers": 227,
+    "verifiedPapers": 229,
     "pendingPapers": 4,
-    "institutionCount": 260,
+    "institutionCount": 262,
     "method": "按所引版本署名及研究开展时归属整理；大学院系和企业实验室归并到所属机构，机构次序不表示牵头或贡献排名。独立作者与性质未确认的机构列其他；同一论文允许多机构，不从作者现职或仅邮箱推断。会议题目索引未逐篇核对机构。"
   }
 }
